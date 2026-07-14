@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#3f5f9e"/>
+
+  <!-- Icon group: speech bubble (chatbot conversation), centered ~ (500, 300) -->
+  <g>
+    <!-- Bubble body -->
+    <rect x="360" y="190" width="280" height="170" rx="40"
+          fill="#fafaf8" stroke="#1a1a1a" stroke-width="16"/>
+
+    <!-- Tail: filled to merge with the body, outer edges outlined below -->
+    <polygon points="440,340 510,340 428,440" fill="#fafaf8" stroke="none"/>
+    <!-- Re-cover the body's bottom border between the tail roots so no line cuts across the mouth -->
+    <rect x="446" y="348" width="58" height="22" fill="#fafaf8"/>
+    <!-- Outer tail edges -->
+    <line x1="428" y1="440" x2="440" y2="340" stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+    <line x1="428" y1="440" x2="510" y2="340" stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Three conversation dots -->
+    <circle cx="440" cy="275" r="20" fill="#3f5f9e"/>
+    <circle cx="500" cy="275" r="20" fill="#3f5f9e"/>
+    <circle cx="560" cy="275" r="20" fill="#3f5f9e"/>
+  </g>
+</svg>

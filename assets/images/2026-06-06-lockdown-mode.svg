@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#1a3a2a"/>
+
+  <!-- Icon group — designed at 1000×1000 scale, translate(0, -200) centres in 600px height -->
+  <g transform="translate(0, -270)">
+
+    <!-- Icon: padlock with severed outbound arrow -->
+
+    <!-- Padlock body -->
+    <rect
+      x="390" y="530"
+      width="220" height="180"
+      rx="22"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="18"
+      stroke-linejoin="round"
+    />
+
+    <!-- Padlock body secondary fill panel (inner inset) -->
+    <rect
+      x="412" y="552"
+      width="176" height="136"
+      rx="10"
+      fill="#d6dff0"
+    />
+
+    <!-- Padlock shackle (U-shape) -->
+    <path
+      d="M435 532 L435 482 Q435 430 500 430 Q565 430 565 482 L565 532"
+      fill="none"
+      stroke="#1a1a1a"
+      stroke-width="20"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Keyhole circle -->
+    <circle
+      cx="500" cy="604"
+      r="22"
+      fill="#1a1a1a"
+    />
+    <!-- Keyhole slot -->
+    <rect
+      x="493" y="620"
+      width="14" height="30"
+      rx="5"
+      fill="#1a1a1a"
+    />
+
+    <!-- Outbound arrow shaft — starts from right side of padlock, goes right, then SEVERED -->
+    <!-- Arrow shaft left segment (intact, coming from padlock) -->
+    <line
+      x1="613" y1="620"
+      x2="680" y2="620"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linecap="round"
+    />
+
+    <!-- Gap here (severed — no line drawn from x=680 to x=710) -->
+
+    <!-- Arrow shaft right segment (detached, floating — severed end) -->
+    <line
+      x1="716" y1="620"
+      x2="760" y2="620"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linecap="round"
+    />
+
+    <!-- Arrowhead (pointing right, detached) -->
+    <polyline
+      points="748,598 776,620 748,642"
+      fill="none"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Severed break marks — two short diagonal slashes across the gap -->
+    <line
+      x1="688" y1="606"
+      x2="708" y2="634"
+      stroke="#1a1a1a"
+      stroke-width="12"
+      stroke-linecap="round"
+    />
+    <line
+      x1="700" y1="604"
+      x2="720" y2="632"
+      stroke="#1a1a1a"
+      stroke-width="12"
+      stroke-linecap="round"
+    />
+
+  </g>
+</svg>

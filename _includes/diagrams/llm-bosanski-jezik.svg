@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" id="llm-bs-svg"
+     font-family="Inter, system-ui, -apple-system, sans-serif">
+
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      #llm-bs-svg * { opacity: 1 !important; }
+      #llm-bs-svg animate,
+      #llm-bs-svg animateTransform { display: none; }
+      #llm-bs-svg .replay-btn { display: none !important; }
+    }
+    #llm-bs-svg:hover .replay-btn { opacity: 1; }
+    #llm-bs-svg .replay-btn { opacity: 0; transition: opacity 0.2s ease; cursor: pointer; }
+    #llm-bs-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+    #llm-bs-svg .replay-btn:hover path { stroke: #B45309; }
+    #llm-bs-svg .replay-btn:hover polygon { fill: #B45309; }
+    #llm-bs-svg .replay-btn:focus { outline: none; opacity: 1; }
+    #llm-bs-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+  </style>
+
+  <!-- Background -->
+  <rect width="900" height="560" fill="#FAF9F6"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle"
+        font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700"
+        fill="#1C1917" opacity="0">
+    Morfologija multiplicira tokenizaciju
+    <animate attributeName="opacity" from="0" to="1" begin="0s" dur="0.4s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C" opacity="0">
+    Isti glagol, četiri oblika — engleski naspram bosanskog
+    <animate attributeName="opacity" from="0" to="1" begin="0.15s" dur="0.4s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+  </text>
+
+  <!-- ============================== ENGLISH ROW ============================== -->
+
+  <text x="60" y="110" font-size="12" font-weight="600" fill="#78716C"
+        letter-spacing="0.5" opacity="0">
+    ENGLESKI
+    <animate attributeName="opacity" from="0" to="1" begin="0.3s" dur="0.3s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+  </text>
+
+  <!-- English form labels -->
+  <g font-size="10" font-weight="600" fill="#A8A29E" text-anchor="middle" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.3s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <text x="86"  y="130">WORK</text>
+    <text x="159" y="130">WORKS</text>
+    <text x="242" y="130">WORKED</text>
+    <text x="333" y="130">WORKING</text>
+  </g>
+
+  <!-- English token: work -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.5s" dur="0.3s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="60" y="144" width="52" height="36" rx="6"
+          fill="#F5F5F0" stroke="#1C1917" stroke-width="1"/>
+    <text x="86" y="167" text-anchor="middle" font-size="13" font-weight="500" fill="#1C1917">work</text>
+  </g>
+
+  <!-- English token: works -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.62s" dur="0.3s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="128" y="144" width="62" height="36" rx="6"
+          fill="#F5F5F0" stroke="#1C1917" stroke-width="1"/>
+    <text x="159" y="167" text-anchor="middle" font-size="13" font-weight="500" fill="#1C1917">works</text>
+  </g>
+
+  <!-- English token: worked -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.74s" dur="0.3s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="206" y="144" width="72" height="36" rx="6"
+          fill="#F5F5F0" stroke="#1C1917" stroke-width="1"/>
+    <text x="242" y="167" text-anchor="middle" font-size="13" font-weight="500" fill="#1C1917">worked</text>
+  </g>
+
+  <!-- English token: working -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.86s" dur="0.3s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="294" y="144" width="78" height="36" rx="6"
+          fill="#F5F5F0" stroke="#1C1917" stroke-width="1"/>
+    <text x="333" y="167" text-anchor="middle" font-size="13" font-weight="500" fill="#1C1917">working</text>
+  </g>
+
+  <!-- English count chip -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.0s" dur="0.3s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="388" y="148" width="84" height="28" rx="14"
+          fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="430" y="167" text-anchor="middle" font-size="13" font-weight="600" fill="#1C1917">4 tokena</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="60" y1="210" x2="840" y2="210" stroke="#E7E5E4" stroke-width="1" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.4s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+  </line>
+
+  <!-- ============================== BOSNIAN ROW ============================== -->
+
+  <text x="60" y="250" font-size="12" font-weight="600" fill="#B45309"
+        letter-spacing="0.5" opacity="0">
+    BOSANSKI
+    <animate attributeName="opacity" from="0" to="1" begin="1.7s" dur="0.3s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+  </text>
+
+  <!-- Bosnian form labels -->
+  <g font-size="10" font-weight="600" fill="#B45309" text-anchor="middle" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.8s" dur="0.3s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <text x="104" y="270">RADITI</text>
+    <text x="202" y="270">RADI</text>
+    <text x="303" y="270">RADIMO</text>
+    <text x="434" y="270">RADIĆEMO</text>
+  </g>
+
+  <!-- Bosnian group 1: raditi → [rad][iti] -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.9s" dur="0.3s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="60"  y="284" width="46" height="36" rx="6" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <text x="83"  y="307" text-anchor="middle" font-size="13" font-weight="500" fill="#92400E">rad</text>
+    <rect x="110" y="284" width="38" height="36" rx="6" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <text x="129" y="307" text-anchor="middle" font-size="13" font-weight="500" fill="#92400E">iti</text>
+  </g>
+
+  <!-- Bosnian group 2: radi → [rad][i] -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.0s" dur="0.3s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="164" y="284" width="46" height="36" rx="6" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <text x="187" y="307" text-anchor="middle" font-size="13" font-weight="500" fill="#92400E">rad</text>
+    <rect x="214" y="284" width="26" height="36" rx="6" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <text x="227" y="307" text-anchor="middle" font-size="13" font-weight="500" fill="#92400E">i</text>
+  </g>
+
+  <!-- Bosnian group 3: radimo → [rad][imo] -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.1s" dur="0.3s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="256" y="284" width="46" height="36" rx="6" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <text x="279" y="307" text-anchor="middle" font-size="13" font-weight="500" fill="#92400E">rad</text>
+    <rect x="306" y="284" width="44" height="36" rx="6" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <text x="328" y="307" text-anchor="middle" font-size="13" font-weight="500" fill="#92400E">imo</text>
+  </g>
+
+  <!-- Bosnian group 4: radićemo → [rad][ić][emo] — two-tier emphasis (punchline) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.2s" dur="0.3s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="366" y="284" width="46" height="36" rx="6" fill="#F5E6D0" stroke="#92400E" stroke-width="1.5"/>
+    <text x="389" y="307" text-anchor="middle" font-size="13" font-weight="600" fill="#78350F">rad</text>
+    <rect x="416" y="284" width="36" height="36" rx="6" fill="#F5E6D0" stroke="#92400E" stroke-width="1.5"/>
+    <text x="434" y="307" text-anchor="middle" font-size="13" font-weight="600" fill="#78350F">ić</text>
+    <rect x="456" y="284" width="46" height="36" rx="6" fill="#F5E6D0" stroke="#92400E" stroke-width="1.5"/>
+    <text x="479" y="307" text-anchor="middle" font-size="13" font-weight="600" fill="#78350F">emo</text>
+  </g>
+
+  <!-- Bosnian count chip -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.5s" dur="0.3s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="518" y="288" width="84" height="28" rx="14"
+          fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <text x="560" y="307" text-anchor="middle" font-size="13" font-weight="600" fill="#92400E">9 tokena</text>
+  </g>
+
+  <!-- Annotation bracket under radićemo (x=366–502, below y=320) -->
+  <!-- Path length: 8 + 136 + 8 = 152 -->
+  <path d="M 366 326 L 366 334 L 502 334 L 502 326"
+        fill="none" stroke="#92400E" stroke-width="1.5"
+        stroke-dasharray="152" stroke-dashoffset="152">
+    <animate attributeName="stroke-dashoffset" from="152" to="0"
+             begin="2.7s" dur="0.35s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+  </path>
+
+  <line x1="434" y1="334" x2="434" y2="344"
+        stroke="#92400E" stroke-width="1.5" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="3.0s" dur="0.2s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+  </line>
+
+  <text x="434" y="360" text-anchor="middle" font-size="11" fill="#92400E"
+        font-weight="600" letter-spacing="0.3" opacity="0">
+    "RADIĆEMO" → 3 TOKENA
+    <animate attributeName="opacity" from="0" to="1" begin="3.1s" dur="0.25s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+  </text>
+
+  <!-- Bottom explanation panel -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="3.3s" dur="0.45s"
+             fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="60" y="385" width="780" height="130" rx="8"
+          fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <rect x="80" y="405" width="3" height="14" fill="#B45309"/>
+    <text x="92" y="417" font-size="13" font-weight="700" fill="#1C1917"
+          font-family="Merriweather, Georgia, serif">Zašto model ne uočava veze između oblika</text>
+    <text font-size="12" fill="#44403C">
+      <tspan x="80" y="443">Tokenizer ne poznaje morfologiju. Korijen 'rad-' se ponavlja u sva četiri oblika, ali svaki</tspan>
+      <tspan x="80" y="461">nastavak (-iti, -i, -imo, -ićemo) postaje zasebna podriječ — model ih uči kao različite sekvence.</tspan>
+    </text>
+    <text x="80" y="494" font-size="12" font-style="italic" fill="#78716C">
+      Fertilnost (fertility): bosanski prosječno troši 1,88× više tokena od engleskog za isti sadržaj.
+    </text>
+  </g>
+
+  <!-- Replay button (hidden until hover) -->
+  <g class="replay-btn" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+    <circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C"
+          stroke-width="1.5" stroke-linecap="round"/>
+    <polygon points="852,28 858,28 855,33" fill="#78716C"/>
+    <title>Pusti ponovo</title>
+  </g>
+
+  <script>
+  // <![CDATA[
+  (function () {
+    var svg = document.getElementById('llm-bs-svg');
+    var btn = svg && svg.querySelector('.replay-btn');
+    if (!svg || !btn) return;
+    function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+    btn.addEventListener('click', replay);
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+    });
+  })();
+  // ]]>
+  </script>
+
+</svg>

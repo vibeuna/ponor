@@ -1,0 +1,308 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620"
+     id="kp-svg" aria-label="Dijagram: kontekstni prozor se puni porukama, a najstarije poruke tiho ispadaju">
+
+  <title>Kontekstni prozor — šta model stvarno vidi</title>
+
+  <defs>
+    <marker id="arr-stone-kp" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0,0 10,5 0,10" fill="#78716C"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="#FAF9F6"/>
+
+  <!-- ═══════════════════════════════ TITLE ══════════════════════════════ -->
+  <text x="450" y="44" text-anchor="middle"
+        font-family="Merriweather, Georgia, serif"
+        font-size="20" font-weight="700" fill="#1C1917">Kontekstni prozor — šta model stvarno vidi</text>
+  <text x="450" y="66" text-anchor="middle"
+        font-family="Inter, system-ui, -apple-system, sans-serif"
+        font-size="13" fill="#78716C">
+    Kad razgovor naraste, model gubi pristup starijim porukama — tiho, bez upozorenja
+  </text>
+
+  <!-- ══════════════════════ LEFT: RAZGOVOR feed ════════════════════════ -->
+  <g font-family="Inter, system-ui, -apple-system, sans-serif" opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="0.2s" dur="0.4s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+
+    <text x="60" y="104" font-size="11" font-weight="700"
+          fill="#78716C" letter-spacing="0.8">RAZGOVOR</text>
+    <text x="60" y="118" font-size="11" fill="#A8A29E" font-style="italic">što korisnik vidi</text>
+
+    <!-- Msg 1 — oldest, faded (about to fall out) -->
+    <rect x="60" y="126" width="200" height="44" rx="6"
+          fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1" opacity="0.45"/>
+    <text x="74" y="144" font-size="10" font-weight="600"
+          fill="#A8A29E" letter-spacing="0.4" opacity="0.45">KORISNIK · 09:14</text>
+    <text x="74" y="161" font-size="12" fill="#A8A29E" font-style="italic"
+          font-family="Merriweather, Georgia, serif" opacity="0.45">"Recite mi više o tome..."</text>
+
+    <!-- Msg 2 -->
+    <rect x="60" y="178" width="200" height="44" rx="6"
+          fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="74" y="196" font-size="10" font-weight="600"
+          fill="#78716C" letter-spacing="0.4">MODEL · 09:15</text>
+    <text x="74" y="213" font-size="12" fill="#1C1917" font-style="italic"
+          font-family="Merriweather, Georgia, serif">"Naravno, evo detalji..."</text>
+
+    <!-- Msg 3 -->
+    <rect x="60" y="230" width="200" height="44" rx="6"
+          fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="74" y="248" font-size="10" font-weight="600"
+          fill="#78716C" letter-spacing="0.4">KORISNIK · 09:22</text>
+    <text x="74" y="265" font-size="12" fill="#1C1917" font-style="italic"
+          font-family="Merriweather, Georgia, serif">"A šta sa sljedećim..."</text>
+
+    <!-- Msg 4 -->
+    <rect x="60" y="282" width="200" height="44" rx="6"
+          fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="74" y="300" font-size="10" font-weight="600"
+          fill="#78716C" letter-spacing="0.4">MODEL · 09:23</text>
+    <text x="74" y="317" font-size="12" fill="#1C1917" font-style="italic"
+          font-family="Merriweather, Georgia, serif">"Dobro pitanje, to..."</text>
+
+    <!-- Msg 5 — newest -->
+    <rect x="60" y="334" width="200" height="44" rx="6"
+          fill="#F5F5F0" stroke="#D6D3D1" stroke-width="1.5"/>
+    <text x="74" y="352" font-size="10" font-weight="600"
+          fill="#78716C" letter-spacing="0.4">KORISNIK · 09:31</text>
+    <text x="74" y="369" font-size="12" fill="#1C1917" font-style="italic"
+          font-family="Merriweather, Georgia, serif">"Možeš li sažeti sve?"</text>
+  </g>
+
+  <!-- Arrow: feed → window -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="0.8s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <line x1="270" y1="248" x2="330" y2="248"
+          stroke="#78716C" stroke-width="1.5" marker-end="url(#arr-stone-kp)"/>
+    <text x="300" y="240" text-anchor="middle"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="10" fill="#78716C" font-style="italic">ulaz</text>
+  </g>
+
+  <!-- ══════════════════ CENTER: Context Window — focal ════════════════ -->
+
+  <!-- Window frame (coffee = focal element) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="1.1s" dur="0.5s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+
+    <!-- Main frame -->
+    <rect x="340" y="96" width="380" height="300" rx="10"
+          fill="#FDF6EC" stroke="#B45309" stroke-width="2"/>
+    <!-- 3px coffee left stripe (drawn inside the rx boundary) -->
+    <rect x="342" y="107" width="3" height="278" fill="#B45309"/>
+
+    <!-- Eyebrow -->
+    <text x="358" y="117"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">KONTEKSTNI PROZOR</text>
+    <text x="358" y="130"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="11" fill="#78716C" font-style="italic">što model vidi</text>
+    <!-- Divider -->
+    <line x1="358" y1="136" x2="708" y2="136" stroke="#E7E5E4" stroke-width="1"/>
+  </g>
+
+  <!-- Row 1 — oldest, "ispalo" state (dashed + very faded) -->
+  <g opacity="0" font-family="Inter, system-ui, -apple-system, sans-serif">
+    <animate attributeName="opacity" from="0" to="0.36"
+             begin="1.4s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="358" y="142" width="326" height="40" rx="6"
+          fill="#F5F5F0" stroke="#A8A29E" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="372" y="159" font-size="10" font-weight="600"
+          fill="#78716C" letter-spacing="0.4">KORISNIK · 09:14</text>
+    <text x="372" y="174" font-size="11" fill="#78716C" font-style="italic"
+          font-family="Merriweather, Georgia, serif">"Recite mi više o tome..."</text>
+  </g>
+
+  <!-- Row 1 label: "ispalo" — separate so it can animate at full opacity -->
+  <g opacity="0" font-family="Inter, system-ui, -apple-system, sans-serif">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="2.6s" dur="0.4s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <text x="684" y="159" text-anchor="end"
+          font-size="10" font-weight="600" fill="#A8A29E" letter-spacing="0.3">↑ model ne vidi</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g opacity="0" font-family="Inter, system-ui, -apple-system, sans-serif">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="1.6s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="358" y="190" width="326" height="40" rx="6"
+          fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="372" y="207" font-size="10" font-weight="600"
+          fill="#78716C" letter-spacing="0.4">MODEL · 09:15</text>
+    <text x="372" y="222" font-size="11" fill="#1C1917" font-style="italic"
+          font-family="Merriweather, Georgia, serif">"Naravno, evo detalji..."</text>
+  </g>
+
+  <!-- Row 3 — middle (least attended) -->
+  <g opacity="0" font-family="Inter, system-ui, -apple-system, sans-serif">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="1.8s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="358" y="238" width="326" height="40" rx="6"
+          fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="372" y="255" font-size="10" font-weight="600"
+          fill="#78716C" letter-spacing="0.4">KORISNIK · 09:22</text>
+    <text x="372" y="270" font-size="11" fill="#1C1917" font-style="italic"
+          font-family="Merriweather, Georgia, serif">"A šta sa sljedećim..."</text>
+  </g>
+
+  <!-- Row 4 -->
+  <g opacity="0" font-family="Inter, system-ui, -apple-system, sans-serif">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="2.0s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="358" y="286" width="326" height="40" rx="6"
+          fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="372" y="303" font-size="10" font-weight="600"
+          fill="#78716C" letter-spacing="0.4">MODEL · 09:23</text>
+    <text x="372" y="318" font-size="11" fill="#1C1917" font-style="italic"
+          font-family="Merriweather, Georgia, serif">"Dobro pitanje, to..."</text>
+  </g>
+
+  <!-- Row 5 — newest -->
+  <g opacity="0" font-family="Inter, system-ui, -apple-system, sans-serif">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="2.2s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="358" y="334" width="326" height="40" rx="6"
+          fill="#F5F5F0" stroke="#D6D3D1" stroke-width="1.5"/>
+    <text x="372" y="351" font-size="10" font-weight="600"
+          fill="#78716C" letter-spacing="0.4">KORISNIK · 09:31</text>
+    <text x="372" y="366" font-size="11" fill="#1C1917" font-style="italic"
+          font-family="Merriweather, Georgia, serif">"Možeš li sažeti sve?"</text>
+  </g>
+
+  <!-- ════════════════ RIGHT: Attention gradient (x=748–840) ══════════ -->
+  <g opacity="0" font-family="Inter, system-ui, -apple-system, sans-serif">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="2.8s" dur="0.5s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+
+    <text x="748" y="104" font-size="11" font-weight="700"
+          fill="#78716C" letter-spacing="0.8">PAŽNJA</text>
+
+    <!-- U-shaped gradient: strong top zone (rows 1-2), weak middle (row 3), strong bottom (rows 4-5) -->
+    <rect x="748" y="142" width="10" height="88" rx="4" fill="#B45309" opacity="0.88"/>
+    <rect x="748" y="238" width="10" height="40" rx="4" fill="#B45309" opacity="0.16"/>
+    <rect x="748" y="286" width="10" height="88" rx="4" fill="#B45309" opacity="0.88"/>
+
+    <!-- Labels -->
+    <text x="762" y="158" font-size="10" font-weight="700" fill="#92400E">jača</text>
+    <text x="762" y="170" font-size="10" font-weight="700" fill="#92400E">pažnja</text>
+    <text x="762" y="252" font-size="10" fill="#A8A29E">slabija</text>
+    <text x="762" y="264" font-size="10" fill="#A8A29E">pažnja</text>
+    <text x="762" y="302" font-size="10" font-weight="700" fill="#92400E">jača</text>
+    <text x="762" y="314" font-size="10" font-weight="700" fill="#92400E">pažnja</text>
+
+    <!-- "lost in the middle" reference note -->
+    <text x="748" y="400" font-size="10" fill="#78716C" font-style="italic">„lost in</text>
+    <text x="748" y="412" font-size="10" fill="#78716C" font-style="italic">the middle"</text>
+    <text x="748" y="424" font-size="10" fill="#78716C" font-style="italic">Liu i dr., 2023</text>
+  </g>
+
+  <!-- ══════════════════════ BOTTOM: callout ════════════════════════════ -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="3.3s" dur="0.5s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <animateTransform attributeName="transform" type="translate"
+             from="0,8" to="0,0"
+             begin="3.3s" dur="0.5s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+
+    <rect x="60" y="416" width="780" height="118" rx="8"
+          fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <!-- 3px coffee left stripe -->
+    <rect x="60" y="424" width="3" height="102" fill="#B45309"/>
+
+    <text x="78" y="436"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">ŠTA SE DEŠAVA KAD JE PROZOR PUN</text>
+
+    <text x="78" y="456"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="13" fill="#1C1917">Aplikacija tiho skraćuje razgovor — najstarije poruke nestaju iz onoga što model vidi.</text>
+    <text x="78" y="474"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="13" fill="#1C1917">Korisnik ih još uvijek čita u sučelju, ali model ih ne vidi. Nema upozorenja.</text>
+
+    <text x="78" y="496"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="11" fill="#78716C" font-style="italic">Praktično: ako model "zaboravi" šta ste rekli ranije — vjerovatno ste pogodili granicu prozora. To nije greška.</text>
+    <text x="78" y="513"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="11" fill="#78716C" font-style="italic">Novo pravilo: važne instrukcije stavite na početak razgovora, ne u sredinu.</text>
+  </g>
+
+  <!-- ══════════════════════ FOOTNOTE ═══════════════════════════════════ -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="4.0s" dur="0.4s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <text x="450" y="556" text-anchor="middle"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="11" fill="#78716C" font-style="italic">
+      Orijentacione vrijednosti: GPT-4o ~128k tokena · Claude 3.7 Sonnet ~200k tokena · Gemini 1.5 Pro ~1 milion tokena
+    </text>
+    <text x="450" y="572" text-anchor="middle"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="11" fill="#A8A29E" font-style="italic">
+      1.000 tokena ≈ 750 engleskih riječi · bosanski tekst tipično troši više tokena po riječi
+    </text>
+  </g>
+
+  <!-- ══════════════════════ REPLAY BUTTON ══════════════════════════════ -->
+  <g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;"
+     role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+    <circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <path d="M 855 31 A 9 9 0 1 1 846 40" fill="none"
+          stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon points="852,28 858,28 855,33" fill="#78716C"/>
+    <title>Pusti ponovo</title>
+  </g>
+
+  <!-- ══════════════════════ STYLES + SCRIPT ════════════════════════════ -->
+  <style>
+    #kp-svg:hover .replay-btn { opacity: 1; }
+    #kp-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+    #kp-svg .replay-btn:hover path { stroke: #B45309; }
+    #kp-svg .replay-btn:hover polygon { fill: #B45309; }
+    #kp-svg .replay-btn:focus { outline: none; opacity: 1; }
+    #kp-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+
+    @media (prefers-reduced-motion: reduce) {
+      #kp-svg animate,
+      #kp-svg animateTransform { display: none; }
+      #kp-svg .replay-btn { display: none; }
+    }
+  </style>
+
+  <script>
+    // <![CDATA[
+    (function () {
+      var svg = document.getElementById('kp-svg');
+      var btn = svg && svg.querySelector('.replay-btn');
+      if (!svg || !btn) return;
+      function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+      btn.addEventListener('click', replay);
+      btn.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+      });
+    })();
+    // ]]>
+  </script>
+
+</svg>

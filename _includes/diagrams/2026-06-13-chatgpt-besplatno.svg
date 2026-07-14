@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="cgf-svg" viewBox="0 0 900 620" font-family="Inter, system-ui, -apple-system, sans-serif">
+  <style>
+    #cgf-svg .reveal { opacity: 0; }
+    #cgf-svg:hover .replay-btn { opacity: 1; }
+    #cgf-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+    #cgf-svg .replay-btn:hover path { stroke: #B45309; }
+    #cgf-svg .replay-btn:hover polygon { fill: #B45309; }
+    #cgf-svg .replay-btn:focus { outline: none; opacity: 1; }
+    #cgf-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+    @media (prefers-reduced-motion: reduce) {
+      #cgf-svg animate, #cgf-svg animateTransform { display: none; }
+      #cgf-svg .replay-btn { display: none; }
+      #cgf-svg .reveal { opacity: 1; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="#FAF9F6"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">ChatGPT: besplatno naspram plaćenog</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C">Šta dobijate bez plaćanja — i šta zapravo nosi pretplata</text>
+
+  <!-- ============ BESPLATNO row (accent: coffee, the focal point) ============ -->
+  <g class="reveal">
+    <rect x="60" y="96" width="780" height="192" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1.5"/>
+    <rect x="60" y="96" width="4" height="192" rx="2" fill="#B45309"/>
+    <text x="84" y="124" font-size="12" font-weight="700" fill="#B45309" letter-spacing="0.8">BESPLATNO</text>
+    <!-- Summary chip -->
+    <rect x="596" y="106" width="228" height="32" rx="16" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <text x="710" y="127" text-anchor="middle" font-size="12" font-weight="600" fill="#92400E">Dovoljno za većinu potreba</text>
+    <!-- Focal: the model (two-tier emphasis, darker tint) -->
+    <rect x="84" y="140" width="420" height="44" rx="6" fill="#F5E6D0" stroke="#92400E" stroke-width="1.5"/>
+    <text x="100" y="162" font-size="14" font-weight="700" fill="#78350F" font-family="Merriweather, Georgia, serif">Model: GPT-5.5 Instant</text>
+    <text x="100" y="179" font-size="11" fill="#92400E">dinamičan limit → po potrebi prebacivanje na manji model</text>
+    <animate attributeName="opacity" begin="0.3s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+  </g>
+
+  <!-- Free capability pills -->
+  <g class="reveal" font-size="12" font-weight="600">
+    <rect x="84" y="202" width="120" height="30" rx="15" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <text x="144" y="222" text-anchor="middle" fill="#92400E">Pretraga weba</text>
+    <animate attributeName="opacity" begin="0.6s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+  </g>
+  <g class="reveal" font-size="12" font-weight="600">
+    <rect x="216" y="202" width="64" height="30" rx="15" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <text x="248" y="222" text-anchor="middle" fill="#92400E">Slike</text>
+    <animate attributeName="opacity" begin="0.72s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+  </g>
+  <g class="reveal" font-size="12" font-weight="600">
+    <rect x="292" y="202" width="128" height="30" rx="15" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <text x="356" y="222" text-anchor="middle" fill="#92400E">Fajlovi i slike</text>
+    <animate attributeName="opacity" begin="0.84s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+  </g>
+  <g class="reveal" font-size="12" font-weight="600">
+    <rect x="432" y="202" width="150" height="30" rx="15" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <text x="507" y="222" text-anchor="middle" fill="#92400E">Analiza podataka</text>
+    <animate attributeName="opacity" begin="0.96s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+  </g>
+  <g class="reveal" font-size="12" font-weight="600">
+    <rect x="84" y="242" width="140" height="30" rx="15" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <text x="154" y="262" text-anchor="middle" fill="#92400E">Gotovi GPT-ovi</text>
+    <animate attributeName="opacity" begin="1.08s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+  </g>
+  <g class="reveal" font-size="12" font-weight="600">
+    <rect x="236" y="242" width="104" height="30" rx="15" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <text x="288" y="262" text-anchor="middle" fill="#92400E">Pamćenje</text>
+    <animate attributeName="opacity" begin="1.20s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+  </g>
+
+  <!-- Divider -->
+  <g class="reveal">
+    <line x1="60" y1="300" x2="840" y2="300" stroke="#E7E5E4" stroke-width="1"/>
+    <animate attributeName="opacity" begin="1.35s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+  </g>
+
+  <!-- ============ UZ PRETPLATU row (neutral: what paid adds) ============ -->
+  <g class="reveal">
+    <rect x="60" y="314" width="780" height="150" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <rect x="60" y="314" width="4" height="150" rx="2" fill="#78716C"/>
+    <text x="84" y="342" font-size="12" font-weight="700" fill="#78716C" letter-spacing="0.8">UZ PRETPLATU — GO · PLUS · PRO</text>
+    <rect x="620" y="324" width="204" height="30" rx="15" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1"/>
+    <text x="722" y="344" text-anchor="middle" font-size="12" font-weight="600" fill="#1C1917">Volumen + jači modeli</text>
+    <text x="84" y="368" font-size="11" font-style="italic" fill="#78716C">dodatno na sve iznad:</text>
+    <animate attributeName="opacity" begin="1.55s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+  </g>
+
+  <!-- Paid capability pills (neutral) -->
+  <g class="reveal" font-size="12" font-weight="600">
+    <rect x="84" y="380" width="164" height="30" rx="15" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1"/>
+    <text x="166" y="400" text-anchor="middle" fill="#1C1917">Veći ili bez limita</text>
+    <animate attributeName="opacity" begin="1.75s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+  </g>
+  <g class="reveal" font-size="12" font-weight="600">
+    <rect x="260" y="380" width="168" height="30" rx="15" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1"/>
+    <text x="344" y="400" text-anchor="middle" fill="#1C1917">Ručni izbor modela</text>
+    <animate attributeName="opacity" begin="1.87s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+  </g>
+  <g class="reveal" font-size="12" font-weight="600">
+    <rect x="440" y="380" width="188" height="30" rx="15" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1"/>
+    <text x="534" y="400" text-anchor="middle" fill="#1C1917">Model za rezonovanje</text>
+    <animate attributeName="opacity" begin="1.99s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+  </g>
+  <g class="reveal" font-size="12" font-weight="600">
+    <rect x="84" y="420" width="240" height="30" rx="15" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1"/>
+    <text x="204" y="440" text-anchor="middle" fill="#1C1917">GPT-5.5 Pro (najviši nivoi)</text>
+    <animate attributeName="opacity" begin="2.11s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+  </g>
+
+  <!-- ============ Explanation panel (neutral — NOT the coffee output box) ============ -->
+  <g class="reveal" id="cgf-explain">
+    <rect x="60" y="486" width="780" height="114" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <rect x="80" y="506" width="3" height="14" fill="#B45309"/>
+    <text x="92" y="518" font-size="13" font-weight="700" fill="#1C1917" font-family="Merriweather, Georgia, serif">Šta ovo znači za vas</text>
+    <text font-size="12" fill="#44403C">
+      <tspan x="80" y="544">Besplatni nivo pokriva svakodnevne potrebe — pisanje, pitanja, slike i analizu fajlova.</tspan>
+      <tspan x="80" y="562">Pretplata uglavnom kupuje veći obim i jače modele, ne nove osnovne funkcije.</tspan>
+    </text>
+    <text x="80" y="588" font-size="12" font-style="italic" fill="#78716C">Platite tek ako stalno udarate u granice ili vam svakodnevno treba najtemeljitiji model.</text>
+    <animate attributeName="opacity" begin="2.55s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <animateTransform attributeName="transform" type="translate" begin="2.55s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0 8;0 0"/>
+  </g>
+
+  <!-- Replay button -->
+  <g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;"
+     role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+    <circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon points="852,28 858,28 855,33" fill="#78716C"/>
+    <title>Pusti ponovo</title>
+  </g>
+
+  <script>
+    // <![CDATA[
+    (function () {
+      const svg = document.getElementById('cgf-svg');
+      const btn = svg && svg.querySelector('.replay-btn');
+      if (!svg || !btn) return;
+      function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+      btn.addEventListener('click', replay);
+      btn.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+      });
+    })();
+    // ]]>
+  </script>
+</svg>

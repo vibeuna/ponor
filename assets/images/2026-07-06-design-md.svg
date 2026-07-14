@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c46e6e"/>
+
+  <!-- Icon: paint palette with color swatches -->
+  <g>
+    <!-- palette body -->
+    <ellipse cx="500" cy="290" rx="170" ry="125" fill="#fafaf8" stroke="#1a1a1a" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- thumb hole -->
+    <circle cx="560" cy="360" r="35" fill="#c46e6e" stroke="#1a1a1a" stroke-width="10"/>
+    <!-- color swatch dots -->
+    <circle cx="400" cy="220" r="22" fill="#d6dff0" stroke="#1a1a1a" stroke-width="8"/>
+    <circle cx="455" cy="188" r="22" fill="#c46e6e" stroke="#1a1a1a" stroke-width="8"/>
+    <circle cx="515" cy="178" r="22" fill="#d6dff0" stroke="#1a1a1a" stroke-width="8"/>
+    <circle cx="575" cy="195" r="22" fill="#c46e6e" stroke="#1a1a1a" stroke-width="8"/>
+    <circle cx="625" cy="232" r="22" fill="#d6dff0" stroke="#1a1a1a" stroke-width="8"/>
+  </g>
+</svg>

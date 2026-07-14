@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c8996a"/>
+
+  <!-- Icon group — folder with a paper peeking out (files being sorted)
+       Bounding box of primary shapes (paper + folder): x 320–680 (mid 500), y 300–660 (mid 480)
+       Required translate: (500-500, -(200+(480-500))) = (0, -180) -->
+  <g transform="translate(0, -180)">
+
+    <!-- Small accent dots above the folder — hint at automated/agent activity sorting files -->
+    <circle cx="462" cy="265" r="8" fill="#fafaf8" opacity="0.6"/>
+    <circle cx="500" cy="250" r="6" fill="#fafaf8" opacity="0.45"/>
+    <circle cx="538" cy="265" r="8" fill="#fafaf8" opacity="0.6"/>
+
+    <!-- Paper peeking out of the folder (drawn first, mostly tucked behind folder body) -->
+    <rect x="450" y="300" width="100" height="140" rx="12"
+          fill="#fafaf8"
+          stroke="#1a1a1a"
+          stroke-width="14"
+          stroke-linejoin="round"
+          stroke-linecap="round"/>
+
+    <!-- Folder body with raised tab -->
+    <polygon
+      points="
+        320,660
+        320,420
+        400,420
+        430,360
+        590,360
+        620,420
+        680,420
+        680,660
+      "
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="18"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+    />
+
+    <!-- Folder inner tint — secondary fill hinting the open pocket where files sit -->
+    <polygon
+      points="
+        352,632
+        352,442
+        648,442
+        648,632
+      "
+      fill="#d6dff0"
+      stroke="none"
+    />
+
+  </g>
+</svg>

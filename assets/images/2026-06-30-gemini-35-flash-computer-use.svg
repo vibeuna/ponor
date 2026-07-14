@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#5a7a8a"/>
+
+  <!-- Icon group
+       Bounding box: x 350–650, y 360–640
+       X_mid = (350+650)/2 = 500, Y_mid = (360+640)/2 = 500
+       Required translate: (500-500, -(200+(500-500))) = (0, -200) -->
+  <g transform="translate(0, -200)">
+
+    <!-- Small cursor dots above monitor — hint at computer use / GUI control -->
+    <circle cx="452" cy="345" r="9"  fill="#fafaf8" opacity="0.6"/>
+    <circle cx="500" cy="332" r="6"  fill="#fafaf8" opacity="0.4"/>
+    <circle cx="548" cy="345" r="9"  fill="#fafaf8" opacity="0.6"/>
+
+    <!-- Monitor bezel (outer body) -->
+    <rect x="350" y="360" width="300" height="210" rx="18"
+          fill="#fafaf8"
+          stroke="#1a1a1a"
+          stroke-width="16"
+          stroke-linejoin="round"/>
+
+    <!-- Screen area (recessed display) -->
+    <rect x="374" y="383" width="252" height="162" rx="6"
+          fill="#d6dff0"
+          stroke="#1a1a1a"
+          stroke-width="10"
+          stroke-linejoin="round"/>
+
+    <!-- Cursor arrow on screen — icon of AI controlling the GUI -->
+    <polygon
+      points="408,412 408,476 424,460 438,490 452,484 438,454 460,450"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="10"
+      stroke-linejoin="round"
+      stroke-linecap="round"/>
+
+    <!-- Stand neck -->
+    <rect x="478" y="570" width="44" height="54" rx="8"
+          fill="#fafaf8"
+          stroke="#1a1a1a"
+          stroke-width="14"
+          stroke-linejoin="round"/>
+
+    <!-- Stand base -->
+    <rect x="420" y="616" width="160" height="24" rx="12"
+          fill="#fafaf8"
+          stroke="#1a1a1a"
+          stroke-width="14"
+          stroke-linejoin="round"/>
+
+  </g>
+</svg>

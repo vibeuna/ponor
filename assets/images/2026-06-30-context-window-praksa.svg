@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c46e6e"/>
+
+  <!-- Icon group — three vertical bars (tall / short / tall) encoding U-curve / lost-in-the-middle -->
+  <!-- Raw bounding box: x 340–660, y 340–600 → centre (500, 470) -->
+  <!-- Required translate: (500-500, -(200+(470-500))) = (0, -170) -->
+  <g transform="translate(0, -170)">
+
+    <!-- Left bar (tall) — x 340–420, y 340–600 -->
+    <rect x="340" y="340" width="80" height="260" rx="16"
+          fill="#fafaf8" stroke="#1a1a1a" stroke-width="16"
+          stroke-linejoin="round"/>
+
+    <!-- Middle bar (short — the dip) — x 460–540, y 460–600 -->
+    <rect x="460" y="460" width="80" height="140" rx="16"
+          fill="#d6dff0" stroke="#1a1a1a" stroke-width="16"
+          stroke-linejoin="round"/>
+
+    <!-- Right bar (tall) — x 580–660, y 340–600 -->
+    <rect x="580" y="340" width="80" height="260" rx="16"
+          fill="#fafaf8" stroke="#1a1a1a" stroke-width="16"
+          stroke-linejoin="round"/>
+
+    <!-- Small downward-arc hint above middle bar to suggest the dip -->
+    <!-- Arc connecting tops of tall bars, dipping toward the short bar -->
+    <path d="M 380 340 Q 500 410 620 340"
+          fill="none" stroke="#1a1a1a" stroke-width="14"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+  </g>
+</svg>

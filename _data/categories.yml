@@ -1,0 +1,35 @@
+vijesti:
+  name: "Vijesti"
+  description: "Najnovije iz svijeta AI-a i velikih jezičkih modela — provjereno, bez hypea."
+  color: rose
+  text_class: "text-rose-600"
+  bg_class: "bg-rose-500/10"
+  hover_text: "group-hover:text-rose-600"
+  border_class: "border-rose-500"
+  badge_class: "bg-rose-500/10 text-rose-600"
+  card_gradient: "from-rose-50 to-pink-100"
+  card_icon_color: "text-rose-300 dark:text-rose-900"
+
+vodici:
+  name: "Vodiči"
+  description: "Objašnjenja i praktični vodiči: kako AI i veliki jezički modeli zapravo rade."
+  color: coffee
+  text_class: "text-coffee"
+  bg_class: "bg-coffee/10"
+  hover_text: "group-hover:text-coffee"
+  border_class: "border-coffee"
+  badge_class: "bg-coffee/10 text-coffee"
+  card_gradient: "from-amber-50 to-orange-100"
+  card_icon_color: "text-amber-300 dark:text-amber-900"
+
+ai-u-praksi:
+  name: "AI u praksi"
+  description: "AI i LLM u stvarnom radu: alati, evaluacija, produkcija i regulativa."
+  color: teal
+  text_class: "text-teal"
+  bg_class: "bg-teal/10"
+  hover_text: "group-hover:text-teal"
+  border_class: "border-teal"
+  badge_class: "bg-teal/10 text-teal"
+  card_gradient: "from-teal-50 to-emerald-100"
+  card_icon_color: "text-teal-300 dark:text-teal-900"

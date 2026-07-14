@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c46e6e"/>
+
+  <!-- Icon group — designed at 1000×1000 scale, translate(0, -200) centres in 600px height -->
+  <g transform="translate(0, -200)">
+
+    <!-- Icon: upward-trending line chart with dot at top-right endpoint -->
+
+    <!-- Chart card body -->
+    <rect
+      x="280" y="460"
+      width="440" height="280"
+      rx="28"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="18"
+      stroke-linejoin="round"
+    />
+
+    <!-- Chart card inner tint panel -->
+    <rect
+      x="308" y="488"
+      width="384" height="224"
+      rx="14"
+      fill="#d6dff0"
+    />
+
+    <!-- Rising trend line — 4 points trending up-right -->
+    <polyline
+      points="340,680 430,640 540,590 680,520"
+      fill="none"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Endpoint dot at top-right of the line -->
+    <circle
+      cx="680" cy="520"
+      r="20"
+      fill="#1a1a1a"
+    />
+
+    <!-- Small inner highlight on dot -->
+    <circle
+      cx="672" cy="513"
+      r="6"
+      fill="#fafaf8"
+    />
+
+  </g>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#4a9e8e"/>
+
+  <!-- Icon group
+       Raw icon bounding box:
+         Document polygon: left=390, right=610, top=360, bottom=640
+         Dashed bbox rect: left=350, right=650, top=320, bottom=660 (extends slightly outside document)
+         Overall: left=350, right=650, top=320, bottom=660
+         X_mid = (350+650)/2 = 500, Y_mid = (320+660)/2 = 490
+         translate = (500-500, -(200+(490-500))) = (0, -190)
+  -->
+  <g transform="translate(0, -190)">
+
+    <!-- Icon: document with folded top-right corner -->
+
+    <!-- Document body (off-white fill, thick black stroke)
+         Shape: rect with clipped top-right corner replaced by a fold.
+         Polygon points: bottom-left → bottom-right → (fold base x, top) → (fold x, fold y) → top-left
+         Body: x=390–610, y=360–640
+         Fold: top-right corner at (610,360), fold inset=50
+         Fold point: (610-50, 360) = (560, 360) and (610, 360+50) = (610, 410)
+    -->
+    <polygon
+      points="390,360 560,360 610,410 610,640 390,640"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linejoin="round"
+    />
+
+    <!-- Fold triangle (light blue tint, no separate outline — shares the polygon edge) -->
+    <polygon
+      points="560,360 610,410 560,410"
+      fill="#d6dff0"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linejoin="round"
+    />
+
+    <!-- Three text-line stubs to suggest document content -->
+    <line x1="420" y1="448" x2="570" y2="448"
+      stroke="#1a1a1a" stroke-width="14" stroke-linecap="round"/>
+    <line x1="420" y1="490" x2="580" y2="490"
+      stroke="#1a1a1a" stroke-width="14" stroke-linecap="round"/>
+    <line x1="420" y1="532" x2="540" y2="532"
+      stroke="#1a1a1a" stroke-width="14" stroke-linecap="round"/>
+
+    <!-- OCR bounding-box overlay: dashed rectangle surrounding the document -->
+    <rect
+      x="350" y="320"
+      width="300" height="340"
+      rx="10"
+      fill="none"
+      stroke="#1a1a1a"
+      stroke-width="14"
+      stroke-dasharray="22 14"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Corner tick marks at each corner of the bounding box (OCR detection corners) -->
+    <!-- Top-left -->
+    <line x1="350" y1="345" x2="350" y2="320" stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+    <line x1="350" y1="320" x2="375" y2="320" stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+    <!-- Top-right -->
+    <line x1="625" y1="345" x2="625" y2="320" stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+    <line x1="625" y1="320" x2="600" y2="320" stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+    <!-- Bottom-left -->
+    <line x1="350" y1="635" x2="350" y2="660" stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+    <line x1="350" y1="660" x2="375" y2="660" stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+    <!-- Bottom-right -->
+    <line x1="625" y1="635" x2="625" y2="660" stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+    <line x1="625" y1="660" x2="600" y2="660" stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+
+  </g>
+</svg>

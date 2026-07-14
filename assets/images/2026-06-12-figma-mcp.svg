@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#4a9e8e"/>
+
+  <!-- Icon group
+       Raw icon bounding box:
+         horizontal: leftmost x=200, rightmost x=800, X_mid = 500 → no horizontal shift
+         vertical: top of top arrow y=420, bottom of bottom arrow y=580, Y_mid = 500
+         translate = (500-500, -(200+(500-500))) = (0, -200)
+  -->
+  <g transform="translate(0, -200)">
+
+    <!-- Icon: two opposing horizontal arrows (bidirectional design↔code flow) -->
+
+    <!-- TOP ARROW — pointing right (design → code) -->
+    <!-- Shaft -->
+    <line
+      x1="220" y1="460"
+      x2="680" y2="460"
+      stroke="#fafaf8"
+      stroke-width="18"
+      stroke-linecap="round"
+    />
+    <!-- Arrowhead (right) -->
+    <polyline
+      points="640,425 700,460 640,495"
+      fill="none"
+      stroke="#fafaf8"
+      stroke-width="18"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- BOTTOM ARROW — pointing left (code → design) -->
+    <!-- Shaft -->
+    <line
+      x1="780" y1="540"
+      x2="320" y2="540"
+      stroke="#1a1a1a"
+      stroke-width="18"
+      stroke-linecap="round"
+    />
+    <!-- Arrowhead (left) -->
+    <polyline
+      points="360,505 300,540 360,575"
+      fill="none"
+      stroke="#1a1a1a"
+      stroke-width="18"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Small design-system node on left — circle hinting at Figma/design side -->
+    <circle
+      cx="200" cy="500"
+      r="28"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="14"
+    />
+
+    <!-- Small code node on right — diamond hinting at code/component side -->
+    <rect
+      x="772" y="472"
+      width="56" height="56"
+      rx="8"
+      fill="#d6dff0"
+      stroke="#1a1a1a"
+      stroke-width="14"
+      transform="rotate(45, 800, 500)"
+    />
+
+  </g>
+</svg>

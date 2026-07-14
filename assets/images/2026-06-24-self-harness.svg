@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c46e6e"/>
+
+  <!-- Icon group — CENTERING RULE:
+       Circular feedback loop (two arc-arrows) with a central agent node.
+       Raw icon bounding box:
+         Outer arc extents: x=340–660, y=340–660
+         X_mid = (340+660)/2 = 500
+         Y_mid = (340+660)/2 = 500
+         translate = (500-500, -(200+(500-500))) = (0, -200)
+  -->
+  <g transform="translate(0, -200)">
+
+    <!-- Icon: self-improving feedback loop — two arc-arrows forming a cycle -->
+
+    <!-- Top arc: sweeps from ~200° to ~20° (left-bottom to right-top) -->
+    <!-- Arc path: large arc, counterclockwise, center (500,500), radius 155 -->
+    <!-- Start: 200° → (500 + 155*cos(200°), 500 + 155*sin(200°)) ≈ (354, 447) -->
+    <!-- End:    20°  → (500 + 155*cos(20°),  500 + 155*sin(20°))  ≈ (646, 553) -->
+    <path
+      d="M 500,345 A 155,155 0 1 1 354,447"
+      fill="none"
+      stroke="#fafaf8"
+      stroke-width="28"
+      stroke-linecap="round"
+    />
+    <!-- Arrowhead at end of top arc (pointing toward 200° tangent direction, i.e. downward-left) -->
+    <polyline
+      points="374,422 354,447 382,455"
+      fill="none"
+      stroke="#fafaf8"
+      stroke-width="24"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Bottom arc: sweeps from ~20° to ~200° (right-top to left-bottom), the return path -->
+    <!-- This is the complement arc. Start at (646,447), end at (354,553) -->
+    <!-- Start: 340° → (500 + 155*cos(340°), 500 + 155*sin(340°)) ≈ (646, 447) -->
+    <!-- End:   160°  → (500 + 155*cos(160°), 500 + 155*sin(160°)) ≈ (354, 553) -->
+    <path
+      d="M 500,655 A 155,155 0 1 1 646,553"
+      fill="none"
+      stroke="#fafaf8"
+      stroke-width="28"
+      stroke-linecap="round"
+    />
+    <!-- Arrowhead at end of bottom arc (pointing toward 340° tangent, i.e. upward-right) -->
+    <polyline
+      points="626,578 646,553 618,545"
+      fill="none"
+      stroke="#fafaf8"
+      stroke-width="24"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Central agent node — represents the harness being rewritten -->
+    <rect
+      x="452" y="452"
+      width="96" height="96"
+      rx="18"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linejoin="round"
+    />
+    <!-- Inner horizontal lines on node suggesting a config/prompt document -->
+    <line x1="472" y1="480" x2="528" y2="480" stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+    <line x1="472" y1="500" x2="528" y2="500" stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+    <line x1="472" y1="520" x2="510" y2="520" stroke="#d6dff0" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- Small spark dot top-right to hint at self-improvement / iteration -->
+    <circle cx="622" cy="380" r="14" fill="#fafaf8" stroke="#1a1a1a" stroke-width="10"/>
+
+  </g>
+</svg>

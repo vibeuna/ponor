@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#5a7a8a"/>
+
+  <!-- Icon group: fork — two arrows diverging from a single origin point -->
+  <!-- Origin stem rises from bottom-centre; splits into upper-right (MAI-Thinking, heavy reasoning) and right (MAI-Code-Flash, speed) -->
+  <g transform="translate(0, -305)">
+
+    <!-- Stem: vertical line from base to fork point -->
+    <line
+      x1="500" y1="780"
+      x2="500" y2="600"
+      stroke="#1a1a1a" stroke-width="18" stroke-linecap="round"/>
+
+    <!-- Fork node: filled circle at split point -->
+    <circle cx="500" cy="597" r="22" fill="#fafaf8" stroke="#1a1a1a" stroke-width="5"/>
+
+    <!-- Upper-right arm: steeply angled — MAI-Thinking (heavy reasoning) -->
+    <line
+      x1="500" y1="600"
+      x2="650" y2="430"
+      stroke="#1a1a1a" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Upper-right arrowhead -->
+    <polyline
+      points="635,415 650,430 633,447"
+      fill="none" stroke="#1a1a1a" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Right arm: shallow angle — MAI-Code-Flash (speed) -->
+    <line
+      x1="500" y1="600"
+      x2="700" y2="570"
+      stroke="#1a1a1a" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Right arrowhead -->
+    <polyline
+      points="681,553 700,570 680,585"
+      fill="none" stroke="#1a1a1a" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Upper-right arm: secondary fill/highlight to hint at the icon body (optional accent dot at tip) -->
+    <circle cx="650" cy="430" r="14" fill="#d6dff0" stroke="#1a1a1a" stroke-width="5"/>
+
+    <!-- Right arm: accent dot at tip -->
+    <circle cx="700" cy="570" r="14" fill="#d6dff0" stroke="#1a1a1a" stroke-width="5"/>
+
+  </g>
+</svg>

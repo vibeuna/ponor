@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" font-family="Inter, system-ui, -apple-system, sans-serif" id="design-md-svg" role="img" aria-label="Dijagram: DESIGN.md fajl se dijeli na front matter s design tokenima i markdown prozu s osam sekcija, koji se spajaju i čita ih AI agent da generiše UI usklađen s brendom.">
+  <title>Kako AI agent čita DESIGN.md</title>
+  <defs>
+    <marker id="dmd-arrow-coffee" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <polygon points="0,0 10,5 0,10" fill="#B45309"/>
+    </marker>
+    <marker id="dmd-arrow-stone" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0,0 10,5 0,10" fill="#78716C"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="640" fill="#FAF9F6"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Kako AI agent čita DESIGN.md</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C">Design tokeni i proza se spajaju u kontekst za generisanje UI-a</text>
+
+  <!-- ============================================================ -->
+  <!-- ROW 1: DESIGN.md file (input) — y=100 to 164                  -->
+  <!-- ============================================================ -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="0.4s" fill="freeze"/>
+    <rect x="60" y="100" width="780" height="64" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <rect x="60" y="100" width="3" height="64" fill="#78716C"/>
+    <text x="80" y="124" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">DESIGN.MD FAJL</text>
+    <text x="80" y="148" font-size="15" fill="#1C1917" font-style="italic" font-family="Merriweather, Georgia, serif">"design.md" — jedan fajl, u repozitoriju projekta, koji prati kod</text>
+  </g>
+
+  <!-- Two parallel arrows down: file → front matter / file → markdown proza -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.7s" dur="0.3s" fill="freeze"/>
+    <line x1="245" y1="170" x2="245" y2="222" stroke="#78716C" stroke-width="1.5" marker-end="url(#dmd-arrow-stone)"/>
+    <line x1="655" y1="170" x2="655" y2="222" stroke="#78716C" stroke-width="1.5" marker-end="url(#dmd-arrow-stone)"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ROW 2: Two parallel stages — y=230 to 340                     -->
+  <!-- ============================================================ -->
+
+  <!-- Stage 1: front matter (YAML design tokeni) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.1s" dur="0.4s" fill="freeze"/>
+    <rect x="60" y="230" width="370" height="110" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <text x="78" y="254" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">1. FRONT MATTER (YAML)</text>
+    <text x="78" y="280" font-size="14" font-weight="600" fill="#1C1917">Design tokeni</text>
+    <text x="78" y="302" font-size="12" fill="#57534E">Tačne vrijednosti: boje, tipografija,</text>
+    <text x="78" y="318" font-size="12" fill="#57534E">razmak, definicije komponenti.</text>
+
+    <!-- Token-stack icon, top-right corner -->
+    <g transform="translate(400,254)">
+      <rect x="-12" y="-12" width="14" height="14" rx="3" fill="#FDF6EC" stroke="#B45309" stroke-width="1.2"/>
+      <rect x="-4" y="-4" width="14" height="14" rx="3" fill="#FDF6EC" stroke="#B45309" stroke-width="1.2"/>
+    </g>
+  </g>
+
+  <!-- Stage 2: markdown proza (8 fiksnih sekcija) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.35s" dur="0.4s" fill="freeze"/>
+    <rect x="470" y="230" width="370" height="110" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <text x="488" y="254" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">2. MARKDOWN PROZA</text>
+    <text x="488" y="280" font-size="14" font-weight="600" fill="#1C1917">8 fiksnih sekcija</text>
+    <text x="488" y="302" font-size="12" fill="#57534E">Overview, Colors, Typography, Layout,</text>
+    <text x="488" y="318" font-size="12" fill="#57534E">Elevation, Shapes, Components, Do's &amp; Don'ts.</text>
+
+    <!-- Document-with-fold icon, top-right corner -->
+    <g transform="translate(800,254)">
+      <path d="M -10 -14 L 4 -14 L 10 -8 L 10 14 L -10 14 Z" fill="#FDF6EC" stroke="#B45309" stroke-width="1.2"/>
+      <path d="M 4 -14 L 4 -8 L 10 -8 Z" fill="#F5F5F0" stroke="#B45309" stroke-width="1"/>
+      <line x1="-6" y1="-2" x2="6" y2="-2" stroke="#B45309" stroke-width="1" opacity="0.6"/>
+      <line x1="-6" y1="4" x2="6" y2="4" stroke="#B45309" stroke-width="1" opacity="0.6"/>
+      <line x1="-6" y1="10" x2="2" y2="10" stroke="#B45309" stroke-width="1" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- CONVERGENCE: two rails meeting at a junction above the agent  -->
+  <!-- Junction point: (450, 380). Agent top: y=420.                 -->
+  <!-- ============================================================ -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.8s" dur="0.4s" fill="freeze"/>
+
+    <!-- LEFT RAIL: exact token values (dashed stone) -->
+    <path d="M 245 340 L 245 380 L 450 380" fill="none" stroke="#78716C" stroke-width="1.3" stroke-dasharray="4,3"/>
+
+    <!-- RIGHT RAIL: prose rationale (solid coffee — the augmentation DESIGN.md adds) -->
+    <path d="M 655 340 L 655 380 L 450 380" fill="none" stroke="#B45309" stroke-width="2"/>
+
+    <!-- Junction -->
+    <circle cx="450" cy="380" r="4" fill="#B45309"/>
+
+    <!-- Combined arrow into the AI agent -->
+    <line x1="450" y1="384" x2="450" y2="416" stroke="#B45309" stroke-width="2" marker-end="url(#dmd-arrow-coffee)"/>
+
+    <!-- Rail labels -->
+    <text x="347" y="372" font-size="10" fill="#78716C" font-style="italic" text-anchor="middle">tačne vrijednosti</text>
+    <text x="552" y="372" font-size="10" fill="#92400E" font-style="italic" font-weight="600" text-anchor="middle">+ zašto i kada</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ROW 3: AI agent (focal element) — y=420 to 480                -->
+  <!-- ============================================================ -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.1s" dur="0.4s" fill="freeze"/>
+    <rect x="320" y="420" width="260" height="60" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1.5"/>
+    <rect x="320" y="420" width="3" height="60" fill="#B45309"/>
+    <text x="338" y="444" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">3. AI AGENT</text>
+    <text x="338" y="466" font-size="14" font-weight="600" fill="#1C1917">Čita oba sloja odjednom</text>
+  </g>
+
+  <!-- Arrow agent → output -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.5s" dur="0.3s" fill="freeze"/>
+    <line x1="450" y1="486" x2="450" y2="520" stroke="#B45309" stroke-width="2" marker-end="url(#dmd-arrow-coffee)"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ROW 4: Output (UI usklađen s brendom) — y=534 to 618          -->
+  <!-- ============================================================ -->
+  <g opacity="0" transform="translate(0, 8)">
+    <animate attributeName="opacity" from="0" to="1" begin="2.7s" dur="0.5s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="2.7s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0 8;0 0"/>
+    <rect x="60" y="534" width="780" height="84" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <rect x="60" y="534" width="3" height="84" fill="#B45309"/>
+    <text x="80" y="558" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">IZLAZ</text>
+    <text x="80" y="582" font-size="14" fill="#1C1917" font-family="Merriweather, Georgia, serif">UI komponenta s tačnim bojama, fontovima i razmakom —</text>
+    <text x="80" y="602" font-size="14" fill="#1C1917" font-family="Merriweather, Georgia, serif">usklađena s brendom, bez nagađanja iz screenshotova.</text>
+  </g>
+
+  <!-- Replay button -->
+  <g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+    <circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon points="852,28 858,28 855,33" fill="#78716C"/>
+    <title>Pusti ponovo</title>
+  </g>
+
+  <style>
+    #design-md-svg:hover .replay-btn { opacity: 1; }
+    #design-md-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+    #design-md-svg .replay-btn:hover path { stroke: #B45309; }
+    #design-md-svg .replay-btn:hover polygon { fill: #B45309; }
+    #design-md-svg .replay-btn:focus { outline: none; opacity: 1; }
+    #design-md-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+    @media (prefers-reduced-motion: reduce) {
+      #design-md-svg animate, #design-md-svg animateTransform { display: none; }
+      #design-md-svg .replay-btn { display: none; }
+    }
+  </style>
+
+  <script>
+    // <![CDATA[
+    (function () {
+      const svg = document.getElementById('design-md-svg');
+      const btn = svg && svg.querySelector('.replay-btn');
+      if (!svg || !btn) return;
+      function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+      btn.addEventListener('click', replay);
+      btn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); } });
+    })();
+    // ]]>
+  </script>
+</svg>

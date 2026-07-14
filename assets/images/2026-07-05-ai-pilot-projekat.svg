@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#2a5298"/>
+
+  <!-- Icon: clipboard with checklist -->
+  <g>
+    <!-- Clipboard body -->
+    <rect x="390" y="170" width="220" height="290" rx="20"
+          fill="#fafaf8" stroke="#1a1a1a" stroke-width="18"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Clip at top -->
+    <rect x="460" y="150" width="80" height="40" rx="10"
+          fill="#d6dff0" stroke="#1a1a1a" stroke-width="14"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Checklist row 1 -->
+    <rect x="420" y="210" width="34" height="34" rx="6"
+          fill="#d6dff0" stroke="#1a1a1a" stroke-width="8"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="426,228 438,240 452,214" fill="none"
+              stroke="#1a1a1a" stroke-width="8"
+              stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="470" y1="227" x2="575" y2="227"
+          stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- Checklist row 2 -->
+    <rect x="420" y="290" width="34" height="34" rx="6"
+          fill="#d6dff0" stroke="#1a1a1a" stroke-width="8"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="426,308 438,320 452,294" fill="none"
+              stroke="#1a1a1a" stroke-width="8"
+              stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="470" y1="307" x2="575" y2="307"
+          stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- Checklist row 3 -->
+    <rect x="420" y="370" width="34" height="34" rx="6"
+          fill="#d6dff0" stroke="#1a1a1a" stroke-width="8"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="426,388 438,400 452,374" fill="none"
+              stroke="#1a1a1a" stroke-width="8"
+              stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="470" y1="387" x2="575" y2="387"
+          stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>

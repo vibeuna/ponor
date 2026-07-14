@@ -1,0 +1,57 @@
+<button id="back-to-top" class="fixed bottom-6 right-6 w-10 h-10 bg-coffee text-white rounded-full shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-coffee-dark z-40" aria-label="Povratak na vrh">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+</button>
+
+<script>
+    // Dark mode — runs immediately to prevent flash
+    (function() {
+        const toggle = document.getElementById('theme-toggle');
+        const sun = document.getElementById('sun-icon');
+        const moon = document.getElementById('moon-icon');
+        const html = document.documentElement;
+        function updateIcons() {
+            if (html.classList.contains('dark')) { sun.classList.remove('hidden'); moon.classList.add('hidden'); }
+            else { sun.classList.add('hidden'); moon.classList.remove('hidden'); }
+        }
+        const saved = localStorage.getItem('ponor-theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) { html.classList.add('dark'); }
+        updateIcons();
+        toggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('ponor-theme', html.classList.contains('dark') ? 'dark' : 'light');
+            updateIcons();
+        });
+    })();
+</script>
+
+<script>
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileBtn.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        mobileBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="/#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            if (window.location.pathname !== '/') return;
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href').replace('/', ''));
+            if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); mobileMenu.classList.add('hidden'); }
+        });
+    });
+
+    // Back to top
+    (function() {
+        const btn = document.getElementById('back-to-top');
+        if (!btn) return;
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) { btn.classList.remove('opacity-0', 'pointer-events-none'); btn.classList.add('opacity-100'); }
+            else { btn.classList.add('opacity-0', 'pointer-events-none'); btn.classList.remove('opacity-100'); }
+        }, { passive: true });
+        btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    })();
+</script>

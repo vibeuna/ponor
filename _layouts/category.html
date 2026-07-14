@@ -1,0 +1,99 @@
+---
+layout: default
+---
+{% assign cat = site.data.categories[page.category_slug] %}
+{% assign cat_posts = site.posts | where: "category", page.category_slug %}
+
+<section id="main-content" class="pt-12 pb-8 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#1C1917] border-b border-warmgray dark:border-[#44403C]">
+    <div class="max-w-6xl mx-auto">
+        <div class="flex items-center gap-2 mb-4">
+            <a href="/#kategorije" class="text-sm text-stone dark:text-[#A8A29E] hover:text-coffee transition-colors">← Sve kategorije</a>
+        </div>
+        <div class="flex items-start gap-4 md:gap-6">
+            <div class="w-14 h-14 {{ cat.bg_class }} rounded-2xl flex items-center justify-center flex-shrink-0">
+                {% if page.category_slug == 'vodici' %}
+                <svg class="w-7 h-7 {{ cat.text_class }}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                {% elsif page.category_slug == 'ai-u-praksi' %}
+                <svg class="w-7 h-7 {{ cat.text_class }}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                {% elsif page.category_slug == 'vijesti' %}
+                <svg class="w-7 h-7 {{ cat.text_class }}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+                {% endif %}
+            </div>
+            <div>
+                <h1 class="text-3xl md:text-4xl font-bold text-ink mb-3">{{ cat.name }}</h1>
+                <p class="text-stone text-lg max-w-2xl leading-relaxed">{{ cat.description }}</p>
+                <div class="mt-4 flex items-center gap-4 text-sm text-stone dark:text-[#A8A29E]">
+                    <span>{{ cat_posts.size }} članaka</span>
+                    {% if cat_posts.size > 0 %}
+                    {% assign month_num = cat_posts.first.date | date: "%m" %}
+                    <span>•</span>
+                    <span>Zadnji update: {{ cat_posts.first.date | date: "%-d." }} {{ site.data.months[month_num] }} {{ cat_posts.first.date | date: "%Y." }}</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-8 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+        {% if cat_posts.size > 0 %}
+        <div class="space-y-1">
+            {% for post in cat_posts %}
+            {% assign month_num = post.date | date: "%m" %}
+            <a href="{{ post.url }}" class="group block p-5 md:p-6 rounded-xl border border-transparent hover:border-warmgray dark:hover:border-[#44403C] transition-colors">
+                <div class="flex flex-col md:flex-row md:items-center gap-4">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-xs text-stone dark:text-[#A8A29E]">{{ post.date | date: "%-d." }} {{ site.data.months[month_num] }} {{ post.date | date: "%Y." }}</span>
+                            {% if post.read_time %}<span class="text-xs text-stone dark:text-[#A8A29E]">•</span><span class="text-xs text-stone">{{ post.read_time }} min</span>{% endif %}
+                            {% if post.level %}<span class="px-2 py-0.5 bg-teal/10 text-teal dark:bg-teal/20 text-xs rounded-full font-medium">{{ post.level }}</span>{% endif %}
+                        </div>
+                        <h2 class="font-serif text-xl font-bold text-ink {{ cat.hover_text }} transition-colors mb-2">{{ post.title }}</h2>
+                        {% if post.description %}<p class="text-sm text-stone leading-relaxed line-clamp-2">{{ post.description }}</p>{% endif %}
+                    </div>
+                    <div class="flex-shrink-0 hidden md:block">
+                        <svg class="w-5 h-5 text-warmgray group-hover:{{ cat.text_class }} transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </div>
+                </div>
+            </a>
+            {% unless forloop.last %}<div class="border-b border-warmgray mx-5 md:mx-6"></div>{% endunless %}
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="text-stone py-12 text-center">Još nema objavljenih članaka u ovoj kategoriji.</p>
+        {% endif %}
+    </div>
+</section>
+
+<section class="py-8 px-4 sm:px-6 lg:px-8 bg-parchment dark:bg-[#1C1917] border-t border-warmgray dark:border-[#44403C]">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-bold text-ink mb-6 font-serif">Istražite druge kategorije</h2>
+        <div class="grid sm:grid-cols-3 gap-4">
+            {% for cat_entry in site.data.categories %}
+            {% assign other_slug = cat_entry[0] %}
+            {% assign other_cat = cat_entry[1] %}
+            {% unless other_slug == page.category_slug %}
+            {% assign other_posts = site.posts | where: "category", other_slug %}
+            <a href="/kategorije/{{ other_slug }}/" class="group flex items-center gap-4 p-4 bg-white dark:bg-[#292524] border border-warmgray rounded-xl hover:{{ other_cat.border_class }} transition-colors">
+                <div class="w-10 h-10 {{ other_cat.bg_class }} rounded-lg flex items-center justify-center flex-shrink-0">
+                    {% if other_slug == 'vodici' %}
+                    <svg class="w-5 h-5 {{ other_cat.text_class }}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                    {% elsif other_slug == 'ai-u-praksi' %}
+                    <svg class="w-5 h-5 {{ other_cat.text_class }}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    {% elsif other_slug == 'vijesti' %}
+                    <svg class="w-5 h-5 {{ other_cat.text_class }}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+                    {% endif %}
+                </div>
+                <div>
+                    <h3 class="font-semibold text-ink {{ other_cat.hover_text }} transition-colors">{{ other_cat.name }}</h3>
+                    <p class="text-xs text-stone dark:text-[#A8A29E]">{{ other_posts.size }} članaka</p>
+                </div>
+            </a>
+            {% endunless %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% include newsletter.html %}

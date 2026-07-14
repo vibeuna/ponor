@@ -1,0 +1,298 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"
+     font-family="Inter, system-ui, -apple-system, sans-serif"
+     id="llmwiki-svg"
+     aria-label="LLM Wiki arhitektura: tri sloja i tri operacije">
+  <title>LLM Wiki: arhitektura i operacije</title>
+
+  <defs>
+    <marker id="lw-arrow-coffee" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <polygon points="0,0 10,5 0,10" fill="#B45309"/>
+    </marker>
+    <marker id="lw-arrow-stone" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0,0 10,5 0,10" fill="#78716C"/>
+    </marker>
+  </defs>
+
+  <style>
+    #llmwiki-svg .replay-btn { cursor: pointer; opacity: 0; transition: opacity 0.2s ease; }
+    #llmwiki-svg:hover .replay-btn { opacity: 1; }
+    #llmwiki-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+    #llmwiki-svg .replay-btn:hover path { stroke: #B45309; }
+    #llmwiki-svg .replay-btn:hover polygon { fill: #B45309; }
+    #llmwiki-svg .replay-btn:focus { outline: none; opacity: 1; }
+    #llmwiki-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+    @media (prefers-reduced-motion: reduce) {
+      #llmwiki-svg animate,
+      #llmwiki-svg animateTransform { display: none; }
+      #llmwiki-svg .replay-btn { display: none; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="900" height="600" fill="#FAF9F6"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle"
+        font-family="Merriweather, Georgia, serif"
+        font-size="20" font-weight="700" fill="#1C1917">LLM Wiki: arhitektura i operacije</text>
+  <text x="450" y="64" text-anchor="middle"
+        font-size="13" fill="#78716C">Tri sloja · tri operacije · agent radi bookkeeping</text>
+
+  <!-- ─────────────────────────────────────────────── -->
+  <!-- ROW 1: raw/ box (x=60, y=80, w=370, h=88)      -->
+  <!-- ─────────────────────────────────────────────── -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="0.2s" dur="0.4s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="60" y="80" width="370" height="88" rx="8"
+          fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <rect x="60" y="80" width="3" height="88" fill="#78716C"/>
+    <text x="80" y="104" font-size="11" font-weight="700"
+          fill="#78716C" letter-spacing="0.8">SLOJ 1</text>
+    <text x="80" y="126" font-size="15" font-weight="700" fill="#1C1917">raw/</text>
+    <text x="80" y="146" font-size="11" fill="#78716C">Izvorni fajlovi — nepromjenjivi.</text>
+    <text x="80" y="162" font-size="11" fill="#78716C">Agent ih čita pri ingestu, nikad ne mijenja.</text>
+  </g>
+
+  <!-- ─────────────────────────────────────────────── -->
+  <!-- ROW 1: CLAUDE.md box (x=470, y=80, w=370, h=88) -->
+  <!-- ─────────────────────────────────────────────── -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="0.4s" dur="0.4s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="470" y="80" width="370" height="88" rx="8"
+          fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <rect x="470" y="80" width="3" height="88" fill="#78716C"/>
+    <text x="490" y="104" font-size="11" font-weight="700"
+          fill="#78716C" letter-spacing="0.8">SCHEMA</text>
+    <text x="490" y="126" font-size="14" font-weight="700" fill="#1C1917">CLAUDE.md</text>
+    <text x="490" y="146" font-size="11" fill="#78716C">Ustav wiki-ja — definiše tipove stranica,</text>
+    <text x="490" y="162" font-size="11" fill="#78716C">pravila i konvencije za agenta.</text>
+  </g>
+
+  <!-- ─────────────────────────────────────────────── -->
+  <!-- CONVERGENCE RAILS                               -->
+  <!-- Left: solid coffee 2px (fajlovi, primary path)  -->
+  <!-- Right: dashed stone 1.3px (schema, governing)   -->
+  <!-- ─────────────────────────────────────────────── -->
+
+  <!-- Left rail -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="0.7s" dur="0.4s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <path d="M 245 168 L 245 210 L 446 210"
+          fill="none" stroke="#B45309" stroke-width="2"/>
+  </g>
+
+  <!-- Right rail -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="0.9s" dur="0.4s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <path d="M 655 168 L 655 210 L 454 210"
+          fill="none" stroke="#78716C" stroke-width="1.3" stroke-dasharray="4,3"/>
+  </g>
+
+  <!-- Junction circle -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="1.1s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <circle cx="450" cy="210" r="4" fill="#B45309"/>
+  </g>
+
+  <!-- Rail labels (above horizontal segments at y=210, labels at y=202) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="1.2s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <text x="347" y="202" font-size="10" fill="#78716C"
+          font-style="italic" text-anchor="middle">fajlovi</text>
+    <text x="553" y="202" font-size="10" fill="#92400E"
+          font-style="italic" font-weight="600" text-anchor="middle">+ schema</text>
+  </g>
+
+  <!-- Arrow: junction → agent -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="1.3s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <line x1="450" y1="214" x2="450" y2="226"
+          stroke="#B45309" stroke-width="2" marker-end="url(#lw-arrow-coffee)"/>
+  </g>
+
+  <!-- ─────────────────────────────────────────────── -->
+  <!-- AGENT: focal element (x=60, y=230, w=780, h=118) -->
+  <!-- ─────────────────────────────────────────────── -->
+
+  <!-- Agent base (box + stripe + eyebrow + title + divider) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="1.5s" dur="0.4s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="60" y="230" width="780" height="118" rx="8"
+          fill="#FDF6EC" stroke="#B45309" stroke-width="1.5"/>
+    <rect x="60" y="230" width="3" height="118" fill="#B45309"/>
+    <text x="80" y="254" font-size="11" font-weight="700"
+          fill="#B45309" letter-spacing="0.8">AGENT</text>
+    <text x="80" y="276" font-size="16" font-weight="700" fill="#1C1917">LLM Agent</text>
+    <line x1="63" y1="286" x2="837" y2="286"
+          stroke="#E7E5E4" stroke-width="0.5"/>
+  </g>
+
+  <!-- INGEST chip (primary operation — coffee) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="1.8s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="80" y="296" width="100" height="24" rx="12"
+          fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <text x="130" y="312" font-size="11" font-weight="700"
+          fill="#B45309" text-anchor="middle">INGEST</text>
+  </g>
+
+  <!-- QUERY chip (neutral) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="2.0s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="198" y="296" width="100" height="24" rx="12"
+          fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="248" y="312" font-size="11" font-weight="700"
+          fill="#78716C" text-anchor="middle">QUERY</text>
+  </g>
+
+  <!-- LINT chip (neutral) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="2.2s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="316" y="296" width="80" height="24" rx="12"
+          fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="356" y="312" font-size="11" font-weight="700"
+          fill="#78716C" text-anchor="middle">LINT</text>
+  </g>
+
+  <!-- Agent quote -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="2.5s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <text x="80" y="336" font-size="11" fill="#78716C"
+          font-style="italic">Bookkeeping je prebačen na agenta.</text>
+  </g>
+
+  <!-- Arrow: agent → wiki/ -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="2.7s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <line x1="450" y1="348" x2="450" y2="366"
+          stroke="#B45309" stroke-width="2" marker-end="url(#lw-arrow-coffee)"/>
+  </g>
+
+  <!-- ─────────────────────────────────────────────── -->
+  <!-- WIKI/: accumulated knowledge (x=60, y=370, h=100) -->
+  <!-- ─────────────────────────────────────────────── -->
+
+  <!-- wiki/ base (box + stripe + eyebrow + title) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="2.9s" dur="0.4s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="60" y="370" width="780" height="100" rx="8"
+          fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <rect x="60" y="370" width="3" height="100" fill="#78716C"/>
+    <text x="80" y="394" font-size="11" font-weight="700"
+          fill="#78716C" letter-spacing="0.8">SLOJ 2 — WIKI</text>
+    <text x="80" y="416" font-size="15" font-weight="700" fill="#1C1917">wiki/</text>
+  </g>
+
+  <!-- index.md chip -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="3.1s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="170" y="424" width="90" height="22" rx="11"
+          fill="#F5F5F0" stroke="#A8A29E" stroke-width="1"/>
+    <text x="215" y="439" font-size="11" font-weight="600"
+          fill="#78716C" text-anchor="middle">index.md</text>
+  </g>
+
+  <!-- log.md chip -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="3.3s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="276" y="424" width="75" height="22" rx="11"
+          fill="#F5F5F0" stroke="#A8A29E" stroke-width="1"/>
+    <text x="313" y="439" font-size="11" font-weight="600"
+          fill="#78716C" text-anchor="middle">log.md</text>
+  </g>
+
+  <!-- wiki/ body text -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="3.4s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <text x="80" y="458" font-size="11" fill="#78716C">Sintezovane Markdown stranice — distilirano, trajno znanje.</text>
+  </g>
+
+  <!-- Arrow: wiki/ → output -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="3.5s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <line x1="450" y1="470" x2="450" y2="484"
+          stroke="#B45309" stroke-width="2" marker-end="url(#lw-arrow-coffee)"/>
+  </g>
+
+  <!-- ─────────────────────────────────────────────── -->
+  <!-- OUTPUT CALLOUT: rise + fade (y=488, h=82)       -->
+  <!-- ─────────────────────────────────────────────── -->
+  <g opacity="0" transform="translate(0,8)">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="3.7s" dur="0.5s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <animateTransform attributeName="transform" type="translate"
+                      from="0,8" to="0,0"
+                      begin="3.7s" dur="0.5s" fill="freeze"
+                      calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="60" y="488" width="780" height="82" rx="8"
+          fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <rect x="60" y="488" width="3" height="82" fill="#B45309"/>
+    <text x="80" y="512" font-size="11" font-weight="700"
+          fill="#B45309" letter-spacing="0.8">KLJUČNI UVID</text>
+    <text x="80" y="538" font-size="14" fill="#1C1917" font-style="italic"
+          font-family="Merriweather, Georgia, serif">Znanje se kompajlira jednom — svaki naredni upit čita wiki, ne sirovne izvore.</text>
+  </g>
+
+  <!-- Replay button -->
+  <g class="replay-btn" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+    <circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <path d="M 855 31 A 9 9 0 1 1 846 40"
+          fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon points="852,28 858,28 855,33" fill="#78716C"/>
+    <title>Pusti ponovo</title>
+  </g>
+
+  <script>
+    // <![CDATA[
+    (function () {
+      const svg = document.getElementById('llmwiki-svg');
+      const btn = svg && svg.querySelector('.replay-btn');
+      if (!svg || !btn) return;
+      function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+      btn.addEventListener('click', replay);
+      btn.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+      });
+    })();
+    // ]]>
+  </script>
+</svg>

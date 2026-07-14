@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#4a9e8e"/>
+
+  <!-- Icon: microscope -->
+  <g>
+    <!-- base -->
+    <rect x="400" y="440" width="200" height="28" rx="14" fill="#fafaf8" stroke="#1a1a1a" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- vertical stand from base to body -->
+    <line x1="500" y1="440" x2="500" y2="400" stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+    <!-- stage / arm plate -->
+    <rect x="430" y="380" width="140" height="24" rx="12" fill="#d6dff0" stroke="#1a1a1a" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- main curved body: arm sweeping from base up to eyepiece -->
+    <path d="M 500 400 C 500 320 460 260 470 190" fill="none" stroke="#1a1a1a" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- body fill panel behind arm for volume -->
+    <path d="M 470 340 C 470 290 460 250 470 200 C 500 200 520 240 515 300 C 512 320 495 335 470 340 Z" fill="#fafaf8" stroke="#1a1a1a" stroke-width="16" stroke-linejoin="round"/>
+    <!-- objective lens tube pointing down to stage -->
+    <path d="M 460 340 L 440 400" stroke="#1a1a1a" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="437" cy="405" r="14" fill="#d6dff0" stroke="#1a1a1a" stroke-width="14"/>
+    <!-- eyepiece tube, angled -->
+    <path d="M 470 190 L 430 150" stroke="#1a1a1a" stroke-width="20" stroke-linecap="round"/>
+    <!-- eyepiece top -->
+    <rect x="392" y="118" width="60" height="46" rx="14" transform="rotate(-38 422 141)" fill="#fafaf8" stroke="#1a1a1a" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- focus knob accent -->
+    <circle cx="510" cy="330" r="12" fill="#4a9e8e" stroke="#1a1a1a" stroke-width="10"/>
+  </g>
+</svg>

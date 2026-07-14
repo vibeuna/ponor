@@ -1,0 +1,151 @@
+<svg id="eval-pipeline-svg" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" aria-label="Trostepeni eval pipeline: deterministički gate, LLM-as-judge, ručni pregled">
+  <title>Trostepeni eval pipeline za LLM aplikacije</title>
+
+  <defs>
+    <marker id="ep-acoffee" markerWidth="8" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0 0, 8 3.5, 0 7" fill="#B45309"/>
+    </marker>
+    <marker id="ep-astone" markerWidth="8" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0 0, 8 3.5, 0 7" fill="#78716C"/>
+    </marker>
+  </defs>
+
+  <style>
+    #eval-pipeline-svg { font-family: Inter, system-ui, -apple-system, sans-serif; }
+    #eval-pipeline-svg:hover .replay-btn { opacity: 1; }
+    #eval-pipeline-svg .replay-btn { cursor: pointer; opacity: 0; transition: opacity 0.2s ease; }
+    #eval-pipeline-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+    #eval-pipeline-svg .replay-btn:hover path { stroke: #B45309; }
+    #eval-pipeline-svg .replay-btn:hover polygon { fill: #B45309; }
+    #eval-pipeline-svg .replay-btn:focus { outline: none; opacity: 1; }
+    #eval-pipeline-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+    @media (prefers-reduced-motion: reduce) {
+      #eval-pipeline-svg animate,
+      #eval-pipeline-svg animateTransform { display: none; }
+      #eval-pipeline-svg .replay-btn { display: none; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="900" height="600" fill="#FAF9F6"/>
+
+  <!-- Title + Subtitle -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <text x="450" y="38" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917" text-anchor="middle">Trostepeni eval pipeline</text>
+    <text x="450" y="60" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" fill="#78716C" text-anchor="middle">Sortiranje po cijeni — jeftine provjere na svakom outputu, skupe samo na uzorku</text>
+  </g>
+
+  <!-- ULAZ BOX -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.5s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="60" y="80" width="520" height="56" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <rect x="60" y="80" width="3" height="56" fill="#78716C"/>
+    <text x="80" y="100" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">ULAZ</text>
+    <text x="80" y="122" font-family="Merriweather, Georgia, serif" font-size="14" font-style="italic" fill="#1C1917">Generirani LLM output ulazi u eval pipeline</text>
+  </g>
+
+  <!-- Arrow 1: ULAZ to GATE (coffee primary) -->
+  <line x1="320" y1="146" x2="320" y2="170" stroke="#B45309" stroke-width="2" marker-end="url(#ep-acoffee)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+  </line>
+
+  <!-- GATE — FOCAL ELEMENT (coffee 2px stroke, warm tint fill) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="60" y="174" width="520" height="92" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="2"/>
+    <rect x="60" y="174" width="3" height="92" fill="#B45309"/>
+    <text x="80" y="196" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8" fill="#B45309">1. DETERMINISTIČKI GATE</text>
+    <text x="80" y="222" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1917">Format · Dužina · Zabranjene fraze</text>
+    <text x="80" y="248" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" fill="#78716C">100% outputa — bez troška inferencije</text>
+  </g>
+
+  <!-- FAIL label + dashed arrow: GATE to HUMAN QUEUE -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.6s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <text x="621" y="212" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="0.6" fill="#78716C" text-anchor="middle">GREŠKA</text>
+    <line x1="580" y1="220" x2="659" y2="220" stroke="#78716C" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ep-astone)"/>
+  </g>
+
+  <!-- HUMAN REVIEW QUEUE BOX -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.9s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="662" y="192" width="196" height="264" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <rect x="662" y="192" width="3" height="264" fill="#78716C"/>
+    <text x="760" y="272" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C" text-anchor="middle">RUČNI PREGLED</text>
+    <text x="760" y="300" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" fill="#44403C" text-anchor="middle">Greške s gate-a</text>
+    <text x="760" y="320" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" fill="#44403C" text-anchor="middle">i niski LLM-judge</text>
+    <text x="760" y="340" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" fill="#44403C" text-anchor="middle">scores čekaju</text>
+    <text x="760" y="360" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" fill="#44403C" text-anchor="middle">ručni pregled</text>
+  </g>
+
+  <!-- PROLAZ label + Arrow 2: GATE to JUDGE (coffee primary) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.3s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <text x="340" y="284" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="0.8" fill="#B45309">PROLAZ</text>
+    <line x1="320" y1="274" x2="320" y2="298" stroke="#B45309" stroke-width="2" marker-end="url(#ep-acoffee)"/>
+  </g>
+
+  <!-- JUDGE BOX (neutral — secondary stage) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.6s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="60" y="302" width="520" height="90" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <rect x="60" y="302" width="3" height="90" fill="#78716C"/>
+    <text x="80" y="324" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">2. LLM-AS-JUDGE</text>
+    <text x="80" y="350" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#1C1917">Ocjena konzistentnosti outputa</text>
+    <text x="80" y="374" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" fill="#78716C">5–10% uzorka · async · van kritičnog puta</text>
+  </g>
+
+  <!-- NIZAK label + dashed arrow: JUDGE to HUMAN QUEUE -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="3.0s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <text x="621" y="339" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" letter-spacing="0.6" fill="#78716C" text-anchor="middle">NIZAK</text>
+    <line x1="580" y1="348" x2="659" y2="348" stroke="#78716C" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ep-astone)"/>
+  </g>
+
+  <!-- Arrow 3: JUDGE to IZLAZ (coffee primary) -->
+  <line x1="320" y1="400" x2="320" y2="423" stroke="#B45309" stroke-width="2" marker-end="url(#ep-acoffee)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="3.2s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+  </line>
+
+  <!-- IZLAZ BOX — rise + fade landing beat -->
+  <g opacity="0" transform="translate(0, 8)">
+    <animate attributeName="opacity" from="0" to="1" begin="3.5s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" additive="replace" begin="3.5s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="60" y="427" width="520" height="82" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <rect x="60" y="427" width="3" height="82" fill="#B45309"/>
+    <text x="80" y="449" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8" fill="#B45309">ODOBREN ODGOVOR</text>
+    <text x="80" y="474" font-family="Merriweather, Georgia, serif" font-size="14" font-style="italic" fill="#1C1917">Output prošao eval — spreman za korisnika</text>
+    <text x="80" y="497" font-family="Merriweather, Georgia, serif" font-size="12" font-style="italic" fill="#78716C">gate + (ako uzorkovan) LLM-as-judge ocjena</text>
+  </g>
+
+  <!-- Footnote -->
+  <text x="60" y="548" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-style="italic" fill="#78716C" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="4.0s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    * 90–95% validnih outputa nije uzorkovano za LLM-as-judge — prolaze direktno na izlaz
+  </text>
+
+  <!-- Replay button -->
+  <g class="replay-btn" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+    <circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon points="852,28 858,28 855,33" fill="#78716C"/>
+    <title>Pusti ponovo</title>
+  </g>
+
+  <script>
+  // <![CDATA[
+  (function () {
+    var svg = document.getElementById('eval-pipeline-svg');
+    var btn = svg && svg.querySelector('.replay-btn');
+    if (!svg || !btn) return;
+    function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+    btn.addEventListener('click', replay);
+    btn.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+    });
+  })();
+  // ]]>
+  </script>
+
+</svg>

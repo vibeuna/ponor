@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c8996a"/>
+
+  <!--
+    Icon group — centering check:
+    Main piece body: (400,400) to (600,600) → raw center (500,500).
+    Nubs extend bounding box to: top=372, right=628, bottom=600 (cutout), left=400 (cutout).
+    Effective visual center ≈ (514, 486). Translate adjusted: (-14, -186).
+    Simpler: keep translate(0,-200) and design icon truly centered at (500,500).
+    Re-centered body: square (400,400)-(600,600), nubs on top and right.
+    Visual center with nubs: X=(372+628)/2=500 ✓, Y=(372+628)/2=500 ✓ (symmetric nubs).
+  -->
+  <g transform="translate(0,-200)">
+
+    <!--
+      Main puzzle piece centered at (500,500).
+      Body square: (400,400) to (600,600).
+      Top nub: protrudes upward from top edge, centered at x=500.
+        Arc from (472,400) → (528,400) curving UP. sweep-flag=0 (CCW) → curves upward.
+      Right nub: protrudes rightward from right edge, centered at y=500.
+        Arc from (600,472) → (600,528) curving RIGHT. sweep-flag=1 (CW) → curves right.
+      Bottom cutout: indents into body from bottom edge, centered at x=500.
+        Arc from (528,600) → (472,600) curving UP into body. sweep-flag=0 → curves upward (into body since we're on bottom edge going left).
+      Left cutout: indents into body from left edge, centered at y=500.
+        Arc from (400,528) → (400,472) curving RIGHT into body. sweep-flag=1 → curves right (into body).
+    -->
+    <path
+      d="
+        M 400 400
+        L 472 400
+        A 28 28 0 0 0 528 400
+        L 600 400
+        L 600 472
+        A 28 28 0 0 1 600 528
+        L 600 600
+        L 528 600
+        A 28 28 0 0 0 472 600
+        L 400 600
+        L 400 528
+        A 28 28 0 0 1 400 472
+        Z
+      "
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+    />
+
+    <!--
+      Secondary puzzle piece — smaller, positioned offset up-right.
+      Suggests a second piece about to slot in (the "add-in" concept).
+      Body: (560,310) to (680,430) — 120×120, raw center (620,370).
+      One outward nub on its bottom edge (pointing down toward main piece gap).
+      No cutouts — keeps it simple (2 elements total).
+    -->
+    <path
+      d="
+        M 560 310
+        L 680 310
+        L 680 430
+        L 641 430
+        A 22 22 0 0 0 599 430
+        L 560 430
+        Z
+      "
+      fill="#d6dff0"
+      stroke="#1a1a1a"
+      stroke-width="14"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+    />
+
+  </g>
+</svg>

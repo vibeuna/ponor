@@ -1,0 +1,129 @@
+<svg id="eu-ai-act-tiers-svg" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="eu-ai-act-tiers-title">
+
+<title id="eu-ai-act-tiers-title">Četiri kategorije EU AI Act-a: zabranjeni AI sistemi, high-risk, ograničena transparentnost i minimalni rizik, s datumima primjene</title>
+
+<style>
+#eu-ai-act-tiers-svg { font-family: Inter, system-ui, -apple-system, sans-serif; }
+@media (prefers-reduced-motion: reduce) {
+  #eu-ai-act-tiers-svg animate,
+  #eu-ai-act-tiers-svg animateTransform { display: none; }
+  #eu-ai-act-tiers-svg .replay-btn { display: none; }
+}
+#eu-ai-act-tiers-svg:hover .replay-btn { opacity: 1; }
+#eu-ai-act-tiers-svg .replay-btn { transition: opacity 0.2s ease; }
+#eu-ai-act-tiers-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+#eu-ai-act-tiers-svg .replay-btn:hover path { stroke: #B45309; }
+#eu-ai-act-tiers-svg .replay-btn:hover polygon { fill: #B45309; }
+#eu-ai-act-tiers-svg .replay-btn:focus { outline: none; opacity: 1; }
+#eu-ai-act-tiers-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+</style>
+
+<!-- Background -->
+<rect width="900" height="520" fill="#FAF9F6"/>
+
+<!-- ===== TITLE ===== -->
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="1" begin="0s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+  <text x="450" y="50" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917" text-anchor="middle">Četiri kategorije EU AI Act-a</text>
+  <text x="450" y="72" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" fill="#78716C" text-anchor="middle">Ko spada u koju kategoriju i šta je obavezno</text>
+</g>
+
+<!-- ===== ROW 1: ZABRANJENI AI SISTEMI ===== -->
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+  <rect x="60" y="100" width="780" height="64" rx="8" fill="#F5F5F0" stroke="#44403C" stroke-width="1.5"/>
+  <rect x="60" y="100" width="3" height="64" fill="#78716C"/>
+  <text x="82" y="120" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#57534E" letter-spacing="0.8">ZABRANJENI AI SISTEMI</text>
+  <text x="82" y="142" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" fill="#44403C">Social scoring, manipulacija bez pristanka, biometrijski nadzor u javnom prostoru</text>
+  <!-- Date chip -->
+  <rect x="710" y="118" width="130" height="28" rx="14" fill="#F5F5F0" stroke="#78716C" stroke-width="1"/>
+  <text x="775" y="136" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#57534E" text-anchor="middle">od feb 2025.</text>
+</g>
+
+<!-- Divider 1 -->
+<line x1="60" y1="172" x2="840" y2="172" stroke="#E7E5E4" stroke-width="1" opacity="0">
+  <animate attributeName="opacity" from="0" to="1" begin="0.75s" dur="0.25s" fill="freeze"/>
+</line>
+
+<!-- ===== ROW 2: HIGH-RISK [FOCAL — COFFEE] ===== -->
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+  <rect x="60" y="180" width="780" height="88" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1.5"/>
+  <rect x="60" y="180" width="3" height="88" fill="#B45309"/>
+  <text x="82" y="200" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">HIGH-RISK AI SISTEMI</text>
+  <text x="82" y="220" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1917">Zapošljavanje, kreditni scoring, biometrija, obrazovanje, kritična infrastruktura,</text>
+  <text x="82" y="238" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" fill="#1C1917">provođenje zakona, migracija, pravosuđe</text>
+  <text x="82" y="257" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" fill="#92400E">Obaveze: conformity assessment, dokumentacija, registracija, ljudski nadzor</text>
+  <!-- Date chip — coffee -->
+  <rect x="704" y="210" width="136" height="30" rx="15" fill="#FDF6EC" stroke="#B45309" stroke-width="1.5"/>
+  <text x="772" y="229" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#B45309" text-anchor="middle">do aug 2026.</text>
+</g>
+
+<!-- Divider 2 -->
+<line x1="60" y1="276" x2="840" y2="276" stroke="#E7E5E4" stroke-width="1" opacity="0">
+  <animate attributeName="opacity" from="0" to="1" begin="1.35s" dur="0.25s" fill="freeze"/>
+</line>
+
+<!-- ===== ROW 3: OGRANIČENA TRANSPARENTNOST ===== -->
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="1" begin="1.5s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+  <rect x="60" y="284" width="780" height="64" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+  <rect x="60" y="284" width="3" height="64" fill="#A8A29E"/>
+  <text x="82" y="304" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">OGRANIČENA TRANSPARENTNOST</text>
+  <text x="82" y="326" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" fill="#44403C">Chatbotovi koji komuniciraju s ljudima, deepfake sadržaj — obaveza obavještavanja</text>
+  <!-- Obligation chip -->
+  <rect x="714" y="302" width="126" height="28" rx="14" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+  <text x="777" y="320" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#78716C" text-anchor="middle">obavijest</text>
+</g>
+
+<!-- Divider 3 -->
+<line x1="60" y1="356" x2="840" y2="356" stroke="#E7E5E4" stroke-width="1" opacity="0">
+  <animate attributeName="opacity" from="0" to="1" begin="1.85s" dur="0.25s" fill="freeze"/>
+</line>
+
+<!-- ===== ROW 4: MINIMALNI RIZIK ===== -->
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="1" begin="2.0s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+  <rect x="60" y="364" width="780" height="64" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+  <rect x="60" y="364" width="3" height="64" fill="#D6D3D1"/>
+  <text x="82" y="384" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#A8A29E" letter-spacing="0.8">MINIMALNI RIZIK</text>
+  <text x="82" y="406" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" fill="#78716C">Spam filteri, sistemi preporuka, alati za prijevod, standardni chatbotovi</text>
+  <!-- Status chip -->
+  <rect x="714" y="382" width="126" height="28" rx="14" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+  <text x="777" y="400" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#A8A29E" text-anchor="middle">bez obaveza</text>
+</g>
+
+<!-- ===== BOTTOM CALLOUT — coffee output style ===== -->
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="1" begin="2.4s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+  <animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="2.4s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" additive="replace"/>
+  <rect x="60" y="444" width="780" height="56" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+  <rect x="60" y="444" width="3" height="56" fill="#B45309"/>
+  <text x="82" y="463" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">KLJUČNI ROK</text>
+  <text x="82" y="483" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="13" fill="#92400E">Većina Annex III high-risk sistema mora biti usklađena do <tspan font-weight="700">2. augusta 2026.</tspan></text>
+</g>
+
+<!-- ===== REPLAY BUTTON ===== -->
+<g class="replay-btn" style="cursor:pointer;opacity:0" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+  <circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+  <path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="852,28 858,28 855,33" fill="#78716C"/>
+  <title>Pusti ponovo</title>
+</g>
+
+<script>
+// <![CDATA[
+(function () {
+  const svg = document.getElementById('eu-ai-act-tiers-svg');
+  const btn = svg && svg.querySelector('.replay-btn');
+  if (!svg || !btn) return;
+  function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+  btn.addEventListener('click', replay);
+  btn.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+  });
+})();
+// ]]>
+</script>
+
+</svg>

@@ -1,0 +1,51 @@
+{%- comment -%}
+==========================================================================
+  ponor.ai — diagram.html include
+
+  Embeds an inline SVG diagram from _includes/diagrams/{name}.svg into
+  a post, wrapped in a <figure> with optional caption.
+
+  USAGE in any post:
+
+    {% include diagram.html name="context-window" %}
+
+    {% include diagram.html
+       name="context-window"
+       caption="Context window se popunjava kako razgovor raste." %}
+
+    {% include diagram.html
+       name="context-window"
+       caption="..."
+       alt="A diagram showing tokens filling a fixed-capacity window" %}
+
+  PARAMETERS:
+    name    (required) — base filename of the SVG in _includes/diagrams/
+                         e.g. name="context-window" loads
+                         _includes/diagrams/context-window.svg
+    caption (optional) — Italic stone-colored caption below the diagram
+    alt     (optional) — Accessibility label. Defaults to caption, or to
+                         "Diagram" if no caption is provided.
+    id      (optional) — Custom id for the figure element.
+                         Defaults to "fig-{name}".
+
+  NOTES:
+    - The SVG is inlined (not via <img>) so SMIL animations and the
+      replay button JS both work in modern browsers.
+    - Wrapped in <figure> for semantic HTML and screen-reader support.
+    - The .ponor-diagram class lets you target diagrams from your site
+      CSS (margins, max-width, responsive behavior).
+    - Why _includes/diagrams/ and not assets/diagrams/? Because Jekyll
+      {% include %} can only read from _includes/. Files there are not
+      served as static assets — perfect for inlined SVGs.
+==========================================================================
+{%- endcomment -%}
+
+{%- assign fig_id = include.id | default: "fig-" | append: include.name -%}
+{%- assign fig_alt = include.alt | default: include.caption | default: "Diagram" -%}
+
+<figure id="{{ fig_id }}" class="ponor-diagram" role="figure" aria-label="{{ fig_alt | escape }}">
+  {% include diagrams/{{ include.name }}.svg %}
+  {%- if include.caption -%}
+  <figcaption class="ponor-diagram-caption">{{ include.caption }}</figcaption>
+  {%- endif -%}
+</figure>

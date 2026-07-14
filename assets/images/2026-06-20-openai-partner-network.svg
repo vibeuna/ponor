@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c8996a"/>
+
+  <!-- Icon group — handshake centred at (500, 300) on canvas
+       Raw icon bounding box: x: 180–820, y: 360–640 → X_mid=500, Y_mid=500
+       translate(500-500, -(200+(500-500))) = translate(0, -200) -->
+  <g transform="translate(0, -200)" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- LEFT ARM — coming from left side -->
+    <!-- Forearm/wrist block, left side -->
+    <path d="M 180 510 L 320 510 L 320 570 L 180 570 Z"
+          fill="#fafaf8" stroke="#1a1a1a" stroke-width="16"/>
+
+    <!-- RIGHT ARM — coming from right side -->
+    <!-- Forearm/wrist block, right side -->
+    <path d="M 680 510 L 820 510 L 820 570 L 680 570 Z"
+          fill="#fafaf8" stroke="#1a1a1a" stroke-width="16"/>
+
+    <!-- LEFT HAND — open palm angled toward center -->
+    <!-- Palm body -->
+    <path d="M 310 430 C 310 410, 330 400, 350 408
+             L 490 408 C 510 408, 520 418, 520 435
+             L 520 510 L 310 510 Z"
+          fill="#fafaf8" stroke="#1a1a1a" stroke-width="16"/>
+
+    <!-- Left thumb -->
+    <path d="M 310 480 C 280 475, 265 455, 275 430
+             C 282 415, 300 412, 310 430"
+          fill="#fafaf8" stroke="#1a1a1a" stroke-width="14"/>
+
+    <!-- Left fingers (three knuckle lines across top of left palm) -->
+    <line x1="360" y1="408" x2="360" y2="390" stroke="#1a1a1a" stroke-width="10"/>
+    <line x1="400" y1="408" x2="400" y2="385" stroke="#1a1a1a" stroke-width="10"/>
+    <line x1="440" y1="408" x2="440" y2="390" stroke="#1a1a1a" stroke-width="10"/>
+    <line x1="480" y1="408" x2="480" y2="395" stroke="#1a1a1a" stroke-width="10"/>
+
+    <!-- RIGHT HAND — clasping left hand -->
+    <!-- Palm body -->
+    <path d="M 480 430 C 480 418, 490 408, 510 408
+             L 650 408 C 670 400, 690 410, 690 430
+             L 690 510 L 480 510 Z"
+          fill="#d6dff0" stroke="#1a1a1a" stroke-width="16"/>
+
+    <!-- Right thumb -->
+    <path d="M 690 480 C 720 475, 735 455, 725 430
+             C 718 415, 700 412, 690 430"
+          fill="#d6dff0" stroke="#1a1a1a" stroke-width="14"/>
+
+    <!-- Right fingers (knuckle lines across top of right palm) -->
+    <line x1="520" y1="408" x2="520" y2="395" stroke="#1a1a1a" stroke-width="10"/>
+    <line x1="560" y1="408" x2="560" y2="385" stroke="#1a1a1a" stroke-width="10"/>
+    <line x1="600" y1="408" x2="600" y2="390" stroke="#1a1a1a" stroke-width="10"/>
+    <line x1="640" y1="408" x2="640" y2="395" stroke="#1a1a1a" stroke-width="10"/>
+
+    <!-- CLASP ZONE — overlap seam line where hands meet -->
+    <line x1="500" y1="408" x2="500" y2="510" stroke="#1a1a1a" stroke-width="8"/>
+
+    <!-- DECORATIVE ELEMENT — three spark dots above the handshake -->
+    <circle cx="440" cy="355" r="9" fill="#fafaf8" stroke="#1a1a1a" stroke-width="8"/>
+    <circle cx="500" cy="338" r="12" fill="#fafaf8" stroke="#1a1a1a" stroke-width="8"/>
+    <circle cx="560" cy="355" r="9" fill="#fafaf8" stroke="#1a1a1a" stroke-width="8"/>
+
+  </g>
+</svg>

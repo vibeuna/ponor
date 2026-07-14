@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c46e6e"/>
+
+  <!-- Icon group: padlock with alert rays above — regulatory lockdown
+       Icon bounding box: left=370, right=630, top=280, bottom=700
+       X_mid = (370+630)/2 = 500 → x offset = 0
+       Y_mid = (280+700)/2 = 490 → translate y = -(200+(490-500)) = -190
+  -->
+  <g transform="translate(0, -190)">
+
+    <!-- Alert rays above shackle — hint at government directive / warning -->
+    <line x1="500" y1="265" x2="500" y2="285" stroke="#fafaf8" stroke-width="14" stroke-linecap="round" opacity="0.85"/>
+    <line x1="462" y1="275" x2="470" y2="292" stroke="#fafaf8" stroke-width="14" stroke-linecap="round" opacity="0.85"/>
+    <line x1="538" y1="275" x2="530" y2="292" stroke="#fafaf8" stroke-width="14" stroke-linecap="round" opacity="0.85"/>
+    <line x1="432" y1="300" x2="444" y2="312" stroke="#fafaf8" stroke-width="12" stroke-linecap="round" opacity="0.60"/>
+    <line x1="568" y1="300" x2="556" y2="312" stroke="#fafaf8" stroke-width="12" stroke-linecap="round" opacity="0.60"/>
+
+    <!-- Lock shackle (arch) -->
+    <path d="M 450 490 L 450 390 Q 450 330 500 330 Q 550 330 550 390 L 550 490"
+          fill="none" stroke="#1a1a1a" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Lock body -->
+    <rect x="380" y="490" width="240" height="210" rx="24"
+          fill="#fafaf8" stroke="#1a1a1a" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Keyhole — circle + slot -->
+    <circle cx="500" cy="560" r="22" fill="#d6dff0" stroke="#1a1a1a" stroke-width="10"/>
+    <rect x="492" y="575" width="16" height="36" rx="6" fill="#1a1a1a"/>
+
+  </g>
+</svg>

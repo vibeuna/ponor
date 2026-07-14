@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#7b6ea6"/>
+
+  <!-- Icon group
+       Thunderbolt bolt body: x 420–580, y 360–640  →  X_mid=500, Y_mid=500
+       Required translate: (500-500, -(200+(500-500))) = (0, -200) -->
+  <g transform="translate(0, -200)">
+
+    <!-- Small spark dots above bolt — hint at "always-on" energy -->
+    <circle cx="458" cy="340" r="10" fill="#fafaf8" opacity="0.7"/>
+    <circle cx="500" cy="326" r="7"  fill="#fafaf8" opacity="0.5"/>
+    <circle cx="542" cy="340" r="10" fill="#fafaf8" opacity="0.7"/>
+
+    <!-- Thunderbolt main body -->
+    <!-- Classic zigzag bolt: wide top-left, narrow waist, wide bottom-right -->
+    <polygon
+      points="
+        548,360
+        468,360
+        440,508
+        492,508
+        452,640
+        580,468
+        524,468
+        560,360
+      "
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+    />
+
+    <!-- Inner highlight tint on upper half of bolt (hand-drawn depth) -->
+    <polygon
+      points="
+        542,378
+        476,378
+        454,490
+        492,490
+        520,420
+        548,378
+      "
+      fill="#d6dff0"
+      stroke="none"
+    />
+
+  </g>
+</svg>

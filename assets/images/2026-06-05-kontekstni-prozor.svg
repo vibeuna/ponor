@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#2a5298"/>
+
+  <!-- Icon group — designed at 1000×1000 scale, translate(0, -200) centres in 600px height -->
+  <g transform="translate(0, -200)">
+    <!-- Icon: window frame representing "kontekstni prozor" (context window) -->
+    <!-- Outer window frame -->
+    <rect
+      x="300" y="350"
+      width="400" height="300"
+      rx="18"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="18"
+      stroke-linejoin="round"
+    />
+    <!-- Horizontal dividing bar (splits window into upper and lower panes) -->
+    <line
+      x1="300" y1="500"
+      x2="700" y2="500"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linecap="round"
+    />
+    <!-- Vertical dividing bar (splits window into left and right panes) -->
+    <line
+      x1="500" y1="350"
+      x2="500" y2="650"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linecap="round"
+    />
+    <!-- Secondary fill: upper-left pane tint -->
+    <rect
+      x="318" y="368"
+      width="164" height="114"
+      rx="6"
+      fill="#d6dff0"
+    />
+    <!-- Secondary fill: upper-right pane tint -->
+    <rect
+      x="518" y="368"
+      width="164" height="114"
+      rx="6"
+      fill="#d6dff0"
+    />
+  </g>
+</svg>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#2a5298"/>
+
+  <!-- Icon group — three stacked document pages representing the three-layer architecture (raw/ → wiki/ → schema) -->
+  <!-- Icon bounding box: x 310–650, y 410–786 → centre (480, 598) → translate(20, -298) -->
+  <g transform="translate(20, -298)">
+
+    <!-- Page 3 (bottom/back layer) — raw/ source layer, light blue tint -->
+    <rect
+      x="390" y="466"
+      width="260" height="320"
+      rx="16"
+      fill="#d6dff0"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linejoin="round"
+    />
+    <!-- Folded top-right corner detail on back page -->
+    <polyline
+      points="614,466 650,466 650,502"
+      fill="none"
+      stroke="#1a1a1a"
+      stroke-width="14"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <!-- Three ruled lines on back page (representing content) -->
+    <line x1="416" y1="530" x2="620" y2="530" stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+    <line x1="416" y1="562" x2="600" y2="562" stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+    <line x1="416" y1="594" x2="580" y2="594" stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- Page 2 (middle layer) — wiki/ working layer, off-white fill -->
+    <rect
+      x="350" y="438"
+      width="260" height="320"
+      rx="16"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linejoin="round"
+    />
+    <!-- Folded top-right corner detail on middle page -->
+    <polyline
+      points="574,438 610,438 610,474"
+      fill="none"
+      stroke="#1a1a1a"
+      stroke-width="14"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <!-- Three ruled lines on middle page -->
+    <line x1="376" y1="502" x2="580" y2="502" stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+    <line x1="376" y1="534" x2="560" y2="534" stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+    <line x1="376" y1="566" x2="540" y2="566" stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- Page 1 (top/front layer) — CLAUDE.md schema layer, off-white fill with strongest presence -->
+    <rect
+      x="310" y="410"
+      width="260" height="320"
+      rx="16"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="18"
+      stroke-linejoin="round"
+    />
+    <!-- Folded top-right corner detail on front page -->
+    <polyline
+      points="534,410 570,410 570,446"
+      fill="none"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <!-- Light blue inset panel on front page (representing structured schema definition) -->
+    <rect
+      x="332" y="432"
+      width="216" height="72"
+      rx="8"
+      fill="#d6dff0"
+      stroke="#1a1a1a"
+      stroke-width="10"
+    />
+    <!-- Three ruled lines on front page below the inset panel -->
+    <line x1="336" y1="534" x2="540" y2="534" stroke="#1a1a1a" stroke-width="11" stroke-linecap="round"/>
+    <line x1="336" y1="566" x2="520" y2="566" stroke="#1a1a1a" stroke-width="11" stroke-linecap="round"/>
+    <line x1="336" y1="598" x2="500" y2="598" stroke="#1a1a1a" stroke-width="11" stroke-linecap="round"/>
+
+  </g>
+</svg>

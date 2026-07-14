@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#5a7a8a"/>
+
+  <!-- Icon group
+       Raw icon bounding box: top=450, bottom=770, left=220, right=780
+       X_mid=(220+780)/2=500 → x offset=0
+       Y_mid=(450+770)/2=610 → y offset=-(200+(610-500))=-310
+  -->
+  <g transform="translate(0, -310)">
+
+    <!-- Icon: balance scales — weighing IPO/vendor decisions theme -->
+
+    <!-- Base platform -->
+    <rect
+      x="400" y="745"
+      width="200" height="28"
+      rx="14"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linejoin="round"
+    />
+
+    <!-- Vertical post -->
+    <line
+      x1="500" y1="745"
+      x2="500" y2="480"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linecap="round"
+    />
+
+    <!-- Pivot circle at top of post -->
+    <circle
+      cx="500" cy="468"
+      r="22"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="15"
+    />
+
+    <!-- Horizontal beam — slightly tilted left-down to suggest weighing in progress -->
+    <line
+      x1="300" y1="502"
+      x2="700" y2="482"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linecap="round"
+    />
+
+    <!-- Left pan suspension lines (from beam end to pan rim) -->
+    <line x1="300" y1="502" x2="255" y2="620" stroke="#1a1a1a" stroke-width="12" stroke-linecap="round"/>
+    <line x1="300" y1="502" x2="345" y2="620" stroke="#1a1a1a" stroke-width="12" stroke-linecap="round"/>
+
+    <!-- Left pan body -->
+    <path
+      d="M 240 620 Q 300 665 360 620"
+      fill="#d6dff0"
+      stroke="#1a1a1a"
+      stroke-width="15"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Left pan rim line -->
+    <line
+      x1="240" y1="620"
+      x2="360" y2="620"
+      stroke="#1a1a1a"
+      stroke-width="15"
+      stroke-linecap="round"
+    />
+
+    <!-- Right pan suspension lines (from beam end to pan rim) -->
+    <line x1="700" y1="482" x2="655" y2="590" stroke="#1a1a1a" stroke-width="12" stroke-linecap="round"/>
+    <line x1="700" y1="482" x2="745" y2="590" stroke="#1a1a1a" stroke-width="12" stroke-linecap="round"/>
+
+    <!-- Right pan body -->
+    <path
+      d="M 640 590 Q 700 635 760 590"
+      fill="#d6dff0"
+      stroke="#1a1a1a"
+      stroke-width="15"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Right pan rim line -->
+    <line
+      x1="640" y1="590"
+      x2="760" y2="590"
+      stroke="#1a1a1a"
+      stroke-width="15"
+      stroke-linecap="round"
+    />
+
+    <!-- Small dot accent at beam pivot contact point -->
+    <circle
+      cx="500" cy="490"
+      r="10"
+      fill="#1a1a1a"
+    />
+
+  </g>
+</svg>

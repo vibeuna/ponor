@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c8996a"/>
+
+  <!-- Icon group
+       Icon bounding box: x 300–700, y 400–650  →  X_mid=500, Y_mid=525
+       Required translate: (500-500, -(200+(525-500))) = (0, -225) -->
+  <g transform="translate(0, -225)">
+
+    <!-- Terminal: outer shell / monitor body -->
+    <rect
+      x="300" y="400"
+      width="400" height="260"
+      rx="28"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="18"
+      stroke-linejoin="round"
+    />
+
+    <!-- Title bar tint panel -->
+    <rect
+      x="318" y="418"
+      width="364" height="52"
+      rx="14"
+      fill="#d6dff0"
+    />
+
+    <!-- Title bar traffic-light dots (purely decorative, hand-drawn feel) -->
+    <circle cx="356" cy="444" r="11" fill="#1a1a1a"/>
+    <circle cx="393" cy="444" r="11" fill="#1a1a1a"/>
+    <circle cx="430" cy="444" r="11" fill="#1a1a1a"/>
+
+    <!-- Screen / content area -->
+    <rect
+      x="318" y="482"
+      width="364" height="160"
+      rx="10"
+      fill="#1a1a1a"
+    />
+
+    <!-- Prompt chevron  ›  (>) -->
+    <polyline
+      points="352,537 384,562 352,587"
+      fill="none"
+      stroke="#fafaf8"
+      stroke-width="16"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Cursor block after the prompt -->
+    <rect
+      x="400" y="543"
+      width="28" height="36"
+      rx="4"
+      fill="#fafaf8"
+    />
+
+  </g>
+</svg>

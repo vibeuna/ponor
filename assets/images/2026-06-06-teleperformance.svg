@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#4a9e8e"/>
+
+  <!-- Icon group — balance scale, designed in 1000x1000 space, translated up to centre in 600px height -->
+  <g transform="translate(0, -164)">
+
+    <!-- Central vertical post -->
+    <line x1="500" y1="340" x2="500" y2="620"
+          stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Base / foot of the stand -->
+    <line x1="420" y1="620" x2="580" y2="620"
+          stroke="#1a1a1a" stroke-width="18" stroke-linecap="round"/>
+
+    <!-- Pivot knob at top of post -->
+    <circle cx="500" cy="336" r="14"
+            fill="#fafaf8" stroke="#1a1a1a" stroke-width="14"/>
+
+    <!-- Beam — tilted: left side lower, right side higher -->
+    <!-- Left end at (300, 390), right end at (700, 310) — tilted ~11° -->
+    <line x1="296" y1="392" x2="704" y2="308"
+          stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Left arm suspension string -->
+    <line x1="296" y1="392" x2="296" y2="448"
+          stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- Right arm suspension string -->
+    <line x1="704" y1="308" x2="704" y2="390"
+          stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- Left pan — lower, filled with secondary tint to show weight -->
+    <path d="M240 448 Q296 500 352 448"
+          fill="#d6dff0" stroke="#1a1a1a" stroke-width="16"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="240" y1="448" x2="352" y2="448"
+          stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Right pan — higher, lighter (empty) -->
+    <path d="M648 390 Q704 438 760 390"
+          fill="#fafaf8" stroke="#1a1a1a" stroke-width="16"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="648" y1="390" x2="760" y2="390"
+          stroke="#1a1a1a" stroke-width="16" stroke-linecap="round"/>
+
+    <!-- Small dots above right pan — hint at the "lighter" / abstract side -->
+    <circle cx="680" cy="364" r="6" fill="#1a1a1a"/>
+    <circle cx="704" cy="356" r="6" fill="#1a1a1a"/>
+    <circle cx="728" cy="364" r="6" fill="#1a1a1a"/>
+
+  </g>
+</svg>

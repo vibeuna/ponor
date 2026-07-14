@@ -1,0 +1,18 @@
+# Jekyll build output — never commit
+_site/
+
+# Jekyll cache
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Bundler
+Gemfile.lock
+
+# Internal reference/working material — not part of the published site
+reference_static_web/
+_diagram-specs/
+
+# OS noise
+.DS_Store
+Thumbs.db

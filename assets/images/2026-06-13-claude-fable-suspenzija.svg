@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#2a5298"/>
+
+  <!-- Icon group: Lock representing suspension/access restriction -->
+  <g transform="translate(0, -200)">
+    <!-- Lock body (rounded rectangle) -->
+    <rect x="400" y="480" width="200" height="220" rx="20" fill="#fafaf8" stroke="#1a1a1a" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Lock shackle (top half of lock) -->
+    <path d="M 450 480 Q 450 360 500 360 Q 550 360 550 480" fill="none" stroke="#1a1a1a" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Lock keyhole -->
+    <circle cx="500" cy="540" r="18" fill="#1a1a1a"/>
+    <circle cx="500" cy="620" r="12" fill="#1a1a1a"/>
+
+    <!-- Accent line below lock (hint of restriction/security barrier) -->
+    <line x1="350" y1="750" x2="650" y2="750" stroke="#d6dff0" stroke-width="14" stroke-linecap="round"/>
+  </g>
+</svg>

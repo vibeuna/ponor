@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420"
+     id="cma-svg" role="img"
+     aria-label="Dijagram: tri mehanizma za kontekst projekta — AGENTS.md, CLAUDE.md i .claude/agents/">
+  <title>Tri mehanizma za kontekst projekta</title>
+
+  <defs>
+    <marker id="cma-arr" markerWidth="8" markerHeight="8"
+            refX="6.5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 Z" fill="#B45309"/>
+    </marker>
+  </defs>
+
+  <style>
+    #cma-svg text { font-style: normal; }
+    #cma-svg:hover .replay-btn { opacity: 1; }
+    #cma-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+    #cma-svg .replay-btn:hover path { stroke: #B45309; }
+    #cma-svg .replay-btn:hover polygon { fill: #B45309; }
+    #cma-svg .replay-btn:focus { outline: none; opacity: 1; }
+    #cma-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+    @media (prefers-reduced-motion: reduce) {
+      #cma-svg animate,
+      #cma-svg animateTransform { display: none; }
+      #cma-svg .replay-btn { display: none; }
+    }
+  </style>
+
+  <!-- Background -->
+  <rect width="900" height="420" fill="#FAF9F6"/>
+
+  <!-- Title + Subtitle -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="0.2s" dur="0.4s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <text x="450" y="44" text-anchor="middle"
+          font-family="Merriweather, Georgia, serif"
+          font-size="20" font-weight="700" fill="#1C1917">
+      Tri mehanizma za kontekst projekta
+    </text>
+    <text x="450" y="66" text-anchor="middle"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="12" fill="#78716C">
+      AGENTS.md, CLAUDE.md i .claude/agents/ &#x2014; različiti dosezi, jedan radni tok
+    </text>
+  </g>
+
+  <!-- AGENTS.md focal box (left) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="0.7s" dur="0.4s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <rect x="60" y="84" width="358" height="104" rx="8"
+          fill="#FDF6EC" stroke="#B45309" stroke-width="1.5"/>
+    <rect x="60" y="84" width="3" height="104" rx="1.5" fill="#B45309"/>
+    <text x="78" y="101"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="10" font-weight="700" letter-spacing="0.8"
+          fill="#B45309">KANONSKI IZVOR</text>
+    <text x="78" y="122"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="15" font-weight="700" fill="#1C1917">AGENTS.md</text>
+    <text x="78" y="141"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="12" fill="#78716C">project root &#x2014; kanonski kontekst</text>
+    <!-- 30+ alata chip -->
+    <rect x="78" y="152" width="74" height="22" rx="11"
+          fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <text x="115" y="167" text-anchor="middle"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="11" font-weight="600" fill="#B45309">30+ alata</text>
+  </g>
+
+  <!-- @import arrow + label -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="1.2s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <line x1="422" y1="136" x2="476" y2="136"
+          stroke="#B45309" stroke-width="2"
+          marker-end="url(#cma-arr)"/>
+    <text x="450" y="126" text-anchor="middle"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="10" font-style="italic" fill="#B45309">@import</text>
+  </g>
+
+  <!-- CLAUDE.md neutral box (right) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="1.4s" dur="0.4s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <rect x="482" y="84" width="358" height="104" rx="8"
+          fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <rect x="482" y="84" width="3" height="104" rx="1.5" fill="#78716C"/>
+    <text x="500" y="101"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="10" font-weight="700" letter-spacing="0.8"
+          fill="#78716C">SAMO CLAUDE CODE</text>
+    <text x="500" y="122"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="15" font-weight="700" fill="#1C1917">CLAUDE.md</text>
+    <text x="500" y="141"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="12" fill="#78716C">@import + Claude-specifična proširenja</text>
+    <!-- Samo Claude Code chip -->
+    <rect x="500" y="152" width="118" height="22" rx="11"
+          fill="#F5F5F0" stroke="#A8A29E" stroke-width="1"/>
+    <text x="559" y="167" text-anchor="middle"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="11" font-weight="600" fill="#78716C">Samo Claude Code</text>
+  </g>
+
+  <!-- Separator -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="1.9s" dur="0.3s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <line x1="60" y1="210" x2="840" y2="210"
+          stroke="#D6D3D1" stroke-width="1" stroke-dasharray="4,4"/>
+    <text x="450" y="224" text-anchor="middle"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="9" font-weight="700" letter-spacing="0.8"
+          fill="#A8A29E">ZASEBNI MEHANIZAM</text>
+  </g>
+
+  <!-- .claude/agents/ box (centered) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="2.1s" dur="0.4s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <rect x="200" y="234" width="500" height="74" rx="8"
+          fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <rect x="200" y="234" width="3" height="74" rx="1.5" fill="#A8A29E"/>
+    <text x="218" y="252"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="10" font-weight="700" letter-spacing="0.8"
+          fill="#78716C">DEFINICIJA SUB-AGENATA</text>
+    <text x="218" y="271"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="14" font-weight="700" fill="#1C1917">.claude/agents/&lt;ime&gt;.md</text>
+    <text x="218" y="290"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="12" fill="#78716C">YAML frontmatter + system prompt za svaki sub-agent</text>
+  </g>
+
+  <!-- Output box (rises in) -->
+  <g opacity="0" transform="translate(0,8)">
+    <animate attributeName="opacity" from="0" to="1"
+             begin="2.6s" dur="0.5s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <animateTransform attributeName="transform" type="translate"
+             from="0,8" to="0,0" additive="replace"
+             begin="2.6s" dur="0.5s" fill="freeze"
+             calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="60" y="328" width="780" height="66" rx="8"
+          fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <rect x="60" y="328" width="3" height="66" rx="1.5" fill="#B45309"/>
+    <text x="78" y="346"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="10" font-weight="700" letter-spacing="0.8"
+          fill="#B45309">PREPORUČENI RADNI TOK</text>
+    <text x="78" y="368"
+          font-family="Inter, system-ui, -apple-system, sans-serif"
+          font-size="13" font-weight="500" fill="#1C1917">
+      AGENTS.md = jedini izvor istine &#x2192; @import u CLAUDE.md &#x2192; sub-agenti u .claude/agents/
+    </text>
+  </g>
+
+  <!-- Replay button -->
+  <g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;"
+     role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+    <circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C"
+          stroke-width="1.5" stroke-linecap="round"/>
+    <polygon points="852,28 858,28 855,33" fill="#78716C"/>
+    <title>Pusti ponovo</title>
+  </g>
+
+  <script>
+    // <![CDATA[
+    (function () {
+      const svg = document.getElementById('cma-svg');
+      const btn = svg && svg.querySelector('.replay-btn');
+      if (!svg || !btn) return;
+      function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+      btn.addEventListener('click', replay);
+      btn.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+      });
+    })();
+    // ]]>
+  </script>
+</svg>

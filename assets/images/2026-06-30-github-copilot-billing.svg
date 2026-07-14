@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#2a5298"/>
+
+  <!-- Icon group — icon centred at (500, 500) in raw coords, translate(0,-200) moves it to (500,300) on canvas -->
+  <!-- Bounding box: x 330–670, y 320–680 → midpoint (500, 500) ✓ -->
+  <g transform="translate(0, -200)">
+
+    <!-- Icon: gold coin with token/credit symbol — representing per-token billing -->
+
+    <!-- Coin outer body -->
+    <circle
+      cx="500" cy="500"
+      r="160"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="18"
+    />
+
+    <!-- Coin inner rim (tinted inset) -->
+    <circle
+      cx="500" cy="500"
+      r="128"
+      fill="#d6dff0"
+      stroke="#1a1a1a"
+      stroke-width="14"
+    />
+
+    <!-- Center symbol: stylised "T" for token — two strokes forming a T shape -->
+    <!-- Horizontal bar of T -->
+    <line
+      x1="446" y1="464"
+      x2="554" y2="464"
+      stroke="#1a1a1a"
+      stroke-width="22"
+      stroke-linecap="round"
+    />
+    <!-- Vertical stem of T -->
+    <line
+      x1="500" y1="464"
+      x2="500" y2="548"
+      stroke="#1a1a1a"
+      stroke-width="22"
+      stroke-linecap="round"
+    />
+
+    <!-- Small decorative dot below the T stem — hints at a decimal / unit marker -->
+    <circle
+      cx="500" cy="574"
+      r="12"
+      fill="#1a1a1a"
+    />
+
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#5a7a8a"/>
+
+  <!-- Icon group: clapperboard
+       Icon bounding box: x 295–705, y 275–570
+       Visual centre: x=(295+705)/2=500, y=(275+570)/2=422.5
+       Required translate: (500-500, -(200+(422.5-500))) = (0, -(200-77.5)) = (0, -122.5)
+       Using translate(0, -122) -->
+  <g transform="translate(0, -122)" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Main clapperboard body: x 310–690, y 360–570 -->
+    <rect x="310" y="360" width="380" height="210" rx="12" fill="#fafaf8" stroke-width="16"/>
+
+    <!-- Top clapper bar: x 310–690, y 275–345 -->
+    <rect x="310" y="275" width="380" height="70" rx="10" fill="#fafaf8" stroke-width="16"/>
+
+    <!-- Diagonal stripes on top clapper bar (alternating black fills) -->
+    <!-- Stripe 1 -->
+    <polygon points="310,275 355,275 310,345" fill="#1a1a1a" stroke="none"/>
+    <!-- Stripe 2 -->
+    <polygon points="400,275 445,275 355,345 310,345" fill="#1a1a1a" stroke="none"/>
+    <!-- Stripe 3 -->
+    <polygon points="490,275 535,275 445,345 400,345" fill="#1a1a1a" stroke="none"/>
+    <!-- Stripe 4 -->
+    <polygon points="580,275 625,275 535,345 490,345" fill="#1a1a1a" stroke="none"/>
+    <!-- Stripe 5 -->
+    <polygon points="670,275 690,275 690,302 625,345 580,345" fill="#1a1a1a" stroke="none"/>
+
+    <!-- Hinge pin between bar and body (the pivot line) -->
+    <line x1="310" y1="345" x2="690" y2="345" stroke-width="6"/>
+
+    <!-- Clapper arm: a tilted bar on top of the clapper bar (the moving part) -->
+    <!-- Pivot left at (310, 310), arm goes up-right at ~20 deg -->
+    <rect x="308" y="260" width="390" height="32" rx="8" fill="#d6dff0" stroke-width="12"
+          transform="rotate(-12, 310, 310)"/>
+
+    <!-- Film frame lines inside the body: 3 horizontal dividers suggesting frame grid -->
+    <line x1="340" y1="420" x2="660" y2="420" stroke-width="7" stroke-dasharray="0"/>
+    <line x1="340" y1="470" x2="660" y2="470" stroke-width="7"/>
+    <line x1="340" y1="520" x2="660" y2="520" stroke-width="7"/>
+
+    <!-- Vertical divider in body to suggest grid -->
+    <line x1="500" y1="360" x2="500" y2="570" stroke-width="7"/>
+
+    <!-- Play symbol (triangle) subtly in centre of body -->
+    <polygon points="455,435 455,505 535,470" fill="#d6dff0" stroke-width="10"/>
+
+  </g>
+</svg>

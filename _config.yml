@@ -1,0 +1,27 @@
+title: "ponor.ai"
+description: "Jednostavni vodiči, aktualne vijesti i praktični savjeti o LLM modelima i AI alatima na bosanskom jeziku. Svaki dan novi sadržaj."
+url: "https://ponor.ai"
+baseurl: ""
+lang: bs
+title_separator: "—"
+
+author:
+  name: "Dino"
+  email: "kontakt@ponor.ai"
+
+twitter:
+  username: ponorai
+github_username: ponorai
+
+permalink: /clanci/:slug/
+future: true
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - reference_static_web/

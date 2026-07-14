@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#4a9e8e"/>
+
+  <!--
+    Robot arm icon centred at canvas (500, 300).
+
+    Icon raw bounds: x 290–810, y 308–778 → X_mid=550, Y_mid=543
+    Translate: x = 500-550 = -50, y = -(200+(543-500)) = -243
+  -->
+
+  <!-- LAYER 1: black outlines (wide) -->
+  <g transform="translate(-50, -243)" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none">
+
+    <!-- Base plate -->
+    <rect x="420" y="748" width="160" height="30" rx="10" fill="#1a1a1a"/>
+    <!-- Pedestal -->
+    <rect x="462" y="678" width="76" height="74" rx="10" fill="#1a1a1a"/>
+    <!-- Shoulder joint -->
+    <circle cx="500" cy="668" r="36" fill="#1a1a1a"/>
+    <!-- Upper arm: capsule polygon -->
+    <polygon points="480,652 600,504 640,536 520,684" fill="#1a1a1a"/>
+    <!-- Elbow joint -->
+    <circle cx="620" cy="520" r="30" fill="#1a1a1a"/>
+    <!-- Forearm: capsule polygon -->
+    <polygon points="603,506 683,406 717,434 637,534" fill="#1a1a1a"/>
+    <!-- Wrist joint -->
+    <circle cx="700" cy="420" r="24" fill="#1a1a1a"/>
+    <!-- Palm block -->
+    <rect x="680" y="368" width="52" height="50" rx="10" fill="#1a1a1a"/>
+    <!-- Finger 1 (left, curving out) -->
+    <path d="M 690,370 C 678,348 662,326 665,308" stroke="#1a1a1a" stroke-width="26"/>
+    <!-- Finger 2 (right, curving out) -->
+    <path d="M 722,370 C 734,348 750,326 747,308" stroke="#1a1a1a" stroke-width="26"/>
+    <!-- Fingertip pad 1 -->
+    <circle cx="665" cy="308" r="19" fill="#1a1a1a"/>
+    <!-- Fingertip pad 2 -->
+    <circle cx="747" cy="308" r="19" fill="#1a1a1a"/>
+  </g>
+
+  <!-- LAYER 2: white fills (slightly smaller) -->
+  <g transform="translate(-50, -243)" stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none">
+
+    <!-- Base plate -->
+    <rect x="428" y="754" width="144" height="18" rx="7" fill="#fafaf8" stroke="none"/>
+    <!-- Pedestal -->
+    <rect x="470" y="686" width="60" height="58" rx="7" fill="#fafaf8" stroke="none"/>
+    <!-- Shoulder joint -->
+    <circle cx="500" cy="668" r="23" fill="#d6dff0" stroke="none"/>
+    <!-- Upper arm white fill -->
+    <polygon points="488,658 606,513 633,528 514,675" fill="#fafaf8" stroke="none"/>
+    <!-- Elbow joint -->
+    <circle cx="620" cy="520" r="18" fill="#d6dff0" stroke="none"/>
+    <!-- Forearm white fill -->
+    <polygon points="609,511 687,413 712,430 634,529" fill="#fafaf8" stroke="none"/>
+    <!-- Wrist joint -->
+    <circle cx="700" cy="420" r="14" fill="#d6dff0" stroke="none"/>
+    <!-- Palm block -->
+    <rect x="687" y="375" width="38" height="37" rx="7" fill="#fafaf8" stroke="none"/>
+    <!-- Finger 1 white inner -->
+    <path d="M 690,370 C 678,348 662,326 665,308" stroke="#fafaf8" stroke-width="10" fill="none"/>
+    <!-- Finger 2 white inner -->
+    <path d="M 722,370 C 734,348 750,326 747,308" stroke="#fafaf8" stroke-width="10" fill="none"/>
+    <!-- Fingertip 1 -->
+    <circle cx="665" cy="308" r="11" fill="#d6dff0" stroke="none"/>
+    <!-- Fingertip 2 -->
+    <circle cx="747" cy="308" r="11" fill="#d6dff0" stroke="none"/>
+
+    <!-- Shoulder inner hub -->
+    <circle cx="500" cy="668" r="9" fill="#fafaf8" stroke="none"/>
+    <!-- Elbow inner hub -->
+    <circle cx="620" cy="520" r="8" fill="#fafaf8" stroke="none"/>
+    <!-- Wrist inner hub -->
+    <circle cx="700" cy="420" r="6" fill="#fafaf8" stroke="none"/>
+
+    <!-- Signal dots above gripper (AI activity hint) -->
+    <circle cx="706" cy="274" r="9"  fill="#fafaf8" stroke="none"/>
+    <circle cx="732" cy="258" r="6"  fill="#fafaf8" stroke="none"/>
+    <circle cx="680" cy="260" r="6"  fill="#fafaf8" stroke="none"/>
+  </g>
+
+</svg>

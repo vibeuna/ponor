@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#2a5298"/>
+
+  <!-- Icon: padlock — shackle (arc) + body + keyhole -->
+  <g>
+    <!-- Shackle -->
+    <path d="M 395 255 A 105 105 0 0 1 605 255" fill="none" stroke="#1a1a1a" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Body -->
+    <rect x="380" y="255" width="240" height="200" rx="24" fill="#fafaf8" stroke="#1a1a1a" stroke-width="16" stroke-linejoin="round"/>
+    <!-- Keyhole -->
+    <circle cx="500" cy="325" r="26" fill="#1a1a1a"/>
+    <rect x="488" y="335" width="24" height="55" rx="6" fill="#1a1a1a"/>
+  </g>
+</svg>

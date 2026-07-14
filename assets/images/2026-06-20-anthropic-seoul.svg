@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c46e6e"/>
+
+  <!-- Icon group — icon designed in raw coords, centred vertically at Y_mid=525, X_mid=500.
+       translate(0, -225) shifts visual centre from (500,525) to (500,300). -->
+  <g transform="translate(0, -225)">
+
+    <!-- Icon: office building (zgrada) — represents Anthropic Seoul office opening -->
+
+    <!-- Main building body -->
+    <rect
+      x="370" y="320"
+      width="260" height="410"
+      rx="10"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="18"
+      stroke-linejoin="round"
+    />
+
+    <!-- Building facade tint (inner panel) -->
+    <rect
+      x="395" y="345"
+      width="210" height="360"
+      rx="6"
+      fill="#d6dff0"
+    />
+
+    <!-- Window grid — 3 columns × 4 rows -->
+    <!-- Row 1 -->
+    <rect x="410" y="368" width="44" height="54" rx="5" fill="#fafaf8" stroke="#1a1a1a" stroke-width="8"/>
+    <rect x="478" y="368" width="44" height="54" rx="5" fill="#fafaf8" stroke="#1a1a1a" stroke-width="8"/>
+    <rect x="546" y="368" width="44" height="54" rx="5" fill="#fafaf8" stroke="#1a1a1a" stroke-width="8"/>
+    <!-- Row 2 -->
+    <rect x="410" y="444" width="44" height="54" rx="5" fill="#fafaf8" stroke="#1a1a1a" stroke-width="8"/>
+    <rect x="478" y="444" width="44" height="54" rx="5" fill="#fafaf8" stroke="#1a1a1a" stroke-width="8"/>
+    <rect x="546" y="444" width="44" height="54" rx="5" fill="#fafaf8" stroke="#1a1a1a" stroke-width="8"/>
+    <!-- Row 3 -->
+    <rect x="410" y="520" width="44" height="54" rx="5" fill="#fafaf8" stroke="#1a1a1a" stroke-width="8"/>
+    <rect x="478" y="520" width="44" height="54" rx="5" fill="#fafaf8" stroke="#1a1a1a" stroke-width="8"/>
+    <rect x="546" y="520" width="44" height="54" rx="5" fill="#fafaf8" stroke="#1a1a1a" stroke-width="8"/>
+    <!-- Row 4 -->
+    <rect x="410" y="596" width="44" height="42" rx="5" fill="#fafaf8" stroke="#1a1a1a" stroke-width="8"/>
+    <rect x="546" y="596" width="44" height="42" rx="5" fill="#fafaf8" stroke="#1a1a1a" stroke-width="8"/>
+
+    <!-- Entrance door — centred, bottom of building -->
+    <rect
+      x="468" y="646"
+      width="64" height="84"
+      rx="8"
+      fill="#1a1a1a"
+      stroke="#1a1a1a"
+      stroke-width="10"
+      stroke-linejoin="round"
+    />
+    <!-- Door handle -->
+    <circle cx="523" cy="692" r="5" fill="#fafaf8"/>
+
+    <!-- Ground line / step -->
+    <rect
+      x="350" y="728"
+      width="300" height="16"
+      rx="8"
+      fill="#1a1a1a"
+    />
+
+    <!-- Abstract element: three upward rays above building (suggest launch / new office) -->
+    <line x1="500" y1="300" x2="500" y2="252" stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+    <line x1="460" y1="308" x2="444" y2="263" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/>
+    <line x1="540" y1="308" x2="556" y2="263" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Dot caps on rays -->
+    <circle cx="500" cy="248" r="10" fill="#1a1a1a"/>
+    <circle cx="442" cy="260" r="8" fill="#1a1a1a"/>
+    <circle cx="558" cy="260" r="8" fill="#1a1a1a"/>
+
+  </g>
+</svg>

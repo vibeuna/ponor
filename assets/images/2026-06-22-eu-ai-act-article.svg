@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c8996a"/>
+
+  <!-- Icon group — raw design centred at (500, 500), translated to (500, 300) on canvas -->
+  <g transform="translate(0, -200)">
+    <!-- Shield body: spans x=400–600, y=380–625 (raw), centred at ~(500,502) -->
+    <path d="M 400 380 L 600 380 L 600 480 Q 600 590 500 625 Q 400 590 400 480 Z"
+          fill="#fafaf8" stroke="#1a1a1a" stroke-width="16"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Compliance checkmark -->
+    <polyline points="455,495 480,523 550,450"
+              fill="none" stroke="#1a1a1a" stroke-width="20"
+              stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

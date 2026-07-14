@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#5a7a8a"/>
+
+  <!-- Icon group — shield representing the cyber-safeguard classifier / jailbreak-severity framework.
+       Raw bounding box: x 385-615 (X_mid 500), y 430-660 (Y_mid 545).
+       translate x = 500 - 500 = 0
+       translate y = -(200 + (545 - 500)) = -245 -->
+  <g transform="translate(0, -245)">
+    <!-- Shield body -->
+    <path d="M500 430
+             L610 460
+             L610 545
+             C610 610 560 645 500 660
+             C440 645 390 610 390 545
+             L390 460
+             Z"
+          fill="#fafaf8" stroke="#1a1a1a" stroke-width="18"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Inner checkmark (gate / verification) -->
+    <path d="M450 545 L488 580 L558 500"
+          fill="none" stroke="#d6dff0" stroke-width="16"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Small accent dot above the shield -->
+    <circle cx="500" cy="385" r="14" fill="#d6dff0" stroke="#1a1a1a" stroke-width="8"/>
+  </g>
+</svg>

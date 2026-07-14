@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#4a9e8e"/>
+
+  <!-- Icon: hourglass — represents the reported delay -->
+  <path d="M390,180 L610,180 Q500,300 610,420 L390,420 Q500,300 390,180 Z"
+        fill="#fafaf8" stroke="#1a1a1a" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="360" y="150" width="280" height="30" rx="15"
+        fill="#fafaf8" stroke="#1a1a1a" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="360" y="420" width="280" height="30" rx="15"
+        fill="#fafaf8" stroke="#1a1a1a" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Sand: sliver remaining at top, pile settled at bottom -->
+  <path d="M470,210 L530,210 L500,240 Z" fill="#d6dff0" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M430,410 L570,410 L500,360 Z" fill="#d6dff0" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Falling grain -->
+  <circle cx="500" cy="300" r="10" fill="#1a1a1a"/>
+</svg>

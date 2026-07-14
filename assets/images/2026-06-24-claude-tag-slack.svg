@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#2a5298"/>
+
+  <!--
+    Icon: Slack-style "#" hashtag + message bubble with indicator dot.
+
+    Design approach: use SVG paint-order="stroke fill" so stroke
+    (thick black outline) is painted behind the fill (white/tint).
+    This gives the hand-drawn outlined look with a single element per shape.
+
+    Raw coordinate bounding box:
+      "#" combined: x[400,600], y[415,585]  → center (500, 500)
+      Bubble incl. tail: x[524,616], y[546,622] → extends bbox
+      Combined: x[400,616], y[415,622]
+      x_mid = 508, y_mid = 518.5
+      translate(-8, -219) to land at canvas center (500,300)
+  -->
+  <g transform="translate(-8, -219)" stroke-linecap="round" stroke-linejoin="round"
+     style="paint-order: stroke fill">
+
+    <!-- Vertical bars of "#" — slightly angled like a real glyph -->
+    <line x1="453" y1="415" x2="437" y2="585"
+          stroke="#1a1a1a" stroke-width="34" fill="none"
+          style="paint-order: stroke fill"/>
+    <line x1="453" y1="415" x2="437" y2="585"
+          stroke="#fafaf8" stroke-width="18" fill="none"/>
+
+    <line x1="563" y1="415" x2="547" y2="585"
+          stroke="#1a1a1a" stroke-width="34" fill="none"/>
+    <line x1="563" y1="415" x2="547" y2="585"
+          stroke="#fafaf8" stroke-width="18" fill="none"/>
+
+    <!-- Horizontal bars — drawn on top, same double-stroke technique -->
+    <line x1="400" y1="461" x2="600" y2="461"
+          stroke="#1a1a1a" stroke-width="34" fill="none"/>
+    <line x1="400" y1="461" x2="600" y2="461"
+          stroke="#fafaf8" stroke-width="18" fill="none"/>
+
+    <line x1="400" y1="541" x2="600" y2="541"
+          stroke="#1a1a1a" stroke-width="34" fill="none"/>
+    <line x1="400" y1="541" x2="600" y2="541"
+          stroke="#fafaf8" stroke-width="18" fill="none"/>
+
+    <!-- Message bubble: rounded rect with speech tail -->
+    <!-- Tail (drawn behind bubble body, same fill as bubble) -->
+    <polygon points="542,598 526,622 566,598"
+             fill="#d6dff0" stroke="#1a1a1a" stroke-width="14"
+             stroke-linejoin="round"/>
+
+    <!-- Bubble body — paint-order: stroke fill gives outline behind fill -->
+    <rect x="524" y="546" width="92" height="56" rx="18"
+          fill="#d6dff0" stroke="#1a1a1a" stroke-width="14"
+          style="paint-order: stroke fill"/>
+
+    <!-- Indicator dot inside bubble -->
+    <circle cx="570" cy="574" r="10"
+            fill="#2a5298" stroke="#1a1a1a" stroke-width="5"
+            style="paint-order: stroke fill"/>
+
+  </g>
+</svg>

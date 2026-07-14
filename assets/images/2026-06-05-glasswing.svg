@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c8996a"/>
+
+  <!-- Icon group — shield centred, designed in 1000x1000 space, translated up to centre in 600px height -->
+  <g transform="translate(0, -93)">
+
+    <!-- Shield body -->
+    <path d="M500 240
+             L340 310
+             L340 430
+             Q340 530 500 590
+             Q660 530 660 430
+             L660 310
+             Z"
+          fill="#fafaf8"
+          stroke="#1a1a1a"
+          stroke-width="18"
+          stroke-linejoin="round"
+          stroke-linecap="round"/>
+
+    <!-- Shield inner secondary fill — decorative inner panel -->
+    <path d="M500 272
+             L368 332
+             L368 432
+             Q368 514 500 564
+             Q632 514 632 432
+             L632 332
+             Z"
+          fill="#d6dff0"
+          stroke="none"/>
+
+    <!-- Checkmark / tick inside the shield — signals verified/protected -->
+    <polyline points="432,420 476,466 576,366"
+              fill="none"
+              stroke="#1a1a1a"
+              stroke-width="22"
+              stroke-linecap="round"
+              stroke-linejoin="round"/>
+
+    <!-- Small spark element above the shield — hints at AI/scan activity -->
+    <line x1="500" y1="196" x2="500" y2="216"
+          stroke="#1a1a1a" stroke-width="10" stroke-linecap="round"/>
+    <line x1="476" y1="202" x2="484" y2="218"
+          stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/>
+    <line x1="524" y1="202" x2="516" y2="218"
+          stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/>
+
+  </g>
+</svg>

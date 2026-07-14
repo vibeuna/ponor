@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c8996a"/>
+
+  <!-- Icon group — raw coordinates designed with icon bounding box y=510–700 (mid=605), x=350–650 (mid=500).
+       translate(0, -(200 + (605-500))) = translate(0, -305) centres icon on canvas at (500, 300). -->
+  <g transform="translate(0, -305)">
+
+    <!-- Icon: ascending bar chart — three bars rising left to right, representing IPO valuation trajectory -->
+
+    <!-- Bar 1 (shortest, left) -->
+    <rect
+      x="350" y="650"
+      width="80" height="50"
+      rx="10"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linejoin="round"
+    />
+
+    <!-- Bar 2 (mid height, centre) -->
+    <rect
+      x="460" y="590"
+      width="80" height="110"
+      rx="10"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linejoin="round"
+    />
+
+    <!-- Bar 3 (tallest, right) — light blue tint fill to add visual accent -->
+    <rect
+      x="570" y="510"
+      width="80" height="190"
+      rx="10"
+      fill="#d6dff0"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linejoin="round"
+    />
+
+    <!-- Baseline -->
+    <line
+      x1="330" y1="714"
+      x2="670" y2="714"
+      stroke="#1a1a1a"
+      stroke-width="14"
+      stroke-linecap="round"
+    />
+
+    <!-- Upward arrow above tallest bar — hints at continued growth / IPO listing -->
+    <polyline
+      points="610,488 610,456 598,472"
+      fill="none"
+      stroke="#1a1a1a"
+      stroke-width="14"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <polyline
+      points="610,456 622,472"
+      fill="none"
+      stroke="#1a1a1a"
+      stroke-width="14"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+  </g>
+</svg>

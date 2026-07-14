@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#4a9e8e"/>
+
+  <!-- Icon: proof-stamp seal with checkmark, ribbon tails as accent -->
+  <g>
+    <!-- Ribbon tails (drawn behind seal, tucked under it) -->
+    <polygon points="485,340 440,340 420,445 445,420 470,445"
+             fill="#d6dff0" stroke="#1a1a1a" stroke-width="14"
+             stroke-linecap="round" stroke-linejoin="round"/>
+    <polygon points="515,340 560,340 580,445 555,420 530,445"
+             fill="#d6dff0" stroke="#1a1a1a" stroke-width="14"
+             stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Seal body -->
+    <circle cx="500" cy="290" r="145"
+            fill="#fafaf8" stroke="#1a1a1a" stroke-width="20"/>
+
+    <!-- Checkmark -->
+    <polyline points="440,300 480,340 570,220" fill="none"
+              stroke="#1a1a1a" stroke-width="28"
+              stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -1,0 +1,223 @@
+---
+layout: default
+title: "ponor.ai — Razumijte umjetnu inteligenciju na bosanskom"
+description: "Jednostavni vodiči, aktualne vijesti i praktični savjeti o LLM modelima i AI alatima na bosanskom jeziku. Svaki dan novi sadržaj."
+---
+
+<!-- Hero -->
+<section id="main-content" class="relative overflow-hidden pt-10 pb-8 md:pt-16 md:pb-10 px-4 sm:px-6 lg:px-8">
+    <div class="absolute inset-y-0 left-0 right-0 px-4 sm:px-6 lg:px-8 pointer-events-none">
+        <div class="max-w-7xl mx-auto h-full relative translate-x-14">
+            <canvas id="llm-graph" class="absolute inset-0 w-full h-full" style="opacity:0.7"></canvas>
+        </div>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-cream from-[35%] to-transparent dark:from-[#1C1917] pointer-events-none"></div>
+    <div class="relative z-10 max-w-6xl mx-auto">
+        <div class="max-w-2xl fade-in">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-coffee/10 dark:bg-coffee/20 text-coffee text-xs font-semibold tracking-wide uppercase mb-6">
+                <span class="w-2 h-2 rounded-full bg-coffee animate-pulse"></span>
+                Svaki dan novi sadržaj
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-ink leading-tight mb-6">
+                Novosti iz svijeta umjetne inteligencije, <span class="text-coffee">na bosanskom</span>
+            </h1>
+            <p class="text-lg md:text-xl text-stone dark:text-[#A8A29E] leading-relaxed mb-8">
+                Jednostavni vodiči, aktualne vijesti i praktični savjeti o LLM modelima i AI alatima.
+                Bez buzzworda. Bez predrasuda. Samo korisno znanje.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#najnovije" class="btn-primary inline-flex items-center px-6 py-3 bg-coffee text-white rounded-lg font-medium text-sm hover:bg-coffee-dark">
+                    Zaronite u AI
+                </a>
+                <a href="/o-nama/" class="inline-flex items-center gap-2 px-6 py-3 border border-warmgray text-ink rounded-lg font-medium text-sm hover:bg-white transition-colors">
+                    O projektu
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Today's Highlight -->
+{% if site.posts.size > 0 %}
+{% assign featured = site.posts.first %}
+{% assign month_num = featured.date | date: "%m" %}
+{% assign feat_cat = site.data.categories[featured.category] %}
+<section class="py-5 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+        <div class="fade-in fade-in-delay-1 bg-white dark:bg-[#292524] rounded-2xl border border-warmgray dark:border-[#44403C] p-6 md:p-8 card-hover">
+            <div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+                <div class="flex-shrink-0">
+                    {% if featured.image %}
+                    <img src="{{ featured.image }}" alt="{{ featured.title | escape }}" class="w-20 h-20 rounded-xl object-cover border border-warmgray dark:border-[#44403C]">
+                    {% else %}
+                    <div class="w-12 h-12 bg-teal/10 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="flex-1">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-xs font-semibold text-teal uppercase tracking-wider">Današnja tema</span>
+                        <span class="text-xs text-stone dark:text-[#A8A29E]">{{ featured.date | date: "%-d." }} {{ site.data.months[month_num] }} {{ featured.date | date: "%Y." }}</span>
+                    </div>
+                    <h2 class="text-xl md:text-2xl font-bold text-ink mb-2">
+                        <a href="{{ featured.url }}" class="hover:text-coffee transition-colors">{{ featured.title }}</a>
+                    </h2>
+                    {% if featured.description %}<p class="text-stone dark:text-[#A8A29E] text-sm md:text-base leading-relaxed">{{ featured.description }}</p>{% endif %}
+                </div>
+                <div class="flex-shrink-0">
+                    <a href="{{ featured.url }}" class="inline-flex items-center gap-2 px-4 py-2 bg-coffee text-white rounded-lg text-sm font-medium hover:bg-coffee-dark transition-colors">
+                        Pročitajte
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Categories -->
+<section id="kategorije" class="py-10 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12 fade-in fade-in-delay-2">
+            <h2 class="text-3xl md:text-4xl font-bold text-ink mb-4">Istražite teme</h2>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {% assign vodici_posts = site.posts | where: "category", "vodici" %}
+            <a href="/kategorije/vodici/" class="category-card group bg-parchment dark:bg-[#292524] border border-warmgray dark:border-[#44403C] rounded-2xl p-6 fade-in fade-in-delay-2">
+                <div class="w-10 h-10 bg-coffee/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-coffee/20 transition-colors">
+                    <svg class="w-5 h-5 text-coffee" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-ink mb-2 group-hover:text-coffee transition-colors">Vodiči</h3>
+                <p class="text-sm text-stone dark:text-[#A8A29E] leading-relaxed">Objašnjenja i praktični vodiči: kako AI i veliki jezički modeli zapravo rade.</p>
+                <div class="mt-4 flex items-center gap-1 text-xs font-medium text-coffee">
+                    {{ vodici_posts.size }} članaka
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
+            </a>
+
+            {% assign praksa_posts = site.posts | where: "category", "ai-u-praksi" %}
+            <a href="/kategorije/ai-u-praksi/" class="category-card group bg-parchment dark:bg-[#292524] border border-warmgray dark:border-[#44403C] rounded-2xl p-6 fade-in fade-in-delay-2">
+                <div class="w-10 h-10 bg-teal/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal/20 transition-colors">
+                    <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-ink mb-2 group-hover:text-teal transition-colors">AI u praksi</h3>
+                <p class="text-sm text-stone dark:text-[#A8A29E] leading-relaxed">AI i LLM u stvarnom radu: alati, evaluacija, produkcija i regulativa.</p>
+                <div class="mt-4 flex items-center gap-1 text-xs font-medium text-teal">
+                    {{ praksa_posts.size }} članaka
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Articles -->
+<section id="najnovije" class="py-10 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#1C1917] border-y border-warmgray dark:border-[#44403C]">
+    <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-ink mb-2">Najnovije iz ponora</h2>
+                <p class="text-stone">Svjež sadržaj objavljen u posljednjih nekoliko dana.</p>
+            </div>
+            <a href="/kategorije/vijesti/" class="inline-flex items-center gap-1 text-sm font-medium text-coffee hover:text-coffee-dark transition-colors">
+                Pregledajte sve
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for post in site.posts limit:6 %}
+            {% assign month_num = post.date | date: "%m" %}
+            {% assign pcat = site.data.categories[post.category] %}
+            <article class="article-card group">
+                <a href="{{ post.url }}" class="block">
+                    <div class="aspect-[16/9] rounded-xl mb-4 overflow-hidden border border-warmgray dark:border-[#44403C]">
+                        {% if post.image %}
+                        <img src="{{ post.image }}" alt="{{ post.title | escape }}" class="w-full h-full object-cover">
+                        {% else %}
+                        <div class="w-full h-full bg-gradient-to-br {% if pcat %}{{ pcat.card_gradient }}{% else %}from-gray-50 to-gray-100{% endif %} dark:from-[#292524] dark:to-[#1C1917] flex items-center justify-center">
+                            {% if post.category == 'vodici' %}
+                            <svg class="w-12 h-12 text-amber-300 dark:text-amber-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                            {% elsif post.category == 'ai-u-praksi' %}
+                            <svg class="w-12 h-12 text-teal-300 dark:text-teal-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            {% elsif post.category == 'vijesti' %}
+                            <svg class="w-12 h-12 text-rose-300 dark:text-rose-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="flex items-center gap-3 mb-3">
+                        {% if pcat %}<span class="px-2 py-1 {{ pcat.badge_class }} text-xs font-semibold rounded-md">{{ pcat.name }}</span>{% endif %}
+                        <span class="text-xs text-stone dark:text-[#A8A29E]">{{ post.date | date: "%-d." }} {{ site.data.months[month_num] }}</span>
+                        {% if post.read_time %}<span class="text-warmgray dark:text-[#44403C]">·</span><span class="text-xs text-stone dark:text-[#A8A29E]">{{ post.read_time }} min čitanja</span>{% endif %}
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-ink mb-2 {% if pcat %}{{ pcat.hover_text }}{% else %}group-hover:text-coffee{% endif %} transition-colors leading-snug">{{ post.title }}</h3>
+                    {% if post.description %}<p class="text-sm text-stone dark:text-[#A8A29E] leading-relaxed line-clamp-2">{{ post.description }}</p>{% endif %}
+                </a>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% include newsletter.html %}
+
+<script>
+    // LLM neural network animation (homepage only)
+    (function() {
+        const canvas = document.getElementById('llm-graph');
+        if (!canvas) return;
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.parentElement.getBoundingClientRect();
+        const W = rect.width, H = rect.height;
+        canvas.width = W * dpr; canvas.height = H * dpr;
+        const ctx = canvas.getContext('2d');
+        ctx.scale(dpr, dpr);
+        const LAYERS = [3, 5, 5, 3];
+        const nodes = [];
+        LAYERS.forEach(function(count, li) {
+            const x = W * 0.1 + li * (W * 0.8 / (LAYERS.length - 1));
+            for (let i = 0; i < count; i++) {
+                nodes.push({ x, y: H * 0.1 + (i + 0.5) * (H * 0.8 / count), layer: li, phase: Math.random() * Math.PI * 2, speed: 0.4 + Math.random() * 0.7 });
+            }
+        });
+        const edges = [];
+        for (let li = 0; li < LAYERS.length - 1; li++) {
+            const A = nodes.filter(n => n.layer === li), B = nodes.filter(n => n.layer === li + 1);
+            A.forEach(a => B.forEach(b => edges.push({ a, b, particles: [], next: Math.random() * 2000 })));
+        }
+        let prev = 0;
+        function frame(t) {
+            const dt = Math.min(t - prev, 50); prev = t;
+            const dark = document.documentElement.classList.contains('dark');
+            ctx.clearRect(0, 0, W, H);
+            edges.forEach(e => {
+                ctx.beginPath(); ctx.moveTo(e.a.x, e.a.y); ctx.lineTo(e.b.x, e.b.y);
+                ctx.strokeStyle = dark ? 'rgba(168,162,158,0.15)' : 'rgba(120,113,108,0.12)';
+                ctx.lineWidth = 1; ctx.stroke();
+                e.next -= dt;
+                if (e.next < 0) { e.particles.push({ t: 0, v: 0.00022 + Math.random() * 0.00018 }); e.next = 1200 + Math.random() * 3000; }
+                e.particles = e.particles.filter(p => {
+                    p.t += p.v * dt;
+                    if (p.t >= 1) return false;
+                    const px = e.a.x + (e.b.x - e.a.x) * p.t, py = e.a.y + (e.b.y - e.a.y) * p.t;
+                    const alpha = Math.sin(p.t * Math.PI);
+                    ctx.beginPath(); ctx.arc(px, py, 2.5, 0, Math.PI * 2);
+                    ctx.fillStyle = dark ? 'rgba(253,186,116,' + alpha + ')' : 'rgba(180,83,9,' + alpha + ')';
+                    ctx.fill(); return true;
+                });
+            });
+            nodes.forEach(n => {
+                const pulse = Math.sin(t * 0.001 * n.speed + n.phase), r = 5.5 + pulse * 1.2, opacity = 0.7 + pulse * 0.2;
+                const isIO = n.layer === 0 || n.layer === LAYERS.length - 1, color = isIO ? '#0F766E' : '#B45309';
+                ctx.beginPath(); ctx.arc(n.x, n.y, r + 6, 0, Math.PI * 2);
+                ctx.fillStyle = isIO ? 'rgba(15,118,110,0.1)' : 'rgba(180,83,9,0.08)'; ctx.fill();
+                ctx.beginPath(); ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
+                ctx.fillStyle = color; ctx.globalAlpha = opacity; ctx.fill(); ctx.globalAlpha = 1;
+            });
+            requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+    })();
+</script>

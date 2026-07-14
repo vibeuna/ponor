@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#5a7a8a"/>
+
+  <!-- Icon group — three horizontal stacked rounded rectangles representing text → LLM → output
+       Icon bounding box: x 230–770, y 365–635 → centre (500, 500) → translate(0, -200) -->
+  <g transform="translate(0, -200)">
+
+    <!-- ── TOP LAYER: text output (right side) ── -->
+    <!-- Output layer — smaller, light blue tint, thinner stroke -->
+    <rect
+      x="280" y="365"
+      width="440" height="68"
+      rx="18"
+      fill="#d6dff0"
+      stroke="#1a1a1a"
+      stroke-width="14"
+      stroke-linejoin="round"
+    />
+    <!-- Text-dot lines inside top layer (3 short lines suggesting text tokens) -->
+    <line x1="310" y1="389" x2="410" y2="389" stroke="#1a1a1a" stroke-width="9" stroke-linecap="round"/>
+    <line x1="310" y1="409" x2="380" y2="409" stroke="#1a1a1a" stroke-width="9" stroke-linecap="round"/>
+    <line x1="310" y1="429" x2="430" y2="429" stroke="#1a1a1a" stroke-width="9" stroke-linecap="round"/>
+
+    <!-- Output flow dots — right side, suggesting text coming out -->
+    <circle cx="740" cy="385" r="6" fill="#1a1a1a"/>
+    <circle cx="758" cy="385" r="6" fill="#1a1a1a"/>
+    <circle cx="776" cy="385" r="6" fill="#1a1a1a"/>
+    <!-- Short lines after dots (output text tokens) -->
+    <line x1="740" y1="405" x2="770" y2="405" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/>
+    <line x1="740" y1="421" x2="760" y2="421" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- ── MIDDLE LAYER: LLM processing — most prominent ── -->
+    <!-- Middle layer — tallest, off-white, thickest stroke, widest -->
+    <rect
+      x="230" y="453"
+      width="540" height="104"
+      rx="22"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="18"
+      stroke-linejoin="round"
+    />
+    <!-- Light blue inset panel inside middle layer (representing model internals) -->
+    <rect
+      x="258" y="471"
+      width="484" height="68"
+      rx="10"
+      fill="#d6dff0"
+      stroke="#1a1a1a"
+      stroke-width="10"
+    />
+    <!-- Dot grid inside inset panel — abstract neural/parameter representation -->
+    <!-- Row 1 -->
+    <circle cx="305" cy="496" r="7" fill="#1a1a1a"/>
+    <circle cx="345" cy="496" r="7" fill="#1a1a1a"/>
+    <circle cx="385" cy="496" r="7" fill="#1a1a1a"/>
+    <circle cx="425" cy="496" r="7" fill="#1a1a1a"/>
+    <circle cx="465" cy="496" r="7" fill="#1a1a1a"/>
+    <circle cx="505" cy="496" r="7" fill="#1a1a1a"/>
+    <circle cx="545" cy="496" r="7" fill="#1a1a1a"/>
+    <circle cx="585" cy="496" r="7" fill="#1a1a1a"/>
+    <circle cx="625" cy="496" r="7" fill="#1a1a1a"/>
+    <circle cx="665" cy="496" r="7" fill="#1a1a1a"/>
+    <!-- Row 2 -->
+    <circle cx="305" cy="522" r="7" fill="#1a1a1a"/>
+    <circle cx="345" cy="522" r="7" fill="#1a1a1a"/>
+    <circle cx="385" cy="522" r="7" fill="#1a1a1a"/>
+    <circle cx="425" cy="522" r="7" fill="#1a1a1a"/>
+    <circle cx="465" cy="522" r="7" fill="#1a1a1a"/>
+    <circle cx="505" cy="522" r="7" fill="#1a1a1a"/>
+    <circle cx="545" cy="522" r="7" fill="#1a1a1a"/>
+    <circle cx="585" cy="522" r="7" fill="#1a1a1a"/>
+    <circle cx="625" cy="522" r="7" fill="#1a1a1a"/>
+    <circle cx="665" cy="522" r="7" fill="#1a1a1a"/>
+
+    <!-- ── BOTTOM LAYER: text input (left side) ── -->
+    <!-- Input layer — smaller, light blue tint, thinner stroke -->
+    <rect
+      x="280" y="577"
+      width="440" height="68"
+      rx="18"
+      fill="#d6dff0"
+      stroke="#1a1a1a"
+      stroke-width="14"
+      stroke-linejoin="round"
+    />
+    <!-- Text-dot lines inside bottom layer -->
+    <line x1="310" y1="601" x2="450" y2="601" stroke="#1a1a1a" stroke-width="9" stroke-linecap="round"/>
+    <line x1="310" y1="621" x2="410" y2="621" stroke="#1a1a1a" stroke-width="9" stroke-linecap="round"/>
+    <line x1="310" y1="641" x2="480" y2="641" stroke="#1a1a1a" stroke-width="9" stroke-linecap="round"/>
+
+    <!-- Input flow dots — left side, suggesting text tokens entering -->
+    <circle cx="224" cy="597" r="6" fill="#1a1a1a"/>
+    <circle cx="206" cy="597" r="6" fill="#1a1a1a"/>
+    <circle cx="188" cy="597" r="6" fill="#1a1a1a"/>
+    <!-- Short lines before dots (input text tokens) -->
+    <line x1="188" y1="617" x2="218" y2="617" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/>
+    <line x1="188" y1="633" x2="208" y2="633" stroke="#1a1a1a" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Vertical connection lines between layers (showing data flow upward) -->
+    <line x1="500" y1="433" x2="500" y2="453" stroke="#1a1a1a" stroke-width="12" stroke-linecap="round"/>
+    <line x1="500" y1="557" x2="500" y2="577" stroke="#1a1a1a" stroke-width="12" stroke-linecap="round"/>
+
+  </g>
+</svg>

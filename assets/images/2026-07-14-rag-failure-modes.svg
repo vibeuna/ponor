@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c46e6e"/>
+
+  <!-- Icon group — stethoscope (diagnosis framing for a RAG debugging playbook) -->
+  <!-- Raw bounding box: x 380–620, y 350–695 → centre (500, 522.5) -->
+  <!-- Required translate: (500-500, -(200+(522.5-500))) = (0, -222.5) -->
+  <g transform="translate(0, -222.5)">
+
+    <!-- Left ear-tube -->
+    <path d="M 400 370 C 400 430 440 450 500 455"
+          fill="none" stroke="#1a1a1a" stroke-width="18"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Right ear-tube -->
+    <path d="M 600 370 C 600 430 560 450 500 455"
+          fill="none" stroke="#1a1a1a" stroke-width="18"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Left eartip -->
+    <circle cx="400" cy="370" r="20" fill="#fafaf8" stroke="#1a1a1a" stroke-width="16"/>
+
+    <!-- Right eartip -->
+    <circle cx="600" cy="370" r="20" fill="#fafaf8" stroke="#1a1a1a" stroke-width="16"/>
+
+    <!-- Main tube down to chestpiece -->
+    <path d="M 500 455 L 500 565"
+          fill="none" stroke="#1a1a1a" stroke-width="18"
+          stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Chestpiece (diaphragm) -->
+    <circle cx="500" cy="630" r="65" fill="#fafaf8" stroke="#1a1a1a" stroke-width="18"/>
+
+    <!-- Diaphragm inner detail -->
+    <circle cx="500" cy="630" r="26" fill="#d6dff0" stroke="#1a1a1a" stroke-width="10"/>
+
+  </g>
+</svg>
