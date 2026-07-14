@@ -1,17 +1,17 @@
-title: "ponor.ai"
+title: "ponor.ba"
 description: "Jednostavni vodiči, aktualne vijesti i praktični savjeti o LLM modelima i AI alatima na bosanskom jeziku. Svaki dan novi sadržaj."
-url: "https://ponor.ai"
+url: "https://www.ponor.ba"
 baseurl: ""
 lang: bs
 title_separator: "—"
 
 author:
   name: "Dino"
-  email: "kontakt@ponor.ai"
+  email: "kontakt@ponor.ba"
 
 twitter:
-  username: ponorai
-github_username: ponorai
+  username: ponor
+github_username: ponor
 
 permalink: /clanci/:slug/
 future: true
