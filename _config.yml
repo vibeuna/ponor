@@ -7,7 +7,17 @@ title_separator: "—"
 
 author:
   name: "Dino"
-  email: "kontakt@ponor.ba"
+  email: "vibeuna@gmail.com"
+
+# Newsletter signup (MailerLite custom HTML form).
+# action: the form's subscribe endpoint
+#   (from MailerLite: Forms -> Embedded form -> HTML snippet -> the <form action=...> URL)
+# email_field: name of the email input the provider expects
+#   (MailerLite: "fields[email]", Buttondown: "email")
+# While action is empty, the site shows an RSS follow block instead of the form.
+newsletter:
+  action: "https://assets.mailerlite.com/jsonp/2511666/forms/193067898519946836/subscribe"
+  email_field: "fields[email]"
 
 permalink: /clanci/:slug/
 future: true

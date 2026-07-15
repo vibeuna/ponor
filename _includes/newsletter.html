@@ -5,10 +5,57 @@
         </div>
         <h2 class="text-3xl md:text-4xl font-bold text-ink dark:text-cream mb-4 font-serif">Pratite razumijevanje AI-a, svaki dan</h2>
         <p class="text-lg text-stone dark:text-[#A8A29E] mb-8">Svako jutro jedan članak — praktičan, kratak, na bosanskom. Bez buzzworda i bez spama.</p>
-        <form action="#" method="post" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input type="email" name="email" placeholder="vaš@email.com" required class="flex-1 px-4 py-3 bg-cream dark:bg-[#292524] border border-warmgray dark:border-[#44403C] rounded-lg text-ink dark:text-cream placeholder-stone focus:outline-none focus:ring-2 focus:ring-coffee/50 focus:border-coffee transition-colors">
+        {% if site.newsletter.action != "" %}
+        <form id="newsletter-form" action="{{ site.newsletter.action }}" method="post" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <input type="email" name="{{ site.newsletter.email_field }}" placeholder="vaš@email.com" required autocomplete="email" class="flex-1 px-4 py-3 bg-cream dark:bg-[#292524] border border-warmgray dark:border-[#44403C] rounded-lg text-ink dark:text-cream placeholder-stone focus:outline-none focus:ring-2 focus:ring-coffee/50 focus:border-coffee transition-colors">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;height:0;overflow:hidden">
             <button type="submit" class="px-6 py-3 bg-coffee text-white rounded-lg font-medium text-sm hover:bg-coffee-dark transition-colors whitespace-nowrap">Pretplatite se</button>
         </form>
-        <p class="mt-4 text-xs text-stone dark:text-[#A8A29E]">Pretplatu možete otkazati u bilo kojem trenutku.</p>
+        <p id="newsletter-status" class="mt-4 text-sm hidden" role="status"></p>
+        <p id="newsletter-hint" class="mt-4 text-xs text-stone dark:text-[#A8A29E]">Pretplatu možete otkazati u bilo kojem trenutku.</p>
+        <script>
+            (function() {
+                var form = document.getElementById('newsletter-form');
+                var status = document.getElementById('newsletter-status');
+                var hint = document.getElementById('newsletter-hint');
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var honeypot = form.querySelector('input[name="website"]');
+                    var btn = form.querySelector('button');
+                    function show(msg, ok) {
+                        status.textContent = msg;
+                        status.classList.remove('hidden', 'text-teal', 'text-red-600');
+                        status.classList.add(ok ? 'text-teal' : 'text-red-600');
+                    }
+                    if (honeypot && honeypot.value) { show('Hvala! Provjerite email za potvrdu pretplate.', true); return; }
+                    btn.disabled = true;
+                    var data = new URLSearchParams(new FormData(form));
+                    data.delete('website');
+                    fetch(form.action, { method: 'POST', body: data })
+                        .then(function(res) {
+                            if (!res.ok) throw new Error(res.status);
+                            show('Hvala! Provjerite email za potvrdu pretplate.', true);
+                            form.reset();
+                            hint.classList.add('hidden');
+                        })
+                        .catch(function() {
+                            // CORS or network failure — fall back to a full-page submit
+                            // (form.submit() skips this handler) so the signup still
+                            // lands on the provider's page.
+                            form.submit();
+                        })
+                        .finally(function() { btn.disabled = false; });
+                });
+            })();
+        </script>
+        {% else %}
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <a href="/feed.xml" class="inline-flex items-center gap-2 px-6 py-3 bg-coffee text-white rounded-lg font-medium text-sm hover:bg-coffee-dark transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6.18 15.64a2.18 2.18 0 012.18 2.18C8.36 19 7.38 20 6.18 20C5 20 4 19 4 17.82a2.18 2.18 0 012.18-2.18M4 4.44A15.56 15.56 0 0119.56 20h-2.83A12.73 12.73 0 004 7.27V4.44m0 5.66a9.9 9.9 0 019.9 9.9h-2.83A7.07 7.07 0 004 12.93V10.1z"/></svg>
+                Pratite putem RSS-a
+            </a>
+        </div>
+        <p class="mt-4 text-xs text-stone dark:text-[#A8A29E]">Email pretplata uskoro stiže.</p>
+        {% endif %}
     </div>
 </section>
