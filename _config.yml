@@ -9,10 +9,6 @@ author:
   name: "Dino"
   email: "kontakt@ponor.ba"
 
-twitter:
-  username: ponor
-github_username: ponor
-
 permalink: /clanci/:slug/
 future: true
 
