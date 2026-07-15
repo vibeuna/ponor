@@ -31,3 +31,5 @@ exclude:
   - Gemfile.lock
   - README.md
   - reference_static_web/
+  - tailwind.config.js
+  - tailwind.input.css

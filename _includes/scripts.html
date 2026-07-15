@@ -3,7 +3,7 @@
 </button>
 
 <script>
-    // Dark mode — runs immediately to prevent flash
+    // Dark mode toggle — initial theme is applied in head.html before first paint
     (function() {
         const toggle = document.getElementById('theme-toggle');
         const sun = document.getElementById('sun-icon');
@@ -13,8 +13,6 @@
             if (html.classList.contains('dark')) { sun.classList.remove('hidden'); moon.classList.add('hidden'); }
             else { sun.classList.add('hidden'); moon.classList.remove('hidden'); }
         }
-        const saved = localStorage.getItem('ponor-theme');
-        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) { html.classList.add('dark'); }
         updateIcons();
         toggle.addEventListener('click', () => {
             html.classList.toggle('dark');

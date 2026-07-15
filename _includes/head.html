@@ -33,33 +33,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        cream: '#FAF9F6',
-                        parchment: '#F5F5F0',
-                        ink: '#1C1917',
-                        stone: '#78716C',
-                        coffee: '#B45309',
-                        'coffee-dark': '#92400E',
-                        teal: '#0F766E',
-                        'teal-dark': '#115E59',
-                        warmgray: '#E7E5E4',
-                        'warmgray-light': '#F5F5F4',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        serif: ['Merriweather', 'Georgia', 'serif'],
-                        mono: ['Fira Code', 'monospace'],
-                    }
-                }
+        // Apply saved theme before first paint to avoid a light-mode flash.
+        (function() {
+            var saved = localStorage.getItem('ponor-theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
             }
-        }
+        })();
     </script>
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
     <style>
         html { transition: background-color 0.3s ease, color 0.3s ease; scroll-padding-top: 5rem; }
         body { font-family: 'Inter', system-ui, sans-serif; background-color: #FAF9F6; color: #1C1917; transition: background-color 0.3s ease, color 0.3s ease; }
