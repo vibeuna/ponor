@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#5a7a8a"/>
+
+  <!-- Icon: compass (robot navigation / wayfinding) — centred at (500, 300) -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Outer compass body -->
+    <circle cx="500" cy="300" r="175" fill="#fafaf8" stroke="#1a1a1a" stroke-width="18"/>
+    <!-- Inner bezel ring -->
+    <circle cx="500" cy="300" r="132" fill="none" stroke="#1a1a1a" stroke-width="7"/>
+
+    <!-- Cardinal tick marks just inside the outer ring -->
+    <line x1="500" y1="140" x2="500" y2="168" stroke="#1a1a1a" stroke-width="9"/>
+    <line x1="500" y1="432" x2="500" y2="460" stroke="#1a1a1a" stroke-width="9"/>
+    <line x1="340" y1="300" x2="368" y2="300" stroke="#1a1a1a" stroke-width="9"/>
+    <line x1="632" y1="300" x2="660" y2="300" stroke="#1a1a1a" stroke-width="9"/>
+
+    <!-- Compass needle: north half tinted, south half off-white -->
+    <polygon points="500,175 452,300 548,300" fill="#d6dff0" stroke="#1a1a1a" stroke-width="10"/>
+    <polygon points="500,425 452,300 548,300" fill="#fafaf8" stroke="#1a1a1a" stroke-width="10"/>
+
+    <!-- Center pivot -->
+    <circle cx="500" cy="300" r="20" fill="#fafaf8" stroke="#1a1a1a" stroke-width="9"/>
+  </g>
+</svg>

@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Inter, system-ui, -apple-system, sans-serif" id="ladder-svg" role="img" aria-label="Agentska arhitektura kao ljestve od tri prečke: jedan prompt, radni tok i agent. Osa je pitanje ko drži kontrolu toka — kod ili model. Agent je trošak, penji se samo kad niža prečka zakaže.">
+  <title>Agentski obrasci kao ljestve: penji se od jednog prompta, preko radnog toka, do agenta — tek kad niža prečka zakaže.</title>
+
+  <defs>
+    <marker id="lad-arrow-coffee" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <polygon points="0,0 10,5 0,10" fill="#B45309"/>
+    </marker>
+    <marker id="lad-arrow-stone" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0,0 10,5 0,10" fill="#78716C"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="600" fill="#FAF9F6"/>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Agentski obrasci: ljestve, a ne meni</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#78716C">Penji se prečku po prečku — višu tek kad niža demonstrativno zakaže</text>
+
+  <!-- ============================================================ -->
+  <!-- LEFT AXIS (coffee accent, the key message): ko drži kontrolu -->
+  <!-- toka. Read bottom→top: kod → model. Revealed after the rungs. -->
+  <!-- ============================================================ -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="2.6s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <!-- top endpoint label -->
+    <text x="96" y="74" text-anchor="middle" font-size="11" font-weight="700" fill="#92400E" letter-spacing="0.5">model</text>
+    <!-- vertical arrow pointing up -->
+    <line x1="96" y1="448" x2="96" y2="84" stroke="#B45309" stroke-width="2" marker-end="url(#lad-arrow-coffee)"/>
+    <!-- bottom endpoint label -->
+    <text x="96" y="466" text-anchor="middle" font-size="11" font-weight="700" fill="#92400E" letter-spacing="0.5">kod</text>
+    <!-- rotated axis label -->
+    <text x="72" y="266" text-anchor="middle" font-size="12" font-weight="700" fill="#92400E" letter-spacing="0.6" transform="rotate(-90 72 266)">ko drži kontrolu toka</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- RUNG 3 (TOP): agent — model drži kontrolu toka. Thin: a cost,  -->
+  <!-- not an endpoint. Neutral grayscale. y=80..172                  -->
+  <!-- ============================================================ -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="2.25s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="140" y="80" width="700" height="92" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <rect x="140" y="80" width="3" height="92" fill="#78716C"/>
+    <text x="162" y="106" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">NAJVIŠA PREČKA</text>
+    <text x="162" y="140" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">agent</text>
+    <text x="162" y="162" font-size="12" font-style="italic" fill="#78716C">autonomija je trošak, ne vrlina</text>
+    <text x="440" y="116" font-size="13" font-weight="600" fill="#44403C">model drži kontrolu toka</text>
+    <text x="440" y="140" font-size="12" fill="#57534E">Model sam bira sljedeći potez i broj koraka.</text>
+    <text x="440" y="160" font-size="12" fill="#78716C">obrasci: ReAct · refleksija</text>
+  </g>
+
+  <!-- Climb arrow: radni tok → agent (stone, points up). y=194→176 -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="2.05s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <line x1="490" y1="194" x2="490" y2="176" stroke="#78716C" stroke-width="1.5" marker-end="url(#lad-arrow-stone)"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- RUNG 2 (MIDDLE): radni tok — kod drži kontrolu toka. The RICH   -->
+  <!-- rung: holds the five patterns as neutral chips. y=196..372      -->
+  <!-- ============================================================ -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="0.9s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="140" y="196" width="700" height="176" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <rect x="140" y="196" width="3" height="176" fill="#78716C"/>
+    <text x="162" y="222" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">SREDNJE PREČKE — PET OBLIKA</text>
+    <text x="162" y="256" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">radni tok</text>
+    <text x="300" y="256" font-size="13" font-weight="600" fill="#44403C">kod drži kontrolu toka</text>
+    <text x="300" y="277" font-size="12" fill="#57534E">Koraci su unaprijed određeni kodom; model popunjava pojedini korak.</text>
+  </g>
+
+  <!-- Five pattern chips (neutral). Row 1: three. Row 2: two. -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="1.25s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="162" y="302" width="173" height="30" rx="14" fill="#FAF9F6" stroke="#D6D3D1" stroke-width="1"/>
+    <text x="248" y="322" text-anchor="middle" font-size="13" font-weight="600" fill="#57534E">ulančavanje promptova</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="1.40s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="349" y="302" width="110" height="30" rx="14" fill="#FAF9F6" stroke="#D6D3D1" stroke-width="1"/>
+    <text x="404" y="322" text-anchor="middle" font-size="13" font-weight="600" fill="#57534E">usmjeravanje</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="1.55s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="473" y="302" width="124" height="30" rx="14" fill="#FAF9F6" stroke="#D6D3D1" stroke-width="1"/>
+    <text x="535" y="322" text-anchor="middle" font-size="13" font-weight="600" fill="#57534E">paralelizacija</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="1.70s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="162" y="336" width="166" height="30" rx="14" fill="#FAF9F6" stroke="#D6D3D1" stroke-width="1"/>
+    <text x="245" y="356" text-anchor="middle" font-size="13" font-weight="600" fill="#57534E">orchestrator–radnici</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="1.85s" dur="0.35s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="342" y="336" width="173" height="30" rx="14" fill="#FAF9F6" stroke="#D6D3D1" stroke-width="1"/>
+    <text x="428" y="356" text-anchor="middle" font-size="13" font-weight="600" fill="#57534E">evaluator–optimizator</text>
+  </g>
+
+  <!-- Climb arrow: jedan prompt → radni tok (stone, points up). -->
+  <!-- With the climbing rule annotation. y=388→374 -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="0.7s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <line x1="490" y1="388" x2="490" y2="374" stroke="#78716C" stroke-width="1.5" marker-end="url(#lad-arrow-stone)"/>
+    <text x="505" y="384" font-size="10" font-style="italic" fill="#78716C">penji se tek kad niža prečka zakaže</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- RUNG 1 (BOTTOM): jedan prompt — the simplest rung. y=390..452   -->
+  <!-- ============================================================ -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="0.3s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <rect x="140" y="390" width="700" height="62" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <rect x="140" y="390" width="3" height="62" fill="#78716C"/>
+    <text x="162" y="414" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">NAJNIŽA PREČKA</text>
+    <text x="162" y="438" font-family="Merriweather, Georgia, serif" font-size="18" font-weight="700" fill="#1C1917">jedan prompt</text>
+    <text x="440" y="426" font-size="12" fill="#57534E">Prije ikakvog sistema: može li jedan dobar prompt</text>
+    <text x="440" y="443" font-size="12" fill="#57534E">(uz retrieval i par primjera) obaviti posao?</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- CAPTION (coffee callout): the takeaway. y=478..538             -->
+  <!-- ============================================================ -->
+  <g opacity="0" transform="translate(0, 8)">
+    <animate attributeName="opacity" values="0;1" begin="3.0s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <animateTransform attributeName="transform" type="translate" begin="3.0s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0 8;0 0"/>
+    <rect x="60" y="478" width="780" height="60" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <rect x="60" y="478" width="3" height="60" fill="#B45309"/>
+    <text x="80" y="502" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">PRAVILO IZBORA</text>
+    <text x="80" y="526" font-family="Merriweather, Georgia, serif" font-size="15" font-style="italic" fill="#1C1917">agent je trošak, ne cilj — penji se samo kad moraš</text>
+  </g>
+
+  <!-- Footnote -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" begin="3.6s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1"/>
+    <text x="60" y="568" font-size="11" font-style="italic" fill="#78716C">Ljestve, ne meni: svih sedam obrazaca svodi se na jednu osu — ko drži kontrolu toka, kod ili model.</text>
+  </g>
+
+  <!-- Replay button -->
+  <g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+    <circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon points="852,28 858,28 855,33" fill="#78716C"/>
+    <title>Pusti ponovo</title>
+  </g>
+
+  <style>
+    #ladder-svg:hover .replay-btn { opacity: 1; }
+    #ladder-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+    #ladder-svg .replay-btn:hover path { stroke: #B45309; }
+    #ladder-svg .replay-btn:hover polygon { fill: #B45309; }
+    #ladder-svg .replay-btn:focus { outline: none; opacity: 1; }
+    #ladder-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+    @media (prefers-reduced-motion: reduce) {
+      #ladder-svg animate, #ladder-svg animateTransform { display: none; }
+      #ladder-svg .replay-btn { display: none; }
+    }
+  </style>
+
+  <script>
+    // <![CDATA[
+    (function () {
+      const svg = document.getElementById('ladder-svg');
+      const btn = svg && svg.querySelector('.replay-btn');
+      if (!svg || !btn) return;
+      function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+      btn.addEventListener('click', replay);
+      btn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); } });
+    })();
+    // ]]>
+  </script>
+</svg>

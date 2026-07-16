@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c8996a"/>
+
+  <!-- Icon: chalkboard (wooden frame + dark slate + chalk writing + chalk tray) -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Wooden frame -->
+    <rect x="160" y="140" width="680" height="310" rx="20"
+          fill="#fafaf8" stroke="#1a1a1a" stroke-width="18"/>
+    <!-- Slate board surface -->
+    <rect x="196" y="176" width="608" height="238" rx="10"
+          fill="#1a1a1a"/>
+
+    <!-- Chalk writing lines -->
+    <line x1="240" y1="240" x2="640" y2="240" stroke="#fafaf8" stroke-width="9"/>
+    <line x1="240" y1="300" x2="560" y2="300" stroke="#fafaf8" stroke-width="9"/>
+    <!-- Light-blue chalk checkmark accent -->
+    <polyline points="620,340 662,378 742,288"
+              fill="none" stroke="#d6dff0" stroke-width="14"/>
+
+    <!-- Chalk tray ledge -->
+    <rect x="188" y="448" width="624" height="24" rx="10"
+          fill="#d6dff0" stroke="#1a1a1a" stroke-width="8"/>
+    <!-- Piece of chalk resting on the tray -->
+    <rect x="676" y="450" width="94" height="16" rx="8"
+          fill="#fafaf8" stroke="#1a1a1a" stroke-width="6"/>
+  </g>
+</svg>

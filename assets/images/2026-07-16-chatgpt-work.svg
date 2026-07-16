@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c46e6e"/>
+
+  <!-- Icon group: a single gear (autonomous agent running multi-step work).
+       Designed directly in the 1000x600 space, visual bounding box centred
+       at (500, 300). Gear tips span x 344-656, y 144-456. -->
+  <g>
+    <!-- Gear body: 8-tooth cog -->
+    <path
+      d="M 617.1,273.8 L 656.4,277.7 L 656.4,322.3 L 617.1,326.2 L 601.3,364.3 L 626.4,394.9 L 594.9,426.4 L 564.3,401.3 L 526.2,417.1 L 522.3,456.4 L 477.7,456.4 L 473.8,417.1 L 435.7,401.3 L 405.1,426.4 L 373.6,394.9 L 398.7,364.3 L 382.9,326.2 L 343.6,322.3 L 343.6,277.7 L 382.9,273.8 L 398.7,235.7 L 373.6,205.1 L 405.1,173.6 L 435.7,198.7 L 473.8,182.9 L 477.7,143.6 L 522.3,143.6 L 526.2,182.9 L 564.3,198.7 L 594.9,173.6 L 626.4,205.1 L 601.3,235.7 Z"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="16"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Hub ring (light-blue tint) -->
+    <circle
+      cx="500" cy="300"
+      r="72"
+      fill="#d6dff0"
+      stroke="#1a1a1a"
+      stroke-width="16"
+    />
+
+    <!-- Inner bore -->
+    <circle
+      cx="500" cy="300"
+      r="26"
+      fill="#fafaf8"
+      stroke="#1a1a1a"
+      stroke-width="12"
+    />
+  </g>
+</svg>

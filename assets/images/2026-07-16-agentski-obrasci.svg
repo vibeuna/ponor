@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#6b9080"/>
+
+  <!-- Icon: three-rung ladder (article's spine) — centred at (500, 300),
+       plain group, no transform; coordinates designed directly in 1000x600. -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left rail -->
+    <rect x="365" y="150" width="30" height="300" rx="15"
+          fill="#fafaf8" stroke-width="16"/>
+    <!-- Right rail -->
+    <rect x="605" y="150" width="30" height="300" rx="15"
+          fill="#fafaf8" stroke-width="16"/>
+
+    <!-- Bottom rung -->
+    <rect x="380" y="372" width="240" height="26" rx="12"
+          fill="#fafaf8" stroke-width="14"/>
+    <!-- Middle rung -->
+    <rect x="380" y="287" width="240" height="26" rx="12"
+          fill="#fafaf8" stroke-width="14"/>
+    <!-- Top rung — coffee accent, the highest prong you climb toward -->
+    <rect x="380" y="202" width="240" height="26" rx="12"
+          fill="#B45309" stroke-width="14"/>
+  </g>
+</svg>
