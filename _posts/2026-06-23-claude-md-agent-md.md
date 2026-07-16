@@ -40,15 +40,15 @@ Za lične overridove koji ne trebaju biti commitovani, postoji `CLAUDE.local.md`
 
 Najčešća greška je trpanje pravila kodnog stila u ovaj fajl. To je i skupo i kontraproduktivno.
 
-CLAUDE.md troši prostor u kontekstnom prozoru (context window). Svaki redak koji ste dodali tamo zauzima kapacitet koji bi inače bio dostupan za vaš kod i razgovor. Prema zajedničkoj praksi razvojnih timova koji koriste Claude Code, fajlovi iznad otprilike 200 linija počinju negativno utjecati na kvalitet slijeđenja uputa — model ne ignoriše ostatak, ali mu prioritizacija slabi.
+CLAUDE.md troši prostor u kontekstnom prozoru (context window). Svaki redak koji ste dodali tamo zauzima kapacitet koji bi inače bio dostupan za vaš kod i razgovor. Prema zajedničkoj praksi razvojnih timova koji koriste Claude Code, fajlovi iznad otprilike 200 linija počinju negativno utjecati na kvalitet slijeđenja uputa – model ne ignoriše ostatak, ali mu prioritizacija slabi.
 
 Pravila poput "uvijek koristi single quotes", "indent je 2 razmaka", "ne koristi `var`" - to je posao lintera (lint alata). Prettier, ESLint, Black, rustfmt izvršavaju ta pravila deterministički, bez trošenja kontekstnog prozora. Agent koji čita "koristi single quotes" iz CLAUDE.md i agent koji dobije grešku od ESLinta jer je napisao double quotes - isti ishod, drastično različiti troškovi.
 
 **Praktično pravilo:** ako pravilo može biti pokriveno linterom ili formatterom, tamo i spada.
 
-## AGENTS.md — široko prihvaćena konvencija za višealatne timove
+## AGENTS.md – široko prihvaćena konvencija za višealatne timove
 
-`AGENTS.md` je open standard — nije u vlasništvu Anthropica, nije vezan za Claude Code. To je obična Markdown datoteka bez obaveznog YAML frontmattera, čija jedina posebnost je da ju alati za AI-asistiranu izradu softvera prepoznaju po imenu i čitaju automatski.
+`AGENTS.md` je open standard – nije u vlasništvu Anthropica, nije vezan za Claude Code. To je obična Markdown datoteka bez obaveznog YAML frontmattera, čija jedina posebnost je da ju alati za AI-asistiranu izradu softvera prepoznaju po imenu i čitaju automatski.
 
 Prema dostupnoj dokumentaciji i zajedničkoj praksi, više od 30 alata čita `AGENTS.md`: OpenAI Codex, GitHub Copilot, Cursor, Gemini CLI, Google Jules, Aider, Devin i drugi. Claude Code je ne čita direktno - ali to se rješava s jednom linijom.
 
@@ -88,7 +88,7 @@ my-project/
 
 {% include diagram.html name="2026-06-23-claude-md-agent-md" caption="Tri fajla, tri različite namjene: kanonski kontekst, Claude-specifična proširenja, i definicije sub-agenata." alt="Dijagram koji prikazuje odnos između AGENTS.md, CLAUDE.md i .claude/agents/ fajlova" %}
 
-## .claude/agents/ — definicija custom sub-agenata
+## .claude/agents/ – definicija custom sub-agenata
 
 Fajlovi u `.claude/agents/` su poseban mehanizam, odvojen od CLAUDE.md i AGENTS.md. Svaki fajl definira jednog custom sub-agenta s YAML frontmatterom i Markdown tijelom:
 
@@ -103,7 +103,7 @@ model: claude-opus-4-5
 Ti si senior inženjer koji pregledava kod. Fokusiraj se na...
 ```
 
-Ove definicije kontrolišu autonomnu delegaciju — koji alati su dostupni sub-agentu, koji model koristi, koja podešavanja (settings) i dozvole (permissions) važe. Prompt koji piše developer u tijelu fajla postaje system prompt sub-agenta.
+Ove definicije kontrolišu autonomnu delegaciju – koji alati su dostupni sub-agentu, koji model koristi, koja podešavanja (settings) i dozvole (permissions) važe. Prompt koji piše developer u tijelu fajla postaje system prompt sub-agenta.
 
 Napomena o scope-u: globalni sub-agenti idu u `~/.claude/agents/` i dostupni su u svim projektima; projektni sub-agenti idu u `.claude/agents/` i važe samo za taj projekt.
 
@@ -132,7 +132,7 @@ Preporučeni radni tok: `AGENTS.md` na root-u kao jedini izvor istine, `@import`
 - [Anthropic: Claude Code Memory (CLAUDE.md dokumentacija)](https://docs.anthropic.com/en/docs/claude-code/memory)
 - [Anthropic: Claude Code Sub-agents](https://docs.anthropic.com/en/docs/claude-code/sub-agents)
 - [Anthropic: Claude Code Settings i loading order](https://docs.anthropic.com/en/docs/claude-code/settings)
-- [BuildThisNow: AGENTS.md vs CLAUDE.md — strukturalna usporedba](https://www.buildthisnow.com/blog/guide/mechanics/agents-md-vs-claude-md)
+- [BuildThisNow: AGENTS.md vs CLAUDE.md – strukturalna usporedba](https://www.buildthisnow.com/blog/guide/mechanics/agents-md-vs-claude-md)
 - [MorphLLM: AGENTS.md specifikacija i pregled](https://www.morphllm.com/agents-md-guide)
 - [HumanLayer: Praktični vodič za pisanje dobrog CLAUDE.md](https://www.humanlayer.dev/blog/writing-a-good-claude-md)
 - [arxiv 2601.20404: Peer-reviewed studija o utjecaju AGENTS.md na efikasnost agenata](https://arxiv.org/pdf/2601.20404)

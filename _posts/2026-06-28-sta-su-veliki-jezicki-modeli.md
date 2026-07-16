@@ -72,6 +72,6 @@ Ali veći kontekstni prozor ne garantuje savršeno procesuiranje. Istraživanja 
 
 ## Izvori
 
-- Brown et al. (2020). *Language Models are Few-Shot Learners.* [arxiv.org/abs/2005.14165](https://arxiv.org/abs/2005.14165) — Temeljni GPT-3 rad koji je postavio osnovu za modernu eru LLM-ova.
-- Liu et al. (2023). *Lost in the Middle: How Language Models Use Long Contexts.* [arxiv.org/abs/2307.03172](https://arxiv.org/abs/2307.03172) — Stanford istraživanje o ograničenjima dugih kontekstnih prozora.
+- Brown et al. (2020). *Language Models are Few-Shot Learners.* [arxiv.org/abs/2005.14165](https://arxiv.org/abs/2005.14165) – Temeljni GPT-3 rad koji je postavio osnovu za modernu eru LLM-ova.
+- Liu et al. (2023). *Lost in the Middle: How Language Models Use Long Contexts.* [arxiv.org/abs/2307.03172](https://arxiv.org/abs/2307.03172) – Stanford istraživanje o ograničenjima dugih kontekstnih prozora.
 - Anthropic. *Claude model documentation.* [anthropic.com/claude](https://www.anthropic.com/claude)

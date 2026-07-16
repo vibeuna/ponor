@@ -5,7 +5,7 @@ date: 2026-06-24
 category: vodici
 audience: developers
 read_time: 7
-description: "Prodavač kaže milijun tokena. Model ignoriše upravo onu informaciju iz sredine. Nije bug — to je osnovna karakteristika transformera. Kako to oblikuje arhitekturalne odluke."
+description: "Prodavač kaže milijun tokena. Model ignoriše upravo onu informaciju iz sredine. Nije bug – to je osnovna karakteristika transformera. Kako to oblikuje arhitekturalne odluke."
 diagram: /assets/diagrams/2026-06-30-context-window-praksa.svg
 image: /assets/images/2026-06-30-context-window-praksa.svg
 ---
@@ -24,7 +24,7 @@ Mehanizam je u mehanizmu pažnje (attention mechanism): tokom treninga, modeli s
 
 Praktična posljedica: puni kontekstni prozor nije ravnopravna memorija. To je prostor s jačim i slabijim zonama.
 
-{% include diagram.html name="2026-06-30-context-window-praksa" caption="Tačnost modela pada kada se relevantan dokument nalazi u sredini konteksta — pozicije 1 i 20 su pouzdane, sredina nije." alt="Bar chart showing U-shaped accuracy curve across 5 document positions in a 20-document context window" %}
+{% include diagram.html name="2026-06-30-context-window-praksa" caption="Tačnost modela pada kada se relevantan dokument nalazi u sredini konteksta – pozicije 1 i 20 su pouzdane, sredina nije." alt="Bar chart showing U-shaped accuracy curve across 5 document positions in a 20-document context window" %}
 
 ## Efektivni vs. nominalni prozor
 

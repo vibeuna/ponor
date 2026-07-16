@@ -89,9 +89,9 @@ Regulativa je već dijelom aktivna. August 2026. nije daleko.
 
 ## Izvori
 
-- [Regulation (EU) 2024/1689 — Official Journal text, EUR-Lex](https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng)
-- [Article 113 — Applicability timeline (annotated)](https://artificialintelligenceact.eu/article/113/)
+- [Regulation (EU) 2024/1689 – Official Journal text, EUR-Lex](https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng)
+- [Article 113 – Applicability timeline (annotated)](https://artificialintelligenceact.eu/article/113/)
 - [Implementation timeline summary](https://artificialintelligenceact.eu/implementation-timeline/)
-- [European Commission — Regulatory Framework for AI](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
-- [Annex III — High-risk AI categories](https://artificialintelligenceact.eu/annex/3/)
-- [Article 5 — Prohibited AI practices](https://artificialintelligenceact.eu/article/5/)
+- [European Commission – Regulatory Framework for AI](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
+- [Annex III – High-risk AI categories](https://artificialintelligenceact.eu/annex/3/)
+- [Article 5 – Prohibited AI practices](https://artificialintelligenceact.eu/article/5/)
