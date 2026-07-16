@@ -4,7 +4,9 @@ layout: default
 {% assign cat = site.data.categories[page.category] %}
 {% assign month_num = page.date | date: "%m" %}
 {% assign month_name = site.data.months[month_num] %}
-{% assign formatted_date = page.date | date: "%-d." | append: " " | append: month_name | append: " " | append: page.date | date: "%Y." %}
+{% assign day = page.date | date: "%-d." %}
+{% assign year = page.date | date: "%Y." %}
+{% assign formatted_date = day | append: " " | append: month_name | append: " " | append: year %}
 
 <div id="reading-progress" role="progressbar" aria-label="Napredak čitanja"></div>
 

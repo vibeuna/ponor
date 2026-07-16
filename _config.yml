@@ -19,6 +19,11 @@ newsletter:
   action: "https://assets.mailerlite.com/jsonp/2511666/forms/193067898519946836/subscribe"
   email_field: "fields[email]"
 
+# Privacy-friendly analytics (GoatCounter, goatcounter.com — no cookies).
+# Set to your site code (the <code> in https://<code>.goatcounter.com).
+# While empty, no analytics script is emitted.
+goatcounter: "ponor"
+
 permalink: /clanci/:slug/
 future: true
 
