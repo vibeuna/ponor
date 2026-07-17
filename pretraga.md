@@ -4,15 +4,38 @@ title: Pretraga
 permalink: /pretraga/
 description: "Pretražite sve članke na ponor.ba — vodiče, vijesti i tekstove o AI-u i velikim jezičkim modelima na bosanskom jeziku."
 ---
+<style>
+    #search-box { position: relative; }
+    #search-box svg {
+        position: absolute;
+        left: 1.25rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1.25rem;
+        height: 1.25rem;
+        pointer-events: none;
+    }
+    #search-input {
+        width: 100%;
+        /* generous left inset so the icon and text never crowd each other */
+        padding: 0.9rem 1.25rem 0.9rem 3.5rem;
+        font-size: 1.0625rem;
+        line-height: 1.5;
+    }
+</style>
+
 <section id="main-content" class="pt-10 pb-8 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#1C1917] border-b border-warmgray dark:border-[#44403C]">
     <div class="max-w-3xl mx-auto">
         <h1 class="text-3xl md:text-4xl font-bold text-ink mb-6">Pretraga</h1>
         <label for="search-input" class="sr-only">Pretražite članke</label>
-        <div class="relative">
-            <svg class="w-5 h-5 text-stone absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        {% comment %} Geometry is explicit CSS, not Tailwind utilities: the
+           compiled tailwind.css predates this page and doesn't include its
+           padding/position classes. See <style> below. {% endcomment %}
+        <div id="search-box">
+            <svg class="text-stone" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
             <input id="search-input" type="search" autocomplete="off" autofocus
                 placeholder="Pretražite članke — npr. RAG, agenti, EU AI Act…"
-                class="w-full pl-12 pr-4 py-3.5 bg-cream dark:bg-[#292524] border border-warmgray dark:border-[#44403C] rounded-xl text-ink dark:text-cream placeholder-stone focus:outline-none focus:ring-2 focus:ring-coffee/50 focus:border-coffee transition-colors">
+                class="bg-cream dark:bg-[#292524] border border-warmgray dark:border-[#44403C] rounded-xl text-ink dark:text-cream placeholder-stone focus:outline-none focus:ring-2 focus:ring-coffee/50 focus:border-coffee transition-colors">
         </div>
         <p id="search-count" class="mt-3 text-sm text-stone dark:text-[#A8A29E]" role="status" aria-live="polite"></p>
     </div>
