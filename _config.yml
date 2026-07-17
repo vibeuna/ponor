@@ -36,5 +36,6 @@ exclude:
   - Gemfile.lock
   - README.md
   - reference_static_web/
+  - scripts/
   - tailwind.config.js
   - tailwind.input.css
