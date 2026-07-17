@@ -1,0 +1,62 @@
+{% comment %}
+  JSON-LD structured data for post pages. Emits a linked @graph:
+    - Organization (publisher, referenced by @id)
+    - BreadcrumbList (mirrors the visual Početna › Kategorija › Članak nav)
+    - Article / NewsArticle (headline, dates, author, reading time, section)
+  Relies on `og_image` being assigned earlier in head.html (same scope).
+  Strings go through `jsonify` so quotes/special chars are escaped safely.
+{% endcomment %}
+{% if page.layout == 'post' %}
+{% assign sd_cat = site.data.categories[page.category] %}
+{% assign sd_url = page.url | prepend: site.url %}
+{% assign sd_image = og_image | prepend: site.url %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": {{ site.title | jsonify }},
+      "url": "{{ site.url }}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ '/assets/images/ponor-social-default.png' | prepend: site.url }}",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ sd_url }}#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Početna", "item": "{{ site.url }}/" }{% if sd_cat %},
+        { "@type": "ListItem", "position": 2, "name": {{ sd_cat.name | jsonify }}, "item": "{{ site.url }}/kategorije/{{ page.category }}/" },
+        { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ sd_url }}" }{% else %},
+        { "@type": "ListItem", "position": 2, "name": {{ page.title | jsonify }}, "item": "{{ sd_url }}" }{% endif %}
+      ]
+    },
+    {
+      "@type": "{% if page.category == 'vijesti' %}NewsArticle{% else %}Article{% endif %}",
+      "@id": "{{ sd_url }}#article",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page.description | default: site.description | jsonify }},
+      "image": "{{ sd_image }}",
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+      "author": {
+        "@type": "Person",
+        "name": "Dino",
+        "url": "{{ site.url }}/o-nama/"
+      },
+      "publisher": { "@id": "{{ site.url }}/#organization" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ sd_url }}" },
+      "inLanguage": "bs",{% if sd_cat %}
+      "articleSection": {{ sd_cat.name | jsonify }},{% endif %}{% if page.read_time %}
+      "timeRequired": "PT{{ page.read_time }}M",{% endif %}
+      "breadcrumb": { "@id": "{{ sd_url }}#breadcrumb" }
+    }
+  ]
+}
+</script>
+{% endif %}

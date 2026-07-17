@@ -1,0 +1,26 @@
+---
+layout: default
+permalink: /404.html
+title: "Stranica nije pronađena"
+sitemap: false
+---
+<section id="main-content" class="pt-16 pb-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto text-center">
+        <div class="w-20 h-20 bg-coffee/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-coffee" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <p class="text-6xl font-bold text-coffee mb-4">404</p>
+        <h1 class="text-3xl md:text-4xl font-bold text-ink mb-6">Stranica nije pronađena</h1>
+        <p class="text-xl text-stone dark:text-[#A8A29E] leading-relaxed max-w-xl mx-auto mb-10">
+            Stranicu koju tražite ne možemo pronaći. Možda je premještena ili više ne postoji.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="{{ '/' | relative_url }}" class="inline-flex items-center px-6 py-3 bg-coffee text-white rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
+                Nazad na naslovnicu
+            </a>
+            <a href="{{ '/kategorije/vijesti/' | relative_url }}" class="inline-flex items-center px-6 py-3 border border-coffee/30 text-ink dark:text-[#E7E5E4] rounded-lg text-sm font-medium hover:bg-coffee/5 transition-colors">
+                Najnovije vijesti
+            </a>
+        </div>
+    </div>
+</section>
