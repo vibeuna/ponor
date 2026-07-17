@@ -1,0 +1,24 @@
+---
+layout: null
+permalink: /search.json
+sitemap: false
+---
+[
+  {% for post in site.posts %}
+  {% assign cat = site.data.categories[post.category] %}
+  {% assign m = post.date | date: '%m' %}
+  {% assign monthName = site.data.months[m] %}
+  {
+    "title": {{ post.title | jsonify }},
+    "url": "{{ post.url }}",
+    "description": {{ post.description | default: '' | jsonify }},
+    "category": {{ post.category | default: '' | jsonify }},
+    "categoryName": {{ cat.name | default: '' | jsonify }},
+    "date": "{{ post.date | date: '%Y-%m-%d' }}",
+    "dateDisplay": "{{ post.date | date: '%-d.' }} {{ monthName }} {{ post.date | date: '%Y.' }}",
+    "readTime": {{ post.read_time | default: 0 }},
+    "tags": {% if post.tags %}{{ post.tags | jsonify }}{% else %}[]{% endif %},
+    "content": {{ post.content | strip_html | normalize_whitespace | truncate: 1500 | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
