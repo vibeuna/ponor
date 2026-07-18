@@ -58,6 +58,10 @@ U odnosu na vaše lične podatke imate pravo na: pristup, ispravku, brisanje, og
 
 Pretplatu na newsletter možete otkazati u bilo kojem trenutku putem linka za odjavu koji se nalazi u svakoj poruci.
 
+## Djeca
+
+Stranica nije namijenjena djeci mlađoj od 16 godina i svjesno ne prikupljamo njihove podatke.
+
 ## Izmjene ove politike
 
 Politiku možemo povremeno ažurirati. Datum posljednje izmjene naveden je na vrhu stranice. Značajne promjene istaknut ćemo na vidnom mjestu.
