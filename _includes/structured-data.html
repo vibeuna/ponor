@@ -45,6 +45,11 @@
       "datePublished": "{{ page.date | date_to_xmlschema }}",
       "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
       "author": {
+        "@type": "Organization",
+        "name": "Ponor AI tim",
+        "url": "{{ site.url }}/o-nama/"
+      },
+      "editor": {
         "@type": "Person",
         "name": "Dino",
         "url": "{{ site.url }}/o-nama/"
