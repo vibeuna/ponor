@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#2a5298"/>
+
+  <!-- Icon: closed padlock (closed / unverified access — unnamed license, unreleased weights)
+       Bounding box centred at (500, 300): shackle top y=160, body bottom y=440. -->
+
+  <!-- Shackle -->
+  <path d="M 435 295 L 435 225 A 65 65 0 0 1 565 225 L 565 295"
+        fill="none" stroke="#1a1a1a" stroke-width="20"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Lock body -->
+  <rect x="375" y="280" width="250" height="160" rx="30"
+        fill="#fafaf8" stroke="#1a1a1a" stroke-width="18"
+        stroke-linejoin="round"/>
+
+  <!-- Keyhole: circle + tapered slot -->
+  <circle cx="500" cy="350" r="24"
+          fill="#d6dff0" stroke="#1a1a1a" stroke-width="9"/>
+  <path d="M 486 362 L 500 408 L 514 362"
+        fill="#d6dff0" stroke="#1a1a1a" stroke-width="9"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
