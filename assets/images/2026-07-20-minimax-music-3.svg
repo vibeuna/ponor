@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#7c5a82"/>
+
+  <!-- Icon: artist's palette (creative/design audience) — oval body with a
+       thumb-hole cutout and a row of paint-blob dots. Centred at (500, 300),
+       designed directly in the 1000x600 space (no transform). -->
+  <g>
+    <!-- Palette body -->
+    <ellipse cx="500" cy="305" rx="190" ry="135"
+             fill="#d6dff0" stroke="#1a1a1a" stroke-width="16"
+             stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Thumb hole -->
+    <ellipse cx="565" cy="355" rx="30" ry="40"
+             fill="#fafaf8" stroke="#1a1a1a" stroke-width="10"
+             stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Paint blobs along the upper arc — alternating plum accent and off-white -->
+    <circle cx="400" cy="255" r="26" fill="#7c5a82" stroke="#1a1a1a" stroke-width="8"/>
+    <circle cx="460" cy="222" r="26" fill="#fafaf8" stroke="#1a1a1a" stroke-width="8"/>
+    <circle cx="525" cy="218" r="26" fill="#7c5a82" stroke="#1a1a1a" stroke-width="8"/>
+    <circle cx="588" cy="242" r="26" fill="#fafaf8" stroke="#1a1a1a" stroke-width="8"/>
+  </g>
+</svg>

@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Inter, system-ui, -apple-system, sans-serif" id="gnb-svg" role="img" aria-label="Poređenje dva puta do odgovora na pitanje o vašim podacima: obični chatbot odgovara iz memorije modela i konteksta razgovora bez garantovane veze s vašim podacima, dok Gemini Notebook odgovor utemeljuje u vašim priloženim izvorima i u sandboxu piše i pokreće kod koji računa nad njima, vraćajući izračunat rezultat.">
+  <defs>
+    <marker id="arrow-coffee-gnb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <polygon points="0,0 10,5 0,10" fill="#B45309"/>
+    </marker>
+    <marker id="arrow-stone-gnb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0,0 10,5 0,10" fill="#78716C"/>
+    </marker>
+  </defs>
+
+  <title>Utemeljen izračun naspram običnog chatbota</title>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="#FAF9F6"/>
+
+  <!-- Title & subtitle (Merriweather title, Inter subtitle) -->
+  <text x="450" y="42" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Utemeljen izračun naspram običnog chatbota</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C">Isto pitanje o vašim podacima — dva različita puta do odgovora</text>
+
+  <!-- ============================================================ -->
+  <!-- SHARED QUESTION (neutral input box, top)                     -->
+  <!-- ============================================================ -->
+  <g class="anim" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <rect x="60" y="84" width="780" height="58" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <rect x="60" y="84" width="3" height="58" fill="#78716C"/>
+    <text x="80" y="108" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">PITANJE O VAŠIM PODACIMA</text>
+    <text x="80" y="131" font-size="15" font-style="italic" font-family="Merriweather, Georgia, serif" fill="#1C1917">„Koliki je prosječan rok plaćanja u našim ugovorima?”</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- FORK: one question -> two paths                               -->
+  <!-- ============================================================ -->
+  <g class="anim" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.6s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <!-- shared stub down from question box -->
+    <line x1="450" y1="142" x2="450" y2="160" stroke="#78716C" stroke-width="1.5"/>
+    <!-- left branch (secondary path, stone) -->
+    <polyline points="450,160 250,160 250,184" fill="none" stroke="#78716C" stroke-width="1.5" marker-end="url(#arrow-stone-gnb)"/>
+    <!-- right branch (primary path, coffee) -->
+    <polyline points="450,160 650,160 650,184" fill="none" stroke="#B45309" stroke-width="2" marker-end="url(#arrow-coffee-gnb)"/>
+  </g>
+
+  <!-- Vertical divider between the two paths -->
+  <line id="gnb-divider" x1="450" y1="168" x2="450" y2="456" stroke="#E7E5E4" stroke-width="1">
+    <animate attributeName="y2" from="168" to="456" begin="1.5s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="168;456"/>
+  </line>
+
+  <!-- ============================================================ -->
+  <!-- LEFT PATH — OBIČNI CHATBOT (baseline, neutral)                -->
+  <!-- ============================================================ -->
+
+  <!-- Step: MODEL -->
+  <g class="anim" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <text x="72" y="180" font-size="12" font-weight="600" fill="#78716C" letter-spacing="0.5">OBIČNI CHATBOT</text>
+    <rect x="72" y="190" width="356" height="64" rx="8" fill="#F5F5F0" stroke="#1C1917" stroke-width="1"/>
+    <rect x="72" y="190" width="3" height="64" fill="#78716C"/>
+    <text x="90" y="212" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">MODEL</text>
+    <text x="90" y="234" font-size="13" fill="#44403C">Odgovara iz naučenog znanja</text>
+    <text x="90" y="250" font-size="13" fill="#44403C">i konteksta razgovora.</text>
+  </g>
+
+  <!-- Connector: MODEL -> ODGOVOR (secondary, stone) -->
+  <g class="anim" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.1s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <line x1="250" y1="254" x2="250" y2="284" stroke="#78716C" stroke-width="1.5" marker-end="url(#arrow-stone-gnb)"/>
+  </g>
+
+  <!-- Answer (neutral — a guess, NOT the coffee result box) -->
+  <g class="anim" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.3s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <rect x="72" y="286" width="356" height="104" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <rect x="72" y="286" width="3" height="104" fill="#78716C"/>
+    <text x="90" y="310" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">ODGOVOR</text>
+    <text x="90" y="332" font-size="13" fill="#44403C">Zvuči uvjerljivo, ali nema</text>
+    <text x="90" y="348" font-size="13" fill="#44403C">garancije da je izveden iz</text>
+    <text x="90" y="364" font-size="13" fill="#44403C">vaših stvarnih podataka.</text>
+    <text x="90" y="382" font-size="11" font-style="italic" fill="#78716C">rizik: uvjerljiva ali netačna vrijednost</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- RIGHT PATH — GEMINI NOTEBOOK (highlighted, coffee)            -->
+  <!-- ============================================================ -->
+
+  <!-- Step: VAŠI IZVORI (knowledge base) -->
+  <g class="anim" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.9s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <text x="472" y="180" font-size="12" font-weight="600" fill="#B45309" letter-spacing="0.5">GEMINI NOTEBOOK</text>
+    <rect x="472" y="190" width="356" height="44" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <rect x="472" y="190" width="3" height="44" fill="#B45309"/>
+    <text x="488" y="209" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">VAŠI IZVORI · KNOWLEDGE BASE</text>
+    <text x="488" y="227" font-size="12" fill="#44403C">Ugovori, izvještaji, priloženi dokumenti.</text>
+  </g>
+
+  <!-- Connector: IZVORI -> SANDBOX (primary, coffee) -->
+  <g class="anim" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.1s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <line x1="650" y1="234" x2="650" y2="256" stroke="#B45309" stroke-width="2" marker-end="url(#arrow-coffee-gnb)"/>
+  </g>
+
+  <!-- Focal: SANDBOX ("secure cloud computer") — two-tier emphasis -->
+  <g class="anim" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.3s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <rect x="472" y="258" width="356" height="84" rx="8" fill="#F5E6D0" stroke="#92400E" stroke-width="2">
+      <animate attributeName="stroke-width" begin="2.7s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1;0.25 0.1 0.25 1" keyTimes="0;0.5;1" values="2;3.2;2"/>
+    </rect>
+    <rect x="472" y="258" width="3" height="84" fill="#B45309"/>
+    <!-- terminal glyph (icon concept) -->
+    <rect x="488" y="274" width="22" height="16" rx="4" fill="#78350F"/>
+    <text x="499" y="286" text-anchor="middle" font-size="10" font-weight="700" fill="#FDF6EC">&gt;_</text>
+    <text x="518" y="287" font-size="12" font-weight="700" fill="#78350F">SANDBOX</text>
+    <text x="488" y="310" font-size="11" font-style="italic" fill="#92400E">„secure cloud computer” po notebook-u</text>
+    <text x="488" y="331" font-size="13" font-weight="500" fill="#78350F">Piše i pokreće kod nad vašim izvorima.</text>
+  </g>
+
+  <!-- Connector: SANDBOX -> IZRAČUNAT ODGOVOR (primary, coffee) -->
+  <g class="anim" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.6s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <line x1="650" y1="342" x2="650" y2="362" stroke="#B45309" stroke-width="2" marker-end="url(#arrow-coffee-gnb)"/>
+  </g>
+
+  <!-- Coffee output box (the computed result) -->
+  <g class="anim anim-rise" opacity="0" transform="translate(0,8)">
+    <animate attributeName="opacity" from="0" to="1" begin="2.9s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="2.9s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0 8;0 0"/>
+    <rect x="472" y="366" width="356" height="88" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <rect x="472" y="366" width="3" height="88" fill="#B45309"/>
+    <text x="488" y="390" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">IZRAČUNAT ODGOVOR</text>
+    <text x="488" y="412" font-size="13" fill="#92400E">Rezultat izračunat iz vaših</text>
+    <text x="488" y="428" font-size="13" fill="#92400E">izvora — ne prisjećen iz</text>
+    <text x="488" y="444" font-size="13" fill="#92400E">memorije modela.</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- BOTTOM EXPLANATION PANEL (neutral — why it matters)          -->
+  <!-- ============================================================ -->
+  <g class="anim anim-rise" opacity="0" transform="translate(0,8)">
+    <animate attributeName="opacity" from="0" to="1" begin="3.3s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="3.3s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0 8;0 0"/>
+    <rect x="60" y="474" width="780" height="126" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <rect x="80" y="494" width="3" height="14" fill="#B45309"/>
+    <text x="92" y="506" font-size="13" font-weight="700" font-family="Merriweather, Georgia, serif" fill="#1C1917">Šta poslovni čitalac treba zapamtiti</text>
+    <text font-size="12" fill="#44403C">
+      <tspan x="80" y="532">Obični chatbot generiše odgovor iz memorije modela i konteksta razgovora — bez garantovane veze s vašim</tspan>
+      <tspan x="80" y="550">podacima. Gemini Notebook odgovor utemeljuje u izvorima koje ste priložili i, u sandboxu po notebook-u, piše</tspan>
+      <tspan x="80" y="568">i pokreće kod koji računa nad tim izvorima. Izvršavanje koda je sloj infrastrukture, ne nova verzija modela.</tspan>
+    </text>
+    <text x="80" y="590" font-size="12" font-style="italic" fill="#78716C">Ključno: odgovor je izračunat iz vaših izvora u sandboxu, a ne prisjećen iz memorije modela.</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- REPLAY BUTTON                                                 -->
+  <!-- ============================================================ -->
+  <g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+    <circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon points="852,28 858,28 855,33" fill="#78716C"/>
+    <title>Pusti ponovo</title>
+  </g>
+
+  <style>
+    #gnb-svg:hover .replay-btn { opacity: 1; }
+    #gnb-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+    #gnb-svg .replay-btn:hover path { stroke: #B45309; }
+    #gnb-svg .replay-btn:hover polygon { fill: #B45309; }
+    #gnb-svg .replay-btn:focus { outline: none; opacity: 1; }
+    #gnb-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+    @media (prefers-reduced-motion: reduce) {
+      #gnb-svg animate, #gnb-svg animateTransform { display: none; }
+      #gnb-svg .replay-btn { display: none; }
+      /* Render final state statically (base opacity is 0 for the reveal) */
+      #gnb-svg .anim { opacity: 1 !important; }
+      #gnb-svg .anim-rise { transform: none !important; }
+    }
+  </style>
+
+  <script>
+    // <![CDATA[
+    (function () {
+      const svg = document.getElementById('gnb-svg');
+      const btn = svg && svg.querySelector('.replay-btn');
+      if (!svg || !btn) return;
+      function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+      btn.addEventListener('click', replay);
+      btn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); } });
+    })();
+    // ]]>
+  </script>
+</svg>

@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 710" font-family="Inter, system-ui, -apple-system, sans-serif" id="mm3-svg" role="img" aria-label="Tok od prompta do numere u MiniMax Music-3.0: prompt i opcioni tekst ulaze u model preko API-ja (vokalni ili instrumentalni režim), izlazi MP3 artefakt, a zatim slijedi provjera licence i prava. Interni prototip je nizak rizik, dok je komercijalna isporuka blokirana dok se prava ne potvrde.">
+  <defs>
+    <marker id="mm3-arrow-coffee" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <polygon points="0,0 10,5 0,10" fill="#B45309"/>
+    </marker>
+    <marker id="mm3-arrow-stone" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0,0 10,5 0,10" fill="#78716C"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="710" fill="#FAF9F6"/>
+  <title>Music-3.0: od prompta do numere je lako, čišćenje prava za objavu nije</title>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Music-3.0: numera je laka, pravo na objavu nije</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C">Od prompta do MP3-a je trivijalno; čišćenje prava za komercijalnu upotrebu je nerešen korak</text>
+
+  <!-- ============================================================ -->
+  <!-- ROW 1: INPUT — prompt + optional lyrics (y=92 to 168)        -->
+  <!-- ============================================================ -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <rect x="60" y="92" width="780" height="76" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <rect x="60" y="92" width="3" height="76" fill="#78716C"/>
+    <text x="80" y="116" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">ULAZ — PROMPT (+ OPCIONI TEKST)</text>
+    <text x="80" y="140" font-size="15" fill="#1C1917" font-style="italic" font-family="Merriweather, Georgia, serif">„Topla lo-fi podloga, klavir, 90 BPM, sjetno raspoloženje…"</text>
+    <text x="80" y="159" font-size="12" fill="#57534E">+ opcioni tekst pjesme (lyrics) ili automatski generisan tekst</text>
+  </g>
+
+  <!-- Arrow input → model -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.6s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <line x1="450" y1="172" x2="450" y2="200" stroke="#78716C" stroke-width="1.5" marker-end="url(#mm3-arrow-stone)"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ROW 2: MODEL — MiniMax Music-3.0 via API (y=208 to 312)      -->
+  <!-- Widest neutral box = pipeline heart, but NOT focal (neutral) -->
+  <!-- ============================================================ -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <rect x="270" y="208" width="360" height="104" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <text x="450" y="232" text-anchor="middle" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">MODEL — MINIMAX MUSIC-3.0 (API)</text>
+    <text x="450" y="256" text-anchor="middle" font-size="14" font-weight="600" fill="#1C1917">Generisanje numere — jedan API poziv</text>
+    <!-- two mode chips -->
+    <g>
+      <rect x="335" y="276" width="86" height="24" rx="12" fill="#FAF9F6" stroke="#78716C" stroke-width="1"/>
+      <text x="378" y="292" text-anchor="middle" font-size="13" font-weight="600" fill="#57534E">vokal</text>
+      <rect x="433" y="276" width="132" height="24" rx="12" fill="#FAF9F6" stroke="#78716C" stroke-width="1"/>
+      <text x="499" y="292" text-anchor="middle" font-size="13" font-weight="600" fill="#57534E">instrumental</text>
+    </g>
+  </g>
+
+  <!-- Arrow model → artifact -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.3s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <line x1="450" y1="316" x2="450" y2="344" stroke="#78716C" stroke-width="1.5" marker-end="url(#mm3-arrow-stone)"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ROW 3: ARTIFACT — audio MP3 (y=352 to 424)                  -->
+  <!-- ============================================================ -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.6s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <rect x="320" y="352" width="260" height="72" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <rect x="320" y="352" width="3" height="72" fill="#78716C"/>
+    <text x="338" y="376" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">ARTEFAKT</text>
+    <text x="338" y="398" font-size="14" font-weight="600" fill="#1C1917">Audio (MP3)</text>
+    <text x="338" y="414" font-size="12" fill="#57534E">MP3 · 44,1 kHz · 256 kbps</text>
+    <!-- small waveform flourish (stone, not coffee — coffee is reserved for the gate) -->
+    <g stroke="#A8A29E" stroke-width="2" stroke-linecap="round">
+      <line x1="524" y1="388" x2="524" y2="396"/>
+      <line x1="532" y1="381" x2="532" y2="403"/>
+      <line x1="540" y1="385" x2="540" y2="399"/>
+      <line x1="548" y1="378" x2="548" y2="406"/>
+      <line x1="556" y1="386" x2="556" y2="398"/>
+    </g>
+  </g>
+
+  <!-- PRIMARY coffee arrow: artifact → gate (this is the emphasized path) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.0s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <line x1="450" y1="428" x2="450" y2="460" stroke="#B45309" stroke-width="2" marker-end="url(#mm3-arrow-coffee)"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ROW 4: GATE — licensing / rights check (FOCAL, coffee)       -->
+  <!-- y=468 to 556                                                 -->
+  <!-- ============================================================ -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.4s" dur="0.45s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <rect x="250" y="468" width="400" height="88" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="2"/>
+    <rect x="250" y="468" width="3" height="88" fill="#B45309"/>
+    <text x="270" y="492" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">PROVJERA — LICENCA I PRAVA</text>
+    <text x="270" y="516" font-size="14" font-weight="700" fill="#1C1917" font-family="Merriweather, Georgia, serif">Prava na izlaz nisu razjašnjena</text>
+    <text x="270" y="538" font-size="12" fill="#57534E">Zvanični ToS ćuti o pravima na generisani izlaz.</text>
+    <!-- padlock icon (coffee) top-right -->
+    <g transform="translate(600, 482)">
+      <path d="M -8 6 A 8 8 0 0 1 8 6" fill="none" stroke="#B45309" stroke-width="1.6"/>
+      <rect x="-11" y="6" width="22" height="16" rx="3" fill="#FDF6EC" stroke="#B45309" stroke-width="1.6"/>
+      <circle cx="0" cy="13" r="1.8" fill="#B45309"/>
+    </g>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- FORK: gate decides — prototype (open) vs commercial (blocked) -->
+  <!-- Coffee stub + node at (450,578), then two rails diverge        -->
+  <!-- ============================================================ -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.9s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <!-- coffee stub down from gate -->
+    <line x1="450" y1="560" x2="450" y2="574" stroke="#B45309" stroke-width="2"/>
+    <!-- decision node -->
+    <circle cx="450" cy="578" r="4" fill="#B45309"/>
+    <!-- left rail (low-risk prototype) — stone -->
+    <path d="M 450 578 L 245 578 L 245 590" fill="none" stroke="#78716C" stroke-width="1.5" marker-end="url(#mm3-arrow-stone)"/>
+    <!-- right rail (commercial delivery) — coffee -->
+    <path d="M 450 578 L 655 578 L 655 590" fill="none" stroke="#B45309" stroke-width="2" marker-end="url(#mm3-arrow-coffee)"/>
+    <!-- rail labels above the horizontal segments -->
+    <text x="345" y="571" text-anchor="middle" font-size="10" font-style="italic" fill="#78716C">nizak rizik</text>
+    <text x="560" y="571" text-anchor="middle" font-size="10" font-style="italic" font-weight="600" fill="#92400E">prije objave: potvrdi prava</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- LEFT OUTCOME: internal / prototype — open, neutral            -->
+  <!-- y=596 to 684                                                 -->
+  <!-- ============================================================ -->
+  <g opacity="0" transform="translate(0, 8)">
+    <animate attributeName="opacity" from="0" to="1" begin="3.2s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <animateTransform attributeName="transform" type="translate" begin="3.2s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0 8;0 0"/>
+    <rect x="80" y="596" width="330" height="88" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <rect x="80" y="596" width="3" height="88" fill="#78716C"/>
+    <text x="100" y="620" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">INTERNO / PROTOTIP</text>
+    <text x="100" y="644" font-size="14" font-weight="600" fill="#1C1917">Slobodno eksperimentiši</text>
+    <text x="100" y="664" font-size="12" fill="#57534E">Skice, demo, interni test — prolaz.</text>
+    <!-- check icon (stone) top-right -->
+    <polyline points="372,632 379,640 392,624" fill="none" stroke="#78716C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- RIGHT OUTCOME: commercial delivery — blocked until verified   -->
+  <!-- y=596 to 684 (coffee-dark, two-tier emphasis within accent)   -->
+  <!-- ============================================================ -->
+  <g opacity="0" transform="translate(0, 8)">
+    <animate attributeName="opacity" from="0" to="1" begin="3.5s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <animateTransform attributeName="transform" type="translate" begin="3.5s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0 8;0 0"/>
+    <rect x="490" y="596" width="330" height="88" rx="8" fill="#FDF6EC" stroke="#92400E" stroke-width="1.5"/>
+    <rect x="490" y="596" width="3" height="88" fill="#92400E"/>
+    <text x="510" y="620" font-size="11" font-weight="700" fill="#92400E" letter-spacing="0.8">KOMERCIJALNA ISPORUKA</text>
+    <text x="510" y="644" font-size="14" font-weight="700" fill="#1C1917" font-family="Merriweather, Georgia, serif">Blokirano dok se prava ne potvrde</text>
+    <text x="510" y="664" font-size="12" fill="#57534E">Traži pisanu potvrdu prava prije objave.</text>
+    <!-- closed padlock icon (coffee-dark) top-right -->
+    <g transform="translate(786, 618)">
+      <path d="M -7 4 A 7 7 0 0 1 7 4" fill="none" stroke="#92400E" stroke-width="1.6"/>
+      <rect x="-10" y="4" width="20" height="15" rx="3" fill="#FDF6EC" stroke="#92400E" stroke-width="1.6"/>
+      <circle cx="0" cy="10.5" r="1.6" fill="#92400E"/>
+    </g>
+  </g>
+
+  <!-- Footnote -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="4.2s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0;1"/>
+    <text x="60" y="702" font-size="11" font-style="italic" fill="#78716C">Ilustrativno. Zvanični ToS ne dodjeljuje prava na izlaz; format i tvrdnje o „royalty-free" nisu nezavisno potvrđeni (stanje: jul 2026.).</text>
+  </g>
+
+  <!-- Replay button -->
+  <g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+    <circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon points="852,28 858,28 855,33" fill="#78716C"/>
+    <title>Pusti ponovo</title>
+  </g>
+
+  <style>
+    #mm3-svg:hover .replay-btn { opacity: 1; }
+    #mm3-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+    #mm3-svg .replay-btn:hover path { stroke: #B45309; }
+    #mm3-svg .replay-btn:hover polygon { fill: #B45309; }
+    #mm3-svg .replay-btn:focus { outline: none; opacity: 1; }
+    #mm3-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+    @media (prefers-reduced-motion: reduce) {
+      #mm3-svg animate, #mm3-svg animateTransform { display: none; }
+      #mm3-svg .replay-btn { display: none; }
+    }
+  </style>
+
+  <script>
+    // <![CDATA[
+    (function () {
+      const svg = document.getElementById('mm3-svg');
+      const btn = svg && svg.querySelector('.replay-btn');
+      if (!svg || !btn) return;
+      function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+      btn.addEventListener('click', replay);
+      btn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); } });
+    })();
+    // ]]>
+  </script>
+</svg>
