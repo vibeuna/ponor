@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Zašto LLM-ovi loše rade na bosanskom - i šta možete učiniti"
-date: 2026-06-28
+date: 2026-06-25
 category: vodici
 audience: developers
 read_time: 13

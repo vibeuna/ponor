@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "LLM Wiki: Karpathy-ev obrazac za knowledge base koji agent sam održava"
-date: 2026-06-30
+date: 2026-06-21
 category: ai-u-praksi
 audience: developers
 read_time: 9

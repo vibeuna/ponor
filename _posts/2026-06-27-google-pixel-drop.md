@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Google Pixel dobiva AI alate za video i muziku - uz uvjet: plaćena pretplata"
-date: 2026-06-20
+date: 2026-06-27
 description: "Pixel Drop juna 2026. donosi Gemini-powered video kreaciju i music generation, ali samo uz plaćenu Google AI pretplatu i samo u pet EU zemalja."
 category: vijesti
 audience: general

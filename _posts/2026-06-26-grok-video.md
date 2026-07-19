@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "xAI objavio Grok Imagine Video 1.5: native audio i 720p za dizajnere koji rade s AI videom"
-date: 2026-06-20
+date: 2026-06-26
 description: "Grok Imagine Video 1.5 generiše video s native audio u single-pass-u, 720p, $4,20/min API - trenutno #1 na Image-to-Video Arena leaderboardu."
 category: vijesti
 audience: designers

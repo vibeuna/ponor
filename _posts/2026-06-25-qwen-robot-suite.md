@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Alibaba objavio Qwen-Robot Suite: otvoreni modeli za navigaciju i manipulaciju robota"
-date: 2026-06-20
+date: 2026-06-25
 description: "Qwen-Robot Suite donosi tri foundation modela za embodied AI - otvorene težine za navigaciju i manipulaciju, world model samo kao tehnički rad bez weighta."
 category: vijesti
 audience: developers

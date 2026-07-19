@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Šta su veliki jezički modeli i kako ih koristiti"
-date: 2026-06-22
+date: 2026-06-28
 category: vodici
 audience: general
 read_time: 7

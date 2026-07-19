@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CLAUDE.md i AGENTS.md: kako AI coding assistanti pamte kontekst projekta"
-date: 2026-06-20
+date: 2026-06-23
 category: ai-u-praksi
 audience: developers
 read_time: 9

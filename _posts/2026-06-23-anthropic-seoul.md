@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Anthropic otvorio ured u Seulu: šest korejskih kompanija već koristi Claude"
-date: 2026-06-20
+date: 2026-06-23
 description: "Anthropic otvorio ured u Seulu i najavio šest enterprise partnerstava - uz istovremenu US direktivu o izvoznim ograničenjima za Fable 5 i Mythos 5."
 category: vijesti
 audience: businesses

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OpenAI pokrenuo partnersku mrežu za poslovnu implementaciju, uložio 150 miliona dolara"
-date: 2026-06-20
+date: 2026-06-24
 description: "OpenAI Partner Network uvodi tri nivoa za systems integrators i konsultantske firme - Accenture, BCG, McKinsey kao osnivački partneri."
 category: vijesti
 audience: businesses

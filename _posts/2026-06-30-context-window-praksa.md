@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Kontekstni prozor u praksi: gdje modeli gube nit"
-date: 2026-06-24
+date: 2026-06-30
 category: vodici
 audience: developers
 read_time: 7

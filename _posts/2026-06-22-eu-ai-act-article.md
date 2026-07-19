@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "EU AI Act: šta svaka kompanija mora znati prije augusta 2026"
-date: 2026-06-26
+date: 2026-06-22
 category: ai-u-praksi
 audience: businesses
 read_time: 5

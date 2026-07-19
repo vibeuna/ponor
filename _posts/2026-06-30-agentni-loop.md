@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Agentni loop: kako LLM zaista izvršava višekorake zadatke"
-date: 2026-07-02
+date: 2026-06-30
 category: vodici
 audience: developers
 read_time: 9
