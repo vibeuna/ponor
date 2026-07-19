@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#7c5a82"/>
+
+  <!-- Icon: microscope inspecting a design slide (close scrutiny / vetting).
+       Composed directly in 1000x600 space, visual bbox centred on (500,300). -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Base foot -->
+    <rect x="365" y="440" width="270" height="34" rx="17" fill="#fafaf8" stroke-width="16"/>
+
+    <!-- Arm / support pillar (drawn behind the stage) -->
+    <rect x="550" y="315" width="40" height="130" rx="20" fill="#fafaf8" stroke-width="14"/>
+
+    <!-- Stage platform -->
+    <rect x="395" y="388" width="230" height="26" rx="13" fill="#fafaf8" stroke-width="14"/>
+
+    <!-- Specimen slide under scrutiny (the design being evaluated) -->
+    <rect x="468" y="372" width="98" height="18" rx="6" fill="#d6dff0" stroke-width="8"/>
+
+    <!-- Body housing block -->
+    <rect x="466" y="248" width="138" height="88" rx="28" fill="#fafaf8" stroke-width="14"/>
+
+    <!-- Objective lens hanging below body, pointing at the slide -->
+    <line x1="516" y1="336" x2="516" y2="378" stroke="#1a1a1a" stroke-width="30"/>
+    <line x1="516" y1="338" x2="516" y2="374" stroke="#d6dff0" stroke-width="14"/>
+
+    <!-- Diagonal viewing tube -->
+    <line x1="486" y1="278" x2="396" y2="152" stroke="#1a1a1a" stroke-width="52"/>
+    <line x1="486" y1="278" x2="396" y2="152" stroke="#fafaf8" stroke-width="26"/>
+
+    <!-- Eyepiece cap at top of tube -->
+    <line x1="393" y1="156" x2="374" y2="128" stroke="#1a1a1a" stroke-width="58"/>
+    <line x1="393" y1="156" x2="374" y2="128" stroke="#d6dff0" stroke-width="30"/>
+
+  </g>
+</svg>

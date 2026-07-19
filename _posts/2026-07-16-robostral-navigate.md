@@ -2,7 +2,7 @@
 layout: post
 title: "Mistral objavio Robostral Navigate: navigacija robota iz jedne RGB kamere"
 date: 2026-07-16
-description: "Mistral je 8. jula 2026. predstavio Robostral Navigate, model od 8B parametara koji navigira robote iz jedne RGB kamere bez LiDAR-a – uz rezultate koji za sada dolaze isključivo iz simulacije."
+description: "Mistral je 8. Jula 2026. predstavio Robostral Navigate, model od 8B parametara koji navigira robote iz jedne RGB kamere bez LiDAR-a – uz rezultate koji za sada dolaze isključivo iz simulacije."
 category: vijesti
 image: /assets/images/2026-07-16-robostral-navigate.svg
 audience: developers

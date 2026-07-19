@@ -1,6 +1,6 @@
 vijesti:
   name: "Vijesti"
-  description: "Najnovije iz svijeta AI-a i velikih jezičkih modela — provjereno, bez hypea."
+  description: "Najnovije iz svijeta AI-a i LLM-a — provjereno, bez hypea."
   color: rose
   text_class: "text-rose-600"
   bg_class: "bg-rose-500/10"
@@ -12,7 +12,7 @@ vijesti:
 
 vodici:
   name: "Vodiči"
-  description: "Objašnjenja i praktični vodiči: kako AI i veliki jezički modeli zapravo rade."
+  description: "Objašnjenja i praktični vodiči: kako AI i LLM zapravo rade."
   color: coffee
   text_class: "text-coffee"
   bg_class: "bg-coffee/10"

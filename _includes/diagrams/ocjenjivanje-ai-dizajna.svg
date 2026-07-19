@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Inter, system-ui, -apple-system, sans-serif" id="oad-svg" role="img" aria-label="Troslojni lijevak za evaluaciju AI dizajna: automatska kapija, LLM-as-judge trijaža i ljudska evaluacija u kojoj živi konačni sud.">
+  <defs>
+    <marker id="arrow-coffee-oad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <polygon points="0,0 10,5 0,10" fill="#B45309"/>
+    </marker>
+    <marker id="arrow-stone-oad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0,0 10,5 0,10" fill="#78716C"/>
+    </marker>
+  </defs>
+
+  <title>Troslojna evaluacija AI dizajna</title>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="#FAF9F6"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Troslojna evaluacija AI dizajna</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C">Sekvencijalni lijevak — svaki sloj hvata ono što prethodni ne može; potpis ostaje čovjeku</text>
+
+  <!-- ============================================================ -->
+  <!-- FUNNEL WALLS (subtle guides that make the narrowing visible)  -->
+  <!-- ============================================================ -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="0.4s" fill="freeze"/>
+    <line x1="60" y1="184" x2="150" y2="224" stroke="#D6D3D1" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="840" y1="184" x2="750" y2="224" stroke="#D6D3D1" stroke-width="1" stroke-dasharray="3,3"/>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.9s" dur="0.4s" fill="freeze"/>
+    <line x1="150" y1="316" x2="240" y2="356" stroke="#D6D3D1" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="750" y1="316" x2="660" y2="356" stroke="#D6D3D1" stroke-width="1" stroke-dasharray="3,3"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- LAYER 1: Automatska kapija (widest, neutral) — y=92 to 184    -->
+  <!-- ============================================================ -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.2s" dur="0.4s" fill="freeze"/>
+    <rect x="60" y="92" width="780" height="92" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <rect x="60" y="92" width="3" height="92" fill="#78716C"/>
+    <text x="80" y="116" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">1. AUTOMATSKA KAPIJA</text>
+    <text x="80" y="138" font-size="13" font-weight="600" fill="#1C1917">Alati: axe · Lighthouse · omjer kontrasta</text>
+    <text x="80" y="160" font-size="12" fill="#57534E"><tspan font-weight="700" fill="#78716C">✓ HVATA: </tspan>sintaksni propusti — nedostaje alt/aria-label, pali kontrast, slomljen raspored</text>
+    <text x="80" y="178" font-size="11" fill="#78716C" font-style="italic">Jeftino. Pokreće se pri svakoj iteraciji.</text>
+  </g>
+
+  <!-- Arrow: layer 1 → layer 2 (secondary, stone) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.0s" dur="0.3s" fill="freeze"/>
+    <line x1="450" y1="193" x2="450" y2="219" stroke="#78716C" stroke-width="1.5" marker-end="url(#arrow-stone-oad)"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- LAYER 2: LLM-as-judge / trijaža (narrower, neutral) — y=224   -->
+  <!-- ============================================================ -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.2s" dur="0.4s" fill="freeze"/>
+    <rect x="150" y="224" width="600" height="92" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <rect x="150" y="224" width="3" height="92" fill="#78716C"/>
+    <text x="170" y="248" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">2. LLM-AS-JUDGE · TRIJAŽA</text>
+    <text x="170" y="270" font-size="12" fill="#57534E"><tspan font-weight="700" fill="#78716C">✓ HVATA: </tspan>brzo sužavanje, rangiranje kandidata</text>
+    <text x="170" y="288" font-size="12" fill="#57534E"><tspan font-weight="700" fill="#78716C">✕ PROMAŠUJE: </tspan>pouzdanost varira po modelu, kontekst</text>
+    <text x="170" y="308" font-size="11" fill="#78716C" font-style="italic">Izlaz je prijedlog — ne presuda.</text>
+  </g>
+
+  <!-- Arrow: layer 2 → layer 3 (PRIMARY path to the verdict, coffee) -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="2.0s" dur="0.3s" fill="freeze"/>
+    <line x1="450" y1="325" x2="450" y2="351" stroke="#B45309" stroke-width="2" marker-end="url(#arrow-coffee-oad)"/>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- LAYER 3: Ljudska evaluacija (narrowest, FOCAL, coffee) — y=356 -->
+  <!-- ============================================================ -->
+  <g opacity="0" transform="translate(0, 8)">
+    <animate attributeName="opacity" from="0" to="1" begin="2.4s" dur="0.5s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" begin="2.4s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" keyTimes="0;1" values="0 8;0 0"/>
+    <rect x="240" y="356" width="420" height="104" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="2"/>
+    <rect x="240" y="356" width="3" height="104" fill="#B45309"/>
+    <text x="260" y="380" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">3. LJUDSKA EVALUACIJA</text>
+    <text x="260" y="402" font-size="12" fill="#44403C"><tspan font-weight="700" fill="#78716C">✓ HVATA: </tspan>značenje, kontekst, ukus, stvarni korisnik</text>
+    <text x="260" y="420" font-size="12" fill="#44403C">(pomoćne tehnologije) — nezaobilazno za ono što nosi rizik.</text>
+    <text x="260" y="446" font-size="14" font-weight="700" font-family="Merriweather, Georgia, serif" fill="#92400E">Ovdje se stavlja potpis.</text>
+  </g>
+
+  <!-- Potpis seal (result indicator, coffee) — appears after focal lands -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="3.0s" dur="0.4s" fill="freeze"/>
+    <circle cx="620" cy="392" r="20" fill="#FDF6EC" stroke="#B45309" stroke-width="1.5"/>
+    <circle cx="620" cy="392" r="14" fill="none" stroke="#B45309" stroke-width="0.8" opacity="0.5"/>
+    <path d="M 613 392 L 618 398 L 628 386" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="620" y="424" text-anchor="middle" font-size="9" font-weight="700" fill="#92400E" letter-spacing="0.6">POTPIS</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- RULE STRIP (explanatory thesis, neutral) — y=478 to 546       -->
+  <!-- ============================================================ -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="3.4s" dur="0.4s" fill="freeze"/>
+    <rect x="60" y="478" width="780" height="68" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <rect x="60" y="478" width="3" height="68" fill="#78716C"/>
+    <text x="80" y="502" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">PRAVILO</text>
+    <text x="80" y="524" font-size="14" font-weight="600" fill="#1C1917" font-family="Merriweather, Georgia, serif">LLM-as-judge je trijaža, nikad potpis.</text>
+    <text x="80" y="540" font-size="12" fill="#57534E">Automatska kapija filtrira. Trijaža sužava i predlaže. Potpis pripada čovjeku.</text>
+  </g>
+
+  <!-- Footnote -->
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="4.0s" dur="0.4s" fill="freeze"/>
+    <text font-size="11" fill="#78716C" font-style="italic">
+      <tspan x="60" y="570">Ilustrativni prikaz raspodjele posla; koji sloj nosi konačnu odgovornost ovisi o riziku i kontekstu proizvoda.</tspan>
+      <tspan x="60" y="588">Širina sloja odražava obim materijala koji prolazi — lijevak se sužava odozgo prema dolje.</tspan>
+    </text>
+  </g>
+
+  <!-- Replay button -->
+  <g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+    <circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon points="852,28 858,28 855,33" fill="#78716C"/>
+    <title>Pusti ponovo</title>
+  </g>
+
+  <style>
+    #oad-svg:hover .replay-btn { opacity: 1; }
+    #oad-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+    #oad-svg .replay-btn:hover path { stroke: #B45309; }
+    #oad-svg .replay-btn:hover polygon { fill: #B45309; }
+    #oad-svg .replay-btn:focus { outline: none; opacity: 1; }
+    #oad-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+    @media (prefers-reduced-motion: reduce) {
+      #oad-svg animate, #oad-svg animateTransform { display: none; }
+      #oad-svg .replay-btn { display: none; }
+    }
+  </style>
+
+  <script>
+    // <![CDATA[
+    (function () {
+      const svg = document.getElementById('oad-svg');
+      const btn = svg && svg.querySelector('.replay-btn');
+      if (!svg || !btn) return;
+      function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+      btn.addEventListener('click', replay);
+      btn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); } });
+    })();
+    // ]]>
+  </script>
+</svg>
