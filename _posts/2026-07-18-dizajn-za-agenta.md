@@ -1,21 +1,21 @@
 ---
 layout: post
-title: "Dizajn sistema za doba AI agenata"
+title: "Nova pravila dizajna softverskih sistema"
 date: 2026-07-18
 category: ai-u-praksi
 audience: developers
 read_time: 16
-description: "Produkcijski sistem danas se ne dizajnira samo tako da ga čovjek developer razumije, nego tako da ga AI agent može operisati u cjelini. Šta to konkretno mijenja u arhitekturi – i gdje ta logika prestaje da vrijedi."
+description: "Produkcijski sistem danas se ne dizajnira samo tako da ga developer razumije, nego tako da ga AI agent može koristiti u cjelini. Šta to konkretno mijenja u arhitekturi i gdje ta logika prestaje da vrijedi."
 image: /assets/images/2026-07-18-dizajn-za-agenta.svg
 ---
 
 Prototip napravljen kroz vibe coding radi savršeno u demou i počne pucati čim ga pustite u produkciju. Poznata priča. Manje poznat je oblik koji ta priča ima 2026: sistem koji je AI agent mogao sastaviti za sat vremena, isti taj agent kasnije ne može održavati – jer ga više ne može ni pročitati u cjelini. Logika je razasuta po pet servisa, tri repozitorija i nekoliko konzola koje agent nikad ne vidi u istom kontekstu.
 
-Teza ovog teksta je namjerno oštra: produkcijski sistem danas ne dizajnirate samo tako da ga čovjek developer razumije, nego tako da njime AI agent može upravljati u cjelini. Nije riječ o tome da agent piše kod umjesto vas. Riječ je o tome da agent – kroz svoj harness, sa svojim ograničenim kontekstom – bude sposoban da pročita sistem, promijeni ga i pokrene, bez da mu čovjek prethodno mora ručno sklopiti sliku iz deset izvora.
+Teza ovog teksta je namjerno oštra: produkcijski sistem danas ne dizajnirate samo tako da ga developer razumije, nego tako da njime AI agent može upravljati u cjelini. Nije riječ o tome da agent piše kod umjesto vas. Riječ je o tome da agent – kroz svoj harness, sa svojim ograničenim kontekstom – bude sposoban da pročita sistem, promijeni ga i pokrene, bez da mu developer prethodno mora ručno sklopiti sliku iz deset izvora.
 
 ## Prototip koji agent napravi, ali ne može održavati
 
-Klasičan razlog zašto vibe-coded prototip pada u produkciji je poznat: nedostaju rukovanje greškama, validacija, testovi, granični slučajevi. To se nije promijenilo. Promijenilo se to da je danas najproduktivniji "developer" na projektu često agent, a agent ima ograničenje koje čovjek nema na isti način: kontekstni prozor.
+Klasičan razlog zašto vibe-coded prototip pada u produkciji je poznat: nedostaju rukovanje greškama, validacija, testovi, granični slučajevi. To se nije promijenilo. Promijenilo se to da je danas najproduktivniji "developer" na projektu često AI agent, a agent ima ograničenje koje čovjek nema na isti način: kontekstni prozor.
 
 Čovjek gradi mentalnu mapu sistema kroz mjesece i drži je u glavi. Agent nema tu memoriju između sesija. Svaki put kreće od nule i rekonstruiše sistem iz onoga što u tom trenutku može pročitati. Ako je "istina" o tome kako sistem radi razbacana po polyrepou, ručno pisanom glue kodu i podešavanjima u tri različite cloud konzole, agent tu istinu ne može sastaviti. Napravit će izmjenu koja izgleda ispravno lokalno, a lomi nešto što nikad nije vidio.
 
@@ -45,7 +45,7 @@ Druga odluka: neka jedan autoritativan backend definiše i podatke i logiku. To 
 
 {% include diagram.html name="dizajn-za-agenta" caption="Sve klijentske površine i izolovane usluge idu kroz jedan control plane; samo on dodiruje bazu, a klijent nikad direktno." alt="Hub-and-spoke dijagram: WEB, MOBILNI, DESKTOP, ADMIN i izolovani SANDBOX povezani su na centralni control plane (izvor istine), koji je jedini spojen na bazu iza njega; direktan pristup klijenta bazi je precrtan kao zabranjen." %}
 
-Konkretan primjer takvog pristupa je Convex – upravljani backend (BaaS, backend kao usluga) u kojem su baza, funkcije i logika izraženi kao kod na jednom mjestu. Ali princip je vendor-neutralan. Alternativa je ručno sklapanje iz sirovih dijelova hyperscalera: baza na RDS-u, kompjut na EC2, redovi na SQS-u, sve povezano vlastitim glue kodom. Taj put daje maksimalnu kontrolu i minimalan vendor lock-in, ali plaća se površinom: više odvojenih sistema koje agent (i čovjek) mora držati usklađenim, i više mjesta na kojima se istina može razići.
+Konkretan primjer takvog pristupa je Convex – upravljani backend (BaaS, Backend as a Service) u kojem su baza, funkcije i logika izraženi kao kod na jednom mjestu. Ali princip je vendor-neutralan. Alternativa je ručno sklapanje iz sirovih dijelova hyperscalera: baza na RDS-u, kompjut na EC2, redovi na SQS-u, sve povezano vlastitim glue kodom. Taj put daje maksimalnu kontrolu i minimalan vendor lock-in, ali plaća se površinom: više odvojenih sistema koje agent (i čovjek) mora držati usklađenim, i više mjesta na kojima se istina može razići.
 
 Ovdje vrijedi jedno pojašnjenje kao istorijski okvir, ne kao specifikacija: mnogi "developer-friendly" upravljani servisi su nastali kao sloj apstrakcije nad sirovim cloudom – Vercel nad AWS-om, PlanetScale nad MySQL-om i Vitessom. To olakšava rad, ali "to je samo wrapper" je nepotpuna slika: PlanetScale danas nudi i vlastitu infrastrukturu (Metal), pa granica između "wrappera" i "vlastite platforme" nije čvrsta. Poentu tretirajte kao narativ o tome odakle ti alati dolaze, ne kao tvrdnju o tome šta tačno jesu danas.
 
