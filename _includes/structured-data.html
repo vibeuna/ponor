@@ -1,0 +1,139 @@
+{% comment %}
+  JSON-LD structured data. Every graph carries the same Organization node
+  (referenced by @id). Per page type:
+    - post:      BreadcrumbList + Article
+    - homepage:  WebSite
+    - category, tag, /teme/: CollectionPage
+    - /rjecnik/: DefinedTermSet listing every term (term pages emit their
+                 own DefinedTerm in _layouts/term.html)
+  Relies on `og_image` being assigned earlier in head.html (same scope).
+  Strings go through `jsonify` so quotes/special chars are escaped safely.
+{% endcomment %}
+{% capture sd_org %}{
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": {{ site.title | jsonify }},
+      "url": "{{ site.url }}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ '/assets/images/ponor-social-default.png' | prepend: site.url }}",
+        "width": 1200,
+        "height": 630
+      }
+    }{% endcapture %}
+{% assign sd_url = page.url | prepend: site.url %}
+{% if page.layout == 'post' %}
+{% assign sd_cat = site.data.categories[page.category] %}
+{% assign sd_image = og_image | prepend: site.url %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {{ sd_org }},
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ sd_url }}#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Početna", "item": "{{ site.url }}/" }{% if sd_cat %},
+        { "@type": "ListItem", "position": 2, "name": {{ sd_cat.name | jsonify }}, "item": "{{ site.url }}/kategorije/{{ page.category }}/" },
+        { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ sd_url }}" }{% else %},
+        { "@type": "ListItem", "position": 2, "name": {{ page.title | jsonify }}, "item": "{{ sd_url }}" }{% endif %}
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "{{ sd_url }}#article",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page.description | default: site.description | jsonify }},
+      "image": "{{ sd_image }}",
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+      "author": {
+        "@type": "Organization",
+        "name": "Ponor AI tim",
+        "url": "{{ site.url }}/o-nama/"
+      },
+      "editor": {
+        "@type": "Person",
+        "name": "Dino",
+        "jobTitle": "Inžinjer i menadžer",
+        "description": "Diplomirani inžinjer elektrotehnike i menadžmenta, magistar sistemskog inžinjerstva (System Design Engineering), s magistarskim radom o primjeni konvolucijskih neuronskih mreža u obradi slika. Iskustvo u mašinskom vidu, hardveru, softveru i optici; odgovoran za osiguranje kvaliteta, usklađenost s propisima i AI strategiju u AI startupu koji razvija AI sistem za izbjegavanje sudara na moru, zasnovan na mašinskom vidu.",
+        "knowsAbout": ["konvolucijske neuronske mreže", "obrada slika", "mašinski vid", "osiguranje kvaliteta", "AI strategija"],
+        "url": "{{ site.url }}/o-nama/#urednik"
+      },
+      "publisher": { "@id": "{{ site.url }}/#organization" },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ sd_url }}" },
+      "inLanguage": "bs",{% if sd_cat %}
+      "articleSection": {{ sd_cat.name | jsonify }},{% endif %}{% if page.read_time %}
+      "timeRequired": "PT{{ page.read_time }}M",{% endif %}
+      "breadcrumb": { "@id": "{{ sd_url }}#breadcrumb" }
+    }
+  ]
+}
+</script>
+{% elsif page.url == '/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {{ sd_org }},
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "name": {{ site.title | jsonify }},
+      "url": "{{ site.url }}/",
+      "description": {{ site.description | jsonify }},
+      "inLanguage": "bs",
+      "publisher": { "@id": "{{ site.url }}/#organization" }
+    }
+  ]
+}
+</script>
+{% elsif page.layout == 'category' or page.layout == 'tag' or page.url == '/teme/' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {{ sd_org }},
+    {
+      "@type": "CollectionPage",
+      "@id": "{{ sd_url }}#page",
+      "name": {{ page.title | jsonify }},
+      "description": {{ page.description | default: site.description | jsonify }},
+      "url": "{{ sd_url }}",
+      "inLanguage": "bs",
+      "isPartOf": { "@type": "WebSite", "@id": "{{ site.url }}/#website", "url": "{{ site.url }}/" },
+      "publisher": { "@id": "{{ site.url }}/#organization" }
+    }
+  ]
+}
+</script>
+{% elsif page.url == '/rjecnik/' %}
+{% assign sd_terms = site.rjecnik | sort: "sort_key" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {{ sd_org }},
+    {
+      "@type": "DefinedTermSet",
+      "@id": "{{ sd_url }}#set",
+      "name": "Rječnik",
+      "description": {{ page.description | jsonify }},
+      "url": "{{ sd_url }}",
+      "inLanguage": "bs",
+      "publisher": { "@id": "{{ site.url }}/#organization" },
+      "hasDefinedTerm": [{% for t in sd_terms %}
+        {
+          "@type": "DefinedTerm",
+          "name": {{ t.title | jsonify }},{% if t.english and t.english != "" %}
+          "alternateName": {{ t.english | jsonify }},{% endif %}
+          "description": {{ t.description | jsonify }},
+          "url": "{{ t.url | prepend: site.url }}"
+        }{% unless forloop.last %},{% endunless %}{% endfor %}
+      ]
+    }
+  ]
+}
+</script>
+{% endif %}

@@ -1,0 +1,40 @@
+<header class="sticky top-0 z-50 bg-cream/90 dark:bg-[#1C1917]/90 backdrop-blur-md border-b border-warmgray dark:border-[#44403C]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <a href="/" class="flex items-center gap-2 group">
+                <div class="w-8 h-8 bg-coffee rounded-lg flex items-center justify-center text-white font-serif font-bold text-lg group-hover:bg-coffee-dark transition-colors">p</div>
+                <span class="font-serif text-xl font-bold text-ink tracking-tight">ponor<span class="text-coffee">.ba</span></span>
+            </a>
+            <nav class="hidden md:flex items-center gap-7">
+                <a href="/kategorije/vodici/" class="nav-link text-sm font-medium text-stone hover:text-ink transition-colors">Vodiči</a>
+                <a href="/kategorije/ai-u-praksi/" class="nav-link text-sm font-medium text-stone hover:text-ink transition-colors">AI u praksi</a>
+                <a href="/kategorije/ai-za-sve/" class="nav-link text-sm font-medium text-stone hover:text-ink transition-colors">AI za svakoga</a>
+                <a href="/rjecnik/" class="nav-link text-sm font-medium text-stone hover:text-ink transition-colors">Rječnik</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="/pretraga/" class="p-2 rounded-lg text-stone hover:text-ink hover:bg-warmgray-light dark:hover:bg-stone/20 transition-colors" aria-label="Pretraga">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                </a>
+                <button id="theme-toggle" class="p-2 rounded-lg text-stone hover:text-ink hover:bg-warmgray-light dark:hover:bg-stone/20 transition-colors" aria-label="Promijeni temu">
+                    <svg id="sun-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    <svg id="moon-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-stone hover:text-ink" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-warmgray dark:border-[#44403C] bg-cream dark:bg-[#1C1917]">
+        <div class="px-4 py-3 space-y-2">
+            <a href="/pretraga/" class="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-stone hover:bg-warmgray-light dark:hover:bg-[#292524]">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                Pretraga
+            </a>
+            <a href="/kategorije/vodici/" class="block px-3 py-2 rounded-md text-sm font-medium text-stone hover:bg-warmgray-light dark:hover:bg-[#292524]">Vodiči</a>
+            <a href="/kategorije/ai-u-praksi/" class="block px-3 py-2 rounded-md text-sm font-medium text-stone hover:bg-warmgray-light dark:hover:bg-[#292524]">AI u praksi</a>
+            <a href="/kategorije/ai-za-sve/" class="block px-3 py-2 rounded-md text-sm font-medium text-stone hover:bg-warmgray-light dark:hover:bg-[#292524]">AI za svakoga</a>
+            <a href="/rjecnik/" class="block px-3 py-2 rounded-md text-sm font-medium text-stone hover:bg-warmgray-light dark:hover:bg-[#292524]">Rječnik</a>
+        </div>
+    </div>
+</header>

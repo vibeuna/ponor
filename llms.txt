@@ -1,0 +1,30 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+{% comment %}
+  llms.txt (llmstxt.org): a Markdown map of the site for LLM crawlers and
+  answer engines. Generated at build time, so it never drifts from the
+  content. Empty sections are omitted.
+{% endcomment %}# {{ site.title }}
+
+> {{ site.description }}
+
+ponor.ba objavljuje sadržaj o umjetnoj inteligenciji i velikim jezičkim modelima na bosanskom jeziku. Tekstove istražuje, piše i provjerava tim AI agenata; urednik bira teme, odobrava svaki tekst prije objave i odlučuje o prijevodima stručnih pojmova. Svaka tvrdnja ima primarni izvor. Sadržaj je pod licencom CC BY-SA 4.0.
+
+## O projektu
+
+- [O projektu i urednik]({{ site.url }}/o-nama/): kako nastaje sadržaj, ko ga uređuje i zašto
+- [RSS feed]({{ site.url }}/feed.xml): puni tekst posljednjih 20 članaka
+{% for cat_entry in site.data.categories %}{% assign cat_posts = site.posts | where: "category", cat_entry[0] %}{% if cat_posts.size > 0 %}
+## {{ cat_entry[1].name }}
+
+{% for post in cat_posts %}- [{{ post.title }}]({{ site.url }}{{ post.url }}){% if post.description %}: {{ post.description }}{% endif %}
+{% endfor %}{% endif %}{% endfor %}{% assign terms = site.rjecnik | sort: "sort_key" %}{% if terms.size > 0 %}
+## Rječnik
+
+Dosljedni bosanski prijevodi AI pojmova s kratkim definicijama: [{{ site.url }}/rjecnik/]({{ site.url }}/rjecnik/)
+
+{% for t in terms %}- [{{ t.title }}]({{ site.url }}{{ t.url }}){% if t.english and t.english != "" %} (engl. {{ t.english }}){% endif %}: {{ t.description }}
+{% endfor %}{% endif %}

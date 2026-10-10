@@ -1,0 +1,15 @@
+# Display names for tags. Add an entry here whenever a post introduces a
+# new tag slug, and create a matching teme/<slug>.md page (see existing
+# ones for the pattern) so the tag has somewhere to link to.
+llm:
+  name: "Veliki jezički modeli (LLM)"
+ai-agenti:
+  name: "AI agenti"
+mcp:
+  name: "MCP"
+lokalni-ai:
+  name: "Lokalni AI"
+ai-sigurnost:
+  name: "AI sigurnost"
+ai-za-posao:
+  name: "AI za posao"

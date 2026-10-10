@@ -1,0 +1,23 @@
+{%- comment -%}
+  Sets `is_noindex` for the page passed as `p`. Shared by head.html (robots
+  meta) and sitemap.xml (exclusion) so the two can't disagree.
+  Listing pages are noindexed only while they have nothing to list: an empty
+  category, tag, topic index or glossary is thin content that Google would
+  otherwise index and judge the site by. They index automatically once
+  content exists.
+  USAGE: {% include noindex-check.html p=page %}
+{%- endcomment -%}
+{%- assign is_noindex = false -%}
+{%- assign _p = include.p -%}
+{%- if _p.noindex -%}
+  {%- assign is_noindex = true -%}
+{%- elsif _p.layout == 'category' -%}
+  {%- assign _listed = site.posts | where: "category", _p.category_slug -%}
+  {%- if _listed.size == 0 -%}{%- assign is_noindex = true -%}{%- endif -%}
+{%- elsif _p.layout == 'tag' -%}
+  {%- unless site.tags[_p.tag_slug] -%}{%- assign is_noindex = true -%}{%- endunless -%}
+{%- elsif _p.url == '/teme/' -%}
+  {%- if site.tags.size == 0 -%}{%- assign is_noindex = true -%}{%- endif -%}
+{%- elsif _p.url == '/rjecnik/' -%}
+  {%- if site.rjecnik.size == 0 -%}{%- assign is_noindex = true -%}{%- endif -%}
+{%- endif -%}

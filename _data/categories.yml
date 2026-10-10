@@ -1,0 +1,35 @@
+vodici:
+  name: "Vodiči"
+  description: "Nauči kako AI zapravo radi."
+  color: coffee
+  text_class: "text-coffee"
+  bg_class: "bg-coffee/10"
+  hover_text: "group-hover:text-coffee"
+  border_class: "border-coffee"
+  badge_class: "bg-coffee/10 text-coffee"
+  card_gradient: "from-amber-50 to-orange-100"
+  card_icon_color: "text-amber-300 dark:text-amber-900"
+
+ai-u-praksi:
+  name: "AI u praksi"
+  description: "Pogledaj šta stvarno radi."
+  color: teal
+  text_class: "text-teal"
+  bg_class: "bg-teal/10"
+  hover_text: "group-hover:text-teal"
+  border_class: "border-teal"
+  badge_class: "bg-teal/10 text-teal"
+  card_gradient: "from-teal-50 to-emerald-100"
+  card_icon_color: "text-teal-300 dark:text-teal-900"
+
+ai-za-sve:
+  name: "AI za svakoga"
+  description: "Praktični AI savjeti za svaki dan."
+  color: violet
+  text_class: "text-violet-600"
+  bg_class: "bg-violet-500/10"
+  hover_text: "group-hover:text-violet-600"
+  border_class: "border-violet-500"
+  badge_class: "bg-violet-500/10 text-violet-600"
+  card_gradient: "from-violet-50 to-purple-100"
+  card_icon_color: "text-violet-300 dark:text-violet-900"

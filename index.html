@@ -1,0 +1,224 @@
+---
+layout: default
+title: "Umjetna inteligencija objašnjena na bosanskom"
+description: "Vodiči, analize i rječnik AI pojmova na bosanskom jeziku, uključujući kako se veliki jezički modeli zapravo snalaze s našim jezikom."
+---
+
+<!-- Hero -->
+<section id="main-content" class="relative overflow-hidden pt-8 pb-6 md:pt-10 md:pb-6 px-4 sm:px-6 lg:px-8">
+    <div class="absolute inset-y-0 left-0 right-0 px-4 sm:px-6 lg:px-8 pointer-events-none">
+        <div class="max-w-7xl mx-auto h-full relative translate-x-14">
+            <canvas id="llm-graph" class="absolute inset-0 w-full h-full" style="opacity:0.7"></canvas>
+        </div>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-cream from-[35%] to-transparent dark:from-[#1C1917] pointer-events-none"></div>
+    <div class="relative z-10 max-w-6xl mx-auto">
+        <div class="max-w-2xl fade-in">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-ink leading-tight mb-6">
+                Umjetna inteligencija na bosanskom.<br>
+                <span class="block text-2xl md:text-3xl lg:text-4xl text-coffee mt-2">Objašnjena jednostavno.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-stone dark:text-[#A8A29E] leading-relaxed mb-8">
+                Vodiči, praktični eksperimenti i nezavisna istraživanja o AI-u, LLM-ovima i AI agentima.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#najnovije" class="btn-primary inline-flex items-center px-6 py-3 bg-coffee text-white rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-coffee hover:to-coffee-dark">
+                    Zaronite u AI
+                </a>
+                <a href="/o-nama/" class="inline-flex items-center gap-2 px-6 py-3 border border-warmgray text-ink rounded-lg font-medium text-sm hover:text-coffee dark:hover:text-coffee transition-colors">
+                    O projektu
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Categories -->
+<section id="kategorije" class="py-10 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#1C1917]">
+    <div class="max-w-6xl mx-auto">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {% assign vodici_cat = site.data.categories["vodici"] %}
+            {% assign vodici_posts = site.posts | where: "category", "vodici" %}
+            <a href="/kategorije/vodici/" class="category-card group bg-parchment dark:bg-[#292524] border border-warmgray dark:border-[#44403C] rounded-2xl p-6 fade-in fade-in-delay-2">
+                <div class="w-10 h-10 bg-coffee/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-coffee/20 transition-colors">
+                    <svg class="w-5 h-5 text-coffee" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-ink mb-2 group-hover:text-coffee transition-colors">{{ vodici_cat.name }}</h3>
+                <p class="text-sm text-stone dark:text-[#A8A29E] leading-relaxed">{{ vodici_cat.description }}</p>
+                <div class="mt-4 flex items-center gap-1 text-xs font-medium text-coffee">
+                    {{ vodici_posts.size }} članaka
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
+            </a>
+
+            {% assign praksa_cat = site.data.categories["ai-u-praksi"] %}
+            {% assign praksa_posts = site.posts | where: "category", "ai-u-praksi" %}
+            <a href="/kategorije/ai-u-praksi/" class="category-card group bg-parchment dark:bg-[#292524] border border-warmgray dark:border-[#44403C] rounded-2xl p-6 fade-in fade-in-delay-2">
+                <div class="w-10 h-10 bg-teal/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal/20 transition-colors">
+                    <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-ink mb-2 group-hover:text-teal transition-colors">{{ praksa_cat.name }}</h3>
+                <p class="text-sm text-stone dark:text-[#A8A29E] leading-relaxed">{{ praksa_cat.description }}</p>
+                <div class="mt-4 flex items-center gap-1 text-xs font-medium text-teal">
+                    {{ praksa_posts.size }} članaka
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
+            </a>
+
+            {% assign svakoga_cat = site.data.categories["ai-za-sve"] %}
+            {% assign svakoga_posts = site.posts | where: "category", "ai-za-sve" %}
+            <a href="/kategorije/ai-za-sve/" class="category-card group bg-parchment dark:bg-[#292524] border border-warmgray dark:border-[#44403C] rounded-2xl p-6 fade-in fade-in-delay-2">
+                <div class="w-10 h-10 bg-violet-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-violet-500/20 transition-colors">
+                    <svg class="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-ink mb-2 group-hover:text-violet-600 transition-colors">{{ svakoga_cat.name }}</h3>
+                <p class="text-sm text-stone dark:text-[#A8A29E] leading-relaxed">{{ svakoga_cat.description }}</p>
+                <div class="mt-4 flex items-center gap-1 text-xs font-medium text-violet-600">
+                    {{ svakoga_posts.size }} članaka
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
+            </a>
+
+            <a href="/rjecnik/" class="category-card group bg-parchment dark:bg-[#292524] border border-warmgray dark:border-[#44403C] rounded-2xl p-6 fade-in fade-in-delay-2">
+                <div class="w-10 h-10 bg-rose-500/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-rose-500/20 transition-colors">
+                    <svg class="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+                </div>
+                <h3 class="font-serif text-lg font-bold text-ink mb-2 group-hover:text-rose-600 transition-colors">Rječnik</h3>
+                <p class="text-sm text-stone dark:text-[#A8A29E] leading-relaxed">AI pojmovi objašnjeni na bosanskom.</p>
+                <div class="mt-4 flex items-center gap-1 text-xs font-medium text-rose-600">
+                    {{ site.rjecnik.size }} pojmova
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Articles -->
+<section id="najnovije" class="py-10 px-4 sm:px-6 lg:px-8 bg-parchment dark:bg-[#292524] border-y border-warmgray dark:border-[#44403C]">
+    <div class="max-w-6xl mx-auto">
+        <div class="mb-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-ink">Najnoviji članci</h2>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-10">
+        <div class="flex-1 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% assign latest_posts = site.posts | where_exp: "post", "post.category != 'ai-za-sve'" %}
+            {% for post in latest_posts limit:6 %}
+            {% assign month_num = post.date | date: "%m" %}
+            {% assign pcat = site.data.categories[post.category] %}
+            <article class="article-card group">
+                <a href="{{ post.url }}" class="block">
+                    <div class="aspect-[16/9] rounded-xl mb-4 overflow-hidden border border-warmgray dark:border-[#44403C]">
+                        {% if post.image %}
+                        <img src="{{ post.image }}" alt="{{ post.title | escape }}" class="w-full h-full object-cover">
+                        {% else %}
+                        <div class="w-full h-full bg-gradient-to-br {% if pcat %}{{ pcat.card_gradient }}{% else %}from-gray-50 to-gray-100{% endif %} dark:from-[#292524] dark:to-[#1C1917] flex items-center justify-center">
+                            {% if post.category == 'vodici' %}
+                            <svg class="w-12 h-12 text-amber-300 dark:text-amber-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                            {% elsif post.category == 'ai-u-praksi' %}
+                            <svg class="w-12 h-12 text-teal-300 dark:text-teal-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            {% elsif post.category == 'ai-za-sve' %}
+                            <svg class="w-12 h-12 text-violet-300 dark:text-violet-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="flex items-center gap-3 mb-3">
+                        {% if pcat %}<span class="px-2 py-1 {{ pcat.badge_class }} text-xs font-semibold rounded-md">{{ pcat.name }}</span>{% endif %}
+                        <span class="text-xs text-stone dark:text-[#A8A29E]">{{ post.date | date: "%-d." }} {{ site.data.months[month_num] | truncate: 3, "" }}</span>
+                        {% if post.read_time %}<span class="text-warmgray dark:text-[#44403C]">·</span><span class="text-xs text-stone dark:text-[#A8A29E]">{{ post.read_time }} min</span>{% endif %}
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-ink mb-2 {% if pcat %}{{ pcat.hover_text }}{% else %}group-hover:text-coffee{% endif %} transition-colors leading-snug">{{ post.title }}</h3>
+                    {% if post.description %}<p class="text-sm text-stone dark:text-[#A8A29E] leading-relaxed line-clamp-2">{{ post.description }}</p>{% endif %}
+                </a>
+            </article>
+            {% endfor %}
+        </div>
+        <aside class="w-full lg:max-w-xs flex-shrink-0 lg:pl-6">
+            <div class="px-3 mb-4">
+                <h3 class="font-serif text-lg font-bold text-ink">Popularne teme</h3>
+            </div>
+            {% capture tag_cloud %}{% for tag in site.tags %}{{ tag[1].size | plus: 10000 }}~{{ tag[0] }}|||{% endfor %}{% endcapture %}
+            {% assign tag_entries = tag_cloud | split: "|||" | sort | reverse %}
+            {% if tag_entries.size > 0 %}
+            <ul class="space-y-1">
+                {% for entry in tag_entries limit:6 %}
+                {% assign parts = entry | split: "~" %}
+                {% assign tag_slug = parts[1] %}
+                {% assign tag_meta = site.data.tags[tag_slug] %}
+                <li>
+                    <a href="/teme/{{ tag_slug }}/" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-stone hover:bg-warmgray-light dark:hover:bg-[#292524] hover:text-coffee dark:hover:text-coffee transition-colors">
+                        {% include tag-icon.html slug=tag_slug class="w-4 h-4 flex-shrink-0" %}
+                        <span>{{ tag_meta.name | default: tag_slug }}</span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p class="text-sm text-stone dark:text-[#A8A29E]">Teme dolaze uskoro.</p>
+            {% endif %}
+        </aside>
+        </div>
+    </div>
+</section>
+
+{% include newsletter.html %}
+
+<script>
+    // LLM neural network animation (homepage only)
+    (function() {
+        const canvas = document.getElementById('llm-graph');
+        if (!canvas) return;
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.parentElement.getBoundingClientRect();
+        const W = rect.width, H = rect.height;
+        canvas.width = W * dpr; canvas.height = H * dpr;
+        const ctx = canvas.getContext('2d');
+        ctx.scale(dpr, dpr);
+        const LAYERS = [3, 5, 5, 3];
+        const nodes = [];
+        LAYERS.forEach(function(count, li) {
+            const x = W * 0.1 + li * (W * 0.8 / (LAYERS.length - 1));
+            for (let i = 0; i < count; i++) {
+                nodes.push({ x, y: H * 0.1 + (i + 0.5) * (H * 0.8 / count), layer: li, phase: Math.random() * Math.PI * 2, speed: 0.4 + Math.random() * 0.7 });
+            }
+        });
+        const edges = [];
+        for (let li = 0; li < LAYERS.length - 1; li++) {
+            const A = nodes.filter(n => n.layer === li), B = nodes.filter(n => n.layer === li + 1);
+            A.forEach(a => B.forEach(b => edges.push({ a, b, particles: [], next: Math.random() * 2000 })));
+        }
+        let prev = 0;
+        function frame(t) {
+            const dt = Math.min(t - prev, 50); prev = t;
+            const dark = document.documentElement.classList.contains('dark');
+            ctx.clearRect(0, 0, W, H);
+            edges.forEach(e => {
+                ctx.beginPath(); ctx.moveTo(e.a.x, e.a.y); ctx.lineTo(e.b.x, e.b.y);
+                ctx.strokeStyle = dark ? 'rgba(168,162,158,0.15)' : 'rgba(120,113,108,0.12)';
+                ctx.lineWidth = 1; ctx.stroke();
+                e.next -= dt;
+                if (e.next < 0) { e.particles.push({ t: 0, v: 0.00022 + Math.random() * 0.00018 }); e.next = 1200 + Math.random() * 3000; }
+                e.particles = e.particles.filter(p => {
+                    p.t += p.v * dt;
+                    if (p.t >= 1) return false;
+                    const px = e.a.x + (e.b.x - e.a.x) * p.t, py = e.a.y + (e.b.y - e.a.y) * p.t;
+                    const alpha = Math.sin(p.t * Math.PI);
+                    ctx.beginPath(); ctx.arc(px, py, 2.5, 0, Math.PI * 2);
+                    ctx.fillStyle = dark ? 'rgba(253,186,116,' + alpha + ')' : 'rgba(180,83,9,' + alpha + ')';
+                    ctx.fill(); return true;
+                });
+            });
+            nodes.forEach(n => {
+                const pulse = Math.sin(t * 0.001 * n.speed + n.phase), r = 5.5 + pulse * 1.2, opacity = 0.7 + pulse * 0.2;
+                const isIO = n.layer === 0 || n.layer === LAYERS.length - 1, color = isIO ? '#0F766E' : '#B45309';
+                ctx.beginPath(); ctx.arc(n.x, n.y, r + 6, 0, Math.PI * 2);
+                ctx.fillStyle = isIO ? 'rgba(15,118,110,0.1)' : 'rgba(180,83,9,0.08)'; ctx.fill();
+                ctx.beginPath(); ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
+                ctx.fillStyle = color; ctx.globalAlpha = opacity; ctx.fill(); ctx.globalAlpha = 1;
+            });
+            requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+    })();
+</script>

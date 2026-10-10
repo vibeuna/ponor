@@ -1,0 +1,267 @@
+---
+layout: default
+---
+{% assign cat = site.data.categories[page.category] %}
+{% assign month_num = page.date | date: "%m" %}
+{% assign month_name = site.data.months[month_num] %}
+{% assign day = page.date | date: "%-d." %}
+{% assign year = page.date | date: "%Y." %}
+{% assign formatted_date = day | append: " " | append: month_name | append: " " | append: year %}
+
+<div id="reading-progress" role="progressbar" aria-label="Napredak čitanja"></div>
+
+<article id="main-content" class="pt-12 pb-8 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto">
+        <div class="lg:flex lg:gap-10">
+        <div class="min-w-0 flex-1">
+
+        <nav aria-label="Putanja" class="mb-6">
+            <ol class="flex flex-wrap items-center gap-2 text-sm text-stone dark:text-[#A8A29E]">
+                <li><a href="/" class="hover:text-coffee transition-colors">Početna</a></li>
+                <li><span class="opacity-40">›</span></li>
+                {% if cat %}<li><a href="/kategorije/{{ page.category }}/" class="hover:text-coffee transition-colors">{{ cat.name }}</a></li>{% endif %}
+                <li><span class="opacity-40">›</span></li>
+                <li class="text-ink dark:text-[#FAF9F6] font-medium truncate max-w-xs">{{ page.title | truncate: 40 }}</li>
+            </ol>
+        </nav>
+
+        <div class="mb-8">
+            <div class="flex flex-wrap items-center gap-3 mb-6">
+                {% if cat %}<a href="/kategorije/{{ page.category }}/" class="px-3 py-1 {{ cat.bg_class }} {{ cat.text_class }} text-xs font-semibold rounded-full hover:opacity-80 transition-opacity">{{ cat.name }}</a>{% endif %}
+                <span class="text-xs text-stone dark:text-[#A8A29E]">{{ formatted_date }}</span>
+                {% if page.read_time %}<span class="text-xs text-stone dark:text-[#A8A29E]">•</span><span class="text-xs text-stone dark:text-[#A8A29E]">{{ page.read_time }} min čitanja</span>{% endif %}
+                {% if page.level %}<span class="text-xs text-stone dark:text-[#A8A29E]">•</span><span class="text-xs text-stone">{{ page.level }}</span>{% endif %}
+            </div>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-ink leading-tight mb-6">{{ page.title }}</h1>
+            {% if page.description %}<p class="text-lg md:text-xl text-stone leading-relaxed">{{ page.description }}</p>{% endif %}
+        </div>
+
+        {% if page.image %}
+        <div class="rounded-2xl overflow-hidden mb-8 border border-warmgray dark:border-[#44403C]">
+            <img src="{{ page.image }}" alt="{{ page.title | escape }}" class="w-full">
+        </div>
+        {% endif %}
+
+        <div class="flex items-center gap-4 py-6 border-y border-warmgray mb-10">
+            <div class="w-12 h-12 bg-coffee/10 rounded-full flex items-center justify-center text-coffee font-serif font-bold text-lg">p</div>
+            <div>
+                <p class="font-semibold text-ink text-sm">Autor: AI tim · Urednik: Dino</p>
+                <p class="text-xs text-stone dark:text-[#A8A29E]">Piše tim AI agenata, uređuje čovjek. <a href="/o-nama/" class="underline hover:text-coffee">Kako nastaje ponor</a></p>
+            </div>
+        </div>
+
+        <div class="article-body">
+            {{ content }}
+        </div>
+
+        {% if page.tags and page.tags.size > 0 %}
+        <div class="flex flex-wrap gap-2 mt-10 pt-8 border-t border-warmgray">
+            {% for tag in page.tags %}
+            {% assign tag_meta = site.data.tags[tag] %}
+            {% comment %} Link only tags that have a /teme/ page (a _data/tags.yml entry); others would 404. {% endcomment %}
+            {% if tag_meta %}
+            <a href="/teme/{{ tag }}/" class="px-3 py-1 bg-warmgray-light dark:bg-[#292524] text-stone dark:text-[#A8A29E] text-xs rounded-full hover:text-coffee transition-colors">#{{ tag_meta.name }}</a>
+            {% else %}
+            <span class="px-3 py-1 bg-warmgray-light dark:bg-[#292524] text-stone dark:text-[#A8A29E] text-xs rounded-full">#{{ tag }}</span>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% assign share_url = page.url | prepend: site.url %}
+        {% assign share_url_enc = share_url | url_encode %}
+        {% assign share_title_enc = page.title | url_encode %}
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+            <span class="text-sm font-medium text-stone dark:text-[#A8A29E]">Podijelite:</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ share_url_enc }}" target="_blank" rel="noopener" class="w-9 h-9 bg-warmgray-light dark:bg-[#292524] rounded-lg flex items-center justify-center text-stone hover:bg-coffee hover:text-white transition-colors" aria-label="Podijeli na Facebooku">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://wa.me/?text={{ share_title_enc }}%20{{ share_url_enc }}" target="_blank" rel="noopener" class="w-9 h-9 bg-warmgray-light dark:bg-[#292524] rounded-lg flex items-center justify-center text-stone hover:bg-coffee hover:text-white transition-colors" aria-label="Podijeli na WhatsAppu">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="viber://forward?text={{ share_title_enc }}%20{{ share_url_enc }}" rel="noopener" class="w-9 h-9 bg-warmgray-light dark:bg-[#292524] rounded-lg flex items-center justify-center text-stone hover:bg-coffee hover:text-white transition-colors" aria-label="Podijeli na Viberu">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 512 512"><path d="M444 49.9C431.3 38.2 379.9.9 265.3.4c0 0-135.1-8.1-200.9 52.3C27.8 89.3 14.9 143 13.5 209.5c-1.4 66.5-3.1 191.1 117 224.9h.1l-.1 51.6s-.8 20.9 13 25.1c16.6 5.2 26.4-10.7 42.3-27.8 8.7-9.4 20.7-23.2 29.8-33.7 82.2 6.9 145.3-8.9 152.5-11.2 16.6-5.4 110.5-17.4 125.7-142 15.8-128.6-7.6-209.8-49.8-246.5zM457.9 287c-12.9 104-89 110.6-103 115.1-6 1.9-61.5 15.7-131.2 11.2 0 0-52 62.7-68.2 79-5.3 5.3-11.1 4.8-11-5.7 0-6.9.4-85.7.4-85.7-.1 0-.1 0 0 0-101.8-28.2-95.8-134.3-94.7-189.8 1.1-55.5 11.6-101 42.6-131.6 55.7-50.5 170.4-43 170.4-43 96.9.4 143.3 29.6 154.1 39.4 35.7 30.6 53.9 103.8 40.6 211.1zm-139-80.8c.4 8.6-12.5 9.2-12.9.6-1.1-22-11.4-32.7-32.6-33.9-8.6-.5-7.8-13.4.7-12.9 27.9 1.5 43.4 17.5 44.8 46.2zm20.3 11.3c1-42.4-25.5-75.6-75.8-79.3-8.5-.6-7.6-13.5.9-12.9 58 4.2 88.9 44.1 87.8 92.5-.1 8.6-13.1 8.2-12.9-.3zm47 13.4c.1 8.6-12.9 8.7-12.9.1-.6-81.5-54.9-125.9-120.8-126.4-8.5-.1-8.5-12.9 0-12.9 73.7.5 133 51.4 133.7 139.2zM374.9 329v.2c-10.8 19-31 40-51.8 33.3l-.2-.3c-21.1-5.9-70.8-31.5-102.2-56.5-16.2-12.8-31-27.9-42.4-42.4-10.3-12.9-20.7-28.2-30.8-46.6-21.3-38.5-26-55.7-26-55.7-6.7-20.8 14.2-41 33.3-51.8h.2c9.2-4.8 18-3.2 23.9 3.9 0 0 12.4 14.8 17.7 22.1 5 6.8 11.7 17.7 15.2 23.8 6.1 10.9 2.3 22-3.7 26.6l-12 9.6c-6.1 4.9-5.3 14-5.3 14s17.8 67.3 84.3 84.3c0 0 9.1.8 14-5.3l9.6-12c4.6-6 15.7-9.8 26.6-3.7 14.7 8.3 33.4 21.2 45.8 32.9 7 5.7 8.6 14.4 3.8 23.6z"/></svg>
+            </a>
+            <a href="https://twitter.com/intent/tweet?url={{ share_url_enc }}&text={{ share_title_enc }}" target="_blank" rel="noopener" class="w-9 h-9 bg-warmgray-light dark:bg-[#292524] rounded-lg flex items-center justify-center text-stone hover:bg-coffee hover:text-white transition-colors" aria-label="Podijeli na X-u">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_url_enc }}" target="_blank" rel="noopener" class="w-9 h-9 bg-warmgray-light dark:bg-[#292524] rounded-lg flex items-center justify-center text-stone hover:bg-coffee hover:text-white transition-colors" aria-label="Podijeli na LinkedInu">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <button id="copy-link-btn" data-url="{{ share_url }}" class="h-9 px-3 bg-warmgray-light dark:bg-[#292524] rounded-lg inline-flex items-center gap-2 text-stone hover:bg-coffee hover:text-white transition-colors text-xs font-medium" aria-label="Kopiraj link">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                <span>Kopiraj link</span>
+            </button>
+            <button id="native-share-btn" data-url="{{ share_url }}" data-title="{{ page.title | escape }}" class="hidden h-9 px-3 bg-warmgray-light dark:bg-[#292524] rounded-lg items-center gap-2 text-stone hover:bg-coffee hover:text-white transition-colors text-xs font-medium" aria-label="Podijeli">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 12.632a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/></svg>
+                <span>Podijeli</span>
+            </button>
+        </div>
+
+        <nav aria-label="Navigacija člancima" class="mt-10 pt-8 border-t border-warmgray dark:border-[#44403C] grid grid-cols-2 gap-4">
+            {% if page.previous %}
+            <a href="{{ page.previous.url }}" class="group flex flex-col gap-1 p-4 rounded-xl border border-warmgray dark:border-[#44403C] hover:border-coffee/40 hover:bg-cream dark:hover:bg-[#292524] transition-colors">
+                <span class="text-xs text-stone dark:text-[#A8A29E] flex items-center gap-1">
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    Prethodni
+                </span>
+                <span class="font-serif font-bold text-ink dark:text-[#FAF9F6] text-sm group-hover:text-coffee transition-colors leading-snug">{{ page.previous.title }}</span>
+            </a>
+            {% else %}<div></div>{% endif %}
+            {% if page.next %}
+            <a href="{{ page.next.url }}" class="group flex flex-col gap-1 p-4 rounded-xl border border-warmgray dark:border-[#44403C] hover:border-coffee/40 hover:bg-cream dark:hover:bg-[#292524] transition-colors text-right">
+                <span class="text-xs text-stone dark:text-[#A8A29E] flex items-center gap-1 justify-end">
+                    Sljedeći
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </span>
+                <span class="font-serif font-bold text-ink dark:text-[#FAF9F6] text-sm group-hover:text-coffee transition-colors leading-snug">{{ page.next.title }}</span>
+            </a>
+            {% endif %}
+        </nav>
+        </div>
+        <aside id="toc-sidebar"></aside>
+        </div>
+    </div>
+</article>
+
+{% assign related_posts = site.posts | where: "category", page.category %}
+{% assign related_count = 0 %}
+{% if related_posts.size > 1 %}
+<section class="py-8 px-4 sm:px-6 lg:px-8 bg-white dark:bg-[#1C1917] border-y border-warmgray dark:border-[#44403C]">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-bold text-ink mb-8 font-serif">Povezani članci</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            {% for post in related_posts %}
+                {% if post.url != page.url and related_count < 3 %}
+                {% assign related_count = related_count | plus: 1 %}
+                {% assign pcat = site.data.categories[post.category] %}
+                <a href="{{ post.url }}" class="group block p-5 border border-warmgray rounded-xl hover:border-coffee/30 hover:bg-cream transition-colors">
+                    {% if pcat %}<span class="text-xs font-semibold {{ pcat.text_class }} uppercase tracking-wider">{{ pcat.name }}</span>{% endif %}
+                    <h3 class="font-serif font-bold text-ink mt-2 mb-2 group-hover:text-coffee transition-colors leading-snug">{{ post.title }}</h3>
+                    {% if post.description %}<p class="text-sm text-stone dark:text-[#A8A29E] line-clamp-2">{{ post.description }}</p>{% endif %}
+                </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{% include newsletter.html %}
+
+<script>
+    // Sticky TOC sidebar — only for articles > 800 words with 3+ headings
+    (function() {
+        var articleBody = document.querySelector('.article-body');
+        var sidebar = document.getElementById('toc-sidebar');
+        if (!articleBody || !sidebar) return;
+
+        var wordCount = articleBody.innerText.trim().split(/\s+/).length;
+        if (wordCount < 800) return;
+
+        var headings = articleBody.querySelectorAll('h2, h3');
+        if (headings.length < 3) return;
+
+        var label = document.createElement('p');
+        label.className = 'toc-sidebar-label';
+        label.textContent = 'Sadržaj';
+
+        var ul = document.createElement('ul');
+        ul.className = 'toc-sidebar-list';
+
+        var links = [];
+        headings.forEach(function(h) {
+            if (!h.id) return;
+            var li = document.createElement('li');
+            li.className = h.tagName === 'H3' ? 'toc-h3' : 'toc-h2';
+            var a = document.createElement('a');
+            a.href = '#' + h.id;
+            a.textContent = h.textContent;
+            a.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.getElementById(this.getAttribute('href').slice(1));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+            li.appendChild(a);
+            ul.appendChild(li);
+            links.push({ heading: h, link: a });
+        });
+
+        sidebar.appendChild(label);
+        sidebar.appendChild(ul);
+        sidebar.classList.add('toc-ready');
+
+        if (links.length) {
+            window.addEventListener('scroll', function() {
+                var scrollY = window.scrollY + 120;
+                var active = null;
+                for (var i = 0; i < links.length; i++) {
+                    if (links[i].heading.getBoundingClientRect().top + window.scrollY <= scrollY) {
+                        active = links[i];
+                    }
+                }
+                links.forEach(function(l) { l.link.classList.remove('toc-active'); });
+                if (active) active.link.classList.add('toc-active');
+            }, { passive: true });
+        }
+    })();
+</script>
+
+<script>
+    // Reading progress bar
+    (function() {
+        const bar = document.getElementById('reading-progress');
+        const article = document.getElementById('main-content');
+        if (!bar || !article) return;
+        window.addEventListener('scroll', function() {
+            const total = article.offsetHeight - window.innerHeight;
+            const progress = Math.min(Math.max((window.scrollY - article.offsetTop) / total, 0), 1);
+            bar.style.width = (progress * 100) + '%';
+        }, { passive: true });
+    })();
+</script>
+
+<script>
+    // Share: copy link + native share sheet (mobile)
+    (function() {
+        var copyBtn = document.getElementById('copy-link-btn');
+        if (copyBtn) {
+            copyBtn.addEventListener('click', function() {
+                navigator.clipboard.writeText(copyBtn.dataset.url).then(function() {
+                    var label = copyBtn.querySelector('span');
+                    label.textContent = 'Kopirano!';
+                    setTimeout(function() { label.textContent = 'Kopiraj link'; }, 2000);
+                });
+            });
+        }
+        var shareBtn = document.getElementById('native-share-btn');
+        if (shareBtn && navigator.share) {
+            shareBtn.classList.remove('hidden');
+            shareBtn.classList.add('inline-flex');
+            shareBtn.addEventListener('click', function() {
+                navigator.share({ title: shareBtn.dataset.title, url: shareBtn.dataset.url }).catch(function() {});
+            });
+        }
+    })();
+</script>
+
+<script>
+    // Auto-add copy buttons to all code blocks in article body
+    document.querySelectorAll('.article-body pre').forEach(function(pre) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper relative';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+        const btn = document.createElement('button');
+        btn.className = 'copy-btn absolute top-3 right-3 px-2 py-1 bg-white/10 text-white text-xs rounded hover:bg-white/20 transition-colors';
+        btn.textContent = 'Kopiraj';
+        btn.addEventListener('click', function() {
+            navigator.clipboard.writeText(pre.innerText).then(function() {
+                btn.textContent = 'Kopirano!';
+                btn.classList.add('bg-teal/80');
+                setTimeout(function() { btn.textContent = 'Kopiraj'; btn.classList.remove('bg-teal/80'); }, 2000);
+            });
+        });
+        wrapper.insertBefore(btn, pre);
+    });
+</script>
