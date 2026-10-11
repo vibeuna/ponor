@@ -5,7 +5,7 @@ date: 2026-10-11
 category: vodici
 image: /assets/images/2026-10-11-sta-je-ai-agent.svg
 read_time: 6
-description: "Po čemu se AI agent razlikuje od chatbota, kako u petlji koristi alate i zašto samostalnost ima cijenu: agent radi sporije, skuplji je, a greške mu se mogu gomilati."
+description: "Po čemu se AI agent razlikuje od chatbota, kako u petlji koristi alate i zašto samostalnost ima cijenu: sporiji rad, viša cijena i greške koje se gomilaju."
 tags: [ai-agenti]
 ---
 

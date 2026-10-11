@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kako napisati dobar prompt: recite chatbotu jezik, situaciju i oblik odgovora"
+title: "Kako napisati dobar prompt: jezik, situacija, oblik odgovora"
 date: 2026-10-11
 category: ai-za-sve
 image: /assets/images/2026-10-11-kako-napisati-dobar-prompt.svg

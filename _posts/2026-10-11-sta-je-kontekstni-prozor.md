@@ -101,8 +101,8 @@ Prozor se mjeri u tokenima, a isti tekst na različitim jezicima troši različi
 ## Povezano
 
 - [Šta je LLM i kako radi?](/clanci/sta-je-llm/) – kako model generiše tekst token po token, osnova za ovaj tekst.
-- [Šta je token](/clanci/sta-je-llm-token/) – jedinica u kojoj se prozor mjeri.
-- [Kako napisati dobar prompt: recite chatbotu jezik, situaciju i oblik odgovora](/clanci/kako-napisati-dobar-prompt/) – kako jasno navesti jezik i uslove koje model treba poštovati.
+- [Šta je LLM token i kako radi tokenizacija?](/clanci/sta-je-llm-token/) – jedinica u kojoj se prozor mjeri.
+- [Kako napisati dobar prompt: jezik, situacija, oblik odgovora](/clanci/kako-napisati-dobar-prompt/) – kako jasno navesti jezik i uslove koje model treba poštovati.
 
 ## Izvori
 
