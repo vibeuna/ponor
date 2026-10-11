@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <rect width="1000" height="600" rx="40" fill="#c8996a"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Icon: text strip cut into unequal subword segments; second segment highlighted.
+         Widths 90/170/80/120/140 match the tokens branch of gen_article_image.py. -->
+    <rect x="200" y="225" width="600" height="150" rx="18" fill="#fafaf8"/>
+    <rect x="296" y="233" width="158" height="134" fill="#d6dff0"/>
+    <g stroke="#1a1a1a" stroke-width="10">
+      <line x1="290" y1="225" x2="290" y2="375"/>
+      <line x1="460" y1="225" x2="460" y2="375"/>
+      <line x1="540" y1="225" x2="540" y2="375"/>
+      <line x1="660" y1="225" x2="660" y2="375"/>
+    </g>
+    <rect x="200" y="225" width="600" height="150" rx="18" fill="none" stroke="#1a1a1a" stroke-width="16"/>
+  </g>
+</svg>

@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Inter, system-ui, -apple-system, sans-serif" id="llm-svg" role="img" aria-labelledby="llm-title llm-desc">
+  <title id="llm-title">Kako veliki jezički model piše odgovor, token po token</title>
+  <desc id="llm-desc">Tekst u kontekstnom prozoru tokenizator dijeli na tokene. Transformer s mehanizmom pažnje računa vjerovatnoću za svaki token iz vokabulara, bira jedan, dodaje ga na kraj teksta i postupak se ponavlja. Donji panel: u studiji iz 2023. iste rečenice na bosanskom dale su u prosjeku 1,87 puta više tokena nego na engleskom (tokenizator cl100k_base).</desc>
+
+  <defs>
+    <marker id="llm-ah-stone" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#78716C"/>
+    </marker>
+    <marker id="llm-ah-coffee" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B45309"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="#FAF9F6"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Kako veliki jezički model piše odgovor</text>
+  <text x="450" y="64" text-anchor="middle" font-size="13" fill="#78716C">Token po token: svaki izabrani token vraća se na ulaz i krug počinje ponovo</text>
+
+  <!-- ============ INPUT inside the context window ============ -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="0.2s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <!-- Dashed outline = the context window boundary -->
+    <rect x="52" y="84" width="796" height="80" rx="10" fill="none" stroke="#A8A29E" stroke-width="1" stroke-dasharray="4,4"/>
+    <rect x="60" y="92" width="780" height="64" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <rect x="60" y="92" width="3" height="64" fill="#78716C"/>
+    <text x="80" y="116" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">ULAZ</text>
+    <text x="80" y="140" font-size="15" fill="#1C1917" font-style="italic" font-family="Merriweather, Georgia, serif">"Glavni grad Bosne i Hercegovine je"</text>
+    <text x="820" y="116" text-anchor="end" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">KONTEKSTNI PROZOR</text>
+    <text x="820" y="140" text-anchor="end" font-size="11" fill="#78716C" font-style="italic">model vidi ograničen broj tokena</text>
+  </g>
+
+  <!-- Arrow: input -> tokenization -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="0.6s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <line x1="160" y1="172" x2="160" y2="187" stroke="#78716C" stroke-width="1.5" marker-end="url(#llm-ah-stone)"/>
+  </g>
+
+  <!-- ============ STAGE 1: tokenization ============ -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="0.8s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <rect x="60" y="196" width="200" height="120" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <text x="78" y="220" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">1 · TOKENIZACIJA</text>
+    <text x="78" y="243" font-size="13" font-weight="500" fill="#44403C">tokenizator siječe tekst</text>
+    <text x="78" y="260" font-size="13" font-weight="500" fill="#44403C">na tokene</text>
+    <!-- Abstract token chips: deliberately unlabeled, no claimed split -->
+    <rect x="78" y="280" width="30" height="20" rx="6" fill="#E7E5E4" stroke="#D6D3D1" stroke-width="1"/>
+    <rect x="114" y="280" width="22" height="20" rx="6" fill="#E7E5E4" stroke="#D6D3D1" stroke-width="1"/>
+    <rect x="142" y="280" width="34" height="20" rx="6" fill="#E7E5E4" stroke="#D6D3D1" stroke-width="1"/>
+    <rect x="182" y="280" width="18" height="20" rx="6" fill="#E7E5E4" stroke="#D6D3D1" stroke-width="1"/>
+    <rect x="206" y="280" width="28" height="20" rx="6" fill="#E7E5E4" stroke="#D6D3D1" stroke-width="1"/>
+  </g>
+
+  <!-- Arrow: stage 1 -> stage 2 -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="1.2s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <line x1="268" y1="256" x2="281" y2="256" stroke="#78716C" stroke-width="1.5" marker-end="url(#llm-ah-stone)"/>
+  </g>
+
+  <!-- ============ STAGE 2: transformer (FOCAL) ============ -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="1.4s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <rect x="290" y="196" width="300" height="120" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="2"/>
+    <rect x="290" y="196" width="3" height="120" fill="#B45309"/>
+    <text x="308" y="220" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">2 · TRANSFORMER</text>
+    <text x="308" y="245" font-size="15" font-weight="700" fill="#1C1917" font-family="Merriweather, Georgia, serif">Veliki jezički model</text>
+    <text x="308" y="270" font-size="12" fill="#44403C">mehanizam pažnje povezuje svaki</text>
+    <text x="308" y="286" font-size="12" fill="#44403C">token s ostalim tokenima u nizu</text>
+    <!-- Attention icon: every node linked to every other -->
+    <g stroke="#B45309" stroke-width="1" opacity="0.55">
+      <line x1="528" y1="232" x2="566" y2="246"/>
+      <line x1="528" y1="232" x2="540" y2="290"/>
+      <line x1="528" y1="232" x2="572" y2="282"/>
+      <line x1="566" y1="246" x2="540" y2="290"/>
+      <line x1="566" y1="246" x2="572" y2="282"/>
+      <line x1="540" y1="290" x2="572" y2="282"/>
+      <line x1="518" y1="266" x2="528" y2="232"/>
+      <line x1="518" y1="266" x2="566" y2="246"/>
+      <line x1="518" y1="266" x2="540" y2="290"/>
+      <line x1="518" y1="266" x2="572" y2="282"/>
+    </g>
+    <g fill="#B45309">
+      <circle cx="528" cy="232" r="4"/>
+      <circle cx="566" cy="246" r="4"/>
+      <circle cx="518" cy="266" r="4"/>
+      <circle cx="540" cy="290" r="4"/>
+      <circle cx="572" cy="282" r="4"/>
+    </g>
+  </g>
+
+  <!-- Arrow: stage 2 -> stage 3 (primary path) -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="1.9s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <line x1="598" y1="256" x2="611" y2="256" stroke="#B45309" stroke-width="2" marker-end="url(#llm-ah-coffee)"/>
+  </g>
+
+  <!-- ============ STAGE 3: probabilities over the vocabulary ============ -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="2.1s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <rect x="620" y="196" width="220" height="120" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <text x="638" y="220" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">3 · VJEROVATNOĆE</text>
+    <g font-size="12">
+      <text x="702" y="243" text-anchor="end" font-weight="700" fill="#1C1917">Sarajevo</text>
+      <rect x="708" y="232" width="96" height="14" rx="4" fill="#B45309">
+        <animate attributeName="width" from="0" to="96" values="0;96" keyTimes="0;1" begin="2.2s" dur="0.7s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+      </rect>
+      <text x="810" y="243" font-size="11" font-weight="700" fill="#92400E">87%</text>
+
+      <text x="702" y="265" text-anchor="end" font-weight="500" fill="#44403C">Banja</text>
+      <rect x="708" y="254" width="8" height="14" rx="3" fill="#A8A29E">
+        <animate attributeName="width" from="0" to="8" values="0;8" keyTimes="0;1" begin="2.35s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+      </rect>
+      <text x="722" y="265" font-size="11" fill="#57534E">7%</text>
+
+      <text x="702" y="287" text-anchor="end" font-weight="500" fill="#78716C">Mostar</text>
+      <rect x="708" y="276" width="4" height="14" rx="2" fill="#D6D3D1">
+        <animate attributeName="width" from="0" to="4" values="0;4" keyTimes="0;1" begin="2.5s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+      </rect>
+      <text x="718" y="287" font-size="11" fill="#78716C">3%</text>
+    </g>
+    <text x="638" y="306" font-size="11" fill="#78716C" font-style="italic">izbor zavisi i od temperature</text>
+  </g>
+
+  <!-- Arrow: stage 3 -> chosen token (primary path) -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="2.9s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <line x1="730" y1="324" x2="730" y2="344" stroke="#B45309" stroke-width="2" marker-end="url(#llm-ah-coffee)"/>
+  </g>
+
+  <!-- ============ OUTPUT: chosen token appended ============ -->
+  <g class="rv rv-rise" opacity="0" transform="translate(0, 8)">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="3.1s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" values="0 8;0 0" keyTimes="0;1" begin="3.1s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <rect x="60" y="354" width="780" height="64" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <rect x="60" y="354" width="3" height="64" fill="#B45309"/>
+    <text x="80" y="378" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">4 · IZABRANI TOKEN SE DODAJE NA KRAJ</text>
+    <text x="80" y="402" font-size="15" fill="#1C1917" font-style="italic" font-family="Merriweather, Georgia, serif">"Glavni grad Bosne i Hercegovine je <tspan font-weight="700" font-style="normal" fill="#92400E">Sarajevo</tspan>"</text>
+  </g>
+
+  <!-- Loop back: output becomes the next input (primary path) -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="3.5s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <path d="M 52 386 H 32 V 124 H 43" fill="none" stroke="#B45309" stroke-width="2" stroke-linejoin="round" marker-end="url(#llm-ah-coffee)"/>
+    <text x="22" y="255" text-anchor="middle" font-size="11" font-style="italic" font-weight="600" fill="#92400E" transform="rotate(-90 22 255)">ponavlja se za svaki novi token</text>
+  </g>
+
+  <!-- Footnote for the illustrative numbers -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="3.7s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <text x="60" y="438" font-size="11" fill="#78716C" font-style="italic">Vjerovatnoće su ilustrativne. Model računa vjerovatnoću za svaki token iz vokabulara, ne samo za tri prikazana.</text>
+  </g>
+
+  <!-- ============ INSET: Bosnian token premium (explanatory, neutral) ============ -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="3.9s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <rect x="60" y="458" width="780" height="130" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <rect x="60" y="458" width="3" height="130" fill="#78716C"/>
+    <text x="80" y="484" font-size="13" font-weight="700" fill="#1C1917" font-family="Merriweather, Georgia, serif">Ista rečenica, više tokena na bosanskom</text>
+    <g font-size="12">
+      <text x="170" y="514" text-anchor="end" font-weight="500" fill="#44403C">engleski</text>
+      <rect x="180" y="502" width="200" height="16" rx="4" fill="#D6D3D1">
+        <animate attributeName="width" from="0" to="200" values="0;200" keyTimes="0;1" begin="4.0s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+      </rect>
+      <text x="388" y="514" font-size="12" font-weight="600" fill="#57534E">1,00</text>
+
+      <text x="170" y="542" text-anchor="end" font-weight="700" fill="#1C1917">bosanski</text>
+      <rect x="180" y="530" width="374" height="16" rx="4" fill="#A8A29E">
+        <animate attributeName="width" from="0" to="374" values="0;374" keyTimes="0;1" begin="4.1s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+      </rect>
+      <text x="562" y="542" font-size="12" font-weight="700" fill="#1C1917">1,87×</text>
+    </g>
+    <text x="80" y="572" font-size="11" fill="#78716C" font-style="italic">Prosječan broj tokena za iste rečenice u odnosu na engleski, tokenizator cl100k_base (ChatGPT, GPT-4). Petrov i sar., 2023.</text>
+  </g>
+
+  <!-- ============ REPLAY BUTTON ============ -->
+  <g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+    <circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon points="852,28 858,28 855,33" fill="#78716C"/>
+    <title>Pusti ponovo</title>
+  </g>
+
+  <style>
+    #llm-svg:hover .replay-btn { opacity: 1 !important; }
+    #llm-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+    #llm-svg .replay-btn:hover path { stroke: #B45309; }
+    #llm-svg .replay-btn:hover polygon { fill: #B45309; }
+    #llm-svg .replay-btn:focus { outline: none; opacity: 1 !important; }
+    #llm-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+    @media (prefers-reduced-motion: reduce) {
+      #llm-svg animate, #llm-svg animateTransform { display: none; }
+      #llm-svg .replay-btn { display: none; }
+      /* display:none does not reliably stop SMIL, and the groups start at
+         opacity 0; force the final state so nothing stays invisible. */
+      #llm-svg .rv { opacity: 1 !important; }
+      #llm-svg .rv-rise { transform: none !important; }
+    }
+  </style>
+
+  <script>
+    // <![CDATA[
+    (function () {
+      const svg = document.getElementById('llm-svg');
+      const btn = svg && svg.querySelector('.replay-btn');
+      if (!svg || !btn) return;
+      function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+      btn.addEventListener('click', replay);
+      btn.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+      });
+    })();
+    // ]]>
+  </script>
+</svg>

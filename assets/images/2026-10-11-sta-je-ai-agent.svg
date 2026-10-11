@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#7c5a82"/>
+
+  <!-- Icon: single gear (the repeating tool loop), light-blue hub, plum accent axle -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Gear body with 8 teeth -->
+    <path d="M 476.5 186.4 L 480.0 151.3 L 520.0 151.3 L 523.5 186.4 L 563.7 203.0 L 591.0 180.8 L 619.2 209.0 L 597.0 236.3 L 613.6 276.5 L 648.7 280.0 L 648.7 320.0 L 613.6 323.5 L 597.0 363.7 L 619.2 391.0 L 591.0 419.2 L 563.7 397.0 L 523.5 413.6 L 520.0 448.7 L 480.0 448.7 L 476.5 413.6 L 436.3 397.0 L 409.0 419.2 L 380.8 391.0 L 403.0 363.7 L 386.4 323.5 L 351.3 320.0 L 351.3 280.0 L 386.4 276.5 L 403.0 236.3 L 380.8 209.0 L 409.0 180.8 L 436.3 203.0 Z" fill="#fafaf8" stroke-width="18"/>
+    <!-- Hub -->
+    <circle cx="500" cy="300" r="58" fill="#d6dff0" stroke-width="16"/>
+    <!-- Axle accent dot in background color -->
+    <circle cx="500" cy="300" r="20" fill="#7c5a82" stroke-width="8"/>
+  </g>
+</svg>

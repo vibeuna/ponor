@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Inter, system-ui, -apple-system, sans-serif" id="agent-svg" role="img" aria-labelledby="agent-title agent-desc">
+  <title id="agent-title">Kako AI agent radi: agentska petlja</title>
+  <desc id="agent-desc">Agent dobija zadatak i upute. Model odlučuje treba li mu alat; pozivanje alata šalje zahtjev alatu, po potrebi uz odobrenje čovjeka za rizične radnje, a rezultat alata vraća se modelu. Petlja se ponavlja dok se ne ispuni uslov za završetak, npr. konačan odgovor, greška ili najveći dozvoljeni broj koraka. Donji red: chatbot samo odgovara, u toku rada korake određuje programer, a kod agenta model sam bira sljedeći korak.</desc>
+
+  <defs>
+    <marker id="agent-ah-stone" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#78716C"/>
+    </marker>
+    <marker id="agent-ah-coffee" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#B45309"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="#FAF9F6"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Kako AI agent radi</text>
+  <text x="450" y="64" text-anchor="middle" font-size="13" fill="#78716C">Model sam bira sljedeći korak, sve dok ga ne zaustavi uslov za završetak</text>
+
+  <!-- ============ INPUT: task + instructions ============ -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="0.2s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <rect x="60" y="80" width="780" height="60" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <rect x="60" y="80" width="3" height="60" fill="#78716C"/>
+    <text x="80" y="102" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">ULAZ · ZADATAK I UPUTE</text>
+    <text x="80" y="126" font-size="15" fill="#1C1917" font-style="italic" font-family="Merriweather, Georgia, serif">"Pronađi najjeftiniji let za Beč i rezerviši ga."</text>
+  </g>
+
+  <!-- Arrow: input -> model -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="0.6s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <line x1="180" y1="148" x2="180" y2="171" stroke="#78716C" stroke-width="1.5" marker-end="url(#agent-ah-stone)"/>
+  </g>
+
+  <!-- ============ LOOP BOUNDARY ============ -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="0.8s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <rect x="44" y="166" width="812" height="196" rx="10" fill="none" stroke="#A8A29E" stroke-width="1" stroke-dasharray="4,4"/>
+    <rect x="696" y="158" width="150" height="16" fill="#FAF9F6"/>
+    <text x="840" y="170" text-anchor="end" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">AGENTSKA PETLJA</text>
+  </g>
+
+  <!-- ============ FOCAL: the model decides ============ -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="1.0s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <rect x="60" y="180" width="240" height="110" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="2"/>
+    <rect x="60" y="180" width="3" height="110" fill="#B45309"/>
+    <text x="80" y="204" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">1 · MODEL ODLUČUJE</text>
+    <text x="80" y="234" font-size="15" fill="#1C1917" font-style="italic" font-family="Merriweather, Georgia, serif">"Treba li mi alat?"</text>
+    <text x="80" y="258" font-size="13" font-weight="500" fill="#44403C">pozvati alat ili završiti,</text>
+    <text x="80" y="276" font-size="13" font-weight="500" fill="#44403C">na osnovu dosadašnjih rezultata</text>
+  </g>
+
+  <!-- Primary path: tool call -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="1.4s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <line x1="309" y1="215" x2="590" y2="215" stroke="#B45309" stroke-width="2" marker-end="url(#agent-ah-coffee)"/>
+    <text x="450" y="206" text-anchor="middle" font-size="11" font-weight="700" fill="#92400E" letter-spacing="0.8">2 · POZIVANJE ALATA</text>
+  </g>
+
+  <!-- Optional checkpoint: human oversight (secondary, neutral) -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="1.7s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <circle cx="450" cy="215" r="3" fill="#78716C"/>
+    <line x1="450" y1="221" x2="450" y2="236" stroke="#78716C" stroke-width="1.3" stroke-dasharray="3,3"/>
+    <rect x="366" y="240" width="168" height="46" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="450" y="259" text-anchor="middle" font-size="10" font-weight="700" fill="#78716C" letter-spacing="0.8">LJUDSKI NADZOR</text>
+    <text x="450" y="276" text-anchor="middle" font-size="11" fill="#57534E" font-style="italic">čovjek odobrava rizične radnje</text>
+  </g>
+
+  <!-- ============ TOOL ============ -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="1.9s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <rect x="600" y="180" width="240" height="110" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+    <text x="618" y="204" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">3 · ALAT SE IZVRŠAVA</text>
+    <text x="618" y="232" font-size="13" font-weight="500" fill="#44403C">pretraga, izvršavanje koda,</text>
+    <text x="618" y="250" font-size="13" font-weight="500" fill="#44403C">baza podataka, API</text>
+    <text x="618" y="276" font-size="11" fill="#78716C" font-style="italic">vraća stvarne podatke iz okruženja</text>
+  </g>
+
+  <!-- Primary path: result returns to the model -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="2.3s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <path d="M 720 298 V 326 H 180 V 299" fill="none" stroke="#B45309" stroke-width="2" stroke-linejoin="round" marker-end="url(#agent-ah-coffee)"/>
+    <text x="450" y="346" text-anchor="middle" font-size="12" font-style="italic" font-weight="600" fill="#92400E">4 · rezultat alata vraća se modelu, i krug počinje ponovo</text>
+  </g>
+
+  <!-- Exit: stop condition met -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="2.7s" dur="0.3s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <line x1="90" y1="298" x2="90" y2="391" stroke="#B45309" stroke-width="2" marker-end="url(#agent-ah-coffee)"/>
+    <rect x="98" y="366" width="150" height="16" fill="#FAF9F6"/>
+    <text x="100" y="378" font-size="11" font-style="italic" font-weight="600" fill="#92400E">uslov za završetak</text>
+  </g>
+
+  <!-- ============ OUTPUT ============ -->
+  <g class="rv rv-rise" opacity="0" transform="translate(0, 8)">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="2.9s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <animateTransform attributeName="transform" type="translate" from="0 8" to="0 0" values="0 8;0 0" keyTimes="0;1" begin="2.9s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <rect x="60" y="398" width="780" height="56" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+    <rect x="60" y="398" width="3" height="56" fill="#B45309"/>
+    <text x="80" y="419" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">IZLAZ · KRAJ PETLJE</text>
+    <text x="80" y="441" font-size="13" font-weight="500" fill="#1C1917">Petlja staje na uslovu za završetak, npr. konačan odgovor, greška ili najveći dozvoljeni broj koraka.</text>
+  </g>
+
+  <!-- ============ CONTRAST STRIP (explanatory, neutral) ============ -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="3.3s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <text x="60" y="484" font-size="13" font-weight="700" fill="#1C1917" font-family="Merriweather, Georgia, serif">Ko određuje sljedeći korak?</text>
+  </g>
+
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="3.4s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <rect x="60" y="496" width="250" height="84" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="78" y="518" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">CHATBOT</text>
+    <text x="78" y="542" font-size="13" font-weight="500" fill="#44403C">niko: samo odgovara na poruku</text>
+    <text x="78" y="562" font-size="12" fill="#78716C">i ne izvodi radnje</text>
+  </g>
+
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="3.6s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <rect x="325" y="496" width="250" height="84" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="343" y="518" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">TOK RADA</text>
+    <text x="343" y="542" font-size="13" font-weight="500" fill="#44403C">programer, unaprijed u kodu</text>
+    <text x="343" y="562" font-size="12" fill="#78716C">model izvršava zadane korake</text>
+  </g>
+
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="3.8s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <rect x="590" y="496" width="250" height="84" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5"/>
+    <text x="608" y="518" font-size="11" font-weight="700" fill="#1C1917" letter-spacing="0.8">AGENT</text>
+    <text x="608" y="542" font-size="13" font-weight="700" fill="#1C1917">model, u svakom koraku</text>
+    <text x="608" y="562" font-size="12" fill="#78716C">na osnovu rezultata alata</text>
+  </g>
+
+  <!-- Footnote -->
+  <g class="rv" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" values="0;1" keyTimes="0;1" begin="4.0s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <text x="60" y="604" font-size="11" fill="#78716C" font-style="italic">Zadatak je ilustrativan. Prema vodičima Anthropica (2024) i OpenAI-ja (2025).</text>
+  </g>
+
+  <!-- ============ REPLAY BUTTON ============ -->
+  <g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+    <circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon points="852,28 858,28 855,33" fill="#78716C"/>
+    <title>Pusti ponovo</title>
+  </g>
+
+  <style>
+    #agent-svg:hover .replay-btn { opacity: 1 !important; }
+    #agent-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+    #agent-svg .replay-btn:hover path { stroke: #B45309; }
+    #agent-svg .replay-btn:hover polygon { fill: #B45309; }
+    #agent-svg .replay-btn:focus { outline: none; opacity: 1 !important; }
+    #agent-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+    @media (prefers-reduced-motion: reduce) {
+      #agent-svg animate, #agent-svg animateTransform { display: none; }
+      #agent-svg .replay-btn { display: none; }
+      /* display:none does not reliably stop SMIL, and the groups start at
+         opacity 0; force the final state so nothing stays invisible. */
+      #agent-svg .rv { opacity: 1 !important; }
+      #agent-svg .rv-rise { transform: none !important; }
+    }
+  </style>
+
+  <script>
+    // <![CDATA[
+    (function () {
+      const svg = document.getElementById('agent-svg');
+      const btn = svg && svg.querySelector('.replay-btn');
+      if (!svg || !btn) return;
+      function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+      btn.addEventListener('click', replay);
+      btn.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+      });
+    })();
+    // ]]>
+  </script>
+</svg>

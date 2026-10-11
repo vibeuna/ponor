@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Inter, system-ui, -apple-system, sans-serif" id="kpz-svg" role="img" aria-labelledby="kpz-title kpz-desc">
+<title id="kpz-title">Izgubljeno u sredini</title>
+<desc id="kpz-desc">Tačnost GPT-3.5-Turbo s 20 dokumenata prema poziciji dokumenta s odgovorom: 1. pozicija 75,8%, 5. 57,2%, 10. 53,8%, 15. 55,4%, 20. 63,2%. Bez ijednog dokumenta tačnost je 56,1%. Izvor: Liu i saradnici, arXiv 2307.03172v3.</desc>
+<rect width="900" height="620" fill="#FAF9F6"/>
+<text x="450" y="42" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Izgubljeno u sredini</text>
+<text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C">Model najbolje koristi početak i kraj prozora, a najslabije sredinu</text>
+<rect x="60" y="100" width="780" height="64" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<rect x="60" y="100" width="3" height="64" fill="#78716C"/>
+<text x="80" y="124" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">ULAZ</text>
+<text x="80" y="148" font-size="15" fill="#1C1917" font-style="italic" font-family="Merriweather, Georgia, serif">Pitanje i 20 dokumenata. Samo jedan dokument sadrži odgovor.</text>
+<line x1="450" y1="172" x2="450" y2="196" stroke="#78716C" stroke-width="1.5"/>
+<polygon points="445,194 450,204 455,194" fill="#78716C"/>
+<text x="450" y="226" text-anchor="middle" font-size="13" font-weight="600" fill="#44403C">Tačnost prema poziciji dokumenta s odgovorom (1. = početak, 20. = kraj)</text>
+<g font-size="10" fill="#A8A29E">
+<line x1="160" y1="424.0" x2="790" y2="424.0" stroke="#E7E5E4" stroke-width="1" stroke-dasharray="2,3"/>
+<text x="150" y="427.5" text-anchor="end">0%</text>
+<line x1="160" y1="334.0" x2="790" y2="334.0" stroke="#E7E5E4" stroke-width="1" stroke-dasharray="2,3"/>
+<text x="150" y="337.5" text-anchor="end">50%</text>
+<line x1="160" y1="244.0" x2="790" y2="244.0" stroke="#E7E5E4" stroke-width="1" stroke-dasharray="2,3"/>
+<text x="150" y="247.5" text-anchor="end">100%</text>
+</g>
+<rect x="188" y="287.6" width="64" height="136.4" rx="4" fill="#A8A29E">
+  <animate attributeName="height" values="0;0;136.4" dur="1.00s" keyTimes="0;0.300;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+  <animate attributeName="y" values="424;424;287.6" dur="1.00s" keyTimes="0;0.300;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+</rect>
+<text x="220" y="279.6" text-anchor="middle" font-size="12" font-weight="500" fill="#57534E">75,8%<animate attributeName="opacity" values="0;0;1" dur="1.35s" keyTimes="0;0.778;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></text>
+<text x="220" y="442" text-anchor="middle" font-size="12" font-weight="500" fill="#44403C">1.</text>
+<rect x="318" y="321.0" width="64" height="103.0" rx="4" fill="#A8A29E">
+  <animate attributeName="height" values="0;0;103.0" dur="1.15s" keyTimes="0;0.391;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+  <animate attributeName="y" values="424;424;321.0" dur="1.15s" keyTimes="0;0.391;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+</rect>
+<text x="350" y="313.0" text-anchor="middle" font-size="12" font-weight="500" fill="#57534E">57,2%<animate attributeName="opacity" values="0;0;1" dur="1.50s" keyTimes="0;0.800;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></text>
+<text x="350" y="442" text-anchor="middle" font-size="12" font-weight="500" fill="#44403C">5.</text>
+<rect x="448" y="327.2" width="64" height="96.8" rx="4" fill="#B45309">
+  <animate attributeName="height" values="0;0;96.8" dur="1.30s" keyTimes="0;0.462;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+  <animate attributeName="y" values="424;424;327.2" dur="1.30s" keyTimes="0;0.462;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+</rect>
+<text x="480" y="319.2" text-anchor="middle" font-size="12" font-weight="700" fill="#92400E">53,8%<animate attributeName="opacity" values="0;0;1" dur="1.65s" keyTimes="0;0.818;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></text>
+<text x="480" y="442" text-anchor="middle" font-size="12" font-weight="700" fill="#1C1917">10.</text>
+<rect x="578" y="324.3" width="64" height="99.7" rx="4" fill="#A8A29E">
+  <animate attributeName="height" values="0;0;99.7" dur="1.45s" keyTimes="0;0.517;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+  <animate attributeName="y" values="424;424;324.3" dur="1.45s" keyTimes="0;0.517;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+</rect>
+<text x="610" y="316.3" text-anchor="middle" font-size="12" font-weight="500" fill="#57534E">55,4%<animate attributeName="opacity" values="0;0;1" dur="1.80s" keyTimes="0;0.833;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></text>
+<text x="610" y="442" text-anchor="middle" font-size="12" font-weight="500" fill="#44403C">15.</text>
+<rect x="708" y="310.2" width="64" height="113.8" rx="4" fill="#A8A29E">
+  <animate attributeName="height" values="0;0;113.8" dur="1.60s" keyTimes="0;0.562;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+  <animate attributeName="y" values="424;424;310.2" dur="1.60s" keyTimes="0;0.562;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+</rect>
+<text x="740" y="302.2" text-anchor="middle" font-size="12" font-weight="500" fill="#57534E">63,2%<animate attributeName="opacity" values="0;0;1" dur="1.95s" keyTimes="0;0.846;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></text>
+<text x="740" y="442" text-anchor="middle" font-size="12" font-weight="500" fill="#44403C">20.</text>
+<g opacity="1"><animate attributeName="opacity" values="0;0;1" dur="2.35s" keyTimes="0;0.830;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<line x1="160" y1="323.0" x2="790" y2="323.0" stroke="#44403C" stroke-width="1.5" stroke-dasharray="6,4"/>
+<text x="798" y="320.0" font-size="12" font-weight="700" fill="#44403C">56,1%</text>
+<text x="798" y="334.0" font-size="11" fill="#57534E">bez dokumenata</text>
+</g>
+<g opacity="1"><animate attributeName="opacity" values="0;0;1" dur="2.65s" keyTimes="0;0.887;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<line x1="450" y1="456" x2="450" y2="478" stroke="#B45309" stroke-width="2"/>
+<polygon points="444,476 450,486 456,476" fill="#B45309"/>
+</g>
+<g opacity="1">
+<animate attributeName="opacity" values="0;0;1" dur="3.10s" keyTimes="0;0.839;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0" dur="3.10s" keyTimes="0;0.839;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="492" width="780" height="76" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+<rect x="60" y="492" width="3" height="76" fill="#B45309"/>
+<text x="80" y="516" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">REZULTAT</text>
+<text x="80" y="539" font-size="15" fill="#1C1917" font-family="Merriweather, Georgia, serif">Kad je odgovor u sredini, model je slabiji nego bez ijednog dokumenta.</text>
+<text x="80" y="558" font-size="13" fill="#44403C">10. pozicija: <tspan font-weight="700" fill="#92400E">53,8%</tspan>   ·   bez dokumenata: <tspan font-weight="700">56,1%</tspan>   ·   1. pozicija: <tspan font-weight="700">75,8%</tspan></text>
+</g>
+<text font-size="11" fill="#78716C" font-style="italic">
+<tspan x="60" y="590">Izvor: Liu i saradnici, Lost in the Middle, arXiv 2307.03172v3, tabele 1 i 6. Stvarni izmjereni rezultati za GPT-3.5-Turbo</tspan>
+<tspan x="60" y="604">iz 2023, ne ilustrativni. Isprekidana linija: tačnost kad model ne dobije nijedan dokument i odgovara iz naučenog.</tspan>
+</text>
+<g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+<circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+<polygon points="852,28 858,28 855,33" fill="#78716C"/>
+<title>Pusti ponovo</title>
+</g>
+<style>
+#kpz-svg:hover .replay-btn { opacity: 1; }
+#kpz-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+#kpz-svg .replay-btn:hover path { stroke: #B45309; }
+#kpz-svg .replay-btn:hover polygon { fill: #B45309; }
+#kpz-svg .replay-btn:focus { outline: none; opacity: 1; }
+#kpz-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+@media (prefers-reduced-motion: reduce) {
+  #kpz-svg animate, #kpz-svg animateTransform { display: none; }
+  #kpz-svg .replay-btn { display: none; }
+}
+</style>
+<script>
+// <![CDATA[
+(function () {
+  const svg = document.getElementById('kpz-svg');
+  const btn = svg && svg.querySelector('.replay-btn');
+  if (!svg || !btn) return;
+  // Reduced motion: stop the timeline at its end so the final state shows even if SMIL keeps running.
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches && svg.pauseAnimations) {
+    svg.pauseAnimations(); svg.setCurrentTime(10); return;
+  }
+  function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+  btn.addEventListener('click', replay);
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+  });
+})();
+// ]]>
+</script>
+</svg>

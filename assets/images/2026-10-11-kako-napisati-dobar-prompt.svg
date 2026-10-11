@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#4a9e8e"/>
+
+  <!-- Icon: chat exchange, a large prompt bubble with text lines and a smaller reply bubble with typing dots -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Prompt bubble, tail bottom-left -->
+    <path d="M270,145 H590 A40,40 0 0 1 630,185 V315 A40,40 0 0 1 590,355 H340 L275,420 L295,355 H270 A40,40 0 0 1 230,315 V185 A40,40 0 0 1 270,145 Z"
+          fill="#fafaf8" stroke-width="18"/>
+    <!-- Prompt text lines -->
+    <g stroke-width="14" fill="none">
+      <line x1="285" y1="205" x2="575" y2="205"/>
+      <line x1="285" y1="250" x2="540" y2="250"/>
+      <line x1="285" y1="295" x2="460" y2="295"/>
+    </g>
+    <!-- Reply bubble, tail bottom-right, overlapping the prompt bubble -->
+    <path d="M556,285 H734 A36,36 0 0 1 770,321 V389 A36,36 0 0 1 734,425 H720 L745,458 L680,425 H556 A36,36 0 0 1 520,389 V321 A36,36 0 0 1 556,285 Z"
+          fill="#d6dff0" stroke-width="16"/>
+    <!-- Typing dots in background color -->
+    <g fill="#4a9e8e" stroke-width="8">
+      <circle cx="595" cy="355" r="15"/>
+      <circle cx="645" cy="355" r="15"/>
+      <circle cx="695" cy="355" r="15"/>
+    </g>
+  </g>
+</svg>

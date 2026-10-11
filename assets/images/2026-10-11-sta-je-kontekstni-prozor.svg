@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c46e6e"/>
+
+  <!-- Icon: brain (working memory) above a row of shrinking, fading dots (context being forgotten) -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Brain outline -->
+    <path d="M 380 395
+             C 320 395 295 335 328 302
+             C 290 268 312 200 362 200
+             C 372 150 440 135 476 166
+             C 506 130 576 136 592 176
+             C 652 172 694 232 666 276
+             C 702 312 682 382 622 388
+             C 602 414 546 418 520 398
+             C 476 414 412 414 380 395 Z"
+          fill="#fafaf8" stroke-width="18"/>
+    <!-- Gyri and central fissure -->
+    <g fill="none" stroke-width="9">
+      <path d="M 492 172 C 470 212 520 240 496 280 C 474 316 520 350 504 398"/>
+      <path d="M 360 252 C 390 238 412 262 436 248"/>
+      <path d="M 556 230 C 588 214 618 236 632 258"/>
+      <path d="M 378 334 C 408 318 438 340 456 322"/>
+      <path d="M 546 324 C 572 344 604 326 626 338"/>
+    </g>
+    <!-- Fading memory dots -->
+    <circle cx="450" cy="466" r="16" fill="#fafaf8" stroke-width="8"/>
+    <circle cx="500" cy="466" r="12" fill="#d6dff0" stroke-width="7"/>
+    <circle cx="542" cy="466" r="8" fill="#c46e6e" stroke-width="6"/>
+  </g>
+</svg>

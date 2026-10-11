@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#3c7c8a"/>
+
+  <!-- Icon: token network, outer nodes linked to a central node and to each other (attention) -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Edges -->
+    <g stroke-width="10" fill="none">
+      <line x1="500" y1="300" x2="340" y2="190"/>
+      <line x1="500" y1="300" x2="660" y2="190"/>
+      <line x1="500" y1="300" x2="340" y2="410"/>
+      <line x1="500" y1="300" x2="660" y2="410"/>
+      <line x1="340" y1="190" x2="660" y2="190"/>
+      <line x1="340" y1="410" x2="660" y2="410"/>
+      <line x1="340" y1="190" x2="340" y2="410"/>
+      <line x1="660" y1="190" x2="660" y2="410"/>
+    </g>
+    <!-- Outer nodes -->
+    <g stroke-width="16" fill="#fafaf8">
+      <circle cx="340" cy="190" r="44"/>
+      <circle cx="660" cy="190" r="44"/>
+      <circle cx="340" cy="410" r="44"/>
+      <circle cx="660" cy="410" r="44"/>
+    </g>
+    <!-- Central node -->
+    <circle cx="500" cy="300" r="66" fill="#d6dff0" stroke-width="18"/>
+    <!-- Accent dot in background color -->
+    <circle cx="500" cy="300" r="18" fill="#3c7c8a" stroke-width="8"/>
+  </g>
+</svg>
