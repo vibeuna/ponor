@@ -131,16 +131,9 @@ Ovo su naše preporuke, izvedene iz dokumentacije i radova navedenih gore.
 ## Izvori
 
 - [Memory (CLAUDE.md) – Anthropic, Claude Code dokumentacija](https://code.claude.com/docs/en/memory)
-- [Subagents – Anthropic, Claude Code dokumentacija](https://code.claude.com/docs/en/sub-agents)
 - [Claude Code features u Agent SDK-u – Anthropic, dokumentacija](https://code.claude.com/docs/en/agent-sdk/claude-code-features)
 - [agents.md – stranica formata AGENTS.md](https://agents.md)
-- [agentsmd/agents.md – GitHub](https://github.com/agentsmd/agents.md)
 - [Lulla et al., arXiv 2601.20404 (ICSE JAWs 2026)](https://arxiv.org/abs/2601.20404)
 - [Gloaguen et al., arXiv 2602.11988 (preprint)](https://arxiv.org/abs/2602.11988)
-- [Khatri, arXiv 2607.27250 (preprint)](https://arxiv.org/abs/2607.27250)
-- [Zhang et al., arXiv 2604.11088 (preprint)](https://arxiv.org/abs/2604.11088)
 - [Shepard i Albrecht, arXiv 2606.20512 (preprint)](https://arxiv.org/abs/2606.20512)
 - [AGENTS.md – OpenAI Codex dokumentacija](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
-- [Rules – Cursor dokumentacija](https://cursor.com/docs/context/rules)
-- [GEMINI.md – Gemini CLI dokumentacija](https://geminicli.com/docs/cli/gemini-md)
-- [Adding repository custom instructions – GitHub Copilot dokumentacija](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions)

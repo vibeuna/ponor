@@ -111,6 +111,5 @@ Prozor se mjeri u tokenima, a isti tekst na različitim jezicima troši različi
 - [Lost in the Middle: How Language Models Use Long Contexts – Liu et al., arXiv v3](https://arxiv.org/abs/2307.03172v3)
 - [RULER: What's the Real Context Size of Your Long-Context Language Models? – Hsieh et al., NVIDIA, COLM 2024](https://arxiv.org/abs/2404.06654v3)
 - [Language Models are Few-Shot Learners – Brown et al., OpenAI](https://arxiv.org/abs/2005.14165v4)
-- [Attention Is All You Need – Vaswani et al., Google](https://arxiv.org/abs/1706.03762v7)
 - [Context Rot – Chroma, 14. juli 2025.](https://www.trychroma.com/research/context-rot)
 - [Language Model Tokenizers Introduce Unfairness Between Languages – Petrov et al.](https://arxiv.org/abs/2305.15425v2)

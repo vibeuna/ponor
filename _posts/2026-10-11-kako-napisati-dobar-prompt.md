@@ -122,6 +122,5 @@ Ako ti nešto nedostaje, prvo mi postavi pitanja i sačekaj moje odgovore.
 - [Reasoning best practices – OpenAI](https://developers.openai.com/api/docs/guides/reasoning-best-practices)
 - [Tips to write prompts for Gemini – Google](https://support.google.com/a/users/answer/14200040)
 - [Manage what Gemini remembers about you and customize responses – Google](https://support.google.com/gemini/answer/16598625)
-- [Get started writing prompts in Microsoft Copilot – Microsoft](https://support.microsoft.com/en-us/topic/learn-about-copilot-prompts-f6c3b467-f07c-4db1-ae54-ffac96184dd5)
 - [Large Language Models are Zero-Shot Reasoners – Kojima i saradnici](https://arxiv.org/abs/2205.11916v4)
 - [When "A Helpful Assistant" Is Not Really Helpful: Personas in System Prompts Do Not Improve Performances of Large Language Models – Zheng i saradnici, Findings of EMNLP 2024](https://arxiv.org/abs/2311.10054v3)

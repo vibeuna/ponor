@@ -56,12 +56,12 @@ Isto važi i za broj agenata. OpenAI savjetuje da se najprije iskoristi sve što
 **Istraživanja.** Radovi u nastavku objavljeni su na arXivu. Ni za jedan nismo našli potvrdu da je prošao recenziju, pa ih treba čitati kao preprinte (radove koji još nisu recenzirani).
 
 - *AI Agents That Matter* (2024): uz sličnu tačnost, troškovi različitih pristupa razlikuju se "gotovo za dva reda veličine", odnosno skoro stotinu puta. Na benchmarku (referentnom testu) HumanEval pristup LATS bio je više od 50 puta skuplji od jednostavnog pristupa s ponovljenim pokušajima, bez značajne razlike u tačnosti.
-- *Agentless* (2024): fiksan tok rada u tri faze riješio je 32,00% zadataka na SWE-bench Lite, uz prosječan trošak od 0,70 dolara po zadatku. Prema autorima, to je tada bio bolji rezultat od svih agenata za programiranje otvorenog koda.
-- *Why Do Multi-Agent LLM Systems Fail?* (2025): autori polaze od zapažanja da sistemi s više agenata na popularnim benchmarkima često donose tek minimalne dobitke i istražuju zašto je tako. Opisuju 14 načina na koje takvi sistemi zakazuju.
+- [*Agentless*](https://arxiv.org/abs/2407.01489) (2024): fiksan tok rada u tri faze riješio je 32,00% zadataka na SWE-bench Lite, uz prosječan trošak od 0,70 dolara po zadatku. Prema autorima, to je tada bio bolji rezultat od svih agenata za programiranje otvorenog koda.
+- [*Why Do Multi-Agent LLM Systems Fail?*](https://arxiv.org/abs/2503.13657) (2025): autori polaze od zapažanja da sistemi s više agenata na popularnim benchmarkima često donose tek minimalne dobitke i istražuju zašto je tako. Opisuju 14 načina na koje takvi sistemi zakazuju.
 - *Towards a Science of Scaling Agent Systems* (2025, dopunjeno 2026): u poređenju s jednim agentom, rezultati sistema s više agenata kretali su se od +80,8% na finansijskim zadacima koji se mogu podijeliti na dijelove do −70,0% na zadacima koji traže planiranje korak po korak. Glavni nalaz: kada jedan agent već radi dobro, dodatni agenti donose sve manju korist.
 - *Do More Agents Help?* (2026, dopunjeno u oktobru 2026, model GPT-4.1): od šest postavki s više agenata samo je jedna u prosjeku bila bolja od jednog agenta (79,70% naspram 76,65%). Ostalih pet zaostajalo je za 1,71 do 8,76 procentnih poena. Na pojedinim testovima dobici su ipak veliki: jedna postavka bila je bolja za 9,67 poena na HumanEvalu, a druga za 22,25 poena na IFEvalu, ali uz 1,39, odnosno 4,34 puta veću potrošnju tokena.
 
-**Pouzdanost.** Agent koji je zadatak riješio jednom ne mora ga riješiti i sljedeći put. Rad *On the Reliability of Computer Use Agents* (2026) testira Agent S3 s modelom GPT-5 na OSWorldu, benchmarku za upravljanje računarom (computer use), u kojem model radi na računaru na osnovu snimaka ekrana. Agent S3 riješio je oko 78% zadataka barem jednom u deset pokušaja, ali samo oko 36% u svih deset. Rad *Beyond pass@1* (2026) pokazuje da se jaz između onoga što agent može uraditi i onoga što uradi pouzdano širi što je zadatak duži.
+**Pouzdanost.** Agent koji je zadatak riješio jednom ne mora ga riješiti i sljedeći put. Rad [*On the Reliability of Computer Use Agents*](https://arxiv.org/abs/2604.17849) (2026) testira Agent S3 s modelom GPT-5 na OSWorldu, benchmarku za upravljanje računarom (computer use), u kojem model radi na računaru na osnovu snimaka ekrana. Agent S3 riješio je oko 78% zadataka barem jednom u deset pokušaja, ali samo oko 36% u svih deset. Rad [*Beyond pass@1*](https://arxiv.org/abs/2603.29231) (2026) pokazuje da se jaz između onoga što agent može uraditi i onoga što uradi pouzdano širi što je zadatak duži.
 
 ## Kako odlučiti u praksi
 
@@ -91,9 +91,5 @@ Ovo je savjet redakcije Ponora, izveden iz navedenih izvora, a ne rezultat istra
 - [A practical guide to building agents – OpenAI, 2025](https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf)
 - [Choose a design pattern for your agentic AI system – Google Cloud](https://docs.cloud.google.com/architecture/choose-design-pattern-agentic-ai-system)
 - [AI Agents That Matter – arXiv 2024](https://arxiv.org/abs/2407.01502)
-- [Agentless: Demystifying LLM-based Software Engineering Agents – arXiv 2024](https://arxiv.org/abs/2407.01489)
-- [Why Do Multi-Agent LLM Systems Fail? – arXiv 2025](https://arxiv.org/abs/2503.13657)
 - [Towards a Science of Scaling Agent Systems – arXiv 2025](https://arxiv.org/abs/2512.08296)
 - [Do More Agents Help? Evaluating Accuracy and Cost in LLM Multi-Agent Workflows – arXiv 2026](https://arxiv.org/abs/2606.05670)
-- [On the Reliability of Computer Use Agents – arXiv 2026](https://arxiv.org/abs/2604.17849)
-- [Beyond pass@1: A Reliability Science Framework for Long-Horizon LLM Agents – arXiv 2026](https://arxiv.org/abs/2603.29231)

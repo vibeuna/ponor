@@ -84,13 +84,9 @@ Sistematsko mjerenje objavili su Petrov i saradnici 2023. godine. Prema njihovim
 ## Izvori
 
 - [Neural Machine Translation of Rare Words with Subword Units – Sennrich et al.](https://arxiv.org/abs/1508.07909v5)
-- [Language Models are Unsupervised Multitask Learners (GPT-2) – Radford et al., OpenAI](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)
-- [Subword Regularization – Kudo, 2018](https://arxiv.org/abs/1804.10959v1)
 - [SentencePiece – Kudo i Richardson, 2018](https://arxiv.org/abs/1808.06226v1)
 - [tiktoken – OpenAI, GitHub](https://github.com/openai/tiktoken)
 - [The Llama 3 Herd of Models – Meta](https://arxiv.org/abs/2407.21783v3)
-- [Introducing Meta Llama 3 – Meta, blog](https://ai.meta.com/blog/meta-llama-3/)
-- [LLaMA: Open and Efficient Foundation Language Models – Touvron et al.](https://arxiv.org/abs/2302.13971v1)
 - [Glossary: Tokens – Anthropic, Claude dokumentacija](https://platform.claude.com/docs/en/about-claude/glossary)
 - [Why Do Large Language Models (LLMs) Struggle to Count Letters? – Fu et al., 2024](https://arxiv.org/abs/2412.18626v1)
 - [Language Model Tokenizers Introduce Unfairness Between Languages – Petrov et al., 2023](https://arxiv.org/abs/2305.15425v2)
