@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Inter, system-ui, -apple-system, sans-serif" id="llmw-svg" role="img" aria-labelledby="llmw-title llmw-desc">
+<title id="llmw-title">LLM Wiki: tri sloja, tri operacije</title>
+<desc id="llmw-desc">Izvori, koje agent samo čita, i pravilnik (CLAUDE.md ili AGENTS.md), koji agent slijedi, ulaze u agenta. Agent radi tri operacije: unos (novi izvor ažurira 10–15 wiki stranica), upit (odgovor iz wikija; dobri odgovori postaju nove stranice) i provjeru (kontradikcije, zastarjele tvrdnje, stranice bez poveznica). Agent piše i održava wiki: Markdown stranice s indeksom (index.md) i dnevnikom (log.md). Za upit agent čita wiki, počevši od indeksa.</desc>
+<defs>
+<marker id="llmw-ah-stone" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#78716C"/></marker>
+<marker id="llmw-ah-coffee" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+</defs>
+<rect width="900" height="620" fill="#FAF9F6"/>
+<text x="450" y="42" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">LLM Wiki: tri sloja, tri operacije</text>
+<text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C">Agent čita izvore, slijedi pravilnik i sam piše wiki</text>
+<g><animate attributeName="opacity" values="0;0;1" dur="0.60s" keyTimes="0;0.333;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="100" width="370" height="84" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<rect x="60" y="100" width="3" height="84" fill="#78716C"/>
+<text x="80" y="124" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">IZVORI</text>
+<text x="80" y="148" font-size="15" font-style="italic" font-family="Merriweather, Georgia, serif" fill="#1C1917">Članci, bilješke, dokumenti</text>
+<text x="80" y="170" font-size="12" fill="#57534E">Nepromjenjivi: agent ih samo čita</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="0.90s" keyTimes="0;0.556;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="470" y="100" width="370" height="84" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<rect x="470" y="100" width="3" height="84" fill="#78716C"/>
+<text x="490" y="124" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">PRAVILNIK</text>
+<text x="490" y="148" font-size="15" font-style="italic" font-family="Merriweather, Georgia, serif" fill="#1C1917">CLAUDE.md ili AGENTS.md</text>
+<text x="490" y="170" font-size="12" fill="#57534E">Pravila koja agent slijedi u svakoj operaciji</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="1.30s" keyTimes="0;0.692;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<polyline points="245,192 245,222 446,222" fill="none" stroke="#78716C" stroke-width="1.5"/>
+<polyline points="655,192 655,222 454,222" fill="none" stroke="#78716C" stroke-width="1.5"/>
+<text x="257" y="214" font-size="10" font-style="italic" fill="#78716C">čita</text>
+<text x="643" y="214" text-anchor="end" font-size="10" font-style="italic" fill="#78716C">slijedi</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="1.60s" keyTimes="0;0.750;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<circle cx="450" cy="222" r="4" fill="#B45309"/>
+<line x1="450" y1="230" x2="450" y2="244" stroke="#78716C" stroke-width="1.5" marker-end="url(#llmw-ah-stone)"/>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="1.90s" keyTimes="0;0.789;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="254" width="780" height="130" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/>
+<text x="80" y="278" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">AGENT · TRI OPERACIJE</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.20s" keyTimes="0;0.818;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="84" y="292" width="236" height="78" rx="6" fill="#FAF9F6" stroke="#E7E5E4" stroke-width="1"/>
+<text x="100" y="316" font-size="14" font-weight="700" fill="#1C1917">Unos</text>
+<text x="100" y="338" font-size="11" fill="#57534E">Novi izvor ažurira</text>
+<text x="100" y="354" font-size="11" fill="#57534E">10–15 wiki stranica</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.45s" keyTimes="0;0.837;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="336" y="292" width="236" height="78" rx="6" fill="#FAF9F6" stroke="#E7E5E4" stroke-width="1"/>
+<text x="352" y="316" font-size="14" font-weight="700" fill="#1C1917">Upit</text>
+<text x="352" y="338" font-size="11" fill="#57534E">Odgovor iz wikija; dobri</text>
+<text x="352" y="354" font-size="11" fill="#57534E">odgovori postaju nove stranice</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.70s" keyTimes="0;0.852;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="588" y="292" width="236" height="78" rx="6" fill="#FAF9F6" stroke="#E7E5E4" stroke-width="1"/>
+<text x="604" y="316" font-size="14" font-weight="700" fill="#1C1917">Provjera</text>
+<text x="604" y="338" font-size="11" fill="#57534E">Kontradikcije, zastarjele tvrdnje,</text>
+<text x="604" y="354" font-size="11" fill="#57534E">stranice bez poveznica</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="3.10s" keyTimes="0;0.871;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<line x1="450" y1="392" x2="450" y2="418" stroke="#B45309" stroke-width="2" marker-end="url(#llmw-ah-coffee)"/>
+<text x="462" y="410" font-size="11" font-style="italic" font-weight="600" fill="#92400E">piše i održava</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="3.30s" keyTimes="0;0.879;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0" dur="3.30s" keyTimes="0;0.879;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="428" width="780" height="120" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+<rect x="60" y="428" width="3" height="120" fill="#B45309"/>
+<text x="80" y="452" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">WIKI</text>
+<text x="80" y="478" font-size="15" font-style="italic" font-family="Merriweather, Georgia, serif" fill="#1C1917">Markdown stranice koje agent piše, a vi čitate</text>
+<rect x="80" y="498" width="330" height="28" rx="14" fill="#FAF9F6" stroke="#E7E5E4" stroke-width="1"/>
+<text x="96" y="516" font-size="12" fill="#44403C"><tspan font-weight="700" fill="#92400E">index.md</tspan> · indeks koji agent čita prvi</text>
+<rect x="426" y="498" width="330" height="28" rx="14" fill="#FAF9F6" stroke="#E7E5E4" stroke-width="1"/>
+<text x="442" y="516" font-size="12" fill="#44403C"><tspan font-weight="700" fill="#92400E">log.md</tspan> · dnevnik u koji se samo dodaje</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="3.80s" keyTimes="0;0.895;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<polyline points="848,488 870,488 870,331 850,331" fill="none" stroke="#78716C" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#llmw-ah-stone)"/>
+</g>
+<text x="60" y="578" font-size="11" font-style="italic" fill="#78716C"><animate attributeName="opacity" values="0;0;1" dur="4.10s" keyTimes="0;0.902;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>Isprekidana linija: za upit agent čita wiki, počevši od indeksa.
+<tspan x="60" dy="16">Prema opisu Andreja Karpathyja (llm-wiki.md, april 2026).</tspan></text>
+<g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+<circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+<polygon points="852,28 858,28 855,33" fill="#78716C"/>
+<title>Pusti ponovo</title>
+</g>
+<style>
+#llmw-svg:hover .replay-btn { opacity: 1; }
+#llmw-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+#llmw-svg .replay-btn:hover path { stroke: #B45309; }
+#llmw-svg .replay-btn:hover polygon { fill: #B45309; }
+#llmw-svg .replay-btn:focus { outline: none; opacity: 1; }
+#llmw-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+@media (prefers-reduced-motion: reduce) {
+  #llmw-svg animate, #llmw-svg animateTransform { display: none; }
+  #llmw-svg .replay-btn { display: none; }
+}
+</style>
+<script>
+// <![CDATA[
+(function () {
+  const svg = document.getElementById('llmw-svg');
+  const btn = svg && svg.querySelector('.replay-btn');
+  if (!svg || !btn) return;
+  // Reduced motion: stop the timeline at its end so the final state shows even if SMIL keeps running.
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches && svg.pauseAnimations) {
+    svg.pauseAnimations(); svg.setCurrentTime(10); return;
+  }
+  function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+  btn.addEventListener('click', replay);
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+  });
+})();
+// ]]>
+</script>
+</svg>

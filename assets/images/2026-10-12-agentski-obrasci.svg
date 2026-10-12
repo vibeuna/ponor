@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#5a7a8a"/>
+
+  <!-- Icon: three-rung ladder (prompt, tok rada, agent) with an upward arrow: climb a rung only when the one below fails -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Rungs (drawn first so the rails cover their ends) -->
+    <rect x="370" y="376" width="158" height="28" rx="8" fill="#fafaf8" stroke-width="12"/>
+    <rect x="370" y="286" width="158" height="28" rx="8" fill="#fafaf8" stroke-width="12"/>
+    <rect x="370" y="196" width="158" height="28" rx="8" fill="#d6dff0" stroke-width="12"/>
+    <!-- Rails -->
+    <rect x="339" y="140" width="36" height="320" rx="14" fill="#fafaf8" stroke-width="16"/>
+    <rect x="523" y="140" width="36" height="320" rx="14" fill="#fafaf8" stroke-width="16"/>
+    <!-- Upward arrow: autonomy and cost rise with each rung -->
+    <path d="M 629 405 L 629 200" fill="none" stroke-width="14"/>
+    <path d="M 599 232 L 629 200 L 659 232" fill="none" stroke-width="14"/>
+  </g>
+</svg>

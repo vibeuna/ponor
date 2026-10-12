@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#7f8a52"/>
+
+  <!-- Icon: open folder holding two sheets: a plain-text raw source (left) and a linked wiki page (right) -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Folder back panel with tab -->
+    <path d="M 290 445 L 290 200 Q 290 182 308 182 L 405 182 L 438 214 L 692 214 Q 710 214 710 232 L 710 445 Z"
+          fill="#d6dff0" stroke-width="18"/>
+    <!-- Raw source sheet: plain text lines -->
+    <g transform="rotate(-7 422 265)">
+      <rect x="335" y="165" width="175" height="200" rx="10" fill="#fafaf8" stroke-width="14"/>
+      <g fill="none" stroke-width="9">
+        <path d="M 367 202 L 478 202"/>
+        <path d="M 367 230 L 462 230"/>
+      </g>
+    </g>
+    <!-- Wiki sheet: pages joined by links -->
+    <g transform="rotate(6 577 253)">
+      <rect x="490" y="148" width="175" height="210" rx="10" fill="#fafaf8" stroke-width="14"/>
+      <g fill="none" stroke-width="8">
+        <path d="M 532 196 L 622 190"/>
+        <path d="M 532 196 L 578 238"/>
+        <path d="M 622 190 L 578 238"/>
+      </g>
+      <circle cx="532" cy="196" r="12" fill="#fafaf8" stroke-width="8"/>
+      <circle cx="622" cy="190" r="12" fill="#d6dff0" stroke-width="8"/>
+      <circle cx="578" cy="238" r="12" fill="#7f8a52" stroke-width="8"/>
+    </g>
+    <!-- Folder front panel -->
+    <path d="M 272 272 Q 272 262 282 262 L 718 262 Q 728 262 728 272 L 711 436 Q 710 445 700 445 L 300 445 Q 290 445 289 436 Z"
+          fill="#fafaf8" stroke-width="18"/>
+  </g>
+</svg>

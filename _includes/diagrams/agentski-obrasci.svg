@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Inter, system-ui, -apple-system, sans-serif" id="ao-svg" role="img" aria-labelledby="ao-svg-title ao-svg-desc">
+<title id="ao-svg-title">Prompt, tok rada ili agent</title>
+<desc id="ao-svg-desc">Ljestve s tri prečke koje se čitaju odozdo. Prva prečka, gdje treba početi: jedan prompt, jedan poziv modela i jedan odgovor, za sažimanje, prevod ili razvrstavanje. Ako ne radi, druga prečka: tok rada, u kojem kod određuje korake a model ih popunjava, za zadatke s koracima poznatim unaprijed; pet obrazaca su ulančavanje promptova, usmjeravanje, paralelizacija, orkestrator i radnici i petlja ocjenjivanja. Ako ni to ne radi, treća prečka: agent, u kojem model sam bira sljedeći korak i alate, kad se koraci ne mogu predvidjeti. Lijeva osa pokazuje da o sljedećem koraku odlučuje kod na dnu, a model na vrhu. Desna osa pokazuje da trošak i nepredvidivost rastu prema vrhu.</desc>
+<defs>
+<marker id="ao-svg-ah-stone" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A8A29E"/></marker>
+<marker id="ao-svg-ah-coffee" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+</defs>
+<rect width="900" height="600" fill="#FAF9F6"/>
+<text x="450" y="42" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Prompt, tok rada ili agent</text>
+<text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C">Penjite se tek kad niža prečka ne radi</text>
+<g><animate attributeName="opacity" values="0;0;1" dur="0.50s" keyTimes="0;0.200;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<line x1="108" y1="505" x2="108" y2="118" stroke="#A8A29E" stroke-width="1.5" marker-end="url(#ao-svg-ah-stone)"/><text x="108" y="525" text-anchor="middle" font-size="12" font-weight="600" fill="#57534E">kod</text><text x="108" y="104" text-anchor="middle" font-size="12" font-weight="600" fill="#57534E">model</text><text x="86" y="311.5" text-anchor="middle" font-size="10" font-weight="700" fill="#78716C" letter-spacing="0.8" transform="rotate(-90 86 311.5)">KO ODLUČUJE O SLJEDEĆEM KORAKU</text>
+<line x1="810" y1="505" x2="810" y2="118" stroke="#A8A29E" stroke-width="1.5" marker-end="url(#ao-svg-ah-stone)"/><text x="810" y="525" text-anchor="middle" font-size="12" font-weight="600" fill="#57534E">manje</text><text x="810" y="104" text-anchor="middle" font-size="12" font-weight="600" fill="#57534E">više</text><text x="834" y="311.5" text-anchor="middle" font-size="10" font-weight="700" fill="#78716C" letter-spacing="0.8" transform="rotate(-90 834 311.5)">TROŠAK I NEPREDVIDIVOST</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="0.80s" keyTimes="0;0.500;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="150" y="430" width="620" height="80" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1.5"/><rect x="150" y="430" width="3" height="80" fill="#B45309"/><text x="170" y="452" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">PREČKA 1 · JEDAN PROMPT · POČNITE OVDJE</text><text x="170" y="474" font-size="14" font-weight="700" fill="#1C1917">Jedan poziv modela, jedan odgovor</text><text x="170" y="494" font-size="12" fill="#57534E">Sažimanje, prevod, razvrstavanje teksta</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="1.40s" keyTimes="0;0.714;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><line x1="200" y1="428" x2="200" y2="394" stroke="#B45309" stroke-width="2" marker-end="url(#ao-svg-ah-coffee)"/><text x="214" y="415.0" font-size="12" font-style="italic" fill="#92400E">ako niža prečka ne radi</text></g>
+<g><animate attributeName="opacity" values="0;0;1" dur="1.80s" keyTimes="0;0.778;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="150" y="240" width="620" height="150" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/><text x="170" y="262" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">PREČKA 2 · TOK RADA</text><text x="170" y="284" font-size="14" font-weight="700" fill="#1C1917">Kod određuje korake, model ih popunjava</text><text x="170" y="304" font-size="12" fill="#57534E">Kad su koraci poznati unaprijed. Pet obrazaca:</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.20s" keyTimes="0;0.818;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="170" y="318" width="164" height="26" rx="13" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1"/><text x="252.0" y="335" text-anchor="middle" font-size="12" font-weight="600" fill="#1C1917">ulančavanje promptova</text><rect x="342" y="318" width="104" height="26" rx="13" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1"/><text x="394.0" y="335" text-anchor="middle" font-size="12" font-weight="600" fill="#1C1917">usmjeravanje</text><rect x="454" y="318" width="116" height="26" rx="13" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1"/><text x="512.0" y="335" text-anchor="middle" font-size="12" font-weight="600" fill="#1C1917">paralelizacija</text>
+<rect x="170" y="352" width="160" height="26" rx="13" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1"/><text x="250.0" y="369" text-anchor="middle" font-size="12" font-weight="600" fill="#1C1917">orkestrator i radnici</text><rect x="338" y="352" width="148" height="26" rx="13" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1"/><text x="412.0" y="369" text-anchor="middle" font-size="12" font-weight="600" fill="#1C1917">petlja ocjenjivanja</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.80s" keyTimes="0;0.857;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><line x1="200" y1="238" x2="200" y2="204" stroke="#B45309" stroke-width="2" marker-end="url(#ao-svg-ah-coffee)"/><text x="214" y="225.0" font-size="12" font-style="italic" fill="#92400E">ako niža prečka ne radi</text></g>
+<g><animate attributeName="opacity" values="0;0;1" dur="3.20s" keyTimes="0;0.875;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="150" y="110" width="620" height="90" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/><text x="170" y="132" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">PREČKA 3 · AGENT</text><text x="170" y="154" font-size="14" font-weight="700" fill="#1C1917">Model sam bira sljedeći korak i alate</text><text x="170" y="174" font-size="12" fill="#57534E">Kad se koraci ne mogu predvidjeti</text>
+</g>
+<text x="60" y="566" font-size="11" font-style="italic" fill="#78716C"><animate attributeName="opacity" values="0;0;1" dur="3.70s" keyTimes="0;0.892;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>Prema vodičima Anthropica (2024), OpenAI-ja (2025) i Google Clouda (2026). Pet obrazaca toka rada opisuje Anthropic.</text>
+<g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+<circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+<polygon points="852,28 858,28 855,33" fill="#78716C"/>
+<title>Pusti ponovo</title>
+</g>
+<style>
+#ao-svg:hover .replay-btn { opacity: 1; }
+#ao-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+#ao-svg .replay-btn:hover path { stroke: #B45309; }
+#ao-svg .replay-btn:hover polygon { fill: #B45309; }
+#ao-svg .replay-btn:focus { outline: none; opacity: 1; }
+#ao-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+@media (prefers-reduced-motion: reduce) {
+  #ao-svg animate, #ao-svg animateTransform { display: none; }
+  #ao-svg .replay-btn { display: none; }
+}
+</style>
+<script>
+// <![CDATA[
+(function () {
+  const svg = document.getElementById('ao-svg');
+  const btn = svg && svg.querySelector('.replay-btn');
+  if (!svg || !btn) return;
+  // Reduced motion: stop the timeline at its end so the final state shows even if SMIL keeps running.
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches && svg.pauseAnimations) {
+    svg.pauseAnimations(); svg.setCurrentTime(10); return;
+  }
+  function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+  btn.addEventListener('click', replay);
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+  });
+})();
+// ]]>
+</script>
+</svg>
