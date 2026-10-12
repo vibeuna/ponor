@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Inter, system-ui, -apple-system, sans-serif" id="kpo-svg" role="img" aria-labelledby="kpo-svg-title kpo-svg-desc">
+<title id="kpo-svg-title">Kako provjeriti odgovor chatbota</title>
+<desc id="kpo-svg-desc">Šest navika poredanih od najjačih dokaza prema najslabijim. Prva, najjača: otvorite izvor i pročitajte ga, jer stvarna poveznica ne znači da u izvoru piše ono što chatbot tvrdi. Druga: provjerite u nezavisnom izvoru. Treća: tražite pretragu, ali joj ne vjerujte naslijepo. Četvrta: postavite isto pitanje ponovo i uporedite. Peta: razbijte tvrdnju na kratka zasebna pitanja. Odvojeno na dnu, šesta, koja ne pomaže: pitanje "jesi li siguran?", jer na zadacima zaključivanja, bez nove informacije, model često promijeni tačan odgovor u netačan. Redoslijed je procjena Ponora.</desc>
+<defs>
+<marker id="kpo-svg-ah-stone" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A8A29E"/></marker>
+</defs>
+<rect width="900" height="600" fill="#FAF9F6"/>
+<text x="450" y="42" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Kako provjeriti odgovor chatbota</text>
+<text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C">Navike poredane po snazi dokaza</text>
+<g><animate attributeName="opacity" values="0;0;1" dur="0.50s" keyTimes="0;0.200;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<line x1="108" y1="436" x2="108" y2="102" stroke="#A8A29E" stroke-width="1.5" marker-end="url(#kpo-svg-ah-stone)"/>
+<text x="108" y="90" text-anchor="middle" font-size="12" font-weight="600" fill="#57534E">jači</text>
+<text x="108" y="454" text-anchor="middle" font-size="12" font-weight="600" fill="#57534E">slabiji</text>
+<text x="86" y="266.0" text-anchor="middle" font-size="10" font-weight="700" fill="#78716C" letter-spacing="0.8" transform="rotate(-90 86 266.0)">SNAGA DOKAZA</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="0.70s" keyTimes="0;0.429;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="150" y="96" width="640" height="60" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1.5"/><rect x="150" y="96" width="3" height="60" fill="#B45309"/><circle cx="180" cy="126.0" r="14" fill="#B45309" stroke="#B45309" stroke-width="1"/><text x="180" y="131.0" text-anchor="middle" font-size="13" font-weight="700" fill="#FAF9F6">1</text><text x="210" y="122" font-size="14" font-weight="700" fill="#1C1917">Otvorite izvor i pročitajte ga</text><text x="210" y="142" font-size="12" fill="#57534E">Stvarna poveznica ne znači da u izvoru piše ono što chatbot tvrdi</text></g><g><animate attributeName="opacity" values="0;0;1" dur="1.05s" keyTimes="0;0.619;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="150" y="166" width="640" height="60" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/><circle cx="180" cy="196.0" r="14" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1"/><text x="180" y="201.0" text-anchor="middle" font-size="13" font-weight="700" fill="#44403C">2</text><text x="210" y="192" font-size="14" font-weight="700" fill="#1C1917">Provjerite u nezavisnom izvoru</text><text x="210" y="212" font-size="12" fill="#57534E">Službena stranica institucije, zakon, drugi medij</text></g><g><animate attributeName="opacity" values="0;0;1" dur="1.40s" keyTimes="0;0.714;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="150" y="236" width="640" height="60" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/><circle cx="180" cy="266.0" r="14" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1"/><text x="180" y="271.0" text-anchor="middle" font-size="13" font-weight="700" fill="#44403C">3</text><text x="210" y="262" font-size="14" font-weight="700" fill="#1C1917">Tražite pretragu, ali joj ne vjerujte naslijepo</text><text x="210" y="282" font-size="12" fill="#57534E">Manje izmišljenih poveznica, ali tvrdnje i dalje često bez podrške</text></g><g><animate attributeName="opacity" values="0;0;1" dur="1.75s" keyTimes="0;0.771;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="150" y="306" width="640" height="60" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/><circle cx="180" cy="336.0" r="14" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1"/><text x="180" y="341.0" text-anchor="middle" font-size="13" font-weight="700" fill="#44403C">4</text><text x="210" y="332" font-size="14" font-weight="700" fill="#1C1917">Postavite isto pitanje ponovo i uporedite</text><text x="210" y="352" font-size="12" fill="#57534E">Ako se ključna činjenica mijenja, sumnjiva je</text></g><g><animate attributeName="opacity" values="0;0;1" dur="2.10s" keyTimes="0;0.810;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="150" y="376" width="640" height="60" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/><circle cx="180" cy="406.0" r="14" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1"/><text x="180" y="411.0" text-anchor="middle" font-size="13" font-weight="700" fill="#44403C">5</text><text x="210" y="402" font-size="14" font-weight="700" fill="#1C1917">Razbijte tvrdnju na kratka zasebna pitanja</text><text x="210" y="422" font-size="12" fill="#57534E">Svaku tvrdnju provjerite posebno, najbolje u novom razgovoru</text></g>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.45s" keyTimes="0;0.837;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<line x1="150" y1="452" x2="790" y2="452" stroke="#E7E5E4" stroke-width="1"/>
+<rect x="150" y="466" width="640" height="60" rx="8" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1.5" stroke-dasharray="6 4"/><circle cx="180" cy="496.0" r="14" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1"/><text x="180" y="501.0" text-anchor="middle" font-size="13" font-weight="700" fill="#78716C">6</text><text x="210" y="492" font-size="14" font-weight="700" fill="#1C1917">Ne pitajte samo „jesi li siguran?“</text><text x="210" y="512" font-size="12" fill="#57534E">Na zadacima zaključivanja model često promijeni tačan odgovor u netačan</text>
+<rect x="678" y="482" width="96" height="28" rx="14" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+<text x="726" y="501" text-anchor="middle" font-size="12" font-weight="700" fill="#92400E" letter-spacing="0.6">NE POMAŽE</text>
+</g>
+<text x="60" y="566" font-size="11" font-style="italic" fill="#78716C"><animate attributeName="opacity" values="0;0;1" dur="2.95s" keyTimes="0;0.864;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>Redoslijed je procjena Ponora prema istraživanjima navedenim u članku.</text>
+<g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+<circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+<polygon points="852,28 858,28 855,33" fill="#78716C"/>
+<title>Pusti ponovo</title>
+</g>
+<style>
+#kpo-svg:hover .replay-btn { opacity: 1; }
+#kpo-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+#kpo-svg .replay-btn:hover path { stroke: #B45309; }
+#kpo-svg .replay-btn:hover polygon { fill: #B45309; }
+#kpo-svg .replay-btn:focus { outline: none; opacity: 1; }
+#kpo-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+@media (prefers-reduced-motion: reduce) {
+  #kpo-svg animate, #kpo-svg animateTransform { display: none; }
+  #kpo-svg .replay-btn { display: none; }
+}
+</style>
+<script>
+// <![CDATA[
+(function () {
+  const svg = document.getElementById('kpo-svg');
+  const btn = svg && svg.querySelector('.replay-btn');
+  if (!svg || !btn) return;
+  // Reduced motion: stop the timeline at its end so the final state shows even if SMIL keeps running.
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches && svg.pauseAnimations) {
+    svg.pauseAnimations(); svg.setCurrentTime(10); return;
+  }
+  function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+  btn.addEventListener('click', replay);
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+  });
+})();
+// ]]>
+</script>
+</svg>
