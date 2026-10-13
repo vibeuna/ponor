@@ -68,11 +68,11 @@
 <title>Pusti ponovo</title>
 </g>
 <style>
-#cmam-svg:hover .replay-btn { opacity: 1; }
+#cmam-svg:hover .replay-btn { opacity: 1 !important; }
 #cmam-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
 #cmam-svg .replay-btn:hover path { stroke: #B45309; }
 #cmam-svg .replay-btn:hover polygon { fill: #B45309; }
-#cmam-svg .replay-btn:focus { outline: none; opacity: 1; }
+#cmam-svg .replay-btn:focus { outline: none; opacity: 1 !important; }
 #cmam-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
 @media (prefers-reduced-motion: reduce) {
   #cmam-svg animate, #cmam-svg animateTransform { display: none; }

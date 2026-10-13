@@ -78,11 +78,11 @@
 <title>Pusti ponovo</title>
 </g>
 <style>
-#kpz-svg:hover .replay-btn { opacity: 1; }
+#kpz-svg:hover .replay-btn { opacity: 1 !important; }
 #kpz-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
 #kpz-svg .replay-btn:hover path { stroke: #B45309; }
 #kpz-svg .replay-btn:hover polygon { fill: #B45309; }
-#kpz-svg .replay-btn:focus { outline: none; opacity: 1; }
+#kpz-svg .replay-btn:focus { outline: none; opacity: 1 !important; }
 #kpz-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
 @media (prefers-reduced-motion: reduce) {
   #kpz-svg animate, #kpz-svg animateTransform { display: none; }

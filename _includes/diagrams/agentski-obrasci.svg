@@ -35,11 +35,11 @@
 <title>Pusti ponovo</title>
 </g>
 <style>
-#ao-svg:hover .replay-btn { opacity: 1; }
+#ao-svg:hover .replay-btn { opacity: 1 !important; }
 #ao-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
 #ao-svg .replay-btn:hover path { stroke: #B45309; }
 #ao-svg .replay-btn:hover polygon { fill: #B45309; }
-#ao-svg .replay-btn:focus { outline: none; opacity: 1; }
+#ao-svg .replay-btn:focus { outline: none; opacity: 1 !important; }
 #ao-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
 @media (prefers-reduced-motion: reduce) {
   #ao-svg animate, #ao-svg animateTransform { display: none; }
