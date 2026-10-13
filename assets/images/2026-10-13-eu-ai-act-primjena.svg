@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#2a5298"/>
+
+  <defs>
+    <clipPath id="glass">
+      <path d="M 410 160 L 590 160 C 590 240 515 270 515 300 C 515 330 590 360 590 440 L 410 440 C 410 360 485 330 485 300 C 485 270 410 240 410 160 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Icon: hourglass mid-run, sand still in both bulbs: obligations arriving in stages, not removed -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Glass body -->
+    <path d="M 410 160 L 590 160 C 590 240 515 270 515 300 C 515 330 590 360 590 440 L 410 440 C 410 360 485 330 485 300 C 485 270 410 240 410 160 Z" fill="#fafaf8" stroke="none"/>
+    <!-- Sand: remaining in the top bulb, falling stream, pile building in the bottom bulb -->
+    <g clip-path="url(#glass)">
+      <rect x="400" y="236" width="200" height="70" fill="#d6dff0" stroke-width="8"/>
+      <path d="M 400 450 L 400 420 C 440 410 470 372 500 366 C 530 372 560 410 600 420 L 600 450 Z" fill="#d6dff0" stroke-width="8"/>
+    </g>
+    <path d="M 500 300 L 500 366" fill="none" stroke-width="8"/>
+    <!-- Glass outline on top of the sand -->
+    <path d="M 410 160 L 590 160 C 590 240 515 270 515 300 C 515 330 590 360 590 440 L 410 440 C 410 360 485 330 485 300 C 485 270 410 240 410 160 Z" fill="none" stroke-width="16"/>
+    <!-- Frame posts -->
+    <path d="M 378 160 L 378 440" fill="none" stroke-width="14"/>
+    <path d="M 622 160 L 622 440" fill="none" stroke-width="14"/>
+    <!-- Frame caps -->
+    <rect x="350" y="128" width="300" height="34" rx="14" fill="#fafaf8" stroke-width="16"/>
+    <rect x="350" y="438" width="300" height="34" rx="14" fill="#fafaf8" stroke-width="16"/>
+  </g>
+</svg>
