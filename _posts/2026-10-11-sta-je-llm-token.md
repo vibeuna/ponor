@@ -43,7 +43,7 @@ Na bosanski tekst ove procjene se ne mogu direktno primijeniti. Gruba pravila ti
 
 ## Bosanski u tokenima: naš test
 
-Tri rečenice na bosanskom i njihove engleske prijevode propustili smo kroz dva OpenAI-jeva tokenizatora: cl100k_base (GPT-4) i o200k_base (GPT-4o). Tri rečenice nisu statistika. Rezultat ne pokazuje koliko tokena bosanski tekst troši općenito.
+Tri rečenice na bosanskom i njihove engleske prijevode propustili smo kroz dva OpenAI-jeva tokenizatora: cl100k_base (GPT-4) i o200k_base (GPT-4o). Tri rečenice nisu statistika. Rezultat ne pokazuje koliko tokena bosanski tekst troši uopšteno.
 
 {% include diagram.html name="sta-je-llm-token" caption="Ista rečenica u dva OpenAI-jeva tokenizatora. U cl100k_base slovo Š postaje dva tokena; u o200k_base je jedan. Naš test, ne statistika." alt="Engleska rečenica daje 10 tokena u oba tokenizatora. Bosanska rečenica Šta je token i zašto je važan daje 14 tokena u cl100k_base, gdje se Š dijeli na dva bajta, i 11 tokena u o200k_base." %}
 

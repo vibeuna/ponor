@@ -13,3 +13,5 @@ ai-sigurnost:
   name: "AI sigurnost"
 ai-za-posao:
   name: "AI za posao"
+regulativa:
+  name: "Regulativa"

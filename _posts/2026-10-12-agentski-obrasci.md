@@ -41,7 +41,7 @@ Pet obrazaca opisano je u Anthropicovom vodiču "Building effective agents" (dec
 
 Sva tri proizvođača postavljaju sličan prag.
 
-**Anthropic** savjetuje da se traži "najjednostavnije moguće rješenje" i da se složenost povećava samo kada je to potrebno, što "može značiti i da se agentski sistem uopće ne gradi". U istom vodiču piše da je za mnoge primjene obično dovoljno doraditi pojedinačne pozive modela, uz generisanje potpomognuto pretraživanjem (retrieval-augmented generation, RAG) i primjere u promptu.
+**Anthropic** savjetuje da se traži "najjednostavnije moguće rješenje" i da se složenost povećava samo kada je to potrebno, što "može značiti i da se agentski sistem uopšte ne gradi". U istom vodiču piše da je za mnoge primjene obično dovoljno doraditi pojedinačne pozive modela, uz generisanje potpomognuto pretraživanjem (retrieval-augmented generation, RAG) i primjere u promptu.
 
 **OpenAI** u vodiču iz aprila 2025. preporučuje agenta tamo gdje rješenja zasnovana na fiksnim pravilima zakazuju: kod složenih odluka, pravila koja je teško održavati i nestrukturiranih podataka. U ostalim slučajevima može biti dovoljno rješenje čije korake određuje kod.
 
@@ -51,7 +51,7 @@ Isto važi i za broj agenata. OpenAI savjetuje da se najprije iskoristi sve što
 
 ## Šta autonomija košta
 
-**Tokeni.** Prema Anthropicovim internim podacima iz teksta o sistemu Research, agenti troše oko četiri puta više [tokena](/rjecnik/token/) (osnovnih jedinica teksta koje model obrađuje) nego običan razgovor s modelom, a [sistemi s više agenata](/rjecnik/sistem-s-vise-agenata/) oko 15 puta više. To su podaci jedne firme, a ne opće pravilo za sve agente. Isti izvor navodi da sistemi s više agenata nisu dobar izbor za većinu programerskih zadataka. Navodi i da je Anthropicov sistem s više agenata na internoj evaluaciji bio 90,2% bolji od jednog agenta s istim glavnim modelom. Nezavisne provjere tog broja nema.
+**Tokeni.** Prema Anthropicovim internim podacima iz teksta o sistemu Research, agenti troše oko četiri puta više [tokena](/rjecnik/token/) (osnovnih jedinica teksta koje model obrađuje) nego običan razgovor s modelom, a [sistemi s više agenata](/rjecnik/sistem-s-vise-agenata/) oko 15 puta više. To su podaci jedne firme, a ne opšte pravilo za sve agente. Isti izvor navodi da sistemi s više agenata nisu dobar izbor za većinu programerskih zadataka. Navodi i da je Anthropicov sistem s više agenata na internoj evaluaciji bio 90,2% bolji od jednog agenta s istim glavnim modelom. Nezavisne provjere tog broja nema.
 
 **Istraživanja.** Radovi u nastavku objavljeni su na arXivu. Ni za jedan nismo našli potvrdu da je prošao recenziju, pa ih treba čitati kao preprinte (radove koji još nisu recenzirani).
 

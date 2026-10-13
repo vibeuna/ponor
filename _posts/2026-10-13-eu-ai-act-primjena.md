@@ -6,7 +6,7 @@ category: ai-u-praksi
 image: /assets/images/2026-10-13-eu-ai-act-primjena.svg
 read_time: 8
 description: "Od kada važi koja obaveza iz AI Acta nakon Uredbe 2026/1744, šta je samo odgođeno, a ne ukinuto, i kako evropska pravila mogu obavezati firme u BiH."
-tags: [ai-za-posao]
+tags: [regulativa]
 ---
 
 Firma iz Sarajeva razvija AI alat i prodaje ga klijentima u Njemačkoj. Bosna i Hercegovina nije članica EU i na državnom nivou nema zakon o umjetnoj inteligenciji (artificial intelligence, AI). Ipak, evropska pravila mogu obavezivati i takvu firmu. U ovom tekstu objašnjavamo od kada važe pojedine obaveze iz Akta o umjetnoj inteligenciji (AI Act), Uredbe (EU) 2024/1689, nakon izmjena iz jula 2026., i kojim putem te obaveze dolaze do organizacija u BiH.

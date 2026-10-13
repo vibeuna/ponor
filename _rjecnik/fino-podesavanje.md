@@ -11,7 +11,7 @@ source: blackboard/terminology/fine-tuning.md
 generated_by: scripts/build_rjecnik.py
 ---
 
-Fino podešavanje je dodatno treniranje (training) već predtreniranog modela za određeni zadatak ili ponašanje, najčešće na označenim primjerima. Dolazi nakon predtreniranja (pre-training): opće znanje o jeziku model je već stekao iz velike količine teksta, a sada uči konkretan posao. Građa modela pri tome ostaje gotovo ista. Googleovom BERT-u, prema njegovim autorima, na izlazu se dodaje samo jedan dodatni dio. Ilustracije radi, opći jezički model može se fino podesiti da recenzije razvrstava na pozitivne i negativne. Pojam je širok: OpenAI ga u radu iz 2022. koristi i za učenje iz primjera koje su napisali ljudi i za učenje iz ljudskog rangiranja odgovora.
+Fino podešavanje je dodatno treniranje (training) već predtreniranog modela za određeni zadatak ili ponašanje, najčešće na označenim primjerima. Dolazi nakon predtreniranja (pre-training): opšte znanje o jeziku model je već stekao iz velike količine teksta, a sada uči konkretan posao. Građa modela pri tome ostaje gotovo ista. Googleovom BERT-u, prema njegovim autorima, na izlazu se dodaje samo jedan dodatni dio. Ilustracije radi, opšti jezički model može se fino podesiti da recenzije razvrstava na pozitivne i negativne. Pojam je širok: OpenAI ga u radu iz 2022. koristi i za učenje iz primjera koje su napisali ljudi i za učenje iz ljudskog rangiranja odgovora.
 
 **Izvori:**
 - [Improving Language Understanding by Generative Pre-Training – Radford et al., OpenAI 2018](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
