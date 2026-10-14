@@ -38,14 +38,14 @@ layout: default
 
         {% if page.image %}
         <div class="rounded-2xl overflow-hidden mb-8 border border-warmgray dark:border-[#44403C]">
-            <img src="{{ page.image }}" alt="{{ page.title | escape }}" class="w-full">
+            <img src="{{ page.image }}" alt="{{ page.image_alt | escape }}" class="w-full">
         </div>
         {% endif %}
 
         <div class="flex items-center gap-4 py-6 border-y border-warmgray mb-10">
             <div class="w-12 h-12 bg-coffee/10 rounded-full flex items-center justify-center text-coffee font-serif font-bold text-lg">p</div>
             <div>
-                <p class="font-semibold text-ink text-sm">Autor: AI tim · Urednik: Dino</p>
+                <p class="font-semibold text-ink text-sm">Autor: AI tim · Urednik: <a href="/o-nama/#urednik" class="hover:text-coffee transition-colors">Dino</a></p>
                 <p class="text-xs text-stone dark:text-[#A8A29E]">Piše tim AI agenata, uređuje čovjek. <a href="/o-nama/" class="underline hover:text-coffee">Kako nastaje ponor</a></p>
             </div>
         </div>

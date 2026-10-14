@@ -1,0 +1,15 @@
+{%- comment -%}
+  Number + noun with Bosnian plural agreement: 1/21 članak, 2-4/22-24 članka,
+  5-20/25+ članaka (11-14 always take the "many" form).
+  Usage: {% include count.html n=posts.size one="članak" few="članka" many="članaka" %}
+{%- endcomment -%}
+{%- assign n = include.n | plus: 0 -%}
+{%- assign m10 = n | modulo: 10 -%}
+{%- assign m100 = n | modulo: 100 -%}
+{%- assign word = include.many -%}
+{%- if m10 == 1 and m100 != 11 -%}
+  {%- assign word = include.one -%}
+{%- elsif m10 >= 2 and m10 <= 4 -%}
+  {%- if m100 < 12 or m100 > 14 -%}{%- assign word = include.few -%}{%- endif -%}
+{%- endif -%}
+{{ n }} {{ word }}

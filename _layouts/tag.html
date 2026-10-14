@@ -17,7 +17,7 @@ layout: default
         <h1 class="text-3xl md:text-4xl font-bold text-ink mb-3">{{ tag_meta.name | default: page.title }}</h1>
         <p class="text-stone text-lg max-w-2xl leading-relaxed">{{ page.description }}</p>
         <div class="mt-4 flex items-center gap-4 text-sm text-stone dark:text-[#A8A29E]">
-            <span>{{ tag_posts.size }} članaka</span>
+            <span>{% include count.html n=tag_posts.size one="članak" few="članka" many="članaka" %}</span>
         </div>
     </div>
 </section>

@@ -17,11 +17,11 @@ Token je najmanja jedinica teksta s kojom radi [veliki jezički model (large lan
 
 ## Token i tokenizacija
 
-Model ne čita slova ni riječi. tokenizator mu predaje tekst kao niz tokena. Sve što model radi, radi nad tim nizom.
+Model ne čita slova ni riječi. Tokenizator mu predaje tekst kao niz tokena. Sve što model radi, radi nad tim nizom.
 
 Token može biti cijela riječ ako je ta riječ česta. U našem testu riječ „token“ ostaje jedan token, zajedno s razmakom koji joj prethodi. Tokenizatori koje smo testirali lijepe razmak uz riječ koja slijedi. Token može biti i dio riječi, pa čak i jedan bajt. Ako vokabular nema riječ kao cjelinu, tokenizator je slaže od [podriječi (subword)](/rjecnik/podrijec/), tj. dijelova riječi koji jesu u vokabularu.
 
-Učestalost odlučuje kako će tekst biti podijeljen. tokenizator ne zna gramatiku. Zna samo koji su se nizovi znakova često pojavljivali u tekstu na kojem je izgrađen.
+Učestalost odlučuje kako će tekst biti podijeljen. Tokenizator ne zna gramatiku. Zna samo koji su se nizovi znakova često pojavljivali u tekstu na kojem je izgrađen.
 
 ## Kako token funkcioniše
 
@@ -59,14 +59,14 @@ Tri rečenice na bosanskom i njihove engleske prijevode propustili smo kroz dva 
 U rezultatima se vide tri stvari:
 
 - **Neka slova s dijakritikom troše dva tokena.** U cl100k_base "Š" i "Ć" postaju po dva tokena, a "Đ", "č", "ž" i "š" ostaju po jedan token. U o200k_base i "Š" i "Ć" su po jedan token.
-- **Podjele ne prate uvijek slogove.** "zašto" je u cl100k_base `za|š|to`, a u o200k_base `za|što`. "Hljeb" je `hl|j|eb`, a o200k_base `h|lj|eb`. "čitaonici" je u oba toeknizera `č|ita|on|ici`.
-- **Razlika se uglavnom smanjila, ali nije nestala.** U o200k_base bosanske rečenice imaju jedan do tri tokena manje nego u cl100k_base. ngleske se mijenjaju za najviše jedan token. U prve dvije rečenice razlika između bosanskog i engleskog se smanjila, a u trećoj je ostala ista: pet tokena.
+- **Podjele ne prate uvijek slogove.** "zašto" je u cl100k_base `za|š|to`, a u o200k_base `za|što`. "Hljeb" je `hl|j|eb`, a o200k_base `h|lj|eb`. "čitaonici" je u oba tokenizatora `č|ita|on|ici`.
+- **Razlika se uglavnom smanjila, ali nije nestala.** U o200k_base bosanske rečenice imaju jedan do tri tokena manje nego u cl100k_base. Engleske se mijenjaju za najviše jedan token. U prve dvije rečenice razlika između bosanskog i engleskog se smanjila, a u trećoj je ostala ista: pet tokena.
 
 Sistematsko mjerenje objavili su Petrov i saradnici 2023. godine. Prema njihovim rezultatima, bosanski tekst u cl100k_base ima u prosjeku [1,87 puta više tokena od engleskog](https://arxiv.org/abs/2305.15425v2). Detalje i ograničenja te studije opisali smo u tekstu [Šta je LLM i kako radi?](/clanci/sta-je-llm/)
 
 ## Praktične implikacije
 
-- **Cijena.** Proizvođači naplaćuju korištenje modela preko API-ja po tokenu. Zato isti sadržaj na bosanskom zato može koštati više nego na engleskom.
+- **Cijena.** Proizvođači naplaćuju korištenje modela preko API-ja po tokenu. Zato isti sadržaj na bosanskom može koštati više nego na engleskom.
 - **Kontekstni prozor.** Veličina prozora mjeri se u tokenima, pa u njega stane manje bosanskog teksta nego engleskog.
 - **Promjena modela.** Različiti tokenizatori za isti tekst daju različit broj tokena. To pokazuju i naš test i novi Anthropicov tokenizator, koji daje oko 30% više tokena. Procjena napravljena za jedan model ne važi automatski za drugi.
 - **Brojevi.** Tokenizator dijeli i brojeve, a način podjele može uticati na to koliko pouzdano model računa. U našem testu `12345678` u oba vokabulara postaje `123|456|78`. Meta je u prvom modelu [LLaMA](https://arxiv.org/abs/2302.13971v1) sve brojeve dijelila na pojedinačne cifre.

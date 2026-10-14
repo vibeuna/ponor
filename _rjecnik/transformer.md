@@ -6,7 +6,7 @@ term_slug: transformer
 description: "Transformer je arhitektura modela na kojoj se zasnivaju veliki jezički modeli (large language models, LLM)."
 sort_key: "transformer"
 letter: "T"
-related: ["veliki-jezicki-model"]
+related: ["mehanizam-paznje", "veliki-jezicki-model"]
 source: blackboard/terminology/transformer.md
 generated_by: scripts/build_rjecnik.py
 ---

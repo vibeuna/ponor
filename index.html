@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Umjetna inteligencija objašnjena na bosanskom"
-description: "Vodiči, analize i rječnik AI pojmova na bosanskom jeziku, uključujući kako se veliki jezički modeli zapravo snalaze s našim jezikom."
+description: "Vodiči, analize i rječnik AI pojmova na bosanskom jeziku, uključujući kako se veliki jezički modeli zapravo snalaze s našim jezikom. Uz izvore i naše testove."
 ---
 
 <!-- Hero -->
@@ -20,6 +20,9 @@ description: "Vodiči, analize i rječnik AI pojmova na bosanskom jeziku, uklju�
             </h1>
             <p class="text-lg md:text-xl text-stone dark:text-[#A8A29E] leading-relaxed mb-8">
                 Vodiči, praktični eksperimenti i nezavisna istraživanja o AI-u, LLM-ovima i AI agentima.
+            </p>
+            <p class="text-base text-stone dark:text-[#A8A29E] leading-relaxed mb-8 -mt-4">
+                ponor.ba je nezavisna edukativna platforma o umjetnoj inteligenciji na bosanskom jeziku. Tekstove piše tim AI agenata, a urednik ih provjerava i odobrava prije objave. Svaka tvrdnja ima izvor.
             </p>
             <div class="flex flex-wrap gap-4">
                 <a href="#najnovije" class="btn-primary inline-flex items-center px-6 py-3 bg-coffee text-white rounded-lg font-medium text-sm hover:bg-gradient-to-r hover:from-coffee hover:to-coffee-dark">
@@ -46,7 +49,7 @@ description: "Vodiči, analize i rječnik AI pojmova na bosanskom jeziku, uklju�
                 <h3 class="font-serif text-lg font-bold text-ink mb-2 group-hover:text-coffee transition-colors">{{ vodici_cat.name }}</h3>
                 <p class="text-sm text-stone dark:text-[#A8A29E] leading-relaxed">{{ vodici_cat.description }}</p>
                 <div class="mt-4 flex items-center gap-1 text-xs font-medium text-coffee">
-                    {{ vodici_posts.size }} članaka
+                    {% include count.html n=vodici_posts.size one="članak" few="članka" many="članaka" %}
                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </div>
             </a>
@@ -60,7 +63,7 @@ description: "Vodiči, analize i rječnik AI pojmova na bosanskom jeziku, uklju�
                 <h3 class="font-serif text-lg font-bold text-ink mb-2 group-hover:text-teal transition-colors">{{ praksa_cat.name }}</h3>
                 <p class="text-sm text-stone dark:text-[#A8A29E] leading-relaxed">{{ praksa_cat.description }}</p>
                 <div class="mt-4 flex items-center gap-1 text-xs font-medium text-teal">
-                    {{ praksa_posts.size }} članaka
+                    {% include count.html n=praksa_posts.size one="članak" few="članka" many="članaka" %}
                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </div>
             </a>
@@ -74,7 +77,7 @@ description: "Vodiči, analize i rječnik AI pojmova na bosanskom jeziku, uklju�
                 <h3 class="font-serif text-lg font-bold text-ink mb-2 group-hover:text-violet-600 transition-colors">{{ svakoga_cat.name }}</h3>
                 <p class="text-sm text-stone dark:text-[#A8A29E] leading-relaxed">{{ svakoga_cat.description }}</p>
                 <div class="mt-4 flex items-center gap-1 text-xs font-medium text-violet-600">
-                    {{ svakoga_posts.size }} članaka
+                    {% include count.html n=svakoga_posts.size one="članak" few="članka" many="članaka" %}
                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </div>
             </a>
@@ -86,7 +89,7 @@ description: "Vodiči, analize i rječnik AI pojmova na bosanskom jeziku, uklju�
                 <h3 class="font-serif text-lg font-bold text-ink mb-2 group-hover:text-rose-600 transition-colors">Rječnik</h3>
                 <p class="text-sm text-stone dark:text-[#A8A29E] leading-relaxed">AI pojmovi objašnjeni na bosanskom.</p>
                 <div class="mt-4 flex items-center gap-1 text-xs font-medium text-rose-600">
-                    {{ site.rjecnik.size }} pojmova
+                    {% include count.html n=site.rjecnik.size one="pojam" few="pojma" many="pojmova" %}
                     <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                 </div>
             </a>
@@ -102,7 +105,7 @@ description: "Vodiči, analize i rječnik AI pojmova na bosanskom jeziku, uklju�
         </div>
         <div class="flex flex-col lg:flex-row gap-10">
         <div class="flex-1 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {% assign latest_posts = site.posts | where_exp: "post", "post.category != 'ai-za-sve'" %}
+            {% assign latest_posts = site.posts %}
             {% for post in latest_posts limit:6 %}
             {% assign month_num = post.date | date: "%m" %}
             {% assign pcat = site.data.categories[post.category] %}

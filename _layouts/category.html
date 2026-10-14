@@ -23,7 +23,7 @@ layout: default
                 <h1 class="text-3xl md:text-4xl font-bold text-ink mb-3">{{ cat.name }}</h1>
                 <p class="text-stone text-lg max-w-2xl leading-relaxed">{{ cat.description }}</p>
                 <div class="mt-4 flex items-center gap-4 text-sm text-stone dark:text-[#A8A29E]">
-                    <span>{{ cat_posts.size }} članaka</span>
+                    <span>{% include count.html n=cat_posts.size one="članak" few="članka" many="članaka" %}</span>
                     {% if cat_posts.size > 0 %}
                     {% assign month_num = cat_posts.first.date | date: "%m" %}
                     <span>•</span>
@@ -87,7 +87,7 @@ layout: default
                 </div>
                 <div>
                     <h3 class="font-semibold text-ink {{ other_cat.hover_text }} transition-colors">{{ other_cat.name }}</h3>
-                    <p class="text-xs text-stone dark:text-[#A8A29E]">{{ other_posts.size }} članaka</p>
+                    <p class="text-xs text-stone dark:text-[#A8A29E]">{% include count.html n=other_posts.size one="članak" few="članka" many="članaka" %}</p>
                 </div>
             </a>
             {% endunless %}
