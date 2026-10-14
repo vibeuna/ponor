@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c46e6e"/>
+
+  <!-- Icon: two overlapping speech bubbles with a two-way arrow arcing between them: one message carried between two languages -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Back bubble (source), tail bottom-left -->
+    <path d="M 290 130 H 480 Q 520 130 520 170 V 280 Q 520 320 480 320 H 350 L 275 372 L 300 320 H 290 Q 250 320 250 280 V 170 Q 250 130 290 130 Z" fill="#fafaf8" stroke-width="16"/>
+    <path d="M 300 195 L 460 195" fill="none" stroke-width="10"/>
+    <path d="M 300 250 L 410 250" fill="none" stroke-width="10"/>
+    <!-- Front bubble (target), tail bottom-right -->
+    <path d="M 520 230 H 710 Q 750 230 750 270 V 380 Q 750 420 710 420 H 700 L 725 472 L 650 420 H 520 Q 480 420 480 380 V 270 Q 480 230 520 230 Z" fill="#d6dff0" stroke-width="16"/>
+    <path d="M 530 295 L 690 295" fill="none" stroke-width="10"/>
+    <path d="M 530 350 L 640 350" fill="none" stroke-width="10"/>
+    <!-- Two-way arrow arcing from back bubble to front bubble -->
+    <path d="M 562 160 Q 680 150 705 200" fill="none" stroke-width="12"/>
+    <path d="M 580 143 L 562 160 L 582 176" fill="none" stroke-width="12"/>
+    <path d="M 682 189 L 705 200 L 712 175" fill="none" stroke-width="12"/>
+  </g>
+</svg>
