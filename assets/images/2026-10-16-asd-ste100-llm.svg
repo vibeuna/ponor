@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#7c5a82"/>
+
+  <!-- Icon: chalkboard on an A-frame easel with three evenly ruled lines and chalk on the ledge: a fixed set of plain writing rules -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- A-frame easel legs, behind the board -->
+    <path d="M 500 125 L 355 475" fill="none" stroke-width="16"/>
+    <path d="M 500 125 L 645 475" fill="none" stroke-width="16"/>
+    <!-- Board frame -->
+    <rect x="290" y="170" width="420" height="240" rx="20" fill="#fafaf8" stroke-width="16"/>
+    <!-- Writing surface -->
+    <rect x="322" y="202" width="356" height="176" rx="10" fill="#d6dff0" stroke-width="10"/>
+    <!-- Three evenly ruled lines -->
+    <path d="M 362 245 L 638 245" fill="none" stroke-width="10"/>
+    <path d="M 362 290 L 638 290" fill="none" stroke-width="10"/>
+    <path d="M 362 335 L 540 335" fill="none" stroke-width="10"/>
+    <!-- Chalk ledge with one piece of chalk -->
+    <rect x="300" y="410" width="400" height="22" rx="9" fill="#fafaf8" stroke-width="14"/>
+    <rect x="590" y="394" width="50" height="16" rx="6" fill="#fafaf8" stroke-width="8"/>
+  </g>
+</svg>
