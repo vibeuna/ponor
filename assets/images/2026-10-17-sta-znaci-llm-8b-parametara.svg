@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#5a7a8a"/>
+
+  <!-- Icon: memory chip with three pins per side, a light-blue inner die and a pin-1 marker dot: the parameters are numbers stored in hardware memory -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Pins: top -->
+    <path d="M 445 190 L 445 150 M 500 190 L 500 150 M 555 190 L 555 150" stroke-width="16"/>
+    <!-- Pins: bottom -->
+    <path d="M 445 410 L 445 450 M 500 410 L 500 450 M 555 410 L 555 450" stroke-width="16"/>
+    <!-- Pins: left -->
+    <path d="M 390 245 L 350 245 M 390 300 L 350 300 M 390 355 L 350 355" stroke-width="16"/>
+    <!-- Pins: right -->
+    <path d="M 610 245 L 650 245 M 610 300 L 650 300 M 610 355 L 650 355" stroke-width="16"/>
+    <!-- Chip body -->
+    <rect x="390" y="190" width="220" height="220" rx="24" fill="#fafaf8" stroke-width="18"/>
+    <!-- Inner die -->
+    <rect x="445" y="245" width="110" height="110" rx="12" fill="#d6dff0" stroke-width="10"/>
+    <!-- Pin-1 marker -->
+    <circle cx="420" cy="220" r="9" fill="#5a7a8a" stroke-width="6"/>
+  </g>
+</svg>

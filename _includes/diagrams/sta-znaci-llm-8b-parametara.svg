@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Inter, system-ui, -apple-system, sans-serif" id="p8b-svg" role="img" aria-labelledby="p8b-svg-title p8b-svg-desc">
+<title id="p8b-svg-title">Koliko memorije trebaju težine 8B modela</title>
+<desc id="p8b-svg-desc">Težine modela s 8 milijardi parametara zauzimaju oko 32 GB u FP32, 16 GB u FP16 ili BF16, 8 GB na 8 bita i 4 GB na 4 bita. Ollamin fajl qwen3:8b u formatu Q4_K_M ima 5,2 GB.</desc>
+<rect width="900" height="600" fill="#FAF9F6"/>
+<defs><marker id="p8b-svg-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+<marker id="p8b-svg-arrow-stone" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#78716C"/></marker></defs>
+<text x="450" y="42" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Koliko memorije trebaju težine 8B modela</text>
+<text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C">Isti broj parametara, različita preciznost zapisa</text>
+<g><animate attributeName="opacity" values="0;0;1" dur="0.50s" keyTimes="0;0.200;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="100" width="780" height="64" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<rect x="60" y="100" width="3" height="64" fill="#78716C"/>
+<text x="80" y="124" font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8">MODEL</text>
+<text x="80" y="148" font-size="15" font-style="italic" font-family="Merriweather, Georgia, serif" fill="#1C1917">8 milijardi parametara × bajta po parametru</text>
+</g>
+<line x1="450" y1="174" x2="450" y2="200" stroke="#78716C" stroke-width="1.5" marker-end="url(#p8b-svg-arrow-stone)"><animate attributeName="opacity" values="0;0;1" dur="0.60s" keyTimes="0;0.500;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></line>
+<text x="450" y="228" text-anchor="middle" font-size="13" font-weight="600" fill="#44403C">Prostor za same težine, po preciznosti<animate attributeName="opacity" values="0;0;1" dur="0.60s" keyTimes="0;0.500;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></text>
+<line x1="230.0" y1="244" x2="230.0" y2="392" stroke="#E7E5E4" stroke-width="1" stroke-dasharray="2,3"/><text x="230.0" y="408" text-anchor="middle" font-size="10" fill="#A8A29E">0 GB</text>
+<line x1="440.0" y1="244" x2="440.0" y2="392" stroke="#E7E5E4" stroke-width="1" stroke-dasharray="2,3"/><text x="440.0" y="408" text-anchor="middle" font-size="10" fill="#A8A29E">16 GB</text>
+<line x1="650.0" y1="244" x2="650.0" y2="392" stroke="#E7E5E4" stroke-width="1" stroke-dasharray="2,3"/><text x="650.0" y="408" text-anchor="middle" font-size="10" fill="#A8A29E">32 GB</text>
+<text x="218" y="269" text-anchor="end" font-size="13" font-weight="500" fill="#44403C">FP32 · 4 bajta</text><rect x="230" y="252" width="420.0" height="24" rx="4" fill="#A8A29E"><animate attributeName="width" values="0;0;420.0" dur="1.20s" keyTimes="0;0.417;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></rect><text x="660.0" y="269" font-size="12" font-weight="500" fill="#57534E">oko 32 GB<animate attributeName="opacity" values="0;0;1" dur="1.50s" keyTimes="0;0.800;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></text>
+<text x="218" y="305" text-anchor="end" font-size="13" font-weight="500" fill="#44403C">FP16 / BF16 · 2 bajta</text><rect x="230" y="288" width="210.0" height="24" rx="4" fill="#A8A29E"><animate attributeName="width" values="0;0;210.0" dur="1.40s" keyTimes="0;0.500;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></rect><text x="450.0" y="305" font-size="12" font-weight="500" fill="#57534E">oko 16 GB<animate attributeName="opacity" values="0;0;1" dur="1.70s" keyTimes="0;0.824;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></text>
+<text x="218" y="341" text-anchor="end" font-size="13" font-weight="500" fill="#44403C">8 bita · 1 bajt</text><rect x="230" y="324" width="105.0" height="24" rx="4" fill="#A8A29E"><animate attributeName="width" values="0;0;105.0" dur="1.60s" keyTimes="0;0.562;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></rect><text x="345.0" y="341" font-size="12" font-weight="500" fill="#57534E">oko 8 GB<animate attributeName="opacity" values="0;0;1" dur="1.90s" keyTimes="0;0.842;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></text>
+<text x="218" y="377" text-anchor="end" font-size="13" font-weight="700" fill="#1C1917">4 bita · 0,5 bajta</text><rect x="230" y="360" width="52.5" height="24" rx="4" fill="#B45309"><animate attributeName="width" values="0;0;52.5" dur="1.80s" keyTimes="0;0.611;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></rect><text x="308.2" y="377" font-size="12" font-weight="700" fill="#92400E">oko 4 GB<animate attributeName="opacity" values="0;0;1" dur="2.10s" keyTimes="0;0.857;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></text>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.50s" keyTimes="0;0.840;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><line x1="298.2" y1="244" x2="298.2" y2="392" stroke="#92400E" stroke-width="1.5" stroke-dasharray="4,3"/><text x="304.2" y="426" font-size="11" font-weight="600" fill="#92400E">qwen3:8b u Ollami (Q4_K_M): 5,2 GB</text></g>
+<line x1="450" y1="442" x2="450" y2="466" stroke="#B45309" stroke-width="2" marker-end="url(#p8b-svg-arrow)"><animate attributeName="opacity" values="0;0;1" dur="2.70s" keyTimes="0;0.889;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></line>
+<g><animate attributeName="opacity" values="0;0;1" dur="3.10s" keyTimes="0;0.839;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0" dur="3.10s" keyTimes="0;0.839;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="476" width="780" height="64" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+<rect x="60" y="476" width="3" height="64" fill="#B45309"/>
+<text x="80" y="500" font-size="11" font-weight="700" fill="#B45309" letter-spacing="0.8">REZULTAT</text>
+<text x="80" y="524" font-size="15" font-style="italic" font-family="Merriweather, Georgia, serif" fill="#1C1917">Na 4 bita težine 8B modela staju u oko <tspan font-weight="700" font-style="normal" fill="#92400E">4 GB</tspan> umjesto 16 GB.</text>
+</g>
+<text font-size="11" font-style="italic" fill="#78716C">
+<tspan x="60" y="566">Ponorov račun: 8 milijardi × bajta po parametru, samo težine. Pokretanje modela traži dodatnu memoriju.</tspan>
+<tspan x="60" y="582">Q4_K_M kombinuje više formata (otprilike 4–5 bita po težini), a fajl sadrži i podatke koji nisu težine.</tspan>
+</text>
+<g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+<circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+<polygon points="852,28 858,28 855,33" fill="#78716C"/>
+<title>Pusti ponovo</title>
+</g>
+<style>
+#p8b-svg:hover .replay-btn { opacity: 1 !important; }
+#p8b-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+#p8b-svg .replay-btn:hover path { stroke: #B45309; }
+#p8b-svg .replay-btn:hover polygon { fill: #B45309; }
+#p8b-svg .replay-btn:focus { outline: none; opacity: 1 !important; }
+#p8b-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+@media (prefers-reduced-motion: reduce) {
+  #p8b-svg animate, #p8b-svg animateTransform { display: none; }
+  #p8b-svg .replay-btn { display: none; }
+}
+</style>
+<script>
+// <![CDATA[
+(function () {
+  const svg = document.getElementById('p8b-svg');
+  const btn = svg && svg.querySelector('.replay-btn');
+  if (!svg || !btn) return;
+  function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+  btn.addEventListener('click', replay);
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+  });
+})();
+// ]]>
+</script>
+</svg>
