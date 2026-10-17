@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#7f8a52"/>
+
+  <!-- Icon: terminal window with a title bar, a chevron prompt and a cursor underscore: the whole guide runs as terminal commands -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Window body -->
+    <rect x="270" y="150" width="460" height="300" rx="28" fill="#fafaf8" stroke-width="18"/>
+    <!-- Title bar -->
+    <path d="M 270 178 A 28 28 0 0 1 298 150 L 702 150 A 28 28 0 0 1 730 178 L 730 215 L 270 215 Z" fill="#d6dff0" stroke-width="18"/>
+    <!-- Window control dots -->
+    <circle cx="315" cy="183" r="11" fill="#7f8a52" stroke-width="7"/>
+    <circle cx="355" cy="183" r="11" fill="#fafaf8" stroke-width="7"/>
+    <circle cx="395" cy="183" r="11" fill="#fafaf8" stroke-width="7"/>
+    <!-- Prompt chevron -->
+    <path d="M 340 275 L 410 325 L 340 375" fill="none" stroke-width="18"/>
+    <!-- Cursor underscore -->
+    <path d="M 450 380 L 560 380" fill="none" stroke-width="18"/>
+  </g>
+</svg>
