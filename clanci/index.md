@@ -30,7 +30,7 @@ permalink: /clanci/
                     <div class="flex-1">
                         <div class="flex flex-wrap items-center gap-3 mb-2">
                             {% if cat %}<span class="px-2 py-0.5 {{ cat.badge_class }} text-xs rounded-full font-medium">{{ cat.name }}</span>{% endif %}
-                            <span class="text-xs text-stone dark:text-[#A8A29E]">{{ post.date | date: "%-d." }} {{ site.data.months[month_num] }} {{ post.date | date: "%Y." }}</span>
+                            <time datetime="{{ post.date | date: "%Y-%m-%d" }}" class="text-xs text-stone dark:text-[#A8A29E]">{{ post.date | date: "%-d." }} {{ site.data.months[month_num] }} {{ post.date | date: "%Y." }}</time>
                             {% if post.read_time %}<span class="text-xs text-stone dark:text-[#A8A29E]">•</span><span class="text-xs text-stone">{{ post.read_time }} min</span>{% endif %}
                         </div>
                         <h2 class="font-serif text-xl font-bold text-ink {{ cat.hover_text | default: 'group-hover:text-coffee' }} transition-colors mb-2">{{ post.title }}</h2>

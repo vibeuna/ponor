@@ -45,7 +45,7 @@ layout: default
                 <div class="flex flex-col md:flex-row md:items-center gap-4">
                     <div class="flex-1">
                         <div class="flex items-center gap-3 mb-2">
-                            <span class="text-xs text-stone dark:text-[#A8A29E]">{{ post.date | date: "%-d." }} {{ site.data.months[month_num] }} {{ post.date | date: "%Y." }}</span>
+                            <time datetime="{{ post.date | date: "%Y-%m-%d" }}" class="text-xs text-stone dark:text-[#A8A29E]">{{ post.date | date: "%-d." }} {{ site.data.months[month_num] }} {{ post.date | date: "%Y." }}</time>
                             {% if post.read_time %}<span class="text-xs text-stone dark:text-[#A8A29E]">•</span><span class="text-xs text-stone">{{ post.read_time }} min</span>{% endif %}
                             {% if post.level %}<span class="px-2 py-0.5 bg-teal/10 text-teal dark:bg-teal/20 text-xs rounded-full font-medium">{{ post.level }}</span>{% endif %}
                         </div>

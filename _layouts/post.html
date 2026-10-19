@@ -28,7 +28,12 @@ layout: default
         <div class="mb-8">
             <div class="flex flex-wrap items-center gap-3 mb-6">
                 {% if cat %}<a href="/kategorije/{{ page.category }}/" class="px-3 py-1 {{ cat.bg_class }} {{ cat.text_class }} text-xs font-semibold rounded-full hover:opacity-80 transition-opacity">{{ cat.name }}</a>{% endif %}
-                <span class="text-xs text-stone dark:text-[#A8A29E]">{{ formatted_date }}</span>
+                <time datetime="{{ page.date | date: "%Y-%m-%d" }}" class="text-xs text-stone dark:text-[#A8A29E]">{{ formatted_date }}</time>
+                {% comment %} Only set after a material revision (freshness review), so this never shows on first publish. {% endcomment %}
+                {% if page.last_modified_at %}
+                {% assign mod_month = page.last_modified_at | date: "%m" %}
+                <span class="text-xs text-stone dark:text-[#A8A29E]">•</span><span class="text-xs text-stone dark:text-[#A8A29E]">Ažurirano <time datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: "%-d." }} {{ site.data.months[mod_month] }} {{ page.last_modified_at | date: "%Y." }}</time></span>
+                {% endif %}
                 {% if page.read_time %}<span class="text-xs text-stone dark:text-[#A8A29E]">•</span><span class="text-xs text-stone dark:text-[#A8A29E]">{{ page.read_time }} min čitanja</span>{% endif %}
                 {% if page.level %}<span class="text-xs text-stone dark:text-[#A8A29E]">•</span><span class="text-xs text-stone">{{ page.level }}</span>{% endif %}
             </div>

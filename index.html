@@ -125,7 +125,7 @@ description: "Vodiči, analize i rječnik AI pojmova na bosanskom jeziku, uklju�
                     </div>
                     <div class="flex items-center gap-3 mb-3">
                         {% if pcat %}<span class="px-2 py-1 {{ pcat.badge_class }} text-xs font-semibold rounded-md">{{ pcat.name }}</span>{% endif %}
-                        <span class="text-xs text-stone dark:text-[#A8A29E]">{{ post.date | date: "%-d." }} {{ site.data.months[month_num] | truncate: 3, "" }}</span>
+                        <time datetime="{{ post.date | date: "%Y-%m-%d" }}" class="text-xs text-stone dark:text-[#A8A29E]">{{ post.date | date: "%-d." }} {{ site.data.months[month_num] | truncate: 3, "" }}</time>
                         {% if post.read_time %}<span class="text-warmgray dark:text-[#44403C]">·</span><span class="text-xs text-stone dark:text-[#A8A29E]">{{ post.read_time }} min</span>{% endif %}
                     </div>
                     <h3 class="font-serif text-lg font-bold text-ink mb-2 {% if pcat %}{{ pcat.hover_text }}{% else %}group-hover:text-coffee{% endif %} transition-colors leading-snug">{{ post.title }}</h3>
