@@ -9,6 +9,11 @@ author:
   name: "Dino"
   email: "vibeuna@gmail.com"
 
+# Social profiles linked from the header. Empty value hides the button.
+social:
+  x: "https://x.com/i_dinche"
+  facebook: "https://www.facebook.com/ponor.ba/"
+
 # Newsletter signup (MailerLite custom HTML form).
 # action: the form's subscribe endpoint
 #   (from MailerLite: Forms -> Embedded form -> HTML snippet -> the <form action=...> URL)
