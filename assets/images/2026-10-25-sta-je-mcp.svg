@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#4a9e8e"/>
+
+  <!-- Icon: one large host hub on the left linked to three server nodes stacked on the right -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Links (drawn first so nodes sit on top) -->
+    <path d="M 392 300 L 648 170 M 392 300 L 648 300 M 392 300 L 648 430" fill="none" stroke-width="16"/>
+    <!-- Host hub -->
+    <circle cx="392" cy="300" r="80" fill="#d6dff0" stroke-width="18"/>
+    <!-- Server nodes -->
+    <circle cx="648" cy="170" r="44" fill="#fafaf8" stroke-width="16"/>
+    <circle cx="648" cy="300" r="44" fill="#fafaf8" stroke-width="16"/>
+    <circle cx="648" cy="430" r="44" fill="#fafaf8" stroke-width="16"/>
+    <!-- Accent dot in the hub -->
+    <circle cx="392" cy="300" r="22" fill="#4a9e8e" stroke-width="8"/>
+  </g>
+</svg>
