@@ -4,6 +4,7 @@ title: "Objasni dijagramom: Vještina za Claude, ChatGPT i Gemini"
 date: 2026-10-18
 category: ai-za-sve
 image: /assets/images/2026-10-18-kako-objasniti-dijagramom.svg
+last_modified_at: 2026-10-26
 read_time: 7
 description: "Kako naučiti chatbota da objašnjava dijagramom: spremna vještina za kopiranje, objašnjenje kako radi i uputstvo za instalaciju u Claudeu, ChatGPT-u i Geminiju."
 tags: [llm]
@@ -12,6 +13,8 @@ tags: [llm]
 Kada pitate chatbota kako radi prenos novca između dvije banke, obično dobijete nekoliko dugačkih pasusa. Isti odgovor bio bi puno jasniji vizuelno uz nekoliko pravougaonika i par strelica.
 
 Jednostavan fajl pod nazivom `SKILL.md` omogućava umjetnoj inteligenciji da prepozna ovakva pitanja i na njih odgovori dijagramom. U nastavku donosimo gotov fajl, detaljno objašnjenje njegovih dijelova i uputstvo gdje ga sačuvati u Claudeu, ChatGPT-u i Geminiju.
+
+*Ažurirano 26. oktobra 2026: ispravljeni koraci za Claude (šta dijalog prihvata) i ChatGPT (putanja i planovi).*
 
 ## Ukratko
 
@@ -22,7 +25,7 @@ Vještina `objasni-dijagramom` uči model da na pitanja tipa "kako ovo radi" odg
 Dostupnost opcije se razlikuje po aplikacijama:
 * **Claude:** Radi na paketima Free, Pro, Max, Team i Enterprise (potrebno je uključiti opciju za izvršavanje koda).
 * **Gemini:** Radi uz prijavu na račun, navršenih 18 godina i uključen opciju "Keep Activity".
-* **ChatGPT:** Dostupno je samo na plaćenim paketima Business, Enterprise, Healthcare i Edu.
+* **ChatGPT:** OpenAI vještine navodi za planove Business, Enterprise, Healthcare i Edu.
 
 Na našem testu, vještina je odlično radila u Claudeu. Gemini je povremeno imao problema s njenim aktiviranjem, dok na besplatnom ChatGPT-u ova opcija uopšte ne postoji.
 
@@ -123,7 +126,7 @@ Dijagram u potpunosti poštuje pravila: ima sedam elemenata, jasne natpise i usm
 
 1. Otvorite **Settings**, pa u dijelu **Customize** izaberite **Skills**.
 2. Kliknite **+ Add**, pa **Upload skill**.
-3. Prevucite fajlove vještine ili ih izaberite putem opcije **browse**.
+3. Prevucite fajl ili ga izaberite putem opcije **browse**. Dijalog prihvata `.md` fajl (mora sadržavati naziv i opis u YAML zaglavlju) ili `.zip` odnosno `.skill` fajl koji sadrži `SKILL.md`.
 
 *Napomena:* U opcijama mora biti uključena stavka "Code execution and file creation". Ako koristite Claude Code, fajl ubacite u folder `~/.claude/skills/`.
 
@@ -135,7 +138,7 @@ Dijagram u potpunosti poštuje pravila: ima sedam elemenata, jasne natpise i usm
 
 ### ChatGPT
 
-Opcija je trenutno dostupna samo korisnicima Business, Enterprise, Healthcare i Edu paketa unutar postavki radnog prostora.
+OpenAI vještine navodi za planove Business, Enterprise, Healthcare i Edu. U bočnoj traci otvorite **Plugins**, zatim karticu **Skills**, pa **Create** i **Upload from your computer**. Dostupnost zavisi od postavki radnog prostora.
 
 ---
 
