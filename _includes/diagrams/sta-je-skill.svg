@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Inter, system-ui, -apple-system, sans-serif" id="skill-load-svg" role="img" aria-labelledby="skill-load-svg-title skill-load-svg-desc">
+<title id="skill-load-svg-title">Šta ulazi u kontekstni prozor, a šta ostaje vani</title>
+<desc id="skill-load-svg-desc">Prozor se puni u tri koraka. Prvi korak, na početku: u kontekstnom prozoru su sistemski prompt te nazivi i opisi svih vještina, oko 100 tokena po vještini. Zatim stiže zahtjev, na primjer: Pripremi izvještaj iz ovih bilješki. Model provjerava odgovara li zahtjev nekom opisu. Ako ne odgovara, ništa se ne učitava i odgovor ide bez vještine. Ako odgovara, drugi korak: u prozor se učitava tijelo fajla SKILL.md, preporuka je ispod 5.000 tokena. Treći korak, po potrebi: fajl iz references, na primjer šablon, čita se u prozor, a skripta iz scripts se pokreće van prozora, pa u prozor ulazi samo njen izlaz, ne i kod. Nazivi i opisi su uvijek u prozoru, ostatak tek kad zatreba.</desc>
+<defs>
+<marker id="skill-load-svg-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+<marker id="skill-load-svg-arrow-stone" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#78716C"/></marker>
+</defs>
+<rect width="900" height="620" fill="#FAF9F6"/>
+<text x="450" y="42" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Šta ulazi u kontekstni prozor, a šta ostaje vani</text>
+<text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C">Prozor se puni korak po korak, a ne unaprijed</text>
+
+<!-- Step 1: startup -->
+<g><animate attributeName="opacity" values="0;0;1" dur="0.55s" keyTimes="0;0.364;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<text x="60" y="104" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">1 · NA POČETKU</text>
+<text x="60" y="122" font-size="12" fill="#44403C">Nazivi i opisi svih vještina</text>
+<text x="300" y="84" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">KONTEKSTNI PROZOR</text>
+<rect x="300" y="92" width="540" height="36" rx="8" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1.5"/>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="0.70s" keyTimes="0;0.500;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="304" y="96" width="90" height="28" rx="6" fill="#E7E5E4" stroke="#D6D3D1" stroke-width="1"/><text x="349.0" y="114" text-anchor="middle" font-size="11" font-weight="500" fill="#44403C">prompt</text></g>
+<g><animate attributeName="opacity" values="0;0;1" dur="0.85s" keyTimes="0;0.588;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="398" y="96" width="80" height="28" rx="6" fill="#D6D3D1" stroke="#A8A29E" stroke-width="1"/><text x="438.0" y="114" text-anchor="middle" font-size="11" font-weight="500" fill="#44403C">opisi</text></g>
+<text x="398" y="146" font-size="11" font-style="italic" fill="#78716C"><animate attributeName="opacity" values="0;0;1" dur="1.00s" keyTimes="0;0.650;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>oko 100 tokena po vještini</text>
+
+<!-- Request and the matching decision -->
+<g><animate attributeName="opacity" values="0;0;1" dur="1.25s" keyTimes="0;0.720;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="164" width="220" height="60" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<rect x="60" y="164" width="3" height="60" fill="#78716C"/>
+<text x="78" y="183" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">ZAHTJEV</text>
+<text x="78" y="201" font-family="Merriweather, Georgia, serif" font-size="12" font-style="italic" fill="#1C1917">"Pripremi izvještaj</text>
+<text x="78" y="216" font-family="Merriweather, Georgia, serif" font-size="12" font-style="italic" fill="#1C1917">iz ovih bilješki."</text>
+</g>
+<line x1="286" y1="194" x2="424" y2="194" stroke="#78716C" stroke-width="1.5" marker-end="url(#skill-load-svg-arrow-stone)"><animate attributeName="opacity" values="0;0;1" dur="1.40s" keyTimes="0;0.786;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></line>
+<g><animate attributeName="opacity" values="0;0;1" dur="1.65s" keyTimes="0;0.788;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<polygon points="432,194 532,158 632,194 532,230" fill="#F5F5F0" stroke="#78716C" stroke-width="1.5"/>
+<text x="532" y="191" text-anchor="middle" font-size="12" font-weight="700" fill="#1C1917">Odgovara li</text>
+<text x="532" y="207" text-anchor="middle" font-size="12" font-weight="700" fill="#1C1917">nekom opisu?</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="1.95s" keyTimes="0;0.821;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<line x1="638" y1="194" x2="676" y2="194" stroke="#78716C" stroke-width="1.5" marker-end="url(#skill-load-svg-arrow-stone)"/>
+<text x="657" y="186" text-anchor="middle" font-size="11" font-style="italic" fill="#78716C">ne</text>
+<rect x="684" y="164" width="156" height="60" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="698" y="190" font-size="12" fill="#44403C">Ništa se ne učitava.</text>
+<text x="698" y="208" font-size="12" fill="#44403C">Odgovor bez vještine.</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.20s" keyTimes="0;0.864;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<line x1="532" y1="236" x2="532" y2="270" stroke="#B45309" stroke-width="2" marker-end="url(#skill-load-svg-arrow)"/>
+<text x="544" y="258" font-size="11" font-weight="700" fill="#92400E">da</text>
+</g>
+
+<!-- Step 2: body loads -->
+<g><animate attributeName="opacity" values="0;0;1" dur="2.45s" keyTimes="0;0.857;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<text x="60" y="292" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">2 · KAD OPIS ODGOVARA</text>
+<text x="60" y="310" font-size="12" fill="#44403C">Učitava se tijelo SKILL.md</text>
+<rect x="300" y="280" width="540" height="36" rx="8" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1.5"/><rect x="304" y="284" width="90" height="28" rx="6" fill="#E7E5E4" stroke="#D6D3D1" stroke-width="1"/><text x="349.0" y="302" text-anchor="middle" font-size="11" font-weight="500" fill="#44403C">prompt</text><rect x="398" y="284" width="80" height="28" rx="6" fill="#D6D3D1" stroke="#A8A29E" stroke-width="1"/><text x="438.0" y="302" text-anchor="middle" font-size="11" font-weight="500" fill="#44403C">opisi</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.65s" keyTimes="0;0.868;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="482" y="284" width="100" height="28" rx="6" fill="#FDF6EC" stroke="#B45309" stroke-width="1.5"/><text x="532.0" y="302" text-anchor="middle" font-size="11" font-weight="700" fill="#92400E">SKILL.md</text></g>
+<text x="482" y="334" font-size="11" font-style="italic" fill="#78716C"><animate attributeName="opacity" values="0;0;1" dur="2.85s" keyTimes="0;0.877;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>preporuka: ispod 5.000 tokena</text>
+
+<!-- Step 3: files on demand -->
+<g><animate attributeName="opacity" values="0;0;1" dur="3.05s" keyTimes="0;0.885;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<text x="60" y="384" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">3 · PO POTREBI</text>
+<text x="60" y="402" font-size="12" fill="#44403C">Fajlovi i skripte, kad ih</text>
+<text x="60" y="418" font-size="12" fill="#44403C">upute zatraže</text>
+<rect x="300" y="372" width="540" height="36" rx="8" fill="#FAF9F6" stroke="#A8A29E" stroke-width="1.5"/><rect x="304" y="376" width="90" height="28" rx="6" fill="#E7E5E4" stroke="#D6D3D1" stroke-width="1"/><text x="349.0" y="394" text-anchor="middle" font-size="11" font-weight="500" fill="#44403C">prompt</text><rect x="398" y="376" width="80" height="28" rx="6" fill="#D6D3D1" stroke="#A8A29E" stroke-width="1"/><text x="438.0" y="394" text-anchor="middle" font-size="11" font-weight="500" fill="#44403C">opisi</text><rect x="482" y="376" width="100" height="28" rx="6" fill="#FDF6EC" stroke="#B45309" stroke-width="1.5"/><text x="532.0" y="394" text-anchor="middle" font-size="11" font-weight="700" fill="#92400E">SKILL.md</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="3.25s" keyTimes="0;0.892;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<text x="60" y="462" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">VAN PROZORA</text>
+<text x="60" y="480" font-size="12" fill="#44403C">Ostaju na disku dok</text>
+<text x="60" y="496" font-size="12" fill="#44403C">ih upute ne zatraže</text>
+<rect x="520" y="446" width="170" height="52" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5" stroke-dasharray="5 4"/><text x="532" y="468" font-size="12" font-weight="700" fill="#1C1917">references/sablon.md</text><text x="532" y="486" font-size="11" fill="#57534E">dokument se čita u prozor</text>
+<rect x="700" y="446" width="140" height="52" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5" stroke-dasharray="5 4"/><text x="712" y="468" font-size="12" font-weight="700" fill="#1C1917">scripts/provjeri.py</text><text x="712" y="486" font-size="11" fill="#57534E">kod ostaje vani</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="3.40s" keyTimes="0;0.912;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<line x1="631" y1="440" x2="631" y2="414" stroke="#78716C" stroke-width="1.5" marker-end="url(#skill-load-svg-arrow-stone)"/>
+<line x1="730" y1="440" x2="730" y2="414" stroke="#78716C" stroke-width="1.5" marker-end="url(#skill-load-svg-arrow-stone)"/>
+<text x="740" y="432" font-size="11" font-style="italic" fill="#78716C">samo izlaz</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="3.60s" keyTimes="0;0.903;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="586" y="376" width="90" height="28" rx="6" fill="#F5F5F0" stroke="#78716C" stroke-width="1"/><text x="631.0" y="394" text-anchor="middle" font-size="11" font-weight="500" fill="#44403C">šablon</text></g>
+<g><animate attributeName="opacity" values="0;0;1" dur="3.80s" keyTimes="0;0.908;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="680" y="376" width="100" height="28" rx="6" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/><text x="730.0" y="394" text-anchor="middle" font-size="11" font-weight="700" fill="#92400E">izlaz</text></g>
+
+<!-- Callout -->
+<g><animate attributeName="opacity" values="0;0;1" dur="4.20s" keyTimes="0;0.881;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0" dur="4.20s" keyTimes="0;0.881;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="516" width="780" height="66" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+<rect x="60" y="516" width="3" height="66" fill="#B45309"/>
+<text x="80" y="538" font-size="11" font-weight="700" letter-spacing="0.8" fill="#B45309">ŠTA ULAZI U KONTEKST</text>
+<text x="80" y="558" font-size="13" fill="#1C1917">Nazivi i opisi su uvijek u prozoru, ostatak tek kad zatreba.</text>
+<text x="80" y="576" font-size="13" fill="#1C1917">Kod skripte nikad ne ulazi u prozor, samo njen izlaz.</text>
+</g>
+<text x="450" y="606" text-anchor="middle" font-size="11" font-style="italic" fill="#78716C"><animate attributeName="opacity" values="0;0;1" dur="4.45s" keyTimes="0;0.921;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>Veličine segmenata nisu u razmjeri. Nazivi fajlova su primjeri. Prema specifikaciji Agent Skills i dokumentaciji Claudea.</text>
+
+<g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+<circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+<polygon points="852,28 858,28 855,33" fill="#78716C"/>
+<title>Pusti ponovo</title>
+</g>
+<style>
+#skill-load-svg:hover .replay-btn { opacity: 1 !important; }
+#skill-load-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+#skill-load-svg .replay-btn:hover path { stroke: #B45309; }
+#skill-load-svg .replay-btn:hover polygon { fill: #B45309; }
+#skill-load-svg .replay-btn:focus { outline: none; opacity: 1 !important; }
+#skill-load-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+@media (prefers-reduced-motion: reduce) {
+  #skill-load-svg animate, #skill-load-svg animateTransform { display: none; }
+  #skill-load-svg .replay-btn { display: none; }
+}
+</style>
+<script>
+// <![CDATA[
+(function () {
+  const svg = document.getElementById('skill-load-svg');
+  const btn = svg && svg.querySelector('.replay-btn');
+  if (!svg || !btn) return;
+  // Reduced motion: stop the timeline at its end so the final state shows even if SMIL keeps running.
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches && svg.pauseAnimations) {
+    svg.pauseAnimations(); svg.setCurrentTime(10); return;
+  }
+  function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+  btn.addEventListener('click', replay);
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+  });
+})();
+// ]]>
+</script>
+</svg>

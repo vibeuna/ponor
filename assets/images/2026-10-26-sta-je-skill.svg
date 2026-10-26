@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#2a5298"/>
+
+  <!-- Icon: a folder with a page (the SKILL.md) sticking out of it -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Back of the folder, with the tab -->
+    <path d="M 280 185 Q 280 165 300 165 H 410 L 450 210 H 700 Q 720 210 720 230 V 435 Q 720 455 700 455 H 300 Q 280 455 280 435 Z" fill="#d6dff0" stroke-width="18"/>
+    <!-- Page peeking out, with two text lines -->
+    <rect x="340" y="145" width="240" height="200" rx="14" fill="#fafaf8" stroke-width="16"/>
+    <path d="M 380 200 H 540 M 380 240 H 500" fill="none" stroke-width="14"/>
+    <!-- Front panel of the folder -->
+    <path d="M 280 285 Q 280 265 300 265 H 700 Q 720 265 720 285 V 435 Q 720 455 700 455 H 300 Q 280 455 280 435 Z" fill="#fafaf8" stroke-width="18"/>
+    <!-- Accent dot on the front -->
+    <circle cx="500" cy="360" r="26" fill="#2a5298" stroke-width="8"/>
+  </g>
+</svg>
