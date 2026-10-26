@@ -6,7 +6,7 @@ category: vodici
 image: /assets/images/2026-10-26-sta-je-skill.svg
 read_time: 7
 description: "Vještina je folder s uputama koje AI učita tek kad zatrebaju. Kako radi, gdje se koristi, koliko se pouzdano aktivira i na šta paziti."
-tags: [ai-agenti]
+tags: [ai-agenti, skills]
 ---
 
 Neko svake sedmice u chatbot zalijepi isti tekst od dvadeset redova. U njemu piše koji ton da koristi, kakve naslove da stavi i kako da složi tabelu. Zadatak je isti, upute su iste, a lijepi ih svaki put ispočetka. [Vještina](/rjecnik/vjestina/) (engl. skill) rješava taj problem. Upute spremite jednom, a model ih sam pronađe kad zatrebaju.

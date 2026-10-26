@@ -5,16 +5,16 @@ date: 2026-10-18
 category: ai-za-sve
 image: /assets/images/2026-10-18-kako-objasniti-dijagramom.svg
 last_modified_at: 2026-10-26
-read_time: 7
+read_time: 6
 description: "Kako naučiti chatbota da objašnjava dijagramom: spremna vještina za kopiranje, objašnjenje kako radi i uputstvo za instalaciju u Claudeu, ChatGPT-u i Geminiju."
-tags: [llm]
+tags: [ai-agenti, skills]
 ---
 
 Kada pitate chatbota kako radi prenos novca između dvije banke, obično dobijete nekoliko dugačkih pasusa. Isti odgovor bio bi puno jasniji vizuelno uz nekoliko pravougaonika i par strelica.
 
 Jednostavan fajl pod nazivom `SKILL.md` omogućava umjetnoj inteligenciji da prepozna ovakva pitanja i na njih odgovori dijagramom. U nastavku donosimo gotov fajl, detaljno objašnjenje njegovih dijelova i uputstvo gdje ga sačuvati u Claudeu, ChatGPT-u i Geminiju.
 
-*Ažurirano 26. oktobra 2026: ispravljeni koraci za Claude (šta dijalog prihvata) i ChatGPT (putanja i planovi).*
+*Ažurirano 26. oktobra 2026: opšti opis vještina i uslovi po alatima prebačeni su u članak [Šta je SKILL i kako radi?](https://www.ponor.ba/clanci/sta-je-skill/). Ispravljeni su koraci za Claude (šta dijalog prihvata) i ChatGPT (putanja i planovi).*
 
 ## Ukratko
 
@@ -22,24 +22,17 @@ Jednostavan fajl pod nazivom `SKILL.md` omogućava umjetnoj inteligenciji da pre
 
 Vještina `objasni-dijagramom` uči model da na pitanja tipa "kako ovo radi" odgovori vizuelno. Upute traže da model sam izabere najbolju vrstu dijagrama, da ga nacrta u SVG formatu, da ne izmišlja podatke i da dijagram ostane jednostavan.
 
-Dostupnost opcije se razlikuje po aplikacijama:
-* **Claude:** Radi na paketima Free, Pro, Max, Team i Enterprise (potrebno je uključiti opciju za izvršavanje koda).
-* **Gemini:** Radi uz prijavu na račun, navršenih 18 godina i uključen opciju "Keep Activity".
-* **ChatGPT:** OpenAI vještine navodi za planove Business, Enterprise, Healthcare i Edu.
+Vještine rade u Claudeu, Geminiju i ChatGPT-u, ali uslovi se razlikuju po alatu i planu. Detalji su u članku [Šta je SKILL i kako radi?](https://www.ponor.ba/clanci/sta-je-skill/#gdje-radi).
 
 Na našem testu, vještina je odlično radila u Claudeu. Gemini je povremeno imao problema s njenim aktiviranjem, dok na besplatnom ChatGPT-u ova opcija uopšte ne postoji.
 
-## Šta je vještina i kako radi?
+## Šta je vještina?
 
-Vještina se nalazi u folderu čiji je glavni dio fajl `SKILL.md`. Na samom vrhu fajla stoji zaglavlje (YAML) s dva obavezna polja: naziv (`name`) i opis (`description`). Ispod zaglavlja pišu se upute u običnom Markdown formatu. Folder može sadržavati i dodatne skripte ili dokumente. Sva pravila su opisana u otvorenoj [specifikaciji Agent Skills](https://agentskills.io/specification).
-
-Naziv vještine ima stroga pravila: do 64 znaka, samo mala slova, brojevi i crtice (bez razmaka i specijalnih znakova). Naziv fajla i foldera moraju biti potpuno identični. Opis može imati do 1.024 znaka i precizno objašnjava šta vještina radi i kada je AI treba pokrenuti.
-
-Glavna prednost vještina u odnosu na stalne upute jeste ušteda memorije. Stalne upute AI čita u svakom razgovoru, što zauzima prostor. Kod vještina, AI na početku vidi samo naziv i opis (oko 100 tokena). Cijeli fajl se učitava tek kada postavite pitanje koje odgovara opisu. Zbog toga neiskorištene vještine uopšte ne opterećuju [kontekstni prozor](/rjecnik/kontekstni-prozor/).
+Vještina je folder čiji je glavni dio fajl `SKILL.md`. Na vrhu fajla su naziv i opis, a ispod njih upute u Markdownu. AI na početku vidi samo naziv i opis, a cijele upute učitava tek kad pitanje odgovara opisu. Zato neiskorištene vještine ne opterećuju [kontekstni prozor](/rjecnik/kontekstni-prozor/). Pravila formata su u [specifikaciji Agent Skills](https://agentskills.io/specification), a ograničenja i sigurnost u članku [Šta je SKILL i kako radi?](https://www.ponor.ba/clanci/sta-je-skill/).
 
 {% include diagram.html name="kako-objasniti-dijagramom" caption="Instalirane vještine zauzimaju vrlo malo memorije. Upute se učitavaju tek kada pitanje odgovara opisu." alt="Dijagram prikazuje kako AI učitava vještinu objasni-dijagramom tek kada korisnik postavi pitanje o prenosu novca." %}
 
-Važno je znati da AI ne prepoznaje uvijek savršeno kada treba upotrebiti vještinu. Zato opis mora biti napisan što jasnije i preciznije.
+AI ne prepoznaje uvijek kada treba upotrijebiti vještinu, pa opis mora biti jasan i precizan.
 
 ## Kod za kopiranje
 
@@ -122,38 +115,35 @@ Dijagram u potpunosti poštuje pravila: ima sedam elemenata, jasne natpise i usm
 
 ## Gdje i kako sačuvati vještinu
 
+Putanje su onakve kakve ih vidimo u aplikacijama (oktobar 2026). Pomoćne stranice proizvođača ih ponegdje opisuju drugačije, a uslovi (plan, uključeno izvršavanje koda, godine, Keep Activity) i ograničenja su u članku [Šta je SKILL i kako radi?](https://www.ponor.ba/clanci/sta-je-skill/#gdje-i-kako-je-dodati).
+
 ### Claude
 
 1. Otvorite **Settings**, pa u dijelu **Customize** izaberite **Skills**.
 2. Kliknite **+ Add**, pa **Upload skill**.
-3. Prevucite fajl ili ga izaberite putem opcije **browse**. Dijalog prihvata `.md` fajl (mora sadržavati naziv i opis u YAML zaglavlju) ili `.zip` odnosno `.skill` fajl koji sadrži `SKILL.md`.
-
-*Napomena:* U opcijama mora biti uključena stavka "Code execution and file creation". Ako koristite Claude Code, fajl ubacite u folder `~/.claude/skills/`.
+3. Prevucite fajl `SKILL.md` ili ga izaberite putem opcije **browse**. Dijalog prihvata i `.zip` ili `.skill` fajl koji sadrži `SKILL.md`.
 
 ### Gemini
 
 1. Otvorite **Settings**, pa u dijelu **Preferences** izaberite **Skills**.
 2. Kliknite **Create**, pa **Upload**.
-3. Ubacite fajlove ili cijeli folder (podržani su PDF, CSV, PY, TXT i MD fajlovi).
+3. Otpremite fajl `SKILL.md` (dijalog navodi PDF, CSV, PY, TXT i MD fajlove).
 
 ### ChatGPT
 
-OpenAI vještine navodi za planove Business, Enterprise, Healthcare i Edu. U bočnoj traci otvorite **Plugins**, zatim karticu **Skills**, pa **Create** i **Upload from your computer**. Dostupnost zavisi od postavki radnog prostora.
+OpenAI vještine navodi za planove Business, Enterprise, Healthcare i Edu. U bočnoj traci otvorite **Plugins**, zatim karticu **Skills**, pa **Create** i **Upload from your computer**.
 
 ---
 
 ## Povezano
 
+- [Šta je SKILL i kako radi?](https://www.ponor.ba/clanci/sta-je-skill/) – Šta je vještina, kako se učitava, gdje radi i na šta paziti.
 - [ASD-STE100: Avionska pravila pisanja za vaš chatbot](https://www.ponor.ba/clanci/asd-ste100-llm/) – Kako podesiti trajna pravila stila pisanja.
 - [CLAUDE.md i AGENTS.md: Upute za AI agente](https://www.ponor.ba/clanci/claude-md-agent-md/) – Razlika između trajnih uputa i vještina.
-- [Šta je SKILL i kako radi?](https://www.ponor.ba/clanci/sta-je-skill/) – Šta je vještina, kako se učitava, gdje radi i na šta paziti.
 
 ## Izvori
 
 - [Specification, Agent Skills](https://agentskills.io/specification)
-- [Agent Skills (overview), Claude Docs](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)
-- [Use skills in Claude, Claude Help Center](https://support.claude.com/en/articles/12512180-using-skills-in-claude)
 - [Skills in ChatGPT, OpenAI Help Center](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
-- [Create & manage skills for Gemini Apps, Gemini Apps Help](https://support.google.com/gemini/answer/17094296)
 - [Scalable Vector Graphics (SVG) 2, W3C](https://www.w3.org/TR/SVG2/)
 - [Larkin & Simon, Why a Diagram is (Sometimes) Worth Ten Thousand Words](https://doi.org/10.1111/j.1551-6708.1987.tb00863.x)

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#3c7c8a"/>
+
+  <!-- Icon: browser window with two slider controls and three content bars -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Window body -->
+    <rect x="280" y="150" width="440" height="300" rx="28" fill="#fafaf8" stroke-width="16"/>
+    <!-- Title bar divider -->
+    <path d="M 280 210 L 720 210" fill="none" stroke-width="12"/>
+    <!-- Title bar dots -->
+    <circle cx="326" cy="180" r="7" fill="#1a1a1a" stroke-width="4"/>
+    <circle cx="354" cy="180" r="7" fill="#1a1a1a" stroke-width="4"/>
+    <circle cx="382" cy="180" r="7" fill="#1a1a1a" stroke-width="4"/>
+    <!-- Slider tracks -->
+    <path d="M 335 250 L 665 250 M 335 295 L 665 295" fill="none" stroke-width="10"/>
+    <!-- Slider knobs at different positions -->
+    <circle cx="470" cy="250" r="17" fill="#fafaf8" stroke-width="10"/>
+    <circle cx="580" cy="295" r="17" fill="#fafaf8" stroke-width="10"/>
+    <!-- Content bars -->
+    <rect x="335" y="335" width="300" height="22" rx="11" fill="#d6dff0" stroke-width="8"/>
+    <rect x="335" y="372" width="210" height="22" rx="11" fill="#d6dff0" stroke-width="8"/>
+    <rect x="335" y="409" width="120" height="22" rx="11" fill="#d6dff0" stroke-width="8"/>
+  </g>
+</svg>

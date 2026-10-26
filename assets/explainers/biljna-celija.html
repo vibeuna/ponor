@@ -1,0 +1,519 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Biljna ćelija</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=IBM+Plex+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400..700&display=swap" rel="stylesheet">
+<style>
+/* Koncept: preparat pod mikroskopom. Lijevo je presjek ćelije u bojama bojenja, desno su klizači i očitanje.
+   Ispod su dijelovi ćelije, grupisani po tome ima li ih i životinjska ćelija. */
+:root {
+  --bg: #F1F6F2;
+  --surface: #FFFFFF;
+  --ink: #12241C;
+  --muted: #4B6156;
+  --line: #C9D8CE;
+  --accent: #0E6A5A;
+  --soft: #E3EFE8;
+
+  --wall: #8A9A3C;
+  --gap: #E3EDF1;
+  --cyto: #EEF3D8;
+  --cyto-d: #A8B866;
+  --vac: #CDE5F1;
+  --vac-line: #5E9DBF;
+  --nuc: #6F4FA3;
+  --nuc-l: #D3C7E8;
+  --chl: #2F8F46;
+  --chl-l: #A5D494;
+  --glow: #E9F56A;
+  --mito: #D8643A;
+  --mito-l: #F6C7AE;
+  --golgi: #C99510;
+  --ribo: #43386A;
+  --mem: #B33C6C;
+  --bubble: #2A6F97;
+
+  --f-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --f-body: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1913; --surface: #15241C; --ink: #E6F0E9; --muted: #9DB3A6; --line: #2B4036;
+    --accent: #5FD0A8; --soft: #1E3328;
+    --wall: #9CAC4C; --gap: #1A2D36; --cyto: #263320; --cyto-d: #6F8040;
+    --vac: #1E4256; --vac-line: #5BA3C7; --nuc: #A68CD8; --nuc-l: #3F3360;
+    --chl: #52B864; --chl-l: #2F6B3A; --glow: #DAEF62;
+    --mito: #EC8A60; --mito-l: #6B3A27; --golgi: #E4B43A; --ribo: #BBAFE2;
+    --mem: #E26A9C; --bubble: #BFE6FF;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1913; --surface: #15241C; --ink: #E6F0E9; --muted: #9DB3A6; --line: #2B4036;
+  --accent: #5FD0A8; --soft: #1E3328;
+  --wall: #9CAC4C; --gap: #1A2D36; --cyto: #263320; --cyto-d: #6F8040;
+  --vac: #1E4256; --vac-line: #5BA3C7; --nuc: #A68CD8; --nuc-l: #3F3360;
+  --chl: #52B864; --chl-l: #2F6B3A; --glow: #DAEF62;
+  --mito: #EC8A60; --mito-l: #6B3A27; --golgi: #E4B43A; --ribo: #BBAFE2;
+  --mem: #E26A9C; --bubble: #BFE6FF;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.6;
+  padding-block: 32px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1120px; margin: 0 auto; }
+h1 {
+  font: 700 clamp(2.4rem, 7vw, 4.2rem)/0.98 var(--f-display);
+  letter-spacing: -0.025em;
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+h2 {
+  font: 600 1.35rem/1.2 var(--f-display);
+  letter-spacing: -0.01em;
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+h3 { font: 600 1.15rem/1.25 var(--f-display); margin: 0 0 8px; text-wrap: balance; }
+p { margin: 0 0 10px; }
+.lede { max-width: 62ch; font-size: 1.1rem; margin-bottom: 18px; }
+.try {
+  display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline;
+  max-width: 80ch; margin: 0 0 28px;
+}
+.label {
+  font: 500 0.72rem/1.4 var(--f-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.stage {
+  display: grid; gap: 20px;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  align-items: start;
+  margin-bottom: 44px;
+}
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px;
+  min-width: 0;
+}
+.panel.fig { padding: 8px; }
+#cell { width: 100%; height: auto; display: block; }
+
+.ctl { margin-bottom: 16px; }
+.ctl-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.ctl label { font-weight: 600; }
+.ctl output { font: 500 0.95rem var(--f-mono); font-variant-numeric: tabular-nums; }
+.ctl small { display: block; color: var(--muted); font-size: 0.82rem; line-height: 1.4; }
+input[type="range"] { width: 100%; accent-color: var(--accent); margin: 6px 0 2px; height: 28px; }
+
+.readout { border-top: 1px solid var(--line); padding-top: 16px; }
+.rate { font: 500 3.2rem/1 var(--f-mono); font-variant-numeric: tabular-nums; display: flex; align-items: baseline; gap: 4px; margin: 6px 0 10px; }
+.rate .u { font-size: 1.4rem; color: var(--muted); }
+.meter { height: 8px; border-radius: 4px; background: var(--line); overflow: hidden; margin-bottom: 12px; }
+.meter i { display: block; height: 100%; width: 0; background: var(--chl); border-radius: 4px; transition: width 0.2s; }
+.eq { font: 400 0.85rem/1.5 var(--f-mono); color: var(--muted); margin-bottom: 14px; }
+dl.facts { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; margin: 0; align-items: baseline; }
+dl.facts dt { font: 500 0.7rem/1.4 var(--f-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+dl.facts dd { margin: 0; min-width: 0; }
+.state-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; background: var(--chl); }
+
+.parts { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; margin-bottom: 44px; }
+.groups { display: grid; gap: 22px; }
+.gh { font: 500 0.72rem/1.4 var(--f-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  font: 500 0.95rem var(--f-body);
+  color: var(--ink); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: 7px 14px 7px 11px; cursor: pointer; min-height: 40px;
+}
+.chip:hover { border-color: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.chip .dot { width: 12px; height: 12px; border-radius: 50%; flex: none; box-shadow: 0 0 0 1.5px var(--surface); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+#info { min-height: 250px; }
+#info ul { margin: 0 0 10px; padding-left: 1.2rem; }
+.tag {
+  display: inline-block; font: 500 0.7rem/1 var(--f-mono); letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 5px 9px; border-radius: 4px; background: var(--soft); color: var(--muted); margin-bottom: 12px;
+}
+.tag.plant { background: var(--accent); color: var(--bg); }
+.meta { font-size: 0.92rem; color: var(--muted); }
+.meta b { font: 500 0.7rem var(--f-mono); letter-spacing: 0.1em; text-transform: uppercase; margin-right: 8px; color: var(--ink); }
+.hint { font-size: 0.92rem; color: var(--accent); }
+
+.notes { max-width: 80ch; }
+.notes ul { margin: 0; padding-left: 1.2rem; color: var(--muted); }
+.notes li { margin-bottom: 6px; }
+
+/* SVG model */
+.org { cursor: pointer; transition: opacity 0.2s; }
+#cell[data-sel] .org { opacity: 0.25; }
+#cell[data-sel] .org.sel { opacity: 1; }
+.wall { fill: var(--wall); }
+.gap { fill: var(--gap); }
+.cyto { fill: var(--cyto); }
+.vac { fill: var(--vac); stroke: var(--vac-line); stroke-width: 2.5; }
+.nuc-o { fill: var(--nuc-l); stroke: var(--nuc); stroke-width: 2.2; }
+.nuc-i { fill: none; stroke: var(--nuc); stroke-width: 1; opacity: 0.55; }
+.nucleolus { fill: var(--nuc); }
+.chrom { fill: none; stroke: var(--nuc); stroke-width: 1.5; opacity: 0.6; stroke-linecap: round; }
+.chl-body { fill: var(--chl-l); stroke: var(--chl); stroke-width: 2; }
+.glow { fill: var(--glow); opacity: var(--g, 0); }
+.grana rect { fill: var(--chl); }
+.lam { stroke: var(--chl); stroke-width: 1.5; fill: none; }
+.mito-body { fill: var(--mito-l); stroke: var(--mito); stroke-width: 2; }
+.cr { stroke: var(--mito); stroke-width: 1.8; fill: none; stroke-linecap: round; }
+.golgi path { stroke: var(--golgi); stroke-width: 5; fill: none; stroke-linecap: round; }
+.gv { fill: var(--golgi); }
+.mem { fill: none; stroke: var(--mem); stroke-width: 3.5; }
+.hit { fill: none; stroke: transparent; stroke-width: 16; pointer-events: stroke; }
+.ribo { fill: var(--ribo); }
+.bub { fill: none; stroke: var(--bubble); stroke-width: 1.3; }
+.lbl { font: 500 13px var(--f-mono); fill: var(--ink); text-anchor: middle; pointer-events: none; }
+
+@media (max-width: 860px) {
+  .stage, .parts { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .org, .meter i { transition: none; }
+}
+</style>
+
+<div class="wrap">
+  <h1>Biljna ćelija</h1>
+  <p class="lede">Ćelija je najmanja živa jedinica. Tijelo biljke sastoji se od mnogo ćelija. Ova stranica pokazuje presjek jedne biljne ćelije. Klikni dio na slici da vidiš šta radi, a klizačima mijenjaj svjetlost i vodu.</p>
+  <p class="try"><span class="label">Probaj ovo</span><span>Spusti vodu ispod 50%. Membrana se odvaja od zida, a vakuola se smanjuje. Ispod 40% voda ograničava i fotosintezu.</span></p>
+
+  <section class="stage" aria-label="Model ćelije">
+    <div class="panel fig">
+      <svg id="cell" viewBox="0 0 640 440" role="img" aria-labelledby="cellT cellD">
+        <title id="cellT">Presjek biljne ćelije</title>
+        <desc id="cellD">Ćelija s ćelijskim zidom, membranom, velikom vakuolom, jedrom, hloroplastima, mitohondrijama, Golgijevim aparatom i ribosomima.</desc>
+
+        <g class="org" data-org="zid">
+          <rect class="wall" x="10" y="10" width="620" height="420" rx="48"/>
+          <rect class="gap" x="20" y="20" width="600" height="400" rx="40"/>
+        </g>
+
+        <g id="inner">
+          <g class="org" data-org="citoplazma"><rect class="cyto" x="24" y="24" width="592" height="392" rx="36"/></g>
+          <g class="org" id="ribs" data-org="ribosomi"></g>
+          <g class="org" data-org="vakuola"><ellipse id="vac" class="vac" cx="320" cy="220" rx="180" ry="140"/></g>
+
+          <g class="org" data-org="jedro" transform="translate(84 220)">
+            <ellipse class="nuc-o" rx="44" ry="50"/>
+            <ellipse class="nuc-i" rx="39" ry="45"/>
+            <circle class="nucleolus" cx="-7" cy="-8" r="13"/>
+            <path class="chrom" d="M-24 14 q6 -10 12 0 t12 0 t12 0"/>
+            <path class="chrom" d="M-20 28 q5 -8 10 0 t10 0 t10 0"/>
+            <path class="chrom" d="M8 -24 q6 -8 12 0 t8 4"/>
+          </g>
+
+          <g id="chls"></g>
+          <g id="mitos"></g>
+
+          <g class="org golgi" data-org="golgi" transform="translate(566 225)">
+            <rect x="-42" y="-40" width="84" height="80" fill="transparent"/>
+            <path d="M-24 -22 q24 -9 48 0"/>
+            <path d="M-27 -10 q27 -9 54 0"/>
+            <path d="M-27 2 q27 -9 54 0"/>
+            <path d="M-24 14 q24 -9 48 0"/>
+            <circle class="gv" cx="-34" cy="28" r="4"/>
+            <circle class="gv" cx="32" cy="-30" r="4"/>
+            <circle class="gv" cx="36" cy="22" r="3"/>
+          </g>
+
+          <g class="org" data-org="membrana">
+            <rect class="mem" x="24" y="24" width="592" height="392" rx="36"/>
+            <rect class="hit" x="24" y="24" width="592" height="392" rx="36"/>
+          </g>
+
+          <text class="lbl" x="320" y="226">Vakuola</text>
+          <text class="lbl" x="84" y="292">Jedro</text>
+          <text class="lbl" x="566" y="280">Golgi</text>
+          <text class="lbl" x="70" y="372">Hloroplast</text>
+          <text class="lbl" x="535" y="358">Mitohondrija</text>
+          <g id="bub" pointer-events="none"></g>
+        </g>
+      </svg>
+    </div>
+
+    <div class="panel">
+      <div class="ctl">
+        <div class="ctl-head"><label for="light">Svjetlost</label><output id="lightOut" for="light">70%</output></div>
+        <input type="range" id="light" min="0" max="100" step="1" value="70">
+        <small>Procenat pune dnevne svjetlosti</small>
+      </div>
+      <div class="ctl">
+        <div class="ctl-head"><label for="water">Voda u ćeliji</label><output id="waterOut" for="water">80%</output></div>
+        <input type="range" id="water" min="0" max="100" step="1" value="80">
+        <small>Procenat vode koju ćelija najviše može držati</small>
+      </div>
+
+      <div class="readout" aria-live="polite">
+        <div class="label">Brzina fotosinteze</div>
+        <div class="rate"><span id="rateN">0</span><span class="u">%</span></div>
+        <div class="meter" aria-hidden="true"><i id="meterFill"></i></div>
+        <p class="eq">6 CO<sub>2</sub> + 6 H<sub>2</sub>O + svjetlost → C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6 O<sub>2</sub></p>
+        <dl class="facts">
+          <dt>Turgor</dt><dd id="turgor"></dd>
+          <dt>Ograničava</dt><dd id="limit"></dd>
+        </dl>
+        <p class="meta" style="margin-top:12px">Mjehurići na slici su kisik (O<sub>2</sub>). Izlaze iz hloroplasta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="parts" aria-label="Dijelovi ćelije">
+    <div>
+      <h2>Dijelovi ćelije</h2>
+      <div class="groups" id="groups"></div>
+    </div>
+    <div class="panel" id="info" aria-live="polite"></div>
+  </section>
+
+  <section class="notes">
+    <h2>Šta je pojednostavljeno</h2>
+    <ul>
+      <li>Slika je dvodimenzionalni presjek. Veličine dijelova nisu u razmjeri.</li>
+      <li>Endoplazmatski retikulum, citoskelet i peroksizomi nisu nacrtani.</li>
+      <li>Prava ćelija lista ima desetine hloroplasta i mitohondrija. Ovdje ih je šest i dva.</li>
+      <li>Fotosinteza je relativna brzina. 100% znači puna svjetlost i dovoljno vode. Rast sa svjetlošću prati krivulju zasićenja s izmišljenom konstantom 25.</li>
+      <li>Prag od 40% vode za fotosintezu i prag od 50% za plazmolizu su ilustracija. Biljka u stvarnosti gubi vodu i preko puči (sitnih otvora na listu), koje se tada zatvaraju.</li>
+    </ul>
+  </section>
+</div>
+
+<script>
+(function () {
+  document.documentElement.lang = 'bs';
+  var $ = function (s) { return document.querySelector(s); };
+
+  var ORGS = {
+    zid: { name: 'Ćelijski zid', plant: true, color: 'var(--wall)',
+      does: 'Čvrst omotač oko ćelije, građen od celuloze. Daje ćeliji oblik i potporu. Sprječava da ćelija pukne kad upije mnogo vode.',
+      meta: ['Debljina', 'primarni zid oko 0,1 do 1 µm'],
+      tryit: 'Spusti vodu ispod 50%. Zid ostaje na mjestu, a membrana se povlači od njega.' },
+    hloroplast: { name: 'Hloroplast', plant: true, color: 'var(--chl)',
+      does: 'Ovdje se odvija fotosinteza. Hlorofil hvata svjetlost. Od CO₂ i vode ćelija pravi glukozu i oslobađa kisik. Tamnozeleni stupići su grane, složene od ravnih vrećica (tilakoida).',
+      meta: ['Veličina', 'oko 5 do 10 µm'],
+      tryit: 'Pomjeri klizač svjetlosti. Sjaj u hloroplastima raste, a iz njih izlaze mjehurići kisika.' },
+    vakuola: { name: 'Velika vakuola', plant: true, color: 'var(--vac-line)',
+      does: 'Vreća puna vode i otopljenih supstanci (ćelijski sok). Pritišće citoplazmu na zid. Taj pritisak zove se turgor i drži list čvrstim. Skladišti i šećere, soli i pigmente.',
+      meta: ['Udio', 'može zauzeti do oko 90% volumena ćelije'],
+      tryit: 'Pomjeri klizač vode. Vakuola se širi i skuplja.' },
+    membrana: { name: 'Ćelijska membrana', plant: false, color: 'var(--mem)',
+      does: 'Tanka opna od masti i bjelančevina. Kontroliše šta ulazi u ćeliju i šta izlazi. Leži tik uz zid.',
+      meta: ['Debljina', 'oko 7 do 10 nm'],
+      tryit: 'Spusti vodu ispod 50% i gledaj kako se membrana povlači od zida.' },
+    citoplazma: { name: 'Citoplazma', plant: false, color: 'var(--cyto-d)',
+      does: 'Gusta tekućina u kojoj plutaju organele. U njoj se odvijaju mnoge hemijske reakcije. U zreloj biljnoj ćeliji čini tanak sloj uz zid, jer vakuola zauzima sredinu.',
+      meta: null,
+      tryit: 'Povećaj vodu. Vakuola potiskuje citoplazmu prema rubu.' },
+    jedro: { name: 'Jedro (nukleus)', plant: false, color: 'var(--nuc)',
+      does: 'Sadrži DNK, upute za gradnju ćelije. Obavijeno je dvjema membranama. Jedarce u njemu pravi dijelove ribosoma.',
+      meta: ['Veličina', 'oko 5 do 10 µm'], tryit: null },
+    mito: { name: 'Mitohondrija', plant: false, color: 'var(--mito)',
+      does: 'Oslobađa energiju iz glukoze u procesu ćelijskog disanja. Energija se čuva u molekuli ATP. Biljna ćelija ima i mitohondrije i hloroplaste.',
+      meta: ['Veličina', 'oko 1 do 10 µm dužine'], tryit: null },
+    golgi: { name: 'Golgijev aparat', plant: false, color: 'var(--golgi)',
+      does: 'Slaže i pakuje bjelančevine u mjehuriće i šalje ih dalje. U biljnoj ćeliji gradi i dijelove ćelijskog zida.',
+      meta: ['Građa', 'obično 4 do 8 ravnih vrećica'], tryit: null },
+    ribosomi: { name: 'Ribosomi', plant: false, color: 'var(--ribo)',
+      does: 'Grade bjelančevine prema uputi iz DNK. Plutaju u citoplazmi ili sjede na endoplazmatskom retikulumu (on na slici nije nacrtan).',
+      meta: ['Veličina', 'oko 25 nm'], tryit: null }
+  };
+  var ORDER_PLANT = ['zid', 'hloroplast', 'vakuola'];
+  var ORDER_BOTH = ['membrana', 'citoplazma', 'jedro', 'mito', 'golgi', 'ribosomi'];
+
+  var svg = $('#cell');
+  var sel = null;
+
+  // Grupe dugmadi
+  function chipGroup(title, ids) {
+    var h = '<div><h3 class="gh">' + title + '</h3><div class="chips">';
+    ids.forEach(function (id) {
+      h += '<button type="button" class="chip" data-org="' + id + '" aria-pressed="false">' +
+        '<span class="dot" style="background:' + ORGS[id].color + '"></span>' + ORGS[id].name + '</button>';
+    });
+    return h + '</div></div>';
+  }
+  $('#groups').innerHTML = chipGroup('Samo biljke', ORDER_PLANT) + chipGroup('Biljke i životinje', ORDER_BOTH);
+
+  // Ribosomi (fiksno rasporedjeni)
+  var seed = 7;
+  function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+  var ribs = '', n = 0;
+  while (n < 34) {
+    var x = 40 + rnd() * 560, y = 40 + rnd() * 360;
+    var vx = (x - 320) / 150, vy = (y - 220) / 110;
+    if (vx * vx + vy * vy < 1) continue;
+    if (Math.hypot(x - 84, (y - 220) * 0.9) < 62) continue;
+    ribs += '<circle class="ribo" cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="2.6"/>' +
+      '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="8" fill="transparent"/>';
+    n++;
+  }
+  $('#ribs').innerHTML = ribs;
+
+  // Hloroplasti
+  var CHL = [[200, 56, -4], [330, 50, 3], [450, 58, 6], [220, 388, 4], [400, 390, -5], [70, 340, 70]];
+  function stack(x, y) {
+    return '<rect x="' + (x - 5) + '" y="' + (y - 5) + '" width="10" height="3" rx="1.4"/>' +
+      '<rect x="' + (x - 5) + '" y="' + (y - 1) + '" width="10" height="3" rx="1.4"/>' +
+      '<rect x="' + (x - 5) + '" y="' + (y + 3) + '" width="10" height="3" rx="1.4"/>';
+  }
+  $('#chls').innerHTML = CHL.map(function (c) {
+    return '<g class="org" data-org="hloroplast" transform="translate(' + c[0] + ' ' + c[1] + ') rotate(' + c[2] + ')">' +
+      '<ellipse class="chl-body" rx="30" ry="16"/>' +
+      '<ellipse class="glow" rx="27" ry="13"/>' +
+      '<path class="lam" d="M-9 0 H-5 M5 -2 H9"/>' +
+      '<g class="grana">' + stack(-14, 0) + stack(0, -2) + stack(14, 1) + '</g></g>';
+  }).join('');
+
+  // Mitohondrije
+  var MITO = [[535, 120, -25], [535, 330, 20]];
+  $('#mitos').innerHTML = MITO.map(function (m) {
+    return '<g class="org" data-org="mito" transform="translate(' + m[0] + ' ' + m[1] + ') rotate(' + m[2] + ')">' +
+      '<ellipse class="mito-body" rx="27" ry="13"/>' +
+      '<path class="cr" d="M-15 -6 v7 M-9 -8 v10 M-3 -5 v9 M3 -8 v10 M9 -5 v9 M15 -3 v6"/></g>';
+  }).join('');
+
+  // Izbor dijela
+  var INTRO =
+    '<h3>Šta je biljna ćelija?</h3>' +
+    '<p>Biljna ćelija je osnovna jedinica biljke. Većina ćelija široka je 10 do 100 µm, pa se vide samo mikroskopom.</p>' +
+    '<p>Ima iste osnovne dijelove kao životinjska ćelija. Od nje se razlikuje u tri stvari:</p>' +
+    '<ul><li>ćelijski zid</li><li>hloroplasti</li><li>velika vakuola</li></ul>' +
+    '<p class="hint">Klikni dio na slici ili izaberi s liste.</p>';
+
+  function renderInfo() {
+    var el = $('#info');
+    if (!sel) { el.innerHTML = INTRO; return; }
+    var o = ORGS[sel];
+    var h = '<span class="tag ' + (o.plant ? 'plant' : '') + '">' + (o.plant ? 'Samo biljke' : 'Biljke i životinje') + '</span>' +
+      '<h3>' + o.name + '</h3><p>' + o.does + '</p>';
+    if (o.meta) h += '<p class="meta"><b>' + o.meta[0] + '</b>' + o.meta[1] + '</p>';
+    if (o.tryit) h += '<p class="hint">' + o.tryit + '</p>';
+    el.innerHTML = h;
+  }
+
+  function select(id) {
+    sel = (sel === id) ? null : id;
+    if (sel) svg.setAttribute('data-sel', ''); else svg.removeAttribute('data-sel');
+    svg.querySelectorAll('.org').forEach(function (g) {
+      g.classList.toggle('sel', g.getAttribute('data-org') === sel);
+    });
+    document.querySelectorAll('.chip').forEach(function (b) {
+      b.setAttribute('aria-pressed', b.getAttribute('data-org') === sel ? 'true' : 'false');
+    });
+    renderInfo();
+  }
+
+  svg.addEventListener('click', function (e) {
+    var g = e.target.closest('[data-org]');
+    if (g) select(g.getAttribute('data-org'));
+  });
+  $('#groups').addEventListener('click', function (e) {
+    var b = e.target.closest('.chip');
+    if (b) select(b.getAttribute('data-org'));
+  });
+
+  // Model: svjetlost i voda
+  var lightIn = $('#light'), waterIn = $('#water');
+  var rate = 0;
+
+  function update() {
+    var L = +lightIn.value, W = +waterIn.value;
+    var f = Math.min(1, (L / (L + 25)) * 1.25);   // zasićenje svjetlosti
+    var wf = Math.min(1, W / 40);                  // voda ograničava ispod 40%
+    rate = Math.round(100 * f * wf);
+
+    var shrink = Math.max(0, (50 - W) / 50);       // plazmoliza ispod 50%
+    var s = 1 - 0.16 * shrink;
+    $('#inner').setAttribute('transform', 'translate(320 220) scale(' + s.toFixed(3) + ') translate(-320 -220)');
+
+    var vac = $('#vac');
+    vac.setAttribute('rx', (90 + 90 * W / 100).toFixed(1));
+    vac.setAttribute('ry', (65 + 75 * W / 100).toFixed(1));
+
+    svg.style.setProperty('--g', (rate / 100 * 0.85).toFixed(2));
+
+    $('#lightOut').textContent = L + '%';
+    $('#waterOut').textContent = W + '%';
+    $('#rateN').textContent = rate;
+    $('#meterFill').style.width = rate + '%';
+
+    var t, c;
+    if (W >= 70) { t = 'Čvrsta, pun turgor'; c = 'var(--chl)'; }
+    else if (W >= 50) { t = 'Normalna'; c = 'var(--chl)'; }
+    else if (W >= 25) { t = 'Mlitava, počinje plazmoliza'; c = 'var(--golgi)'; }
+    else { t = 'Plazmoliza, biljka vene'; c = 'var(--mito)'; }
+    $('#turgor').innerHTML = '<span class="state-dot" style="background:' + c + '"></span>' + t;
+
+    var lim;
+    if (rate >= 97) lim = 'Ništa, ćelija radi punom brzinom';
+    else if (f < wf) lim = 'Svjetlost';
+    else if (wf < f) lim = 'Voda';
+    else lim = 'Svjetlost i voda';
+    $('#limit').textContent = lim;
+  }
+  lightIn.addEventListener('input', update);
+  waterIn.addEventListener('input', update);
+
+  // Mjehurići kisika
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var NS = 'http://www.w3.org/2000/svg';
+  var bubG = $('#bub');
+  var bubbles = [];
+  function tick() {
+    if (rate > 0 && bubbles.length < 80) {
+      CHL.forEach(function (c) {
+        if (Math.random() < rate / 100 * 0.03) {
+          var dx = c[0] - 320, dy = c[1] - 220, d = Math.hypot(dx, dy) || 1;
+          var el = document.createElementNS(NS, 'circle');
+          el.setAttribute('class', 'bub');
+          bubG.appendChild(el);
+          bubbles.push({ el: el, x: c[0] + (Math.random() - 0.5) * 24, y: c[1] + (Math.random() - 0.5) * 8,
+            ux: dx / d, uy: dy / d, dist: 0, r: 2 + Math.random() * 1.8, v: 0.35 + Math.random() * 0.3 });
+        }
+      });
+    }
+    bubbles = bubbles.filter(function (b) {
+      b.dist += b.v;
+      if (b.dist > 36) { bubG.removeChild(b.el); return false; }
+      b.el.setAttribute('cx', (b.x + b.ux * b.dist).toFixed(1));
+      b.el.setAttribute('cy', (b.y + b.uy * b.dist).toFixed(1));
+      b.el.setAttribute('r', b.r.toFixed(1));
+      b.el.setAttribute('opacity', (1 - b.dist / 36).toFixed(2));
+      return true;
+    });
+    requestAnimationFrame(tick);
+  }
+
+  renderInfo();
+  update();
+  if (!reduce) requestAnimationFrame(tick);
+})();
+</script>
+
+</body></html>
