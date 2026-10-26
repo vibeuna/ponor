@@ -143,7 +143,7 @@ Opcija je trenutno dostupna samo korisnicima Business, Enterprise, Healthcare i 
 
 - [ASD-STE100: Avionska pravila pisanja za vaš chatbot](https://www.ponor.ba/clanci/asd-ste100-llm/) – Kako podesiti trajna pravila stila pisanja.
 - [CLAUDE.md i AGENTS.md: Upute za AI agente](https://www.ponor.ba/clanci/claude-md-agent-md/) – Razlika između trajnih uputa i vještina.
-- [Šta je kontekstni prozor i zašto LLM zaboravlja?](https://www.ponor.ba/clanci/sta-je-kontekstni-prozor/) – Zašto je važno štedjeti memoriju modela.
+- [Šta je SKILL i kako radi?](https://www.ponor.ba/clanci/sta-je-skill/) – Šta je vještina, kako se učitava, gdje radi i na šta paziti.
 
 ## Izvori
 
