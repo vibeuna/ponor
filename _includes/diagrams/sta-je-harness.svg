@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Inter, system-ui, -apple-system, sans-serif" id="harness-svg" role="img" aria-labelledby="harness-svg-title harness-svg-desc">
+<title id="harness-svg-title">Harness: softver koji vrti petlju oko modela</title>
+<desc id="harness-svg-desc">Zadatak korisnika, na primjer: Dodaj dijagram u README.md, ulazi u harness. Harness sastavi prompt i pošalje ga modelu, koji samo generiše tekst. Ako model zatraži alat, harness izvrši alat, na primjer pročita fajl ili pokrene komandu, doda rezultat u prompt i petlja se ponavlja. Ako model ne traži alat, napiše odgovor i petlja staje. Harness pored toga upravlja dozvolama i sandboxom, fajlovima s uputama, sažimanjem konteksta i podagentima.</desc>
+<defs>
+<marker id="harness-svg-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+</defs>
+<rect width="900" height="600" fill="#FAF9F6"/>
+<text x="450" y="42" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Harness: softver koji vrti petlju oko modela</text>
+<text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C">Model generiše tekst, a harness izvršava ono što model zatraži</text>
+
+<!-- Input -->
+<g><animate attributeName="opacity" values="0;0;1" dur="0.55s" keyTimes="0;0.364;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="92" width="780" height="60" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<rect x="60" y="92" width="3" height="60" fill="#78716C"/>
+<text x="80" y="114" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">ULAZ</text>
+<text x="80" y="138" font-family="Merriweather, Georgia, serif" font-size="15" font-style="italic" fill="#1C1917">"Dodaj dijagram u README.md"</text>
+</g>
+<line x1="450" y1="160" x2="450" y2="190" stroke="#B45309" stroke-width="2" marker-end="url(#harness-svg-arrow)"><animate attributeName="opacity" values="0;0;1" dur="0.80s" keyTimes="0;0.625;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></line>
+
+<!-- Harness frame (focal) -->
+<g><animate attributeName="opacity" values="0;0;1" dur="1.10s" keyTimes="0;0.682;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="196" width="780" height="232" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="2"/>
+<rect x="60" y="196" width="3" height="232" fill="#B45309"/>
+<text x="80" y="220" font-size="11" font-weight="700" letter-spacing="0.8" fill="#B45309">HARNESS</text>
+<text x="152" y="220" font-size="12" fill="#92400E">softver oko modela</text>
+</g>
+
+<!-- Loop steps -->
+<g><animate attributeName="opacity" values="0;0;1" dur="1.40s" keyTimes="0;0.750;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="84" y="278" width="170" height="72" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5"/><text x="169.0" y="308" text-anchor="middle" font-size="13" font-weight="700" fill="#1C1917">Sastavi prompt</text><text x="169.0" y="328" text-anchor="middle" font-size="11" fill="#57534E">upute, historija, alati</text></g>
+<line x1="262" y1="314" x2="292" y2="314" stroke="#B45309" stroke-width="2" marker-end="url(#harness-svg-arrow)"><animate attributeName="opacity" values="0;0;1" dur="1.50s" keyTimes="0;0.833;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></line>
+<g><animate attributeName="opacity" values="0;0;1" dur="1.75s" keyTimes="0;0.800;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="300" y="278" width="140" height="72" rx="8" fill="#E7E5E4" stroke="#A8A29E" stroke-width="1.5"/>
+<text x="370" y="308" text-anchor="middle" font-size="13" font-weight="700" letter-spacing="0.8" fill="#1C1917">MODEL</text>
+<text x="370" y="328" text-anchor="middle" font-size="11" fill="#57534E">samo generiše tekst</text>
+</g>
+<line x1="448" y1="314" x2="464" y2="314" stroke="#B45309" stroke-width="2" marker-end="url(#harness-svg-arrow)"><animate attributeName="opacity" values="0;0;1" dur="1.85s" keyTimes="0;0.865;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></line>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.10s" keyTimes="0;0.833;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<polygon points="472,314 520,278 568,314 520,350" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5"/>
+<text x="520" y="311" text-anchor="middle" font-size="12" font-weight="700" fill="#1C1917">Traži</text>
+<text x="520" y="326" text-anchor="middle" font-size="12" font-weight="700" fill="#1C1917">alat?</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.30s" keyTimes="0;0.870;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<line x1="576" y1="314" x2="632" y2="314" stroke="#B45309" stroke-width="2" marker-end="url(#harness-svg-arrow)"/>
+<text x="604" y="306" text-anchor="middle" font-size="11" font-weight="700" fill="#92400E">da</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.50s" keyTimes="0;0.860;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="640" y="278" width="176" height="72" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5"/><text x="728.0" y="308" text-anchor="middle" font-size="13" font-weight="700" fill="#1C1917">Izvrši alat</text><text x="728.0" y="328" text-anchor="middle" font-size="11" fill="#57534E">čita fajl, pokreće komandu</text></g>
+
+<!-- Return loop -->
+<g><animate attributeName="opacity" values="0;0;1" dur="2.85s" keyTimes="0;0.860;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<path d="M 728 270 V 250 H 169 V 270" fill="none" stroke="#B45309" stroke-width="2" marker-end="url(#harness-svg-arrow)"/>
+<text x="448" y="243" text-anchor="middle" font-size="11" font-style="italic" fill="#92400E">rezultat alata ulazi u prompt, petlja se ponavlja</text>
+</g>
+
+<!-- Other harness duties -->
+<g><animate attributeName="opacity" values="0;0;1" dur="3.10s" keyTimes="0;0.887;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<text x="84" y="372" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">TAKOĐER U HARNESSU</text>
+<rect x="84" y="380" width="140" height="30" rx="14" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1"/><text x="154.0" y="399" text-anchor="middle" font-size="12" font-weight="600" fill="#44403C">Dozvole i sandbox</text>
+<rect x="232" y="380" width="140" height="30" rx="14" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1"/><text x="302.0" y="399" text-anchor="middle" font-size="12" font-weight="600" fill="#44403C">Fajlovi s uputama</text>
+<rect x="600" y="380" width="100" height="30" rx="14" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1"/><text x="650.0" y="399" text-anchor="middle" font-size="12" font-weight="600" fill="#44403C">Sažimanje</text>
+<rect x="708" y="380" width="100" height="30" rx="14" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1"/><text x="758.0" y="399" text-anchor="middle" font-size="12" font-weight="600" fill="#44403C">Podagenti</text>
+</g>
+
+<!-- Exit -->
+<g><animate attributeName="opacity" values="0;0;1" dur="3.35s" keyTimes="0;0.910;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<line x1="520" y1="358" x2="520" y2="450" stroke="#B45309" stroke-width="2" marker-end="url(#harness-svg-arrow)"/>
+<text x="532" y="378" font-size="11" font-weight="700" fill="#92400E">ne</text>
+</g>
+
+<!-- Output -->
+<g><animate attributeName="opacity" values="0;0;1" dur="3.75s" keyTimes="0;0.867;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0" dur="3.75s" keyTimes="0;0.867;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="456" width="780" height="74" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+<rect x="60" y="456" width="3" height="74" fill="#B45309"/>
+<text x="80" y="478" font-size="11" font-weight="700" letter-spacing="0.8" fill="#B45309">ODGOVOR</text>
+<text x="80" y="502" font-family="Merriweather, Georgia, serif" font-size="15" font-style="italic" fill="#1C1917">"Dodao sam dijagram u README.md."</text>
+<text x="80" y="521" font-size="12" fill="#44403C">Petlja staje kad model napiše poruku umjesto zahtjeva za alat.</text>
+</g>
+<text x="450" y="566" text-anchor="middle" font-size="11" font-style="italic" fill="#78716C"><animate attributeName="opacity" values="0;0;1" dur="4.05s" keyTimes="0;0.914;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>Pojednostavljen prikaz jedne petlje. Proizvodi se razlikuju u detaljima i uslovima završetka. Prema dokumentaciji OpenAI-ja i Claude Agent SDK-a.</text>
+
+<g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+<circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+<polygon points="852,28 858,28 855,33" fill="#78716C"/>
+<title>Pusti ponovo</title>
+</g>
+<style>
+#harness-svg:hover .replay-btn { opacity: 1 !important; }
+#harness-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+#harness-svg .replay-btn:hover path { stroke: #B45309; }
+#harness-svg .replay-btn:hover polygon { fill: #B45309; }
+#harness-svg .replay-btn:focus { outline: none; opacity: 1 !important; }
+#harness-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+@media (prefers-reduced-motion: reduce) {
+  #harness-svg animate, #harness-svg animateTransform { display: none; }
+  #harness-svg .replay-btn { display: none; }
+}
+</style>
+<script>
+// <![CDATA[
+(function () {
+  const svg = document.getElementById('harness-svg');
+  const btn = svg && svg.querySelector('.replay-btn');
+  if (!svg || !btn) return;
+  // Reduced motion: stop the timeline at its end so the final state shows even if SMIL keeps running.
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches && svg.pauseAnimations) {
+    svg.pauseAnimations(); svg.setCurrentTime(10); return;
+  }
+  function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+  btn.addEventListener('click', replay);
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+  });
+})();
+// ]]>
+</script>
+</svg>

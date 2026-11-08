@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#7c5a82"/>
+
+  <!-- Icon: a toothed gear with a hub ring (the mechanism around the model) -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Gear body with 8 teeth -->
+    <path d="M 469.5 186.0 L 474.0 152.3 L 526.0 152.3 L 530.5 186.0 L 559.0 197.8 L 586.0 177.1 L 622.9 214.0 L 602.2 241.0 L 614.0 269.5 L 647.7 274.0 L 647.7 326.0 L 614.0 330.5 L 602.2 359.0 L 622.9 386.0 L 586.0 422.9 L 559.0 402.2 L 530.5 414.0 L 526.0 447.7 L 474.0 447.7 L 469.5 414.0 L 441.0 402.2 L 414.0 422.9 L 377.1 386.0 L 397.8 359.0 L 386.0 330.5 L 352.3 326.0 L 352.3 274.0 L 386.0 269.5 L 397.8 241.0 L 377.1 214.0 L 414.0 177.1 L 441.0 197.8 Z" fill="#fafaf8" stroke-width="18"/>
+    <!-- Inner ring, tinted -->
+    <circle cx="500" cy="300" r="62" fill="#d6dff0" stroke-width="14"/>
+    <!-- Hub dot -->
+    <circle cx="500" cy="300" r="22" fill="#7c5a82" stroke-width="8"/>
+  </g>
+</svg>
