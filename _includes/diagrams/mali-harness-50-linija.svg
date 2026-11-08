@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Inter, system-ui, -apple-system, sans-serif" id="mali-harness-svg" role="img" aria-labelledby="mali-harness-svg-title mali-harness-svg-desc">
+<title id="mali-harness-svg-title">Mali harness: gdje je koji dio</title>
+<desc id="mali-harness-svg-desc">Zadatak ulazi u skriptu harness.py. Petlja u linijama 39 do 56 sastavi poruke (linije 40 do 43), pošalje ih modelu (linije 28 do 33 i 44) i provjeri traži li model alat (linije 44 do 47). Ako traži, provjera dozvole (linije 35 do 37, samo za save_note) odlučuje smije li se alat izvršiti, alat se izvrši (linije 48 do 55), a rezultat se dodaje u poruke i petlja se ponavlja, najviše 8 puta. Ako model ne traži alat, njegov odgovor je izlaz. Uz petlju skripta sadrži alate (linije 7 do 16), opise alata (linije 18 do 26), fajl s uputama (linija 41) i ograničenje MAX_TURNS (linije 5, 43 i 56). U skripti nema sažimanja, koda oko alata, podagenata, sesija, pravog sandboxa ni ograničenja troška.</desc>
+<defs>
+<marker id="mali-harness-svg-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+</defs>
+<rect width="900" height="620" fill="#FAF9F6"/>
+<text x="450" y="42" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Mali harness: gdje je koji dio</text>
+<text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C">Brojevi su linije u skripti harness.py (58 linija, od toga 48 neprazno)</text>
+
+<!-- Input -->
+<g><animate attributeName="opacity" values="0;0;1" dur="0.55s" keyTimes="0;0.364;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="88" width="780" height="52" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<rect x="60" y="88" width="3" height="52" fill="#78716C"/>
+<text x="80" y="108" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">ULAZ (LINIJA 58)</text>
+<text x="80" y="129" font-family="Merriweather, Georgia, serif" font-size="15" font-style="italic" fill="#1C1917">"Find the testing budget in my notes and save it to budget.md."</text>
+</g>
+<line x1="450" y1="148" x2="450" y2="176" stroke="#B45309" stroke-width="2" marker-end="url(#mali-harness-svg-arrow)"><animate attributeName="opacity" values="0;0;1" dur="0.80s" keyTimes="0;0.625;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></line>
+
+<!-- Harness frame (focal) -->
+<g><animate attributeName="opacity" values="0;0;1" dur="1.10s" keyTimes="0;0.682;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="182" width="780" height="236" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="2"/>
+<rect x="60" y="182" width="3" height="236" fill="#B45309"/>
+<text x="80" y="205" font-size="11" font-weight="700" letter-spacing="0.8" fill="#B45309">PETLJA</text>
+<text x="130" y="205" font-size="12" fill="#92400E">linije 39–56</text>
+</g>
+
+<!-- Loop steps -->
+<g><animate attributeName="opacity" values="0;0;1" dur="1.40s" keyTimes="0;0.750;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="84" y="248" width="130" height="80" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5"/><text x="149.0" y="274" text-anchor="middle" font-size="13" font-weight="700" fill="#1C1917">Sastavi poruke</text><text x="149.0" y="294" text-anchor="middle" font-size="11" fill="#57534E">uputa i zadatak</text><text x="149.0" y="310" text-anchor="middle" font-size="11" font-weight="600" fill="#78716C">l. 40–43</text></g>
+<line x1="222" y1="288" x2="246" y2="288" stroke="#B45309" stroke-width="2" marker-end="url(#mali-harness-svg-arrow)"><animate attributeName="opacity" values="0;0;1" dur="1.50s" keyTimes="0;0.833;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></line>
+<g><animate attributeName="opacity" values="0;0;1" dur="1.75s" keyTimes="0;0.800;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="254" y="248" width="110" height="80" rx="8" fill="#E7E5E4" stroke="#A8A29E" stroke-width="1.5"/><text x="309.0" y="274" text-anchor="middle" font-size="13" font-weight="700" fill="#1C1917">MODEL</text><text x="309.0" y="294" text-anchor="middle" font-size="11" fill="#57534E">Ollama, /api/chat</text><text x="309.0" y="310" text-anchor="middle" font-size="11" font-weight="600" fill="#78716C">l. 28–33, 44</text></g>
+<line x1="372" y1="288" x2="392" y2="288" stroke="#B45309" stroke-width="2" marker-end="url(#mali-harness-svg-arrow)"><animate attributeName="opacity" values="0;0;1" dur="1.85s" keyTimes="0;0.865;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></line>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.10s" keyTimes="0;0.833;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<polygon points="396,288 446,252 496,288 446,324" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5"/>
+<text x="446" y="285" text-anchor="middle" font-size="12" font-weight="700" fill="#1C1917">Traži</text>
+<text x="446" y="300" text-anchor="middle" font-size="12" font-weight="700" fill="#1C1917">alat?</text>
+<text x="446" y="344" text-anchor="middle" font-size="11" font-weight="600" fill="#78716C">l. 44–47</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.30s" keyTimes="0;0.870;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<line x1="504" y1="288" x2="540" y2="288" stroke="#B45309" stroke-width="2" marker-end="url(#mali-harness-svg-arrow)"/>
+<text x="522" y="280" text-anchor="middle" font-size="11" font-weight="700" fill="#92400E">da</text>
+</g>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.50s" keyTimes="0;0.860;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="548" y="248" width="100" height="80" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5"/><text x="598.0" y="270" text-anchor="middle" font-size="13" font-weight="700" fill="#1C1917">Provjera</text><text x="598.0" y="286" text-anchor="middle" font-size="13" font-weight="700" fill="#1C1917">dozvole</text><text x="598.0" y="306" text-anchor="middle" font-size="11" fill="#57534E">samo save_note</text><text x="598.0" y="322" text-anchor="middle" font-size="11" font-weight="600" fill="#78716C">l. 35–37</text></g>
+<line x1="656" y1="288" x2="676" y2="288" stroke="#B45309" stroke-width="2" marker-end="url(#mali-harness-svg-arrow)"><animate attributeName="opacity" values="0;0;1" dur="2.55s" keyTimes="0;0.902;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/></line>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.80s" keyTimes="0;0.875;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="684" y="248" width="132" height="80" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5"/><text x="750.0" y="274" text-anchor="middle" font-size="13" font-weight="700" fill="#1C1917">Izvrši alat</text><text x="750.0" y="294" text-anchor="middle" font-size="11" fill="#57534E">funkcija iz TOOLS</text><text x="750.0" y="310" text-anchor="middle" font-size="11" font-weight="600" fill="#78716C">l. 48–55</text></g>
+
+<!-- Return loop -->
+<g><animate attributeName="opacity" values="0;0;1" dur="3.15s" keyTimes="0;0.873;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<path d="M 750 242 V 230 H 149 V 242" fill="none" stroke="#B45309" stroke-width="2" marker-end="url(#mali-harness-svg-arrow)"/>
+<text x="450" y="223" text-anchor="middle" font-size="11" font-style="italic" fill="#92400E">rezultat se dodaje u poruke, petlja se ponavlja, najviše 8 krugova</text>
+</g>
+
+<!-- Other parts of the script -->
+<g><animate attributeName="opacity" values="0;0;1" dur="3.40s" keyTimes="0;0.897;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<text x="84" y="372" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">JOŠ U SKRIPTI</text>
+<rect x="84" y="382" width="120" height="30" rx="14" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1"/><text x="144.0" y="401" text-anchor="middle" font-size="12" font-weight="600" fill="#44403C">Alati, l. 7–16</text>
+<rect x="212" y="382" width="170" height="30" rx="14" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1"/><text x="297.0" y="401" text-anchor="middle" font-size="12" font-weight="600" fill="#44403C">Opisi alata, l. 18–26</text>
+<rect x="470" y="382" width="160" height="30" rx="14" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1"/><text x="550.0" y="401" text-anchor="middle" font-size="12" font-weight="600" fill="#44403C">Fajl s uputama, l. 41</text>
+<rect x="638" y="382" width="170" height="30" rx="14" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1"/><text x="723.0" y="401" text-anchor="middle" font-size="12" font-weight="600" fill="#44403C">MAX_TURNS: l. 5, 43, 56</text>
+</g>
+
+<!-- Exit -->
+<g><animate attributeName="opacity" values="0;0;1" dur="3.60s" keyTimes="0;0.917;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<line x1="446" y1="352" x2="446" y2="450" stroke="#B45309" stroke-width="2" marker-end="url(#mali-harness-svg-arrow)"/>
+<text x="458" y="372" font-size="11" font-weight="700" fill="#92400E">ne</text>
+</g>
+
+<!-- Output -->
+<g><animate attributeName="opacity" values="0;0;1" dur="4.00s" keyTimes="0;0.875;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0" dur="4.00s" keyTimes="0;0.875;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="456" width="780" height="70" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+<rect x="60" y="456" width="3" height="70" fill="#B45309"/>
+<text x="80" y="478" font-size="11" font-weight="700" letter-spacing="0.8" fill="#B45309">ODGOVOR MODELA (PETI KRUG)</text>
+<text x="80" y="500" font-family="Merriweather, Georgia, serif" font-size="15" font-style="italic" fill="#1C1917">"I have found the testing budget (300 KM) and saved it to budget.md."</text>
+<text x="80" y="518" font-size="12" fill="#44403C">Petlja staje kad model napiše poruku umjesto zahtjeva za alat (linije 46–47).</text>
+</g>
+
+<!-- Not in the script -->
+<g><animate attributeName="opacity" values="0;0;1" dur="4.35s" keyTimes="0;0.897;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="540" width="780" height="62" rx="8" fill="none" stroke="#A8A29E" stroke-width="1" stroke-dasharray="5 4"/>
+<text x="80" y="560" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">NIJE U OVIH 48 LINIJA</text>
+<rect x="80" y="570" width="96" height="24" rx="12" fill="none" stroke="#A8A29E" stroke-width="1" stroke-dasharray="4 3"/><text x="128.0" y="586" text-anchor="middle" font-size="12" font-weight="600" fill="#78716C">Sažimanje</text><rect x="186" y="570" width="124" height="24" rx="12" fill="none" stroke="#A8A29E" stroke-width="1" stroke-dasharray="4 3"/><text x="248.0" y="586" text-anchor="middle" font-size="12" font-weight="600" fill="#78716C">Kod oko alata</text><rect x="320" y="570" width="94" height="24" rx="12" fill="none" stroke="#A8A29E" stroke-width="1" stroke-dasharray="4 3"/><text x="367.0" y="586" text-anchor="middle" font-size="12" font-weight="600" fill="#78716C">Podagenti</text><rect x="424" y="570" width="74" height="24" rx="12" fill="none" stroke="#A8A29E" stroke-width="1" stroke-dasharray="4 3"/><text x="461.0" y="586" text-anchor="middle" font-size="12" font-weight="600" fill="#78716C">Sesije</text><rect x="508" y="570" width="112" height="24" rx="12" fill="none" stroke="#A8A29E" stroke-width="1" stroke-dasharray="4 3"/><text x="564.0" y="586" text-anchor="middle" font-size="12" font-weight="600" fill="#78716C">Pravi sandbox</text><rect x="630" y="570" width="150" height="24" rx="12" fill="none" stroke="#A8A29E" stroke-width="1" stroke-dasharray="4 3"/><text x="705.0" y="586" text-anchor="middle" font-size="12" font-weight="600" fill="#78716C">Ograničenje troška</text>
+</g>
+
+<g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+<circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+<polygon points="852,28 858,28 855,33" fill="#78716C"/>
+<title>Pusti ponovo</title>
+</g>
+<style>
+#mali-harness-svg:hover .replay-btn { opacity: 1 !important; }
+#mali-harness-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+#mali-harness-svg .replay-btn:hover path { stroke: #B45309; }
+#mali-harness-svg .replay-btn:hover polygon { fill: #B45309; }
+#mali-harness-svg .replay-btn:focus { outline: none; opacity: 1 !important; }
+#mali-harness-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+@media (prefers-reduced-motion: reduce) {
+  #mali-harness-svg animate, #mali-harness-svg animateTransform { display: none; }
+  #mali-harness-svg .replay-btn { display: none; }
+}
+</style>
+<script>
+// <![CDATA[
+(function () {
+  const svg = document.getElementById('mali-harness-svg');
+  const btn = svg && svg.querySelector('.replay-btn');
+  if (!svg || !btn) return;
+  // Reduced motion: stop the timeline at its end so the final state shows even if SMIL keeps running.
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches && svg.pauseAnimations) {
+    svg.pauseAnimations(); svg.setCurrentTime(10); return;
+  }
+  function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+  btn.addEventListener('click', replay);
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+  });
+})();
+// ]]>
+</script>
+</svg>

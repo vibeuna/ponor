@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#7f8a52"/>
+
+  <!-- Icon: a terminal window with a prompt line and short code lines (a small script run from the command line) -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Window body -->
+    <rect x="270" y="150" width="460" height="300" rx="28" fill="#fafaf8" stroke-width="18"/>
+    <!-- Title bar, tinted -->
+    <path d="M 279 212 L 279 178 Q 279 159 298 159 L 702 159 Q 721 159 721 178 L 721 212 Z" fill="#d6dff0" stroke="none"/>
+    <path d="M 279 212 L 721 212" stroke-width="10"/>
+    <rect x="270" y="150" width="460" height="300" rx="28" stroke-width="18"/>
+    <!-- Window dots -->
+    <circle cx="326" cy="184" r="10" fill="#7f8a52" stroke-width="6"/>
+    <circle cx="366" cy="184" r="10" fill="#fafaf8" stroke-width="6"/>
+    <circle cx="406" cy="184" r="10" fill="#fafaf8" stroke-width="6"/>
+    <!-- Prompt chevron and command -->
+    <path d="M 326 256 L 362 284 L 326 312" stroke-width="14"/>
+    <path d="M 392 284 L 540 284" stroke-width="12"/>
+    <!-- Code output lines -->
+    <path d="M 326 358 L 560 358" stroke-width="10"/>
+    <path d="M 326 400 L 462 400" stroke-width="10"/>
+  </g>
+</svg>
