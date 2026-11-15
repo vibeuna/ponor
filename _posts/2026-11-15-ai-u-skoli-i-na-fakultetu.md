@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AI u školi i na fakultetu: šta je pomoć, a šta prepisivanje"
-date: 2026-11-14
+date: 2026-11-15
 category: ai-za-sve
 image: /assets/images/2026-11-14-ai-u-skoli-i-na-fakultetu.svg
 read_time: 8

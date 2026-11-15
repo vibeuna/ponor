@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Šta ne lijepiti u chatbot i šta se s tim dešava"
-date: 2026-11-08
+date: 2026-11-15
 category: ai-za-sve
 image: /assets/images/2026-11-08-sta-ne-dijeliti-s-chatbotom.svg
 read_time: 7
