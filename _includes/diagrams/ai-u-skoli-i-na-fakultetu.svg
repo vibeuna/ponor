@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Inter, system-ui, -apple-system, sans-serif" id="ai-skola-svg" role="img" aria-labelledby="ai-skola-svg-title ai-skola-svg-desc">
+<title id="ai-skola-svg-title">Od pomoći do prepisivanja: pet koraka</title>
+<desc id="ai-skola-svg-desc">Pet načina upotrebe umjetne inteligencije u studentskom radu, poredanih od pomoći do prepisivanja, prema primjerima iz politike Univerziteta u Sarajevu. Korak 1, učenje: objašnjenje zadatka, zadaci za vježbu, kartice i sažeci; ništa se ne predaje, pa nema ni izjave. Korak 2, jezička dorada vlastitog teksta: gramatika, pravopis, jasnije rečenice, komentar na nacrt; izjava prema pravilima. Korak 3, ideje, literatura i struktura: smišljanje ideja, ključne riječi, plan rada; izjava prema pravilima. Korak 4, AI proizvodi dio rada: prevod vlastitog teksta, početni kod, analiza podataka; izjava je obavezna. Korak 5, prepisivanje: rad koji je generisao AI predan kao vlastiti ili prikrivena upotreba; to je kršenje akademskog integriteta prema članu 12. Na svakom koraku odlučuju tri pitanja: ko je obavio misaoni posao, da li je upotreba prijavljena i šta dozvoljava pravilo predmeta. Prepisivanje počinje kad je odgovor pogrešan na bar jedno od njih.</desc>
+<defs>
+<marker id="ai-skola-svg-arrow-s" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#78716C"/></marker>
+<marker id="ai-skola-svg-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+</defs>
+<rect width="900" height="600" fill="#FAF9F6"/>
+<text x="450" y="42" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Od pomoći do prepisivanja: pet koraka</text>
+<text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C">Na svakom koraku odlučuju ista tri pitanja</text>
+
+<!-- Scale -->
+<g><animate attributeName="opacity" values="0;0;1" dur="0.55s" keyTimes="0;0.364;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<text x="60" y="100" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">POMOĆ</text>
+<text x="840" y="100" text-anchor="end" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">PREPISIVANJE</text>
+<line x1="60" y1="114" x2="832" y2="114" stroke="#78716C" stroke-width="1.5" marker-end="url(#ai-skola-svg-arrow-s)"/>
+</g>
+
+<g><animate attributeName="opacity" values="0;0;1" dur="0.85s" keyTimes="0;0.588;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="60" y="136" width="144" height="178" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5"/><text x="74" y="158" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">KORAK 1</text><text x="74" y="180" font-family="Merriweather, Georgia, serif" font-size="13" font-weight="700" fill="#1C1917">Učenje</text><text x="74" y="228" font-size="11" fill="#44403C">Objašnjenje zadatka</text><text x="74" y="244" font-size="11" fill="#44403C">Zadaci za vježbu</text><text x="74" y="260" font-size="11" fill="#44403C">Kartice i sažeci</text><line x1="74" y1="272" x2="190" y2="272" stroke="#E7E5E4" stroke-width="1"/><text x="74" y="289" font-size="9.5" font-weight="700" letter-spacing="0.8" fill="#78716C">IZJAVA</text><text x="74" y="305" font-size="11.5" font-weight="500" fill="#44403C">Ništa se ne predaje</text></g>
+<g><animate attributeName="opacity" values="0;0;1" dur="1.15s" keyTimes="0;0.696;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="219" y="136" width="144" height="178" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5"/><text x="233" y="158" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">KORAK 2</text><text x="233" y="180" font-family="Merriweather, Georgia, serif" font-size="13" font-weight="700" fill="#1C1917">Jezička dorada</text><text x="233" y="197" font-family="Merriweather, Georgia, serif" font-size="13" font-weight="700" fill="#1C1917">vlastitog teksta</text><text x="233" y="228" font-size="11" fill="#44403C">Gramatika, pravopis</text><text x="233" y="244" font-size="11" fill="#44403C">Jasnije rečenice</text><text x="233" y="260" font-size="11" fill="#44403C">Komentar na nacrt</text><line x1="233" y1="272" x2="349" y2="272" stroke="#E7E5E4" stroke-width="1"/><text x="233" y="289" font-size="9.5" font-weight="700" letter-spacing="0.8" fill="#78716C">IZJAVA</text><text x="233" y="305" font-size="11.5" font-weight="500" fill="#44403C">Prema pravilima</text></g>
+<g><animate attributeName="opacity" values="0;0;1" dur="1.45s" keyTimes="0;0.759;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="378" y="136" width="144" height="178" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5"/><text x="392" y="158" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">KORAK 3</text><text x="392" y="180" font-family="Merriweather, Georgia, serif" font-size="13" font-weight="700" fill="#1C1917">Ideje, literatura</text><text x="392" y="197" font-family="Merriweather, Georgia, serif" font-size="13" font-weight="700" fill="#1C1917">i struktura</text><text x="392" y="228" font-size="11" fill="#44403C">Smišljanje ideja</text><text x="392" y="244" font-size="11" fill="#44403C">Ključne riječi</text><text x="392" y="260" font-size="11" fill="#44403C">Plan rada</text><line x1="392" y1="272" x2="508" y2="272" stroke="#E7E5E4" stroke-width="1"/><text x="392" y="289" font-size="9.5" font-weight="700" letter-spacing="0.8" fill="#78716C">IZJAVA</text><text x="392" y="305" font-size="11.5" font-weight="500" fill="#44403C">Prema pravilima</text></g>
+<g><animate attributeName="opacity" values="0;0;1" dur="1.75s" keyTimes="0;0.800;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="537" y="136" width="144" height="178" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5"/><text x="551" y="158" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">KORAK 4</text><text x="551" y="180" font-family="Merriweather, Georgia, serif" font-size="13" font-weight="700" fill="#1C1917">AI proizvodi</text><text x="551" y="197" font-family="Merriweather, Georgia, serif" font-size="13" font-weight="700" fill="#1C1917">dio rada</text><text x="551" y="228" font-size="11" fill="#44403C">Prevod vlastitog teksta</text><text x="551" y="244" font-size="11" fill="#44403C">Početni kod</text><text x="551" y="260" font-size="11" fill="#44403C">Analiza podataka</text><line x1="551" y1="272" x2="667" y2="272" stroke="#E7E5E4" stroke-width="1"/><text x="551" y="289" font-size="9.5" font-weight="700" letter-spacing="0.8" fill="#78716C">IZJAVA</text><text x="551" y="305" font-size="11.5" font-weight="700" fill="#92400E">Obavezna</text></g>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.05s" keyTimes="0;0.829;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="696" y="136" width="144" height="178" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="2"/><rect x="696" y="136" width="3" height="178" fill="#B45309"/><text x="710" y="158" font-size="11" font-weight="700" letter-spacing="0.8" fill="#B45309">KORAK 5</text><text x="710" y="180" font-family="Merriweather, Georgia, serif" font-size="13" font-weight="700" fill="#92400E">Prepisivanje</text><text x="710" y="228" font-size="11" fill="#44403C">AI rad predan</text><text x="710" y="244" font-size="11" fill="#44403C">kao vlastiti</text><text x="710" y="260" font-size="11" fill="#44403C">Prikrivena upotreba</text><line x1="710" y1="272" x2="826" y2="272" stroke="#E7E5E4" stroke-width="1"/><text x="710" y="289" font-size="9.5" font-weight="700" letter-spacing="0.8" fill="#78716C">IZJAVA</text><text x="710" y="305" font-size="11.5" font-weight="700" fill="#92400E">Kršenje (čl. 12)</text></g>
+
+<!-- Three questions -->
+<g><animate attributeName="opacity" values="0;0;1" dur="2.55s" keyTimes="0;0.863;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<text x="450" y="340" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">TRI PITANJA NA SVAKOM KORAKU</text>
+<rect x="60" y="352" width="250" height="76" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/><text x="74" y="374" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">PITANJE 1</text><text x="74" y="396" font-family="Merriweather, Georgia, serif" font-size="12.5" font-weight="700" fill="#1C1917">Ko je obavio misaoni posao?</text><text x="74" y="415" font-size="11" fill="#57534E">Pomoć: konačni tekst i argument su vaši.</text><rect x="325" y="352" width="250" height="76" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/><text x="339" y="374" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">PITANJE 2</text><text x="339" y="396" font-family="Merriweather, Georgia, serif" font-size="12.5" font-weight="700" fill="#1C1917">Da li je upotreba prijavljena?</text><text x="339" y="415" font-size="11" fill="#57534E">Pomoć: izjava tamo gdje je AI dao doprinos.</text><rect x="590" y="352" width="250" height="76" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1.5"/><text x="604" y="374" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">PITANJE 3</text><text x="604" y="396" font-family="Merriweather, Georgia, serif" font-size="12.5" font-weight="700" fill="#1C1917">Šta dozvoljava pravilo predmeta?</text><text x="604" y="415" font-size="11" fill="#57534E">Pomoć: nastavnik upotrebu nije zabranio.</text>
+</g>
+
+<g><animate attributeName="opacity" values="0;0;1" dur="2.90s" keyTimes="0;0.897;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<line x1="450" y1="436" x2="450" y2="462" stroke="#B45309" stroke-width="2" marker-end="url(#ai-skola-svg-arrow)"/>
+</g>
+
+<!-- Output -->
+<g><animate attributeName="opacity" values="0;0;1" dur="3.40s" keyTimes="0;0.853;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0" dur="3.40s" keyTimes="0;0.853;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="470" width="780" height="88" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="1"/>
+<rect x="60" y="470" width="3" height="88" fill="#B45309"/>
+<text x="80" y="492" font-size="11" font-weight="700" letter-spacing="0.8" fill="#B45309">PREPISIVANJE POČINJE</text>
+<text x="80" y="518" font-family="Merriweather, Georgia, serif" font-size="15" font-style="italic" fill="#1C1917">kad je odgovor pogrešan na bar jedno od tri pitanja.</text>
+<text x="80" y="541" font-size="12" fill="#44403C">Isti alat može biti pomoć ili prepisivanje: razliku pravi ko je radio, šta je prijavljeno i šta predmet dozvoljava.</text>
+</g>
+<text x="450" y="586" text-anchor="middle" font-size="11" font-style="italic" fill="#78716C"><animate attributeName="opacity" values="0;0;1" dur="3.75s" keyTimes="0;0.907;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>Primjeri iz politike Univerziteta u Sarajevu (26. 5. 2026.). Druge ustanove i predmeti mogu to urediti drugačije.</text>
+
+<g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+<circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+<polygon points="852,28 858,28 855,33" fill="#78716C"/>
+<title>Pusti ponovo</title>
+</g>
+<style>
+#ai-skola-svg:hover .replay-btn { opacity: 1 !important; }
+#ai-skola-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+#ai-skola-svg .replay-btn:hover path { stroke: #B45309; }
+#ai-skola-svg .replay-btn:hover polygon { fill: #B45309; }
+#ai-skola-svg .replay-btn:focus { outline: none; opacity: 1 !important; }
+#ai-skola-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+@media (prefers-reduced-motion: reduce) {
+  #ai-skola-svg animate, #ai-skola-svg animateTransform { display: none; }
+  #ai-skola-svg .replay-btn { display: none; }
+}
+</style>
+<script>
+// <![CDATA[
+(function () {
+  const svg = document.getElementById('ai-skola-svg');
+  const btn = svg && svg.querySelector('.replay-btn');
+  if (!svg || !btn) return;
+  // Reduced motion: stop the timeline at its end so the final state shows even if SMIL keeps running.
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches && svg.pauseAnimations) {
+    svg.pauseAnimations(); svg.setCurrentTime(10); return;
+  }
+  function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+  btn.addEventListener('click', replay);
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+  });
+})();
+// ]]>
+</script>
+</svg>

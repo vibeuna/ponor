@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#c8996a"/>
+
+  <!-- Icon: a classroom chalkboard hung from a nail, off-white chalk marks, ledge with chalk and eraser -->
+  <g stroke="#1a1a1a" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Hanging cord and nail: marks it as a wall board, not a screen -->
+    <path d="M 360 190 L 500 132 L 640 190" stroke-width="8"/>
+    <circle cx="500" cy="130" r="11" fill="#fafaf8" stroke-width="7"/>
+    <!-- Frame -->
+    <rect x="290" y="185" width="420" height="250" rx="20" fill="#fafaf8" stroke-width="18"/>
+    <!-- Board surface (dark, like slate) -->
+    <rect x="322" y="217" width="356" height="186" rx="8" fill="#1a1a1a" stroke-width="10"/>
+    <!-- Chalk marks (abstract, no text): wave, two lines, right triangle -->
+    <g stroke="#fafaf8">
+      <path d="M 360 265 Q 385 237 410 265 T 460 265" stroke-width="9"/>
+      <path d="M 360 312 L 500 312" stroke-width="9"/>
+      <path d="M 360 355 L 450 355" stroke-width="9"/>
+      <path d="M 555 365 L 555 260 L 640 365 Z" stroke-width="9"/>
+      <path d="M 555 343 L 577 343 L 577 365" stroke-width="6"/>
+    </g>
+    <!-- Chalk ledge, wider than the frame -->
+    <path d="M 265 452 L 735 452" stroke-width="18"/>
+    <!-- Chalk stick resting on the ledge -->
+    <rect x="345" y="427" width="60" height="16" rx="7" fill="#fafaf8" stroke-width="7"/>
+    <!-- Eraser resting on the ledge -->
+    <rect x="560" y="415" width="90" height="28" rx="6" fill="#d6dff0" stroke-width="8"/>
+    <path d="M 560 429 L 650 429" stroke-width="6"/>
+  </g>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Inter, system-ui, -apple-system, sans-serif" id="chatbot-podaci-svg" role="img" aria-labelledby="chatbot-podaci-svg-title chatbot-podaci-svg-desc">
+<title id="chatbot-podaci-svg-title">Brisanje, treniranje i ljudski pregled su tri različite stvari</title>
+<desc id="chatbot-podaci-svg-desc">Poruka koju zalijepite u chatbot prolazi kroz tri odvojena pitanja. Brisanje: razgovor nestaje iz historije, ali kopija ostaje u pozadini, kod Anthropica do 30 dana, a razgovore koje su pregledali ljudi Google čuva do 3 godine. Treniranje: proizvođač razgovor više ne koristi za treniranje, ali razgovor nije obrisan, već naučeno ostaje u modelu, a ocjena palac gore ili dolje može razgovor ponovo otvoriti za treniranje kod OpenAI-ja i Anthropica, dok kod Googlea povratna informacija znači korištenje razgovora za razvoj usluga. Ljudski pregled: Google navodi da dio razgovora pregledaju ljudi i kad je Keep Activity isključen, a pregledani razgovori se ne brišu s aktivnošću; sva tri proizvođača navode da ljudi mogu vidjeti dio razgovora, a isključeno treniranje kod OpenAI-ja ni isključen Keep Activity kod Googlea ne isključuju svaki pregled. Jedna postavka obično ne rješava sva tri pitanja, pa ono što pošaljete kontrolišete samo djelimično.</desc>
+<defs>
+<marker id="chatbot-podaci-svg-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
+<marker id="chatbot-podaci-svg-arrow-s" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#78716C"/></marker>
+</defs>
+<rect width="900" height="600" fill="#FAF9F6"/>
+<text x="450" y="42" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Brisanje, treniranje i ljudski pregled su tri različite stvari</text>
+<text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C">Jedna postavka obično ne rješava sva tri pitanja</text>
+
+<!-- Input -->
+<g><animate attributeName="opacity" values="0;0;1" dur="0.55s" keyTimes="0;0.364;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="92" width="780" height="60" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<rect x="60" y="92" width="3" height="60" fill="#78716C"/>
+<text x="80" y="114" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">ULAZ</text>
+<text x="80" y="138" font-family="Merriweather, Georgia, serif" font-size="15" font-style="italic" fill="#1C1917">"Sažmi mi ovaj nalaz" (tekst zalijepljen u chatbot)</text>
+</g>
+
+<!-- Fan-out to the three questions -->
+<g><animate attributeName="opacity" values="0;0;1" dur="0.80s" keyTimes="0;0.625;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<line x1="450" y1="160" x2="450" y2="176" stroke="#78716C" stroke-width="1.5"/>
+<line x1="185" y1="176" x2="715" y2="176" stroke="#78716C" stroke-width="1.5"/>
+<line x1="185" y1="176" x2="185" y2="190" stroke="#78716C" stroke-width="1.5" marker-end="url(#chatbot-podaci-svg-arrow-s)"/>
+<line x1="450" y1="176" x2="450" y2="190" stroke="#78716C" stroke-width="1.5" marker-end="url(#chatbot-podaci-svg-arrow-s)"/>
+<line x1="715" y1="176" x2="715" y2="190" stroke="#78716C" stroke-width="1.5" marker-end="url(#chatbot-podaci-svg-arrow-s)"/>
+</g>
+
+<g><animate attributeName="opacity" values="0;0;1" dur="1.15s" keyTimes="0;0.696;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="60" y="196" width="250" height="252" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5"/><text x="76" y="222" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">1 · BRISANJE</text><text x="76" y="248" font-family="Merriweather, Georgia, serif" font-size="13" font-weight="700" fill="#1C1917">Nestaje li razgovor?</text><text x="76" y="276" font-size="10" font-weight="700" letter-spacing="0.8" fill="#78716C">ŠTA MIJENJA</text><text x="76" y="294" font-size="11.5" fill="#44403C">Razgovor nestaje iz historije.</text><text x="76" y="320" font-size="10" font-weight="700" letter-spacing="0.8" fill="#78716C">ŠTA NE MIJENJA</text><text x="76" y="338" font-size="11.5" fill="#44403C">Kopija ostaje u pozadini.</text><text x="76" y="354" font-size="11.5" fill="#44403C">Anthropic navodi do 30 dana.</text><text x="76" y="370" font-size="11.5" fill="#44403C">Google čuva razgovore koje su</text><text x="76" y="386" font-size="11.5" fill="#44403C">pregledali ljudi do 3 godine.</text></g>
+<g><animate attributeName="opacity" values="0;0;1" dur="1.65s" keyTimes="0;0.788;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="325" y="196" width="250" height="252" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5"/><text x="341" y="222" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">2 · TRENIRANJE</text><text x="341" y="248" font-family="Merriweather, Georgia, serif" font-size="13" font-weight="700" fill="#1C1917">Uči li model iz razgovora?</text><text x="341" y="276" font-size="10" font-weight="700" letter-spacing="0.8" fill="#78716C">ŠTA MIJENJA</text><text x="341" y="294" font-size="11.5" fill="#44403C">Proizvođač ga više ne koristi</text><text x="341" y="310" font-size="11.5" fill="#44403C">za treniranje.</text><text x="341" y="336" font-size="10" font-weight="700" letter-spacing="0.8" fill="#78716C">ŠTA NE MIJENJA</text><text x="341" y="354" font-size="11.5" fill="#44403C">Razgovor nije obrisan.</text><text x="341" y="370" font-size="11.5" fill="#44403C">Već naučeno ostaje u modelu.</text><text x="341" y="386" font-size="11.5" fill="#44403C">Ocjena palac gore ili dolje</text><text x="341" y="402" font-size="11.5" fill="#44403C">može ga ponovo otvoriti za</text><text x="341" y="418" font-size="11.5" fill="#44403C">treniranje (OpenAI, Anthropic).</text><text x="341" y="434" font-size="11.5" fill="#44403C">Google: za razvoj usluga.</text></g>
+<g><animate attributeName="opacity" values="0;0;1" dur="2.15s" keyTimes="0;0.837;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><rect x="590" y="196" width="250" height="252" rx="8" fill="#F5F5F0" stroke="#A8A29E" stroke-width="1.5"/><text x="606" y="222" font-size="11" font-weight="700" letter-spacing="0.8" fill="#78716C">3 · LJUDSKI PREGLED</text><text x="606" y="248" font-family="Merriweather, Georgia, serif" font-size="13" font-weight="700" fill="#1C1917">Vide li razgovor ljudi?</text><text x="606" y="276" font-size="10" font-weight="700" letter-spacing="0.8" fill="#78716C">ŠTA KAŽU PROIZVOĐAČI</text><text x="606" y="294" font-size="11.5" fill="#44403C">Sva tri: ljudi mogu vidjeti</text><text x="606" y="310" font-size="11.5" fill="#44403C">dio razgovora.</text><text x="606" y="336" font-size="10" font-weight="700" letter-spacing="0.8" fill="#78716C">ŠTA NE MIJENJA</text><text x="606" y="354" font-size="11.5" fill="#44403C">Isključeno treniranje (OpenAI)</text><text x="606" y="370" font-size="11.5" fill="#44403C">ili Keep Activity (Google) ne</text><text x="606" y="386" font-size="11.5" fill="#44403C">isključuje svaki pregled.</text><text x="606" y="402" font-size="11.5" fill="#44403C">Google: pregledani razgovori</text><text x="606" y="418" font-size="11.5" fill="#44403C">se ne brišu s aktivnošću.</text></g>
+
+<g><animate attributeName="opacity" values="0;0;1" dur="2.70s" keyTimes="0;0.889;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><line x1="185.0" y1="454" x2="185.0" y2="470" stroke="#B45309" stroke-width="2" marker-end="url(#chatbot-podaci-svg-arrow)"/><line x1="450.0" y1="454" x2="450.0" y2="470" stroke="#B45309" stroke-width="2" marker-end="url(#chatbot-podaci-svg-arrow)"/><line x1="715.0" y1="454" x2="715.0" y2="470" stroke="#B45309" stroke-width="2" marker-end="url(#chatbot-podaci-svg-arrow)"/></g>
+
+<!-- Focal / output -->
+<g><animate attributeName="opacity" values="0;0;1" dur="3.30s" keyTimes="0;0.848;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/><animateTransform attributeName="transform" type="translate" values="0 8;0 8;0 0" dur="3.30s" keyTimes="0;0.848;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
+<rect x="60" y="476" width="780" height="82" rx="8" fill="#FDF6EC" stroke="#B45309" stroke-width="2"/>
+<rect x="60" y="476" width="3" height="82" fill="#B45309"/>
+<text x="80" y="498" font-size="11" font-weight="700" letter-spacing="0.8" fill="#B45309">ŠTA IZ TOGA SLIJEDI</text>
+<text x="80" y="524" font-family="Merriweather, Georgia, serif" font-size="15" font-style="italic" fill="#1C1917">"Jedna postavka ne rješava sva tri pitanja."</text>
+<text x="80" y="544" font-size="12" fill="#44403C">Zato u chatbot ne lijepite identifikatore, zdravstvene podatke, lozinke, tuđe podatke ni radne dokumente.</text>
+</g>
+<text x="450" y="586" text-anchor="middle" font-size="11" font-style="italic" fill="#78716C"><animate attributeName="opacity" values="0;0;1" dur="3.75s" keyTimes="0;0.907;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>Prema stranicama proizvođača za lične planove, pročitanim 8. 11. 2026. To su njihove tvrdnje, ne revizija, i mijenjaju se.</text>
+
+<g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+<circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+<path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+<polygon points="852,28 858,28 855,33" fill="#78716C"/>
+<title>Pusti ponovo</title>
+</g>
+<style>
+#chatbot-podaci-svg:hover .replay-btn { opacity: 1 !important; }
+#chatbot-podaci-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+#chatbot-podaci-svg .replay-btn:hover path { stroke: #B45309; }
+#chatbot-podaci-svg .replay-btn:hover polygon { fill: #B45309; }
+#chatbot-podaci-svg .replay-btn:focus { outline: none; opacity: 1 !important; }
+#chatbot-podaci-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+@media (prefers-reduced-motion: reduce) {
+  #chatbot-podaci-svg animate, #chatbot-podaci-svg animateTransform { display: none; }
+  #chatbot-podaci-svg .replay-btn { display: none; }
+}
+</style>
+<script>
+// <![CDATA[
+(function () {
+  const svg = document.getElementById('chatbot-podaci-svg');
+  const btn = svg && svg.querySelector('.replay-btn');
+  if (!svg || !btn) return;
+  // Reduced motion: stop the timeline at its end so the final state shows even if SMIL keeps running.
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches && svg.pauseAnimations) {
+    svg.pauseAnimations(); svg.setCurrentTime(10); return;
+  }
+  function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+  btn.addEventListener('click', replay);
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+  });
+})();
+// ]]>
+</script>
+</svg>
