@@ -230,6 +230,40 @@ Two gotchas specific to this codebase:
   (one level up, not in this directory) — part of the editorial
   workflow's publish step; see `../CLAUDE.md`.
 
+## Halucinacija easter egg
+
+A small in-page joke, wired up in `_includes/halucinacija.html` (included
+from the default layout). Nothing is saved and nothing is fetched.
+
+Trigger it by clicking the **p** mark in the header five times within
+about two seconds, or by typing `halucinacija` anywhere that isn't a
+text field. A normal single click on the **p** still goes home, after
+a short pause (under a second) so a rapid burst can be recognised.
+Clicks on the wordmark next to it are immediate.
+
+For a few seconds the page flickers (skipped when the visitor has asked
+the browser for less motion), then a handful of words in the article
+text are swapped for confident nonsense and underlined with a wavy
+line. A toast at the bottom explains the joke and links to
+`/rjecnik/halucinacija/`. **Vrati stvarnost**, or waiting 10 seconds,
+puts the original words back.
+
+Every page already has a built-in list of swaps (a year, a citation,
+"transformer", and other common words). To add swaps that only happen
+on one page, put a `halucinacije` list in that page's front matter.
+`from` is the real phrase to find (capitals don't matter), `to` is
+the nonsense that replaces it:
+
+```yaml
+halucinacije:
+  - from: "Oxforda"
+    to: "kafića Kod džezve"
+```
+
+`_posts/2026-10-10-sta-je-llm.md` has a working example. The list is
+optional — leave it out and the built-in swaps still run. Headings,
+navigation, the header, the footer, and code are left alone.
+
 ## Known gaps
 
 - `_posts/` is currently empty and `git status` shows ~224
