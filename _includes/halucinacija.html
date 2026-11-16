@@ -1,0 +1,564 @@
+{% comment %}
+  Halucinacija — a small on-page joke. Included from the default layout.
+
+  Triggers (nothing is stored, nothing is fetched):
+    1. Five clicks or taps on the "p" mark in the header within about
+       two seconds. A single click on the mark still opens the
+       homepage, after a short pause (under a second) so a second
+       click can join the burst. Once that second click lands, we
+       hold navigation until the two-second window ends. The fifth
+       click plays the joke instead of leaving the page. Clicks on
+       the wordmark beside the mark are not delayed. Ctrl/Cmd/Shift-
+       clicks are left alone.
+    2. Typing the word "halucinacija" outside of a text field.
+
+  The main content flickers briefly (skipped when the visitor prefers
+  reduced motion). Then 3–6 words in ordinary paragraphs are swapped
+  for nonsense and given a wavy underline. Headings, navigation, the
+  header, the footer, and code are never changed. "Vrati stvarnost",
+  the Escape key, or 10 seconds puts the original text back.
+
+  Optional per-page swaps, in that page's front matter. `from` is
+  matched as a whole phrase and capitals are ignored. Page swaps are
+  used first; the built-in list below fills any remaining slots.
+
+      halucinacije:
+        - from: "Oxforda"
+          to: "kafića Kod džezve"
+
+  See README.md, "Halucinacija easter egg".
+{% endcomment %}
+<style>
+  #halucinacija-toast[hidden] { display: none !important; }
+  #halucinacija-toast {
+    position: fixed;
+    z-index: 70;
+    left: 50%;
+    bottom: 1.25rem;
+    translate: -50% 0;
+    width: min(36rem, calc(100vw - 8.5rem));
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 0.85rem;
+    padding: 0.85rem 0.95rem;
+    background: #fffdf8;
+    color: #1c1917;
+    border: 1px solid #e7e5e4;
+    border-radius: 1rem;
+    box-shadow: 0 12px 40px rgba(28, 25, 23, 0.16);
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.45;
+  }
+  #halucinacija-toast p { margin: 0; flex: 1 1 14rem; }
+  #halucinacija-toast a {
+    color: #b45309;
+    font-weight: 600;
+    text-underline-offset: 2px;
+  }
+  #halucinacija-toast a:hover { color: #92400e; }
+  #halucinacija-toast button {
+    flex: 0 0 auto;
+    margin-left: auto;
+    font: inherit;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fff;
+    background: #b45309;
+    border: 0;
+    border-radius: 0.65rem;
+    padding: 0.5rem 0.85rem;
+    cursor: pointer;
+  }
+  #halucinacija-toast button:hover { background: #92400e; }
+  #halucinacija-toast a:focus-visible,
+  #halucinacija-toast button:focus-visible {
+    outline: 2px solid #b45309;
+    outline-offset: 2px;
+  }
+  html.dark #halucinacija-toast {
+    background: #292524;
+    color: #faf9f6;
+    border-color: #44403c;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  }
+  html.dark #halucinacija-toast a { color: #fdba74; }
+  html.dark #halucinacija-toast a:hover { color: #fdba74; }
+  html.dark #halucinacija-toast a:focus-visible,
+  html.dark #halucinacija-toast button:focus-visible { outline-color: #fdba74; }
+
+  .halucinacija-mark {
+    text-decoration: wavy underline;
+    text-decoration-color: #b45309;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 0.22em;
+    text-decoration-skip-ink: none;
+  }
+  html.dark .halucinacija-mark { text-decoration-color: #fdba74; }
+
+  @keyframes halucinacija-glitch {
+    0%, 100% { transform: none; filter: none; opacity: 1; }
+    8% { transform: translate(-2px, 0); filter: hue-rotate(30deg); }
+    16% { transform: translate(2px, 1px); opacity: 0.86; }
+    28% { transform: none; filter: none; opacity: 1; }
+    46% { transform: translate(1px, -1px) skewX(-0.4deg); }
+    58% { transform: translate(-2px, 0); opacity: 0.9; filter: saturate(1.4); }
+    72% { transform: none; opacity: 1; }
+    86% { transform: translate(2px, 0); filter: hue-rotate(-20deg); }
+  }
+  .halucinacija-glitch { animation: halucinacija-glitch 0.9s linear both; }
+  #halucinacija-toast:not([hidden]) { animation: halucinacija-in 0.28s ease; }
+  @keyframes halucinacija-in {
+    from { opacity: 0; translate: -50% 10px; }
+    to { opacity: 1; translate: -50% 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .halucinacija-glitch,
+    #halucinacija-toast:not([hidden]) { animation: none !important; }
+  }
+  @media (max-width: 640px) {
+    #halucinacija-toast {
+      width: min(36rem, calc(100vw - 1.5rem));
+      bottom: 4.75rem;
+    }
+  }
+</style>
+
+<div id="halucinacija-toast" role="status" aria-live="polite" aria-atomic="true" hidden>
+  <p>Eto, ovako izgleda halucinacija: model zvuči sigurno, a izmišlja. 🌀 <a href="/rjecnik/halucinacija/">Halucinacija u rječniku</a></p>
+  <button type="button" id="halucinacija-vrati">Vrati stvarnost</button>
+</div>
+<script type="application/json" id="halucinacija-stranica">{% if page.halucinacije %}{{ page.halucinacije | jsonify | replace: '</', '<\/' }}{% else %}[]{% endif %}</script>
+<script>
+(function () {
+  var SECRET = 'halucinacija';
+  var CLICKS_NEEDED = 5;
+  var CLICK_WINDOW = 2000;
+  // A lone click on the "p" follows the link after a short pause.
+  // The pause is long enough that a second click can cancel it and
+  // start the two-second burst. The wordmark beside the mark is not
+  // delayed at all.
+  var NAV_DELAY_SINGLE = 700;
+  var HOLD_MS = 10000;
+  var MIN_SWAPS = 3;
+  var MAX_SWAPS = 6;
+  var SOURCE_LINE = 'Izvor: povjerljivo, vjerujte mi';
+
+  // Containers we never rewrite. Code, headings, chrome, and the toast itself.
+  var SKIP = 'header, footer, nav, aside, pre, code, kbd, samp, h1, h2, h3, h4, h5, h6, script, style, textarea, input, select, button, svg, form, #halucinacija-toast, #toc-sidebar, .sr-only, .code-block-wrapper';
+  var PROSE = 'p, li, blockquote, td, figcaption, dd';
+
+  // Built-in swaps, most recognisable first. Each one is used at most
+  // once until we have to fill out a very short page.
+  var GENERIC = [
+    { id: 'godina', re: bounded('(?:19|20)\\d{2}\\.?(?:\\s+godine)?'), to: '1987. u Zenici' },
+    { id: 'izvor', re: bounded('izvor(?:ima|om|a|e|u|i)?'), to: SOURCE_LINE },
+    { id: 'transformer', re: bounded('transformer(?:ima|om|a|e|u|i)?'), to: 'Transformator za mikrovalnu' },
+    { id: 'llm', re: bounded('LLM(?:-[\\p{L}]+)?', 'u'), to: 'limunada s mentom' },
+    { id: 'ai', re: bounded('AI(?:-(?:jem|ja|ju|em|om|a|u))?', 'u'), to: 'automatska igraonica' },
+    { id: 'model', re: bounded('model(?:ima|om|a|e|u|i)?'), to: 'model za kafu, 3 u 1' },
+    { id: 'token', re: bounded('token(?:izacij[aeu]|izator(?:ima|om|a|e|u|i)?|ima|om|a|e|u|i)?'), to: 'žeton iz tramvaja' },
+    { id: 'chatgpt', re: bounded('ChatGPT(?:-[\\p{L}\\p{N}]+)?'), to: 'kasica-prasica' },
+    { id: 'agent', re: bounded('agent(?:ima|ski|om|a|e|u|i)?'), to: 'komšija koji sve zna' },
+    { id: 'bosanski', re: bounded('bosansk(?:oga|omu|ima|og|om|oj|im|ih|a|e|u|i)?'), to: 'zenički, bez dvoumljenja' },
+    { id: 'prompt', re: bounded('prompt(?:ovima|ove|ova|ovi|om|a|e|u|i)?'), to: 'ceduljica s narudžbom' },
+    { id: 'halucinacija', re: bounded('halucinacij(?:ama|om|a|e|u|i)?'), to: 'iskrena izmišljotina' },
+    { id: 'openai', re: bounded('OpenAI(?:-(?:jem|ja|ju|eva|evo|ev|em|a|u))?'), to: 'radionica iz garaže' },
+    { id: 'temperatura', re: bounded('temperatur(?:ama|om|a|e|u|i)?'), to: 'jačina šerbeta' }
+  ];
+
+  var FALLBACK_LINES = [
+    '1987. u Zenici',
+    SOURCE_LINE,
+    'Transformator za mikrovalnu',
+    'tri kile jabuka, bez računa',
+    'kako kaže tetka Faza',
+    'potvrđeno u redu za burek'
+  ];
+
+  var CITATION = /sar\.|saradnic|et\s+al\b|doi\.org|arxiv/i;
+
+  var toast = document.getElementById('halucinacija-toast');
+  var restoreBtn = document.getElementById('halucinacija-vrati');
+  var active = false;
+  var generation = 0;
+  var restoreTimer = null;
+  var navTimer = null;
+  var logoClicks = [];
+  var snapshots = [];
+  var typed = '';
+
+  function bounded(source, flags) {
+    return new RegExp('(?<![\\p{L}\\p{N}])(?:' + source + ')(?![\\p{L}\\p{N}])', flags || 'iu');
+  }
+
+  function escapeRe(s) {
+    return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function pageRules() {
+    var el = document.getElementById('halucinacija-stranica');
+    var data = [];
+    try { data = JSON.parse(el ? el.textContent : '[]'); } catch (e) { data = []; }
+    if (!Array.isArray(data)) return [];
+    var rules = [];
+    for (var i = 0; i < data.length && rules.length < MAX_SWAPS; i++) {
+      var item = data[i];
+      if (!item || typeof item.from !== 'string' || typeof item.to !== 'string') continue;
+      var from = item.from.trim();
+      var to = item.to.trim();
+      if (from.length < 2 || !to) continue;
+      rules.push({
+        id: 'page-' + i,
+        page: true,
+        re: bounded(escapeRe(from)),
+        to: to
+      });
+    }
+    return rules;
+  }
+
+  function eligible(node) {
+    var text = node.nodeValue;
+    if (!text || text.trim().length < 2) return false;
+    var el = node.parentElement;
+    if (!el || el.closest(SKIP)) return false;
+    if (!el.closest(PROSE)) return false;
+    if (el.closest('[hidden], [aria-hidden="true"]')) return false;
+    var cs = window.getComputedStyle(el);
+    if (cs.display === 'none' || cs.visibility === 'hidden') return false;
+    return el.getClientRects().length > 0;
+  }
+
+  function citationHit(node) {
+    var anchor = node.parentElement.closest('a');
+    if (!anchor || !CITATION.test(anchor.textContent || '')) return null;
+    var raw = node.nodeValue;
+    var trimmed = raw.trim();
+    if (trimmed.length < 8 || !CITATION.test(trimmed)) return null;
+    var start = raw.indexOf(trimmed);
+    return { start: start, end: start + trimmed.length, to: SOURCE_LINE, id: 'izvor' };
+  }
+
+  function matchNode(node, rules) {
+    var text = node.nodeValue;
+    var i, rule, found;
+    for (i = 0; i < rules.length; i++) {
+      rule = rules[i];
+      if (!rule.page) continue;
+      found = rule.re.exec(text);
+      if (found) return { start: found.index, end: found.index + found[0].length, to: rule.to, id: rule.id };
+    }
+    var cited = citationHit(node);
+    if (cited) return cited;
+    for (i = 0; i < rules.length; i++) {
+      rule = rules[i];
+      if (rule.page) continue;
+      found = rule.re.exec(text);
+      if (found) return { start: found.index, end: found.index + found[0].length, to: rule.to, id: rule.id };
+    }
+    return null;
+  }
+
+  function eachProseNode(fn) {
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (node) {
+        return eligible(node) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+    var node = walker.nextNode();
+    while (node) {
+      fn(node);
+      node = walker.nextNode();
+    }
+  }
+
+  function collect(rules) {
+    var out = [];
+    eachProseNode(function (node) {
+      var hit = matchNode(node, rules);
+      if (!hit) return;
+      var block = node.parentElement.closest(PROSE);
+      if (!block) return;
+      out.push({ node: node, block: block, start: hit.start, end: hit.end, to: hit.to, id: hit.id });
+    });
+    return out;
+  }
+
+  function containsItem(list, item) {
+    for (var i = 0; i < list.length; i++) if (list[i] === item) return true;
+    return false;
+  }
+
+  function choose(candidates, rules) {
+    var chosen = [];
+    var usedNodes = [];
+    var usedBlocks = [];
+    var usedIds = {};
+
+    function take(c, repeatId, repeatBlock) {
+      if (chosen.length >= MAX_SWAPS) return false;
+      if (containsItem(usedNodes, c.node)) return false;
+      if (!repeatBlock && containsItem(usedBlocks, c.block)) return false;
+      if (!repeatId && usedIds[c.id]) return false;
+      chosen.push(c);
+      usedNodes.push(c.node);
+      usedBlocks.push(c.block);
+      usedIds[c.id] = true;
+      return true;
+    }
+
+    // Author-written swaps win, even when two of them share a paragraph.
+    candidates.forEach(function (c) {
+      if (c.id.indexOf('page-') === 0) take(c, false, true);
+    });
+    rules.forEach(function (rule) {
+      if (rule.page) return;
+      for (var i = 0; i < candidates.length; i++) {
+        if (candidates[i].id !== rule.id) continue;
+        if (take(candidates[i], false, false)) break;
+      }
+    });
+    // If the page only matched once or twice, repeat a joke in another paragraph.
+    if (chosen.length < MIN_SWAPS) {
+      candidates.forEach(function (c) {
+        if (chosen.length >= MIN_SWAPS) return;
+        take(c, true, false);
+      });
+    }
+    return { chosen: chosen, usedBlocks: usedBlocks };
+  }
+
+  function addFallbacks(chosen, usedBlocks) {
+    if (chosen.length >= MIN_SWAPS) return;
+    var usedText = {};
+    chosen.forEach(function (c) { usedText[c.to] = true; });
+    var lines = [];
+    for (var i = 0; i < FALLBACK_LINES.length; i++) {
+      if (!usedText[FALLBACK_LINES[i]]) lines.push(FALLBACK_LINES[i]);
+    }
+    var phraseRe = /[\p{L}][\p{L}'’-]{2,}(?:\s+[\p{L}][\p{L}'’-]{2,}){1,2}/gu;
+    var target = 4;
+
+    function tryNode(node, allowUsedBlock) {
+      if (chosen.length >= target || !lines.length) return;
+      var block = node.parentElement.closest(PROSE);
+      if (!block) return;
+      var already = 0;
+      for (var n = 0; n < chosen.length; n++) if (chosen[n].block === block) already += 1;
+      if (already && !allowUsedBlock) return;
+      if (already >= 3) return;
+      var text = node.nodeValue;
+      if (text.trim().length < 20) return;
+      phraseRe.lastIndex = 0;
+      var match;
+      while ((match = phraseRe.exec(text)) && chosen.length < target && lines.length) {
+        var start = match.index;
+        var end = start + match[0].length;
+        var clash = false;
+        for (var c = 0; c < chosen.length; c++) {
+          if (chosen[c].node === node && start < chosen[c].end && end > chosen[c].start) clash = true;
+        }
+        if (clash) continue;
+        chosen.push({ node: node, block: block, start: start, end: end, to: lines.shift(), id: 'fallback' });
+        usedBlocks.push(block);
+        if (!allowUsedBlock) return;
+      }
+    }
+
+    eachProseNode(function (node) { tryNode(node, false); });
+    if (chosen.length < MIN_SWAPS) {
+      eachProseNode(function (node) { tryNode(node, true); });
+    }
+  }
+
+  function remember(block) {
+    for (var i = snapshots.length - 1; i >= 0; i--) {
+      if (snapshots[i].el === block || snapshots[i].el.contains(block)) return;
+      if (block.contains(snapshots[i].el)) snapshots.splice(i, 1);
+    }
+    snapshots.push({ el: block, html: block.innerHTML });
+  }
+
+  function applyAll(chosen) {
+    var groups = [];
+    for (var i = 0; i < chosen.length; i++) {
+      var c = chosen[i];
+      var group = null;
+      for (var g = 0; g < groups.length; g++) {
+        if (groups[g].node === c.node) group = groups[g];
+      }
+      if (!group) {
+        group = { node: c.node, items: [] };
+        groups.push(group);
+      }
+      group.items.push(c);
+    }
+    groups.forEach(function (group) {
+      group.items.sort(function (a, b) { return b.start - a.start; });
+      var node = group.node;
+      group.items.forEach(function (c) {
+        if (!node || !node.parentNode) return;
+        var text = node.nodeValue;
+        var before = text.slice(0, c.start);
+        var after = text.slice(c.end);
+        var span = document.createElement('span');
+        span.className = 'halucinacija-mark';
+        span.textContent = c.to;
+        var parent = node.parentNode;
+        var beforeNode = before ? document.createTextNode(before) : null;
+        if (beforeNode) parent.insertBefore(beforeNode, node);
+        parent.insertBefore(span, node);
+        if (after) parent.insertBefore(document.createTextNode(after), node);
+        parent.removeChild(node);
+        node = beforeNode;
+      });
+    });
+  }
+
+  function glitchTargets() {
+    return document.querySelectorAll('body > article, body > section, #main-content');
+  }
+
+  function clearGlitch() {
+    glitchTargets().forEach(function (el) { el.classList.remove('halucinacija-glitch'); });
+  }
+
+  function showToast() {
+    toast.hidden = false;
+  }
+
+  function hideToast() {
+    toast.hidden = true;
+  }
+
+  function restore() {
+    if (!active && !snapshots.length && toast.hidden) return;
+    generation += 1;
+    active = false;
+    if (restoreTimer) {
+      clearTimeout(restoreTimer);
+      restoreTimer = null;
+    }
+    clearGlitch();
+    for (var i = 0; i < snapshots.length; i++) {
+      if (snapshots[i].el && snapshots[i].el.isConnected) snapshots[i].el.innerHTML = snapshots[i].html;
+    }
+    snapshots = [];
+    hideToast();
+  }
+
+  function runSwaps() {
+    var rules = pageRules().concat(GENERIC);
+    var found = collect(rules);
+    var picked = choose(found, rules);
+    addFallbacks(picked.chosen, picked.usedBlocks);
+    picked.chosen.forEach(function (c) { remember(c.block); });
+    applyAll(picked.chosen);
+    showToast();
+    restoreTimer = setTimeout(restore, HOLD_MS);
+  }
+
+  function afterFlicker(done) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      done();
+      return;
+    }
+    var nodes = glitchTargets();
+    if (!nodes.length) {
+      done();
+      return;
+    }
+    var settled = false;
+    function onEnd(event) {
+      if (event.target !== nodes[0] || event.animationName !== 'halucinacija-glitch') return;
+      finish();
+    }
+    function finish() {
+      if (settled) return;
+      settled = true;
+      nodes[0].removeEventListener('animationend', onEnd);
+      clearGlitch();
+      done();
+    }
+    nodes.forEach(function (el) { el.classList.add('halucinacija-glitch'); });
+    nodes[0].addEventListener('animationend', onEnd);
+    setTimeout(finish, 1200);
+  }
+
+  function trigger() {
+    if (active || !toast) return;
+    active = true;
+    typed = '';
+    if (navTimer) {
+      clearTimeout(navTimer);
+      navTimer = null;
+    }
+    logoClicks = [];
+    var gen = generation;
+    afterFlicker(function () {
+      if (gen !== generation || !active) return;
+      runSwaps();
+    });
+  }
+
+  function armLogoNavigation(href, delay) {
+    if (navTimer) clearTimeout(navTimer);
+    navTimer = setTimeout(function () {
+      navTimer = null;
+      logoClicks = [];
+      if (!active) window.location.assign(href);
+    }, delay);
+  }
+
+  var logo = document.getElementById('site-logo');
+  var mark = logo ? logo.querySelector('div') : null;
+  if (logo && mark) {
+    // Count presses on the orange "p" itself. pointerdown still fires
+    // if the pointer drifts a little before release, which a fast
+    // burst often does. The wordmark keeps the browser's normal click.
+    logo.addEventListener('click', function (e) {
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      if (mark.contains(e.target)) e.preventDefault();
+    });
+    mark.addEventListener('pointerdown', function (e) {
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      e.preventDefault();
+      var now = Date.now();
+      if (!logoClicks.length || now - logoClicks[0] > CLICK_WINDOW) logoClicks = [];
+      logoClicks.push(now);
+      if (logoClicks.length >= CLICKS_NEEDED) {
+        trigger();
+        return;
+      }
+      var delay = logoClicks.length === 1
+        ? NAV_DELAY_SINGLE
+        : Math.max(0, CLICK_WINDOW - (now - logoClicks[0]));
+      armLogoNavigation(logo.href, delay);
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    var target = e.target;
+    if (target && (target.isContentEditable || (target.closest && target.closest('input, textarea, select, [contenteditable]')))) {
+      typed = '';
+      return;
+    }
+    if (e.key === 'Escape') {
+      typed = '';
+      if (active) restore();
+      return;
+    }
+    if (e.metaKey || e.ctrlKey || e.altKey || e.key === 'Shift') return;
+    if (e.key.length !== 1) {
+      typed = '';
+      return;
+    }
+    typed = (typed + e.key.toLowerCase()).slice(-SECRET.length);
+    if (typed === SECRET) trigger();
+  });
+
+  if (restoreBtn) restoreBtn.addEventListener('click', restore);
+})();
+</script>
