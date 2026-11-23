@@ -7,13 +7,16 @@ image: /assets/images/2026-10-12-agentski-obrasci.svg
 read_time: 7
 description: "Jedan prompt, tok rada ili agent? Savjeti Anthropica, OpenAI-ja i Googlea, pet obrazaca toka rada i šta istraživanja kažu o cijeni i pouzdanosti agenata."
 tags: [ai-agenti]
+last_modified_at: 2026-11-23
 ---
 
 Firma želi "AI agenta" koji će svako jutro sažeti pristigle mejlove. Za to joj agent ne treba. Dovoljan je jedan dobro napisan prompt za svaki mejl i malo koda koji ga pokreće. To je već najjednostavniji tok rada, a ne agent. Po procjeni redakcije, agent bi isti posao radio skuplje i manje predvidivo. Ovaj vodič pokazuje kako prepoznati koliko samostalnosti zadatak zaista traži.
 
+*Ažurirano 23. novembra 2026: ispravka. Tri navedena rada prošla su recenziju prije objave ovog teksta, a ne nijedan, kako smo ranije pisali; precizirani su i nalazi o troškovima i pouzdanosti.*
+
 ## Ukratko
 
-Anthropic, OpenAI i Google savjetuju isto: počnite od najjednostavnijeg rješenja. Za sažimanje, prijevod ili razvrstavanje teksta dovoljan je jedan prompt. Tok rada, u kojem kod unaprijed određuje korake, pogodan je za zadatke čiji je redoslijed poznat. Agent, kod kojeg model sam bira sljedeći korak, ima smisla tek kada se koraci ne mogu predvidjeti. Agenti troše više tokena, a istraživanja (uglavnom radovi koji još nisu recenzirani) pokazuju da složenija rješenja često nisu bolja od jednostavnijih.
+Anthropic, OpenAI i Google savjetuju isto: počnite od najjednostavnijeg rješenja. Za sažimanje, prijevod ili razvrstavanje teksta dovoljan je jedan prompt. Tok rada, u kojem kod unaprijed određuje korake, pogodan je za zadatke čiji je redoslijed poznat. Agent, kod kojeg model sam bira sljedeći korak, ima smisla tek kada se koraci ne mogu predvidjeti. Agenti troše više tokena, a istraživanja (dijelom radovi koji još nisu recenzirani) pokazuju da složenija rješenja često nisu bolja od jednostavnijih.
 
 ## Tri opcije: prompt, tok rada i agent
 
@@ -53,15 +56,15 @@ Isto važi i za broj agenata. OpenAI savjetuje da se najprije iskoristi sve što
 
 **Tokeni.** Prema Anthropicovim internim podacima iz teksta o sistemu Research, agenti troše oko četiri puta više [tokena](/rjecnik/token/) (osnovnih jedinica teksta koje model obrađuje) nego običan razgovor s modelom, a [sistemi s više agenata](/rjecnik/sistem-s-vise-agenata/) oko 15 puta više. To su podaci jedne firme, a ne opšte pravilo za sve agente. Isti izvor navodi da sistemi s više agenata nisu dobar izbor za većinu programerskih zadataka. Navodi i da je Anthropicov sistem s više agenata na internoj evaluaciji bio 90,2% bolji od jednog agenta s istim glavnim modelom. Nezavisne provjere tog broja nema.
 
-**Istraživanja.** Radovi u nastavku objavljeni su na arXivu. Ni za jedan nismo našli potvrdu da je prošao recenziju, pa ih treba čitati kao preprinte (radove koji još nisu recenzirani).
+**Istraživanja.** Radovi u nastavku objavljeni su na arXivu. Tri su prošla recenziju: *AI Agents That Matter* u časopisu TMLR, *Agentless* na konferenciji FSE 2025 i *Why Do Multi-Agent LLM Systems Fail?* na konferenciji NeurIPS 2025. Za ostale nismo našli potvrdu recenzije, pa ih treba čitati kao preprinte (radove koji još nisu recenzirani).
 
-- *AI Agents That Matter* (2024): uz sličnu tačnost, troškovi različitih pristupa razlikuju se "gotovo za dva reda veličine", odnosno skoro stotinu puta. Na benchmarku (referentnom testu) HumanEval pristup LATS bio je više od 50 puta skuplji od jednostavnog pristupa s ponovljenim pokušajima, bez značajne razlike u tačnosti.
-- [*Agentless*](https://arxiv.org/abs/2407.01489) (2024): fiksan tok rada u tri faze riješio je 32,00% zadataka na SWE-bench Lite, uz prosječan trošak od 0,70 dolara po zadatku. Prema autorima, to je tada bio bolji rezultat od svih agenata za programiranje otvorenog koda.
+- *AI Agents That Matter* (2024): uz sličnu tačnost, troškovi različitih pristupa razlikuju se "gotovo za dva reda veličine", odnosno skoro stotinu puta. Na benchmarku (referentnom testu) HumanEval pristup LATS bio je više od 50 puta skuplji od jednostavnog pristupa s ponovljenim pokušajima uz postepeno povećanje temperature, a najbolji agent nije bio značajno tačniji od tog pristupa.
+- [*Agentless*](https://arxiv.org/abs/2407.01489) (2024): fiksan tok rada u tri faze riješio je 32,00% zadataka na SWE-bench Lite, uz prosječan trošak od 0,70 dolara po zadatku (brojke iz verzije na arXivu; verzija sa FSE 2025 navodi 32,67% i 0,68 dolara). Prema autorima, to je tada bio bolji rezultat od svih agenata za programiranje otvorenog koda.
 - [*Why Do Multi-Agent LLM Systems Fail?*](https://arxiv.org/abs/2503.13657) (2025): autori polaze od zapažanja da sistemi s više agenata na popularnim benchmarkima često donose tek minimalne dobitke i istražuju zašto je tako. Opisuju 14 načina na koje takvi sistemi zakazuju.
 - *Towards a Science of Scaling Agent Systems* (2025, dopunjeno 2026): u poređenju s jednim agentom, rezultati sistema s više agenata kretali su se od +80,8% na finansijskim zadacima koji se mogu podijeliti na dijelove do −70,0% na zadacima koji traže planiranje korak po korak. Glavni nalaz: kada jedan agent već radi dobro, dodatni agenti donose sve manju korist.
 - *Do More Agents Help?* (2026, dopunjeno u oktobru 2026, model GPT-4.1): od šest postavki s više agenata samo je jedna u prosjeku bila bolja od jednog agenta (79,70% naspram 76,65%). Ostalih pet zaostajalo je za 1,71 do 8,76 procentnih poena. Na pojedinim testovima dobici su ipak veliki: jedna postavka bila je bolja za 9,67 poena na HumanEvalu, a druga za 22,25 poena na IFEvalu, ali uz 1,39, odnosno 4,34 puta veću potrošnju tokena.
 
-**Pouzdanost.** Agent koji je zadatak riješio jednom ne mora ga riješiti i sljedeći put. Rad [*On the Reliability of Computer Use Agents*](https://arxiv.org/abs/2604.17849) (2026) testira Agent S3 s modelom GPT-5 na OSWorldu, benchmarku za upravljanje računarom (computer use), u kojem model radi na računaru na osnovu snimaka ekrana. Agent S3 riješio je oko 78% zadataka barem jednom u deset pokušaja, ali samo oko 36% u svih deset. Rad [*Beyond pass@1*](https://arxiv.org/abs/2603.29231) (2026) pokazuje da se jaz između onoga što agent može uraditi i onoga što uradi pouzdano širi što je zadatak duži.
+**Pouzdanost.** Agent koji je zadatak riješio jednom ne mora ga riješiti i sljedeći put. Rad [*On the Reliability of Computer Use Agents*](https://arxiv.org/abs/2604.17849) (2026) testira Agent S3 s modelom GPT-5 na OSWorldu, benchmarku za upravljanje računarom (computer use), u kojem model radi na računaru na osnovu snimaka ekrana. Agent S3 riješio je oko 78% zadataka barem jednom u deset pokušaja, ali samo oko 36% u svih deset. Rad [*Beyond pass@1*](https://arxiv.org/abs/2603.29231) (2026) pokazuje da se jaz između onoga što agent može uraditi i onoga što uradi pouzdano širi što je zadatak duži, posebno kod programerskih zadataka.
 
 ## Kako odlučiti u praksi
 

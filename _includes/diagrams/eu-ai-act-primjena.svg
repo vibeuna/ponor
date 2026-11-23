@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Inter, system-ui, -apple-system, sans-serif" id="aia-svg" role="img" aria-labelledby="aia-svg-title aia-svg-desc">
 <title id="aia-svg-title">AI Act: šta važi od kada</title>
-<desc id="aia-svg-desc">Vremenska linija primjene Akta o umjetnoj inteligenciji nakon Uredbe (EU) 2026/1744. Ostali ključni datumi: 1. 8. 2024. stupanje na snagu; 2. 2. 2025. zabranjene prakse i AI pismenost; 2. 8. 2025. AI modeli opšte namjene; 2. 8. 2026. opšta primjena i obaveze transparentnosti; 2. 12. 2026. nove zabranjene prakse, dodane 2026.; 2. 8. 2030. rok za usklađivanje visokorizičnih sistema organa javne vlasti koji su već na tržištu. Odgođena pravila za visokorizične AI sisteme: Prilog III s 2. 8. 2026. na 2. 12. 2027., Prilog I s 2. 8. 2027. na 2. 8. 2028. Pravila su odgođena, ne ukinuta. Stanje na dan 13. 10. 2026.</desc>
+<desc id="aia-svg-desc">Vremenska linija primjene Akta o umjetnoj inteligenciji nakon Uredbe (EU) 2026/1744. Ostali ključni datumi: 1. 8. 2024. stupanje na snagu; 2. 2. 2025. zabranjene prakse i AI pismenost; 2. 8. 2025. AI modeli opšte namjene; 2. 8. 2026. opšta primjena i obaveze transparentnosti; 2. 12. 2026. nove zabranjene prakse, dodane 2026.; 2. 8. 2030. rok za usklađivanje visokorizičnih sistema organa javne vlasti koji su već na tržištu. Odgođena pravila za visokorizične AI sisteme: Prilog III s 2. 8. 2026. na 2. 12. 2027., Prilog I s 2. 8. 2027. na 2. 8. 2028. Pravila su odgođena, ne ukinuta. Stanje na dan 23. 11. 2026.</desc>
 <defs>
 <marker id="aia-svg-ah-stone" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#A8A29E"/></marker>
 <marker id="aia-svg-ah-coffee" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker>
@@ -29,7 +29,7 @@
 <g><animate attributeName="opacity" values="0;0;1" dur="4.15s" keyTimes="0;0.904;1" begin="0s" fill="freeze" calcMode="spline" keySplines="0 0 1 1;0.25 0.1 0.25 1"/>
 <rect x="70" y="508" width="770" height="56" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
 <text x="88" y="532" font-family="Merriweather, Georgia, serif" font-size="14" font-style="italic" fill="#1C1917">Odgođeno, ne ukinuto: obaveze za visokorizične sisteme i dalje postoje.</text>
-<text x="88" y="551" font-size="11" fill="#78716C">Stanje na dan 13. 10. 2026. Izbor datuma; potpuna tabela je u tekstu.</text>
+<text x="88" y="551" font-size="11" fill="#78716C">Stanje na dan 23. 11. 2026. Izbor datuma; potpuna tabela je u tekstu.</text>
 </g>
 <g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
 <circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>

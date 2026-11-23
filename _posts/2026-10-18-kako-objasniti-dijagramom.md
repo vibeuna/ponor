@@ -4,7 +4,7 @@ title: "Objasni dijagramom: Vještina za Claude, ChatGPT i Gemini"
 date: 2026-10-18
 category: ai-za-sve
 image: /assets/images/2026-10-18-kako-objasniti-dijagramom.svg
-last_modified_at: 2026-10-26
+last_modified_at: 2026-11-23
 read_time: 6
 description: "Kako naučiti chatbota da objašnjava dijagramom: spremna vještina za kopiranje, objašnjenje kako radi i uputstvo za instalaciju u Claudeu, ChatGPT-u i Geminiju."
 tags: [ai-agenti, skills]
@@ -16,6 +16,8 @@ Jednostavan fajl pod nazivom `SKILL.md` omogućava umjetnoj inteligenciji da pre
 
 *Ažurirano 26. oktobra 2026: opšti opis vještina i uslovi po alatima prebačeni su u članak [Šta je SKILL i kako radi?](https://www.ponor.ba/clanci/sta-je-skill/). Ispravljeni su koraci za Claude (šta dijalog prihvata) i ChatGPT (putanja i planovi).*
 
+*Ažurirano 23. novembra 2026: Gemini za vještine više ne traži Keep Activity; preciziran nalaz Richarda Mayera.*
+
 ## Ukratko
 
 [Vještina](/rjecnik/vjestina/) (engl. skill) je obični folder s fajlom `SKILL.md`. U njemu se nalaze upute koje chatbot učitava samo kada vaše pitanje odgovara opisu te vještine. 
@@ -24,7 +26,7 @@ Vještina `objasni-dijagramom` uči model da na pitanja tipa "kako ovo radi" odg
 
 Vještine rade u Claudeu, Geminiju i ChatGPT-u, ali uslovi se razlikuju po alatu i planu. Detalji su u članku [Šta je SKILL i kako radi?](https://www.ponor.ba/clanci/sta-je-skill/#gdje-radi).
 
-Na našem testu, vještina je odlično radila u Claudeu. Gemini je povremeno imao problema s njenim aktiviranjem, dok na besplatnom ChatGPT-u ova opcija uopšte ne postoji.
+Na našem testu, vještina je odlično radila u Claudeu. Gemini je povremeno imao problema s njenim aktiviranjem, dok je na besplatnom ChatGPT-u ova opcija u našem testu (oktobar 2026) nedostajala.
 
 ## Šta je vještina?
 
@@ -92,7 +94,7 @@ Odgovaraj na bosanskom jeziku. Piši kratke rečenice. Koristi aktiv. U svakoj r
 * **ER ili dijagram klasa:** za strukture podataka.
 * **Vremenska linija:** za hronološke događaje.
 
-Istraživanja (Larkin & Simon, 1987) potvrđuju da dijagrami smanjuju trud pri čitanju jer drže povezane informacije na jednom mjestu. Richard Mayer (2009) je kroz 11 eksperimenata dokazao da kombinacija teksta i slika daje znatno bolje rezultate u učenju nego sam tekst.
+Istraživanja (Larkin & Simon, 1987) potvrđuju da dijagrami smanjuju trud pri čitanju jer drže povezane informacije na jednom mjestu. Richard Mayer (2009) navodi da su u 11 od 11 testova učenici s tekstom i slikama bolje riješili zadatke primjene od onih sa samim tekstom, posebno početnici.
 
 **2. Format.** Vještina traži isključivo čist SVG kod. SVG je standardni format za vektorsku grafiku zapisan kao tekst, što znači da ga AI lako generiše, a korisnik ga može naknadno uređivati.
 
@@ -115,7 +117,7 @@ Dijagram u potpunosti poštuje pravila: ima sedam elemenata, jasne natpise i usm
 
 ## Gdje i kako sačuvati vještinu
 
-Putanje su onakve kakve ih vidimo u aplikacijama (oktobar 2026). Pomoćne stranice proizvođača ih ponegdje opisuju drugačije, a uslovi (plan, uključeno izvršavanje koda, godine, Keep Activity) i ograničenja su u članku [Šta je SKILL i kako radi?](https://www.ponor.ba/clanci/sta-je-skill/#gdje-i-kako-je-dodati).
+Putanje su onakve kakve ih vidimo u aplikacijama (oktobar 2026). Pomoćne stranice proizvođača ih ponegdje opisuju drugačije, a uslovi (plan, uključeno izvršavanje koda, godine) i ograničenja su u članku [Šta je SKILL i kako radi?](https://www.ponor.ba/clanci/sta-je-skill/#gdje-i-kako-je-dodati).
 
 ### Claude
 

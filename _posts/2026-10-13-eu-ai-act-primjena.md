@@ -7,15 +7,18 @@ image: /assets/images/2026-10-13-eu-ai-act-primjena.svg
 read_time: 8
 description: "Od kada važi koja obaveza iz AI Acta nakon Uredbe 2026/1744, šta je samo odgođeno, a ne ukinuto, i kako evropska pravila mogu obavezati firme u BiH."
 tags: [regulativa]
+last_modified_at: 2026-11-23
 ---
 
 Firma iz Sarajeva razvija AI alat i prodaje ga klijentima u Njemačkoj. Bosna i Hercegovina nije članica EU i na državnom nivou nema zakon o umjetnoj inteligenciji (artificial intelligence, AI). Ipak, evropska pravila mogu obavezivati i takvu firmu. U ovom tekstu objašnjavamo od kada važe pojedine obaveze iz Akta o umjetnoj inteligenciji (AI Act), Uredbe (EU) 2024/1689, nakon izmjena iz jula 2026., i kojim putem te obaveze dolaze do organizacija u BiH.
 
-*Tekst opisuje stanje propisa na dan 13. 10. 2026. i nije pravni savjet. Za pitanja o vlastitim obavezama obratite se advokatu.*
+*Ažurirano 23. novembra 2026: dodana ratifikacija Okvirne konvencije Vijeća Evrope od strane BiH i Izvještaj Evropske komisije o BiH za 2026.; preciziran obuhvat člana 75(1).*
+
+*Tekst opisuje stanje propisa na dan 23. 11. 2026. i nije pravni savjet. Za pitanja o vlastitim obavezama obratite se advokatu.*
 
 ## Ukratko
 
-Stanje na dan 13. 10. 2026.: AI Act je uredba EU koja se primjenjuje postepeno, od 2025. do 2030. Uredba (EU) 2026/1744 („Digital Omnibus“), koja je stupila na snagu 27. jula 2026., pomjerila je pravila za visokorizične AI sisteme (high-risk AI system) na 2. decembar 2027. i 2. august 2028. Ta pravila nisu ukinuta. Opšti datum primjene, 2. august 2026., nije se promijenio. AI Act ne obavezuje BiH kao državu, ali može obavezivati firme iz BiH: ako nude AI sisteme (AI system) ili modele na tržištu EU ili ako se rezultat njihovog AI sistema koristi u EU. Iznosi kazni su gornje granice.
+Stanje na dan 23. 11. 2026.: AI Act je uredba EU koja se primjenjuje postepeno, od 2025. do 2030. Uredba (EU) 2026/1744 („Digital Omnibus“), koja je stupila na snagu 27. jula 2026., pomjerila je pravila za visokorizične AI sisteme (high-risk AI system) na 2. decembar 2027. i 2. august 2028. Ta pravila nisu ukinuta. Opšti datum primjene, 2. august 2026., nije se promijenio. AI Act ne obavezuje BiH kao državu, ali može obavezivati firme iz BiH: ako nude AI sisteme (AI system) ili modele na tržištu EU ili ako se rezultat njihovog AI sistema koristi u EU. Iznosi kazni su gornje granice.
 
 ## Šta je donijela Uredba (EU) 2026/1744
 
@@ -95,9 +98,9 @@ Naša procjena je da se drugi put najlakše previdi, jer ne zahtijeva da firma i
 
 AI Act je obavezujući za države članice (član 113, posljednji stav), a BiH to nije. Njena obaveza u ovoj oblasti proizlazi iz [Sporazuma o stabilizaciji i pridruživanju](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22015A0630(01)). Prema članu 70(1), BiH će nastojati osigurati postepeno usklađivanje svog zakonodavstva s pravnom stečevinom EU. Usklađivanje je počelo potpisivanjem Sporazuma i treba biti završeno do kraja prelaznog perioda iz člana 8 (član 70(2)), prema programu koji dogovaraju Evropska komisija i BiH (član 70(3)).
 
-[Izvještaj Evropske komisije o BiH za 2025.](https://westernbalkans-infohub.eu/wp-content/uploads/2025/11/bosnia-and-herzegovina-report-2025.pdf) od 4. novembra 2025. (poglavlje 10, str. 73) poziva BiH da se u potpunosti uskladi s AI Actom. U izvještaju se ne spominje nijedan zakon ni strategija BiH o umjetnoj inteligenciji. I [Radio Slobodna Evropa](https://www.slobodnaevropa.org/a/vestacka-umjetna-inteligencija-bih-crna-gora-srbija-kosovo-ai-chatgpt-gemini-copilot/33792041.html) izvještava da na državnom nivou nema ni zakona ni nacrta zakona.
+[Izvještaj Evropske komisije o BiH za 2026.](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52026SC0691) od 4. novembra 2026. (poglavlje 10) navodi da BiH treba početi razvijati strukture upravljanja i provođenja u skladu s AI Actom. U izvještaju se ne spominje nijedan zakon ni strategija BiH o umjetnoj inteligenciji. I [Radio Slobodna Evropa](https://www.slobodnaevropa.org/a/vestacka-umjetna-inteligencija-bih-crna-gora-srbija-kosovo-ai-chatgpt-gemini-copilot/33792041.html) izvještava da na državnom nivou nema ni zakona ni nacrta zakona.
 
-BiH je [potpisala Okvirnu konvenciju Vijeća Evrope o umjetnoj inteligenciji](https://www.coe.int/en/web/artificial-intelligence/-/bosnia-and-herzegovina-signs-the-council-of-europe-s-framework-convention-on-artificial-intelligence), ali nismo mogli potvrditi da ju je i ratifikovala.
+BiH je [potpisala Okvirnu konvenciju Vijeća Evrope o umjetnoj inteligenciji](https://www.coe.int/en/web/artificial-intelligence/-/bosnia-and-herzegovina-signs-the-council-of-europe-s-framework-convention-on-artificial-intelligence) 9. 12. 2025. i [ratifikovala je](https://www.coe.int/en/web/conventions/full-list?module=signatures-by-treaty&treatynum=225) 28. 10. 2026. Konvencija još nije stupila na snagu, jer je za to potrebno pet ratifikacija.
 
 ## Kazne i nadzor
 
@@ -109,7 +112,7 @@ BiH je [potpisala Okvirnu konvenciju Vijeća Evrope o umjetnoj inteligenciji](ht
 
 Za mala i srednja preduzeća primjenjuje se niži od dva iznosa (član 99(6)). Uredba 2026/1744 ovo pravilo za drugu i treću stavku proširuje i na kategoriju nešto većih preduzeća (novi član 99(6a)). Pravila o kaznama i organe za nadzor tržišta (market surveillance authority) određuju države članice (član 99(1) i član 70). BiH takav organ prema AI Actu nema.
 
-Pružaocima modela opšte namjene kazne izriče Komisija: do 3% godišnjeg svjetskog prometa ili do 15 miliona eura, zavisno od toga šta je veće (član 101). Izmijenjeni član 75(1) daje AI Officeu isključivu nadležnost nad AI sistemima koji su izgrađeni na modelu opšte namjene istog pružaoca.
+Pružaocima modela opšte namjene kazne izriče Komisija: do 3% godišnjeg svjetskog prometa ili do 15 miliona eura, zavisno od toga šta je veće (član 101). Izmijenjeni član 75(1) daje AI Officeu isključivu nadležnost nad AI sistemima izgrađenim na modelu opšte namjene istog pružaoca ili pružaoca iz iste grupe preduzeća, uz izuzetke (npr. sistemi iz Priloga I i kritična infrastruktura).
 
 ## Česte zablude
 
@@ -130,5 +133,5 @@ Pružaocima modela opšte namjene kazne izriče Komisija: do 3% godišnjeg svjet
 - [Regulation (EU) 2026/1744 (Digital Omnibus on AI), OJ L, 24.7.2026 – EUR-Lex](https://eur-lex.europa.eu/eli/reg/2026/1744/oj)
 - [Guidelines for providers of general-purpose AI models – European Commission](https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers)
 - [Stabilisation and Association Agreement EU–BiH, OJ L 164, 30.6.2015 – EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22015A0630(01))
-- [Bosnia and Herzegovina 2025 Report, SWD(2025) 751 final – European Commission (mirror)](https://westernbalkans-infohub.eu/wp-content/uploads/2025/11/bosnia-and-herzegovina-report-2025.pdf)
-- [Bosnia and Herzegovina Signs the Council of Europe's Framework Convention on Artificial Intelligence – Council of Europe](https://www.coe.int/en/web/artificial-intelligence/-/bosnia-and-herzegovina-signs-the-council-of-europe-s-framework-convention-on-artificial-intelligence)
+- [Bosnia and Herzegovina 2026 Report, SWD(2026) 691 final – EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52026SC0691)
+- [Chart of signatures and ratifications of Treaty 225 – Council of Europe Treaty Office](https://www.coe.int/en/web/conventions/full-list?module=signatures-by-treaty&treatynum=225)

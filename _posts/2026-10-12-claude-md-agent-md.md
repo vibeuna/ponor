@@ -5,11 +5,14 @@ date: 2026-10-12
 category: ai-u-praksi
 image: /assets/images/2026-10-12-claude-md-agent-md.svg
 read_time: 8
-description: "Šta su CLAUDE.md i AGENTS.md, kako ih čitaju Claude Code, Codex i drugi alati, na koju zamku nailaze timovi koji koriste više alata i šta o tome kažu istraživanja iz 2026."
+description: "Šta su CLAUDE.md i AGENTS.md, kako ih čitaju Claude Code, Codex i drugi alati, gdje je zamka za timove s više alata i šta kažu istraživanja iz 2026."
 tags: [ai-agenti]
+last_modified_at: 2026-11-23
 ---
 
 [Agent](/rjecnik/agent/) za programiranje (coding agent) iz jedne sesije u drugu pamti samo ono što je zapisano u fajlovima. Ono što nije zapisano, nova sesija ne zna: kojom se naredbom pokreću testovi, koje fajlove agent ne smije mijenjati, pa ni to da tim komentare u kodu piše na bosanskom. Sve to agentu možete reći jednom, u običnom tekstualnom fajlu koji pročita prije nego što počne raditi. Claude Code taj fajl zove CLAUDE.md, a mnogi drugi alati AGENTS.md.
+
+*Ažurirano 23. novembra 2026: Khatrijev rad objavljen je na radionici REALM; dodano koji dijelovi Copilota čitaju AGENTS.md; dopunjen spisak podagenata koji preskaču CLAUDE.md.*
 
 ## Ukratko
 
@@ -79,11 +82,11 @@ Prema [agents.md](https://agents.md), prednost ima fajl koji je najbliži fajlu 
 | [Codex](https://learn.chatgpt.com/docs/agent-configuration/agents-md) | AGENTS.md; u svom folderu ga zamjenjuje AGENTS.override.md | spaja fajlove od korijena projekta do trenutnog foldera, najviše jedan po folderu | po zadanoj postavci najviše 32 KiB ukupno; granica se mijenja postavkom `project_doc_max_bytes` |
 | [Cursor](https://cursor.com/docs/context/rules) | AGENTS.md | spaja fajl iz podfoldera s fajlovima iz foldera iznad | – |
 | [Gemini CLI](https://geminicli.com/docs/cli/gemini-md) | GEMINI.md | – | naveden na stranici agents.md, ali AGENTS.md čita tek kad se podesi `context.fileName` |
-| [GitHub Copilot](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions) | AGENTS.md | prednost ima najbliži fajl | GitHub ne navodi koji dijelovi Copilota ga čitaju |
+| [GitHub Copilot](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions) | AGENTS.md | prednost ima najbliži fajl | čitaju ga cloud agent, Copilot CLI i pregled koda na GitHub.com; Copilot Chat samo u VS Code-u ([tabela podrške](https://docs.github.com/en/copilot/reference/custom-instructions-support)) |
 
 ## Šta pokazuje istraživanje
 
-Ovaj pregled zasniva se na pretrazi arXiva i možda nije potpun. Do oktobra 2026. objavljeno je najmanje pet radova koji mjere kako fajl s uputama utiče na rad agenta. Samo je jedan prihvaćen na naučnom skupu, i to kao kratak rad na radionici. Ostala četiri objavljena su na arXivu kao preprinti (radovi koji još nisu prošli recenziju).
+Ovaj pregled zasniva se na pretrazi arXiva i možda nije potpun. Do oktobra 2026. objavljeno je najmanje pet radova koji mjere kako fajl s uputama utiče na rad agenta. Dva su prihvaćena na naučnim skupovima, oba kao radovi na radionicama. Ostala tri objavljena su na arXivu kao preprinti (radovi koji još nisu prošli recenziju).
 
 **Lulla i saradnici** u radu od pet stranica za radionicu JAWs, održanu uz konferenciju ICSE 2026, zadali su Codexu 124 male izmjene koje su ranije već bile prihvaćene, svaku jednom s AGENTS.md i jednom bez njega. Uz fajl je medijan vremena pao sa 98,57 na 70,34 sekunde, a medijan broja [tokena](/rjecnik/token/) (osnovnih jedinica teksta koje model obrađuje) koje agent generiše smanjio se za 16,58%. Ukupan broj tokena, ulaznih i izlaznih, gotovo se nije promijenio (+1,29%). Autori nisu mjerili da li je kod bio ispravan. Rad, dakle, ne pokazuje da agent uz fajl radi bolje, nego samo da brže završi posao.
 
@@ -97,7 +100,7 @@ Dva preprinta bilježe poboljšanje, svaki na samo jednom modelu. Kod **Zhanga i
 |---|---|---|---|---|---|
 | [Lulla i sar.](https://arxiv.org/abs/2601.20404) | radionica JAWs, ICSE 2026 | Codex | 124 izmjene, 10 repozitorija | nije mjerena | vrijeme −28,6%, izlazni tokeni −16,6% |
 | [Gloaguen i sar.](https://arxiv.org/abs/2602.11988) | preprint | Claude Code, Codex, Qwen Code; 4 modela | 438 | bez značajne razlike (−2 do +2,4 poena) | trošak +19–23% |
-| [Khatri](https://arxiv.org/abs/2607.27250) | preprint | Claude Code, Codex CLI | 17, 3 repozitorija | bez značajne razlike | bez promjene (Codex) |
+| [Khatri](https://arxiv.org/abs/2607.27250) | radionica REALM, EMNLP 2026 | Claude Code, Codex CLI | 17, 3 repozitorija | bez značajne razlike | bez promjene (Codex) |
 | [Zhang i sar.](https://arxiv.org/abs/2604.11088) | preprint | Claude Code, Opus 4.6 | 58 | +6,9–13,8 poena, pojedinačno nije značajno | – |
 | [Shepard i Albrecht](https://arxiv.org/abs/2606.20512) | preprint | Qwen3.5-35B-A3B | SWE-bench Verified | +7,5 poena uz doterivani fajl (značajno) | – |
 
@@ -110,7 +113,7 @@ Ovo su naše preporuke, izvedene iz dokumentacije i radova navedenih gore.
 - **Ako koristite samo Claude Code:** držite CLAUDE.md u korijenu repozitorija i neka bude kraći od 200 redova. Detalje za pojedine dijelove projekta prebacite u `.claude/rules/`.
 - **Ako tim koristi više alata:** AGENTS.md je zajednički nazivnik. Claude Code ga sam čita ako CLAUDE.md ne postoji. Ako vam ipak treba i CLAUDE.md, upišite u njega `@AGENTS.md`, da ne morate održavati upute na dva mjesta.
 - **Prije nego što dodate CLAUDE.local.md** u projekat koji ima samo AGENTS.md, provjerite postavku. U suprotnom AGENTS.md bez upozorenja prestaje važiti.
-- **Za Gemini CLI i Copilot** nemojte pretpostaviti da čitaju AGENTS.md, nego provjerite u dokumentaciji.
+- **Za Gemini CLI** nemojte pretpostaviti da čita AGENTS.md, nego provjerite u dokumentaciji. **Kod Copilota** to zavisi od dijela proizvoda: provjerite GitHubovu tabelu podrške.
 - **Fajl koji napravi `/init`** pregledajte i dopunite onim što zna samo vaš tim. U najvećoj studiji takvi fajlovi nisu pomogli, a rad su poskupili.
 - **Pazite da upute ne protivrječe jedna drugoj**, jer nijedan alat ne garantuje koja će prevladati.
 - **Pregledajte ono što agent uradi.** Fajl s uputama utiče na to kako agent radi, ali rezultat ne provjerava.
@@ -118,9 +121,9 @@ Ovo su naše preporuke, izvedene iz dokumentacije i radova navedenih gore.
 ## Šta NIJE
 
 - **Nije naredba koju agent mora izvršiti.** Fajl je samo još jedan tekst u kontekstu. I sam Anthropic upozorava da agent slabije prati upute iz dužih fajlova, a agents.md navodi da izričita uputa u razgovoru nadjačava fajl.
-- **Nije garancija boljeg koda.** Nijedan od pet radova iz 2026. nije pokazao da običan fajl projekta daje statistički značajno bolji kod. Četiri rada su preprinti, i svi su rađeni na Python projektima.
+- **Nije garancija boljeg koda.** Nijedan od pet radova iz 2026. nije pokazao da običan fajl projekta daje statistički značajno bolji kod. Tri rada su preprinti, i svi su rađeni na Python projektima.
 - **Nije jedino pamćenje između sesija.** Claude Code ima i automatsko pamćenje u MEMORY.md.
-- **Ne čitaju ga svi podagenti.** Prema [Anthropicovoj dokumentaciji](https://code.claude.com/docs/en/sub-agents), ugrađeni podagenti (subagents), tj. pomoćni agenti kojima glavni agent prepušta dio posla, Explore i Plan u Claude Codeu preskaču CLAUDE.md. Za podagente koje sami napravite čitanje se može isključiti.
+- **Ne čitaju ga svi podagenti.** Prema [Anthropicovoj dokumentaciji](https://code.claude.com/docs/en/sub-agents), ugrađeni podagenti (subagents), tj. pomoćni agenti kojima glavni agent prepušta dio posla, Explore, Plan i web-fetch u Claude Codeu preskaču CLAUDE.md. Za podagente koje sami napravite čitanje se može isključiti.
 
 ## Povezano
 

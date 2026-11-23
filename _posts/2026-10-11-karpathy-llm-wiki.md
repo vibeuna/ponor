@@ -7,9 +7,12 @@ image: /assets/images/2026-10-11-karpathy-llm-wiki.svg
 read_time: 7
 description: "Karpathyjev LLM Wiki: agent od vaših izvora gradi i održava wiki. Kako obrazac funkcioniše, koliko wiki može narasti, gdje zapinje i šta vam treba za početak."
 tags: [ai-agenti]
+last_modified_at: 2026-11-23
 ---
 
 Ko god skuplja članke i bilješke, zna kako to obično završi: folder je pun materijala, a kad vam zatreba odgovor, sve čitate ispočetka. Slično je i s chatbotom kojem date dokumente: svako pitanje ponovo kreće od istih sirovih tekstova. Andrej Karpathy je u aprilu 2026. opisao drugačiji pristup i nazvao ga LLM Wiki. [Agent](/rjecnik/agent/) zasnovan na [velikom jezičkom modelu (large language model, LLM)](/rjecnik/veliki-jezicki-model/) od vaših izvora sam gradi i održava wiki. Tako se znanje vremenom nakuplja, umjesto da ga za svako pitanje iznova otkrivate.
+
+*Ažurirano 23. novembra 2026: ispravljeni planovi na kojima je dostupan Claude Cowork.*
 
 ## Ukratko
 
@@ -74,12 +77,12 @@ Zato dvije Karpathyjeve tvrdnje treba uzeti s rezervom. Prva je da je trošak od
 
 Treba vam agent koji može čitati i pisati fajlove u folderu na vašem računaru. Na raspolaganju su:
 
-- **Claude Cowork** (u aplikaciji Claude Desktop). Čita i piše samo u "folderima koje ste povezali, kroz desktop aplikaciju, i samo dok je otvorena". Dostupan je na planovima Pro i Max. Verzija u oblaku je u beta fazi za planove Team i Enterprise.
+- **Claude Cowork** (u aplikaciji Claude Desktop). Čita i piše samo u "folderima koje ste povezali, kroz desktop aplikaciju, i samo dok je otvorena". Dostupan je na svim plaćenim planovima (Pro, Max, Ultra, Team, Enterprise). Na webu i mobitelu radi na planovima Pro, Max, Ultra i Team (na Teamu u beta fazi), a na Enterpriseu ako ga administrator uključi.
 - **ChatGPT/Codex desktop aplikacija** (macOS, Windows, Linux). Prema OpenAI-ju, "može koristiti fajlove i kontekst s lokacije koju izaberete". Izvor ne navodi koji su planovi potrebni.
 - **Claude Code, Codex i OpenCode**, agenti koje Karpathy spominje. U tom obliku pokreću se kucanjem naredbi.
 - **Obsidian** za čitanje wikija. Nije obavezan, jer su stranice obični tekstualni fajlovi.
 
-Iz dostupnih izvora nije jasno nekoliko stvari: mogu li agenti na besplatnim planovima pisati u fajlove, koji su planovi potrebni za ChatGPT i čitaju li desktop aplikacije pravilnik same, kao što to rade agenti koji se pokreću naredbama. Naš savjet: ako niste sigurni, na početku rada recite agentu da pročita pravilnik.
+Claude Cowork radi samo na plaćenim planovima. Iz dostupnih izvora nije jasno nekoliko stvari: koji su planovi potrebni za ChatGPT i čitaju li desktop aplikacije pravilnik same, kao što to rade agenti koji se pokreću naredbama. Naš savjet: ako niste sigurni, na početku rada recite agentu da pročita pravilnik.
 
 Iz opisanih slabosti proizlaze prva tri praktična pravila, a četvrto je naša preporuka:
 
