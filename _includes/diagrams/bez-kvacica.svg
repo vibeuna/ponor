@@ -1,0 +1,112 @@
+<svg id="bk-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Inter, system-ui, -apple-system, sans-serif" role="img" aria-labelledby="bk-title bk-desc">
+  <title id="bk-title">Kvačice u bajtovima i tokenima</title>
+  <desc id="bk-desc">Rečenica "Zašto se sto u kuhinji klima i šta da uradim?" ima 47 bajtova s kvačicama i 45 bez njih, a broj tokena na tri tokenizatora mijenja se sa 16, 17 i 18 na 16, 16 i 17.</desc>
+  <style>
+    @media (prefers-reduced-motion: reduce) {
+      #bk-svg animate, #bk-svg animateTransform { display: none; }
+      #bk-svg .replay-btn { display: none; }
+    }
+    #bk-svg:hover .replay-btn { opacity: 1 !important; }
+    #bk-svg .replay-btn:hover circle { fill: #FDF6EC; stroke: #B45309; }
+    #bk-svg .replay-btn:hover path { stroke: #B45309; }
+    #bk-svg .replay-btn:hover polygon { fill: #B45309; }
+    #bk-svg .replay-btn:focus { outline: none; opacity: 1 !important; }
+    #bk-svg .replay-btn:focus circle { stroke: #B45309; stroke-width: 2; }
+  </style>
+
+  <rect width="900" height="560" fill="#FAF9F6"/>
+
+  <text x="450" y="42" text-anchor="middle" font-family="Merriweather, Georgia, serif" font-size="20" font-weight="700" fill="#1C1917">Kvačice u bajtovima i tokenima</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#78716C">Ista rečenica s kvačicama i bez njih: bajtovi se mijenjaju, tokeni skoro ne</text>
+
+  <!-- Column headers -->
+  <g font-size="11" font-weight="700" fill="#78716C" letter-spacing="0.8" text-anchor="middle">
+    <text x="560" y="112">ZNAKOVI</text>
+    <text x="660" y="112">BAJTOVI</text>
+    <text x="785" y="112">TOKENI</text>
+  </g>
+
+  <!-- ===== Row 1: with diacritics (baseline, neutral) ===== -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="0.3s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <text x="60" y="140" font-size="12" font-weight="600" fill="#78716C" letter-spacing="0.5">S KVAČICAMA</text>
+    <text x="60" y="174" font-family="Merriweather, Georgia, serif" font-size="15" font-style="italic" fill="#1C1917">"Za<tspan fill="#92400E" font-weight="700">š</tspan>to se sto u kuhinji klima i <tspan fill="#92400E" font-weight="700">š</tspan>ta da uradim?"</text>
+  </g>
+  <g opacity="0" font-size="13" font-weight="600" text-anchor="middle">
+    <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="0.8s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <rect x="525" y="155" width="70" height="28" rx="14" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="560" y="174" fill="#1C1917">45</text>
+    <rect x="625" y="155" width="70" height="28" rx="14" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="660" y="174" fill="#1C1917">47</text>
+    <rect x="725" y="155" width="120" height="28" rx="14" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="785" y="174" fill="#1C1917">16 · 17 · 18</text>
+  </g>
+
+  <!-- Annotation: why the byte count differs -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="1.3s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <text x="60" y="206" font-size="11" font-weight="600" fill="#92400E" letter-spacing="0.3">Š, Č, Ć, Ž, Đ = 2 BAJTA U UTF-8 · S, C, Z, D = 1 BAJT</text>
+  </g>
+
+  <line x1="60" y1="232" x2="840" y2="232" stroke="#E7E5E4" stroke-width="1" stroke-dasharray="780" stroke-dashoffset="780">
+    <animate attributeName="stroke-dashoffset" values="780;0" keyTimes="0;1" begin="1.6s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+  </line>
+
+  <!-- ===== Row 2: without diacritics (highlighted) ===== -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.0s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <text x="60" y="272" font-size="12" font-weight="600" fill="#B45309" letter-spacing="0.5">BEZ KVAČICA</text>
+    <text x="60" y="306" font-family="Merriweather, Georgia, serif" font-size="15" font-style="italic" fill="#1C1917">"Zasto se sto u kuhinji klima i sta da uradim?"</text>
+  </g>
+  <g opacity="0" font-size="13" font-weight="600" text-anchor="middle">
+    <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.4s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <rect x="525" y="287" width="70" height="28" rx="14" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="560" y="306" fill="#1C1917">45</text>
+    <rect x="625" y="287" width="70" height="28" rx="14" fill="#FDF6EC" stroke="#B45309" stroke-width="1.5"/>
+    <text x="660" y="306" fill="#92400E">45</text>
+    <rect x="725" y="287" width="120" height="28" rx="14" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <text x="785" y="306" fill="#1C1917">16 · 16 · 17</text>
+  </g>
+  <g opacity="0" font-size="11" text-anchor="middle">
+    <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="2.8s" dur="0.4s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <text x="660" y="334" font-weight="600" fill="#92400E" letter-spacing="0.3">−2 BAJTA</text>
+    <text x="785" y="334" font-style="italic" fill="#78716C">gemma4 · qwen3.5 · nemotron</text>
+  </g>
+
+  <!-- ===== Explanation panel (neutral) ===== -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;1" keyTimes="0;1" begin="3.2s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <animateTransform attributeName="transform" type="translate" values="0 8;0 0" keyTimes="0;1" begin="3.2s" dur="0.5s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <rect x="60" y="380" width="780" height="150" rx="8" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <rect x="80" y="402" width="3" height="14" fill="#B45309"/>
+    <text x="92" y="414" font-family="Merriweather, Georgia, serif" font-size="13" font-weight="700" fill="#1C1917">Na svih deset promptova Ponorovog testa</text>
+    <text font-size="12" fill="#44403C">
+      <tspan x="80" y="444">Bajtovi: 1.298 s kvačicama, 1.250 bez njih, 3,7% manje.</tspan>
+      <tspan x="80" y="464">Tokeni: 1–2% manje na sva tri tokenizatora (427 → 422, 445 → 435, 452 → 443).</tspan>
+      <tspan x="80" y="484">Razlika u bajtovima skoro nestane kad se tekst podijeli na tokene.</tspan>
+    </text>
+    <text x="80" y="512" font-size="11" font-style="italic" fill="#78716C">Tokenizatori modela otvorenih težina pokrenutih kroz Ollamu, ne tokenizatori ChatGPT-a, Claudea i Geminija.</text>
+  </g>
+
+  <!-- Replay button -->
+  <g class="replay-btn" style="cursor:pointer; opacity:0; transition: opacity 0.2s ease;" role="button" tabindex="0" aria-label="Pusti animaciju ponovo">
+    <circle cx="855" cy="40" r="16" fill="#F5F5F0" stroke="#E7E5E4" stroke-width="1"/>
+    <path d="M 855 31 A 9 9 0 1 1 846 40" fill="none" stroke="#78716C" stroke-width="1.5" stroke-linecap="round"/>
+    <polygon points="852,28 858,28 855,33" fill="#78716C"/>
+    <title>Pusti ponovo</title>
+  </g>
+  <script>
+    // <![CDATA[
+    (function () {
+      const svg = document.getElementById('bk-svg');
+      const btn = svg && svg.querySelector('.replay-btn');
+      if (!svg || !btn) return;
+      function replay() { if (typeof svg.setCurrentTime === 'function') svg.setCurrentTime(0); }
+      btn.addEventListener('click', replay);
+      btn.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); replay(); }
+      });
+    })();
+    // ]]>
+  </script>
+</svg>

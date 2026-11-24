@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
+  <!-- Background -->
+  <rect width="1000" height="600" rx="40" fill="#7c5a82"/>
+
+  <!-- Icon: chat bubble with three conversation dots (typing to a chatbot) -->
+  <g>
+    <!-- Bubble body and tail as one path so no seam crosses the tail joint -->
+    <path d="M 340 165 H 660 A 50 50 0 0 1 710 215 V 345 A 50 50 0 0 1 660 395 H 470 L 375 448 L 392 395 H 340 A 50 50 0 0 1 290 345 V 215 A 50 50 0 0 1 340 165 Z"
+          fill="#d6dff0" stroke="#1a1a1a" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Conversation dots: small accent circles in the background colour -->
+    <circle cx="410" cy="280" r="26" fill="#7c5a82"/>
+    <circle cx="500" cy="280" r="26" fill="#7c5a82"/>
+    <circle cx="590" cy="280" r="26" fill="#7c5a82"/>
+  </g>
+</svg>
